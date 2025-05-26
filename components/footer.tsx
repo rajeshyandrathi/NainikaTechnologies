@@ -101,7 +101,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin size={20} className="text-cyan-400 mr-2 mt-1 flex-shrink-0" />
                 <span className="text-slate-300">
-                  1 Boschendal, 28 Harry Galaun Dr<br />
+                  1 Boschendal, 28 Harry Galaun<br />
                   Halfway Gardens, Midrand, South Africa, 1686
                 </span>
               </li>
