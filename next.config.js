@@ -1,8 +1,5 @@
 const path = require('path');
 const nextConfig = {
-  experimental: {
-    outputFileTracingRoot: path.join(__dirname, '../'),
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
