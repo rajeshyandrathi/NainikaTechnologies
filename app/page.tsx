@@ -232,7 +232,7 @@ export default function Home() {
             {[
               { value: "100+", label: "Clients Served" },
               { value: "250+", label: "Projects Completed" },
-              { value: "15+", label: "Years Experience" },
+              { value: "13+", label: "Years Experience" },
               { value: "98%", label: "Client Satisfaction" }
             ].map((stat, index) => (
               <motion.div
