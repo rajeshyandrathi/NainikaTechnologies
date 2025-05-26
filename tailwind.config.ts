@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        customBorder: "hsl(var(--border))",  // renamed from 'border' to 'customBorder'
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -43,9 +43,6 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-      },
-      borderColor: {
-        customBorder: "hsl(var(--border))",  // match renamed color here
       },
       borderRadius: {
         lg: "var(--radius)",
