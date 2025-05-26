@@ -19,7 +19,7 @@ export default function Footer() {
                 <Facebook size={20} />
               </a>
               <a href="https://x.com/cloudforceSA" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Instagram size={20} />
