@@ -185,7 +185,7 @@ export default function Home() {
                 icon: <TestTube size={32} />,
                 title: "Quality Assurance",
                 description: "Rigorous testing methodologies ensuring flawless performance and reliability.",
-                image: "https://c8.alamy.com/comp/2CF1PGY/components-of-quality-assurance-testing-2CF1PGY.jpg"
+                image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
               }
             ].map((service, index) => (
               <motion.div
