@@ -18,13 +18,13 @@ export default function Footer() {
               <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
+              <a href="https://x.com/cloudforceSA" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Twitter size={20} />
               </a>
               <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
+              <a href="https://www.linkedin.com/company/cloudforce-technologies" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
