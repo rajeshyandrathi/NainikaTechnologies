@@ -44,6 +44,9 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      borderColor: {
+        border: "hsl(var(--border))", // explicitly add border color here
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
