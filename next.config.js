@@ -12,7 +12,8 @@ const nextConfig = {
       "c8.alamy.com",
       "img.freepik.com",
       "media.istockphoto.com",
-      "image.shutterstock.com"
+      "image.shutterstock.com",
+      "images.pexels.com"
     ],
   },
   eslint: {
