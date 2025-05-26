@@ -1,0 +1,13 @@
+# Exclude node_modules as usual
+node_modules/
+
+# Exclude .next except specific files
+.next/**
+
+# But allow .next except the large swc binary
+!.next/
+!.next/static/
+!.next/static/**
+
+# Exclude the large swc binary explicitly
+.next/node_modules/@next/swc-win32-x64-msvc/next-swc.win32-x64-msvc.node
