@@ -15,7 +15,7 @@ export default function Footer() {
               Empowering Innovation, Driving Digital Transformation
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
+              <a href="https://www.facebook.com/people/Cloudforce-Technologies/61576771890468/" className="text-slate-300 hover:text-cyan-400 transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="https://x.com/cloudforceSA" className="text-slate-300 hover:text-cyan-400 transition-colors">
