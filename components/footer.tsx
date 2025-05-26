@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-cyan-400">Cloudforce Technologies</h3>
             <p className="text-slate-300 mb-4">
-              Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions.
+              Empowering Innovation, Driving Digital Transformation
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
