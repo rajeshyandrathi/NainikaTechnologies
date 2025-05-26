@@ -98,8 +98,8 @@ export default function ContactPage() {
                       Our Location
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300">
-                      123 Tech Park, Innovation Street<br />
-                      Cape Town, South Africa
+                  1 Boschendal, 28 Harry Galaun Dr<br />
+                  Halfway Gardens, Midrand, South Africa, 1686
                     </p>
                   </div>
                 </div>
@@ -113,8 +113,7 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300">
-                      info@cftechnologies.co.za<br />
-                      support@cftechnologies.co.za
+                      info@cftechnologies.co.za
                     </p>
                   </div>
                 </div>
@@ -128,7 +127,7 @@ export default function ContactPage() {
                       Call Us
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300">
-                      +27 6889 06 854
+                      +27 68 890 6854
                     </p>
                   </div>
                 </div>
