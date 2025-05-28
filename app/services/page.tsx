@@ -26,7 +26,7 @@ export default function ServicesPage() {
     {
       id: "software-development",
       icon: <Code size={32} />,
-      title: "Software Development",
+      title: "Cloud-Native Application Development",
       description: "Custom-built applications tailored to your specific business needs and objectives.",
       image: "https://cdn.pixabay.com/photo/2023/06/23/05/08/software-8082767_1280.jpg",
       features: [
@@ -41,7 +41,7 @@ export default function ServicesPage() {
     {
       id: "web-development",
       icon: <Globe size={32} />,
-      title: "Web Development",
+      title: "Innovative Web & Mobile Development",
       description: "Engaging, high-performance websites and web applications that deliver exceptional user experiences.",
       image: "https://st4.depositphotos.com/12981370/24312/i/1600/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg",
       features: [
@@ -56,7 +56,7 @@ export default function ServicesPage() {
     {
       id: "cloud-implementation",
       icon: <Cloud size={32} />,
-      title: "Cloud Implementation",
+      title: "Enterprise Cloud Architecture & Migration",
       description: "Seamless migration and optimization of cloud environments for improved efficiency and scalability.",
       image: "https://freerangestock.com/sample/140034/cloud-computing--digital-cloud-on-circuit-board.jpg",
       features: [
@@ -71,7 +71,7 @@ export default function ServicesPage() {
     {
       id: "custom-integrations",
       icon: <Database size={32} />,
-      title: "Custom Integrations",
+      title: "API-Driven Integration & Intelligent Automation",
       description: "Connecting disparate systems for streamlined operations and enhanced productivity.",
       image: "https://static.vecteezy.com/system/resources/previews/008/804/844/original/integration-data-system-system-integration-technology-concept-in-wireframe-hands-industrial-and-smart-technology-business-and-automation-solutions-illustration-vector.jpg",
       features: [
@@ -86,7 +86,7 @@ export default function ServicesPage() {
     {
       id: "ecommerce-solutions",
       icon: <ShoppingBag size={32} />,
-      title: "Ecommerce Solutions",
+      title: "AI-Powered E-commerce Solutions",
       description: "Scalable platforms designed for online business success and growth.",
       image: "https://img.freepik.com/premium-photo/ecommerce-hd-8k-wallpaper-stock-photographic-image_890746-30616.jpg?w=2000",
       features: [
@@ -101,7 +101,7 @@ export default function ServicesPage() {
     {
       id: "quality-assurance",
       icon: <TestTube size={32} />,
-      title: "Quality Assurance",
+      title: "Intelligent Quality Engineering",
       description: "Rigorous testing methodologies ensuring flawless performance and reliability.",
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
       features: [
