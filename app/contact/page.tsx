@@ -156,7 +156,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-2 rounded-md border ${
                       errors.name ? "border-red-500" : "border-slate-300 dark:border-slate-600"
                     } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
-                    placeholder="John Doe"
+                    placeholder=""
                     {...register("name")}
                   />
                   {errors.name && (
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-2 rounded-md border ${
                       errors.email ? "border-red-500" : "border-slate-300 dark:border-slate-600"
                     } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
-                    placeholder="john@example.com"
+                    placeholder=""
                     {...register("email")}
                   />
                   {errors.email && (
@@ -191,7 +191,7 @@ export default function ContactPage() {
                       id="phone"
                       type="tel"
                       className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                      placeholder="+27 12 345 6789"
+                      placeholder=""
                       {...register("phone")}
                     />
                   </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                       id="company"
                       type="text"
                       className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                      placeholder="Your Company"
+                      placeholder=""
                       {...register("company")}
                     />
                   </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                     className={`w-full px-4 py-2 rounded-md border ${
                       errors.message ? "border-red-500" : "border-slate-300 dark:border-slate-600"
                     } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
-                    placeholder="How can we help you?"
+                    placeholder=""
                     {...register("message")}
                   ></textarea>
                   {errors.message && (
