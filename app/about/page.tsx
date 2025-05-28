@@ -60,48 +60,49 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 px-4 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
-                Our <span className="text-cyan-600">Story</span>
-              </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Cloudforce Technologies was founded with a bold vision: to empower businesses to unlock their full potential through the strategic use of technology. In an era where digital disruption is constant and customer expectations are ever-evolving, we saw a critical need for a partner that not only understands technology but also knows how to align it with real business outcomes.
-              </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
-                From the beginning, our mission has been clear—help organizations embrace digital transformation with confidence, clarity, and purpose. We understand that transformation isn't just about implementing new systems—it's about reimagining business models, optimizing processes, elevating customer experiences, and building the agility needed to compete in a digital-first world.
-              </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Our team of seasoned professionals brings together a powerful blend of technical depth and business insight. We specialize in crafting bespoke technology solutions that address the distinct challenges and opportunities our clients face—whether it's modernizing legacy systems, streamlining operations, enabling data-driven decision-making, or scaling with cloud-native platforms.
-              </p>
-              <p className="text-slate-600 dark:text-slate-300">
-                Today, Cloudforce Technologies stands as a trusted digital transformation partner to forward-thinking organizations across diverse industries. We don’t just deliver solutions—we drive lasting impact. By fostering innovation, enhancing efficiency, and accelerating digital maturity, we help our clients achieve their strategic goals and stay ahead in an increasingly competitive landscape.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
-            >
-              <Image
-                src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
-                alt="IT Infrastructure"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+    <section className="py-20 px-4 bg-white dark:bg-slate-900">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
+          Our <span className="text-cyan-600">Story</span>
+        </h2>
+        <p className="text-slate-600 dark:text-slate-300 mb-4">
+          Cloudforce Technologies was born out of a vision to turn technology into a strategic growth engine. In a world of constant digital acceleration, we saw the need for a partner that goes beyond implementation—to help organizations think bigger, move faster, and scale smarter.
+        </p>
+        <p className="text-slate-600 dark:text-slate-300 mb-4">
+          Our mission is simple yet powerful: enable businesses to lead with technology that’s aligned to purpose, built for agility, and designed to drive measurable impact.
+        </p>
+        <p className="text-slate-600 dark:text-slate-300 mb-4">
+          With a team of technologists, architects, and strategists, we deliver intelligent, cloud-native, and data-driven solutions that reimagine operations, elevate customer experiences, and future-proof digital infrastructure.
+        </p>
+        <p className="text-slate-600 dark:text-slate-300">
+          Today, we proudly serve visionary organizations across industries—as a transformation partner that’s as committed to innovation as we are to outcomes.
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
+      >
+        <Image
+          src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
+          alt="IT Infrastructure"
+          fill
+          className="object-cover"
+        />
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Our Approach Section */}
       <section className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
