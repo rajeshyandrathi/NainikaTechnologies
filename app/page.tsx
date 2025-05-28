@@ -127,97 +127,100 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            ref={servicesRef}
-            initial="hidden"
-            animate={servicesInView ? "visible" : "hidden"}
-            variants={fadeIn}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white">
-              Our Core <span className="text-cyan-600">Services</span>
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              We offer a comprehensive range of technology solutions designed to help your business thrive in the digital age.
-            </p>
-          </motion.div>
+     <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      ref={servicesRef}
+      initial="hidden"
+      animate={servicesInView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white">
+        Our Core <span className="text-cyan-600">Services</span>
+      </h2>
+      <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        We deliver cutting-edge technology services that accelerate innovation, boost scalability, and future-proof your business.
+      </p>
+    </motion.div>
 
-          <motion.div
-            initial="hidden"
-            animate={servicesInView ? "visible" : "hidden"}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                icon: <Code size={32} />,
-                title: "Software Development",
-                description: "Custom-built applications tailored to your specific business needs and objectives.",
-                image: "https://cdn.pixabay.com/photo/2023/06/23/05/08/software-8082767_1280.jpg"
-              },
-              {
-                icon: <Globe size={32} />,
-                title: "Web Development",
-                description: "Engaging, high-performance websites and web applications that deliver exceptional user experiences.",
-                image: "https://st4.depositphotos.com/12981370/24312/i/1600/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg"
-              },
-              {
-                icon: <Cloud size={32} />,
-                title: "Cloud Implementation",
-                description: "Seamless migration and optimization of cloud environments for improved efficiency and scalability.",
-                image: "https://freerangestock.com/sample/140034/cloud-computing--digital-cloud-on-circuit-board.jpg"
-              },
-              {
-                icon: <Database size={32} />,
-                title: "Custom Integrations",
-                description: "Connecting disparate systems for streamlined operations and enhanced productivity.",
-                image: "https://static.vecteezy.com/system/resources/previews/008/804/844/original/integration-data-system-system-integration-technology-concept-in-wireframe-hands-industrial-and-smart-technology-business-and-automation-solutions-illustration-vector.jpg"
-              },
-              {
-                icon: <ShoppingBag size={32} />,
-                title: "Ecommerce Solutions",
-                description: "Scalable platforms designed for online business success and growth.",
-                image: "https://img.freepik.com/premium-photo/ecommerce-hd-8k-wallpaper-stock-photographic-image_890746-30616.jpg?w=2000"
-              },
-              {
-                icon: <TestTube size={32} />,
-                title: "Quality Assurance",
-                description: "Rigorous testing methodologies ensuring flawless performance and reliability.",
-                image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
-              }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeIn}
-                className="service-card bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-800 dark:text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-slate-600 dark:text-slate-300">{service.description}</p>
-                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
-                    Learn more <ArrowRight size={16} className="ml-2" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+    <motion.div
+      initial="hidden"
+      animate={servicesInView ? "visible" : "hidden"}
+      variants={staggerContainer}
+      className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+    >
+      {[
+        {
+          icon: <Code size={32} />,
+          title: "Cloud-Native Development",
+          description: "Build scalable, high-performance applications using microservices, containers, and serverless architectures.",
+          image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZzDGsBqv2EMcltQf7_S4pQ.jpeg"
+        },
+        {
+          icon: <Globe size={32} />,
+          title: "Modern Web & Mobile Platforms",
+          description: "Craft immersive digital experiences powered by the latest web and mobile technologies.",
+          image: "https://assets-global.website-files.com/621b1f2990f6ed1f6e5c28eb/64d14c2ffdc055b7ed9b2f71_Web%20Development.jpg"
+        },
+        {
+          icon: <Cloud size={32} />,
+          title: "Cloud Strategy & Migration",
+          description: "Design and migrate enterprise systems to AWS, Azure, or GCP with security and performance in mind.",
+          image: "https://www.spiceworks.com/wp-content/uploads/2023/07/Cloud-Migration-Strategy.jpg"
+        },
+        {
+          icon: <Database size={32} />,
+          title: "API Integrations & Automation",
+          description: "Connect ecosystems with robust APIs and intelligent workflows that drive seamless operations.",
+          image: "https://miro.medium.com/v2/resize:fit:1400/1*eFtMN9v0Jg8wFSQvNIlqtg.jpeg"
+        },
+        {
+          icon: <ShoppingBag size={32} />,
+          title: "AI-Driven Ecommerce Solutions",
+          description: "Launch intelligent commerce experiences that scale, personalize, and convert—powered by data and AI.",
+          image: "https://img.freepik.com/premium-photo/artificial-intelligence-ecommerce-online-shopping-digital-marketing-concept_34663-3361.jpg"
+        },
+        {
+          icon: <TestTube size={32} />,
+          title: "Intelligent Quality Engineering",
+          description: "Leverage automation, AI, and continuous testing to ensure digital reliability at speed and scale.",
+          image: "https://www.qentelli.com/sites/default/files/styles/blogs/public/2021-05/AI_Testing_2.jpg"
+        }
+      ].map((service, index) => (
+        <motion.div
+          key={index}
+          variants={fadeIn}
+          className="service-card bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg"
+        >
+          <div className="relative h-48">
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white">{service.title}</h3>
+            </div>
+            <p className="text-slate-600 dark:text-slate-300">{service.description}</p>
+            <Link
+              href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+              className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300"
+            >
+              Learn more <ArrowRight size={16} className="ml-2" />
+            </Link>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
 
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
