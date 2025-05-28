@@ -63,32 +63,32 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/services#software-development" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Software Development
+                  Cloud-Native Application Development
                 </Link>
               </li>
               <li>
                 <Link href="/services#web-development" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Web Development
+                  Innovative Web & Mobile Development
                 </Link>
               </li>
               <li>
                 <Link href="/services#cloud-implementation" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Cloud Implementation
+                  Enterprise Cloud Architecture & Migration
                 </Link>
               </li>
               <li>
                 <Link href="/services#custom-integrations" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Custom Integrations
+                  API-Driven Integration & Intelligent Automation
                 </Link>
               </li>
               <li>
                 <Link href="/services#ecommerce-solutions" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Ecommerce Solutions
+                  AI-Powered E-commerce Solutions
                 </Link>
               </li>
               <li>
                 <Link href="/services#quality-assurance" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Quality Assurance
+                 Intelligent Quality Engineering
                 </Link>
               </li>
             </ul>
