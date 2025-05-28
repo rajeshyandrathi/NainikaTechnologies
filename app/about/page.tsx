@@ -165,7 +165,7 @@ export default function AboutPage() {
 
 
       {/* Our Values Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
+  <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
   <div className="max-w-7xl mx-auto">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -178,57 +178,52 @@ export default function AboutPage() {
         Our <span className="text-cyan-300">Values</span>
       </h2>
       <p className="text-gray-200 max-w-3xl mx-auto">
-        These core principles guide everything we do at Cloudforce Technologies—
-        shaping our culture, informing our decisions, and driving our impact.
+        At Cloudforce Technologies, our values fuel transformative outcomes. They guide how we innovate, collaborate, and scale technology for impact.
       </p>
     </motion.div>
 
-    <motion.div
-      ref={valuesRef}
-      initial="hidden"
-      animate={valuesInView ? "visible" : "hidden"}
-      variants={staggerContainer}
-      className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
         {
           title: "Excellence",
-          description: "We strive for excellence in every solution we deliver, ensuring the highest quality and performance."
+          description: "We engineer with precision, uphold the highest standards, and deliver scalable, future-proof digital solutions."
         },
         {
           title: "Innovation",
-          description: "We embrace innovation and continuously explore new technologies to provide cutting-edge solutions."
+          description: "We foster a culture of continuous innovation, leveraging emerging tech to unlock untapped opportunities."
         },
         {
           title: "Integrity",
-          description: "We operate with honesty, transparency, and ethical standards in all our business relationships."
-        },
-        {
-          title: "Partnership",
-          description: "We build long-term partnerships with our clients, focusing on their success as our primary goal."
+          description: "We build trust through transparency, secure development practices, and ethical use of technology."
         },
         {
           title: "Accountability",
-          description: "We take ownership of our actions and outcomes, delivering on our commitments with consistency and reliability."
+          description: "We take full ownership—from ideation to execution—ensuring every solution delivers measurable business value."
         },
         {
           title: "Customer Centricity",
-          description: "We put the customer at the heart of everything we do—listening, adapting, and creating meaningful impact."
+          description: "We co-create with clients, aligning digital strategy with user experience and long-term transformation goals."
+        },
+        {
+          title: "Partnership",
+          description: "We serve as strategic allies, embedding ourselves in your mission to accelerate growth through technology."
         }
       ].map((value, index) => (
         <motion.div
           key={index}
-          variants={fadeIn}
-          className="bg-white/10 backdrop-blur-sm p-6 rounded-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-left"
         >
           <h3 className="text-xl font-bold mb-3 text-cyan-300">{value.title}</h3>
           <p className="text-gray-200">{value.description}</p>
         </motion.div>
       ))}
-    </motion.div>
+    </div>
   </div>
 </section>
-
 
       {/* Our Team Section */}
       <section className="py-20 px-4 bg-white dark:bg-slate-900">
