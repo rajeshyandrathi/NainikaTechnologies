@@ -104,59 +104,83 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
-              Our <span className="text-cyan-600">Approach</span>
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              At Cloudforce Technologies, we take a tailored approach to analyze each client's unique needs, maximizing the return on IT investments.
-            </p>
-          </motion.div>
+     <section className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+        Our <span className="text-cyan-600">Approach</span>
+      </h2>
+      <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        At Cloudforce Technologies, we follow a proven six-phase approach to digital transformation—ensuring every solution is strategically aligned, technically sound, and delivers lasting business value.
+      </p>
+    </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Lightbulb size={32} />,
-                title: "Discover",
-                description: "We begin by thoroughly understanding your business objectives, challenges, and current technology landscape."
-              },
-              {
-                icon: <Globe size={32} />,
-                title: "Design",
-                description: "Our experts design customized solutions that align with your business goals and address your specific needs."
-              },
-              {
-                icon: <Award size={32} />,
-                title: "Deliver",
-                description: "We implement solutions with precision, ensuring seamless integration and minimal disruption to your operations."
-              }
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg"
-              >
-                <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg inline-block mb-4">
-                  {step.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">{step.title}</h3>
-                <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
-              </motion.div>
-            ))}
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: <Search size={32} />,
+          title: "Assess",
+          description:
+            "We begin by evaluating your current technology landscape, digital maturity, and business challenges to establish a strong foundation."
+        },
+        {
+          icon: <Lightbulb size={32} />,
+          title: "Discover",
+          description:
+            "Through workshops and stakeholder engagement, we uncover key insights into operational gaps, user expectations, and growth opportunities."
+        },
+        {
+          icon: <Compass size={32} />,
+          title: "Strategize",
+          description:
+            "We develop a clear digital roadmap that aligns technology initiatives with business objectives, timelines, and investment priorities."
+        },
+        {
+          icon: <Globe size={32} />,
+          title: "Design",
+          description:
+            "Our team architects scalable, secure, and user-centric solutions using modern platforms, cloud-native tools, and intelligent automation."
+        },
+        {
+          icon: <Truck size={32} />,
+          title: "Deliver",
+          description:
+            "We bring ideas to life by executing with agility and precision, ensuring seamless delivery, integration, and adoption across your organization."
+        },
+        {
+          icon: <LineChart size={32} />,
+          title: "Optimize",
+          description:
+            "Post-deployment, we analyze performance metrics, gather feedback, and continuously refine solutions for maximum impact and ROI."
+        }
+      ].map((step, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg"
+        >
+          <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg inline-block mb-4">
+            {step.icon}
           </div>
-        </div>
-      </section>
+          <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">
+            {step.title}
+          </h3>
+          <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Our Values Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
