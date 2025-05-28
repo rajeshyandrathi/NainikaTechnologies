@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-   <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+      <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={servicesRef}
@@ -209,7 +209,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-slate-800 dark:text-white">{service.title}</h3>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300">{service.description}</p>
-                  <Link href={/services#${service.title.toLowerCase().replace(/\s+/g, '-')}} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
+                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
                     Learn more <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>
