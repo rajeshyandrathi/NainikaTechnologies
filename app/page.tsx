@@ -153,38 +153,38 @@ export default function Home() {
             {[
               {
                 icon: <Code size={32} />,
-                title: "Software Development",
-                description: "Custom-built applications tailored to your specific business needs and objectives.",
+                title: "Cloud-Native Application Development",
+                description: "Build scalable, resilient cloud-native applications optimized for performance, agility, and seamless scalability to accelerate business innovation.",
                 image: "https://cdn.pixabay.com/photo/2023/06/23/05/08/software-8082767_1280.jpg"
               },
               {
                 icon: <Globe size={32} />,
-                title: "Web Development",
-                description: "Engaging, high-performance websites and web applications that deliver exceptional user experiences.",
+                title: "Innovative Web & Mobile Development",
+                description: "Craft sleek, responsive web and mobile applications designed for exceptional user engagement and seamless performance.",
                 image: "https://st4.depositphotos.com/12981370/24312/i/1600/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg"
               },
               {
                 icon: <Cloud size={32} />,
-                title: "Cloud Implementation",
-                description: "Seamless migration and optimization of cloud environments for improved efficiency and scalability.",
+                title: "Enterprise Cloud Architecture & Migration",
+                description: "Architect, migrate, and optimize mission-critical workloads to the cloud for enhanced agility, operational efficiency, seamless scalability, and accelerated innovation.",
                 image: "https://freerangestock.com/sample/140034/cloud-computing--digital-cloud-on-circuit-board.jpg"
               },
               {
                 icon: <Database size={32} />,
-                title: "Custom Integrations",
-                description: "Connecting disparate systems for streamlined operations and enhanced productivity.",
+                title: "API-Driven Integration & Intelligent Automation",
+                description: "ConnEnable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
                 image: "https://static.vecteezy.com/system/resources/previews/008/804/844/original/integration-data-system-system-integration-technology-concept-in-wireframe-hands-industrial-and-smart-technology-business-and-automation-solutions-illustration-vector.jpg"
               },
               {
                 icon: <ShoppingBag size={32} />,
-                title: "Ecommerce Solutions",
-                description: "Scalable platforms designed for online business success and growth.",
+                title: "AI-Powered E-commerce Solutions",
+                description: "Implement intelligent commerce platforms that deliver personalized customer experiences and boost conversions through advanced analytics and automation.",
                 image: "https://img.freepik.com/premium-photo/ecommerce-hd-8k-wallpaper-stock-photographic-image_890746-30616.jpg?w=2000"
               },
               {
                 icon: <TestTube size={32} />,
-                title: "Quality Assurance",
-                description: "Rigorous testing methodologies ensuring flawless performance and reliability.",
+                title: "Intelligent Quality Engineering",
+                description: "Implement advanced testing strategies powered by AI and automation to ensure superior product quality, faster releases, and seamless user experiences.",
                 image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
               }
             ].map((service, index) => (
