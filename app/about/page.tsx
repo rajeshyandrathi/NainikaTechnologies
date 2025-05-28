@@ -73,13 +73,16 @@ export default function AboutPage() {
                 Our <span className="text-cyan-600">Story</span>
               </h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Cloudforce Technologies was founded with a clear mission: to help businesses harness the power of technology to drive growth, efficiency, and innovation. We recognized that many organizations struggle to keep pace with rapidly evolving technology landscapes and need a trusted partner to guide their digital transformation journey.
+                Cloudforce Technologies was founded with a bold vision: to empower businesses to unlock their full potential through the strategic use of technology. In an era where digital disruption is constant and customer expectations are ever-evolving, we saw a critical need for a partner that not only understands technology but also knows how to align it with real business outcomes.
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Since our inception, we've been dedicated to delivering tailored technology solutions that address the unique challenges and opportunities of each client we serve. Our team of experienced professionals combines deep technical expertise with business acumen to ensure that every solution we provide delivers measurable value.
+                From the beginning, our mission has been clear—help organizations embrace digital transformation with confidence, clarity, and purpose. We understand that transformation isn't just about implementing new systems—it's about reimagining business models, optimizing processes, elevating customer experiences, and building the agility needed to compete in a digital-first world.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Our team of seasoned professionals brings together a powerful blend of technical depth and business insight. We specialize in crafting bespoke technology solutions that address the distinct challenges and opportunities our clients face—whether it's modernizing legacy systems, streamlining operations, enabling data-driven decision-making, or scaling with cloud-native platforms.
               </p>
               <p className="text-slate-600 dark:text-slate-300">
-                Today, Cloudforce Technologies stands as a leading technology partner for businesses across various industries, helping them navigate the complexities of the digital landscape and achieve their strategic objectives.
+                Today, Cloudforce Technologies stands as a trusted digital transformation partner to forward-thinking organizations across diverse industries. We don’t just deliver solutions—we drive lasting impact. By fostering innovation, enhancing efficiency, and accelerating digital maturity, we help our clients achieve their strategic goals and stay ahead in an increasingly competitive landscape.
               </p>
             </motion.div>
             <motion.div
