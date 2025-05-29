@@ -280,7 +280,7 @@ export default function ContactPage() {
     >
       <iframe
         title="Our Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.0533280523784!2d28.12112127532317!3d-25.989064077231155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956bd27be5295b%3A0x57fe84cd372c1746!2s1%20Boschendal%2C%2028%20Harry%20Galaun%20Dr%2C%20Halfway%20Gardens%2C%20Midrand%2C%201686%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1716998916691!5m2!1sen!2sus"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.3641594263954!2d28.108304876139076!3d-25.988885777209912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571df982b26bd%3A0xef20e9f5752b34f8!2sBoschendal%20Complex%20-%20Midrand.!5e0!3m2!1sen!2sza!4v1748522390986!5m2!1sen!2sza"
         width="100%"
         height="450"
         style={{ border: 0 }}
