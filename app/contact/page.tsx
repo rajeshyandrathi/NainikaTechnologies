@@ -254,46 +254,44 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
-              Our <span className="text-cyan-600">Location</span>
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Visit our office to meet our team and discuss your technology needs in person.
-            </p>
-          </motion.div>
+  <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+        Our <span className="text-cyan-600">Location</span>
+      </h2>
+      <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+        Visit us at our Midrand office. Use the map below to find directions.
+      </p>
+    </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="rounded-xl overflow-hidden shadow-lg h-[400px] bg-slate-200 dark:bg-slate-700"
-          >
-            {/* Placeholder for map - in a real implementation, you would integrate Google Maps or similar */}
-            <div className="w-full h-full flex items-center justify-center bg-slate-200 dark:bg-slate-700">
-              <div className="text-center">
-                <MapPin size={48} className="mx-auto mb-4 text-cyan-600" />
-                <h3 className="text-xl font-bold text-slate-800 dark:text-white">
-                  Cloudforce Technologies
-                </h3>
-                <p className="text-slate-600 dark:text-slate-300">
-                  1 Boschendal, 28 Harry Galaun Dr<br />
-                  Halfway Gardens, Midrand, South Africa, 1686
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="overflow-hidden rounded-xl shadow-lg"
+    >
+      <iframe
+        title="Our Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.0533280523784!2d28.12112127532317!3d-25.989064077231155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956bd27be5295b%3A0x57fe84cd372c1746!2s1%20Boschendal%2C%2028%20Harry%20Galaun%20Dr%2C%20Halfway%20Gardens%2C%20Midrand%2C%201686%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1716998916691!5m2!1sen!2sus"
+        width="100%"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="w-full h-[450px] rounded-xl border-0"
+      ></iframe>
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 }
