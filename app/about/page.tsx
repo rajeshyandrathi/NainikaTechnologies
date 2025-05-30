@@ -226,7 +226,8 @@ export default function AboutPage() {
   </div>
 </section>
 
-      {/* Our Team Section */}
+ {/* Our Team Section */}
+   {/*
       <section className="py-20 px-4 bg-white dark:bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -299,6 +300,7 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+   */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
