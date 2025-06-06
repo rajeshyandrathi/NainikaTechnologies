@@ -58,7 +58,7 @@ export default function Navbar() {
               <img
                 src="/Company-logo.png"
                 alt="Company Logo"
-                className="h-8 md:h-10"
+                className="h-12 md:h-14"
                 draggable={false}
               />
             </Link>
