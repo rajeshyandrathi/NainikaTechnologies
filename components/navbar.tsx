@@ -10,7 +10,6 @@ import { ThemeToggle } from "./theme-toggle";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [atBottom, setAtBottom] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -18,25 +17,13 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const innerHeight = window.innerHeight;
-      const scrollHeight = document.documentElement.scrollHeight;
-
-      // Debug logs (remove after confirming it works)
-      // console.log({ scrollY, innerHeight, scrollHeight, atBottom: scrollY + innerHeight >= scrollHeight - 20 });
 
       setScrolled(scrollY > 10);
-
-      // Use a threshold of 20px from bottom
-      if (scrollY + innerHeight >= scrollHeight - 20) {
-        setAtBottom(true);
-      } else {
-        setAtBottom(false);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Run on mount as well to detect if already at bottom
+    // Run on mount to set initial state
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -75,7 +62,7 @@ export default function Navbar() {
                 Cloudforce{" "}
                 <span
                   className={`${
-                    atBottom ? "text-black dark:text-white" : "text-white"
+                    scrolled ? "text-black dark:text-white" : "text-white"
                   }`}
                 >
                   Technologies
@@ -95,7 +82,7 @@ export default function Navbar() {
                   className={`font-medium transition-colors ${
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
-                      : atBottom
+                      : scrolled
                       ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
@@ -143,7 +130,7 @@ export default function Navbar() {
                   className={`block py-3 px-4 rounded-md font-medium transition-colors ${
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
-                      : atBottom
+                      : scrolled
                       ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
