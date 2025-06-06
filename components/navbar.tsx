@@ -12,19 +12,12 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -48,6 +41,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <img
@@ -66,21 +60,22 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-medium transition-colors ${
-                  pathname === link.href
-                    ? "text-cyan-600 dark:text-cyan-400"
-                    : scrolled || pathname !== "/"
-                    ? "text-slate-700 hover:text-cyan-600 dark:text-slate-200 dark:hover:text-cyan-400"
-                    : "text-white hover:text-cyan-300"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-medium transition-colors ${
+                    isActive
+                      ? "text-cyan-600 dark:text-cyan-400"
+                      : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <ThemeToggle />
           </nav>
 
@@ -111,19 +106,22 @@ export default function Navbar() {
           className="md:hidden bg-white dark:bg-slate-900 shadow-lg"
         >
           <div className="px-4 pt-2 pb-4 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block py-3 px-4 rounded-md font-medium ${
-                  pathname === link.href
-                    ? "bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400"
-                    : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block py-3 px-4 rounded-md font-medium transition-colors ${
+                    isActive
+                      ? "text-cyan-600 dark:text-cyan-400"
+                      : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
         </motion.div>
       )}
