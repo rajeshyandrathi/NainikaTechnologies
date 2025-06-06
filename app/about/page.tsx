@@ -339,9 +339,6 @@ export default function AboutPage() {
             "/Reliant.png",
             "/Synatic.png",
             "/cenegenics.png",
-            "/LANDSA.jpg",
-            "/Aument Capital.jpg:,
-            "/Hudl-logo-print-pantone.jpg",
           ].map((logo, index) => (
             <div key={index + logo} className="flex items-center px-8">
               <Image
