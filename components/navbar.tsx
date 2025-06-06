@@ -55,12 +55,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-            <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
-              Cloudforce{" "}
-              <span className={`${scrolled || pathname !== "/" ? "text-slate-800 dark:text-white" : "text-white"}`}>
-                Technologies
-              </span>
-            </span>
+              <img
+                src="/Company-logo.png"
+                alt="Company Logo"
+                className="h-8 md:h-10"
+                draggable={false}
+              />
             </Link>
           </div>
 
