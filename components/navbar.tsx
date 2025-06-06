@@ -57,13 +57,7 @@ export default function Navbar() {
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
                 Cloudforce{" "}
-                <span
-                  className={`${
-                    scrolled || pathname !== "/"
-                      ? "text-slate-800 dark:text-white"
-                      : "text-white"
-                  }`}
-                >
+                <span className="text-white">
                   Technologies
                 </span>
               </span>
