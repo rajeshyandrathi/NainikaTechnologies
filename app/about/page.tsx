@@ -334,7 +334,7 @@ export default function AboutPage() {
             "/ADA.png",
             "/AumentCapital.png",
             "/BCBS.png",
-            "/Cape-Union-Mart.png",
+            "/CapeUnionMart.png",
             "/cenegenics.png",
             "/ChangeHealthCare.png",
             "/CharterBrands_Logo_Black.png",
