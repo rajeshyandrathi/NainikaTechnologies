@@ -302,6 +302,58 @@ export default function AboutPage() {
       </section>
    */}
 
+      {/* Our Clients Section */}
+<section className="py-20 px-4 bg-white dark:bg-slate-900">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+        Our <span className="text-cyan-600">Clients</span>
+      </h2>
+      <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+        We proudly partner with forward-thinking businesses, public sector organizations, and global enterprises. Our clients trust us to turn complexity into clarity and ideas into outcomes.
+      </p>
+    </motion.div>
+
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={staggerContainer}
+      viewport={{ once: true }}
+      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center"
+    >
+      {[
+        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Oracle_logo.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/36/Accenture.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/Deloitte.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fb/Capgemini_201x_logo.svg"
+      ].map((logo, index) => (
+        <motion.div
+          key={index}
+          variants={fadeIn}
+          className="flex items-center justify-center grayscale hover:grayscale-0 transition"
+        >
+          <Image
+            src={logo}
+            alt={`Client ${index + 1}`}
+            width={120}
+            height={60}
+            className="object-contain"
+          />
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
         <div className="max-w-5xl mx-auto text-center">
