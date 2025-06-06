@@ -10,12 +10,21 @@ import { ThemeToggle } from "./theme-toggle";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [atBottom, setAtBottom] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const totalHeight = document.body.scrollHeight;
+      const visibleHeight = window.innerHeight;
+
+      setScrolled(scrollY > 10);
+      setAtBottom(scrollY + visibleHeight >= totalHeight - 10); // bottom threshold
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -51,7 +60,7 @@ export default function Navbar() {
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
                 Cloudforce{" "}
-                <span className="text-white">
+                <span className={`${atBottom ? "text-black dark:text-white" : "text-white"}`}>
                   Technologies
                 </span>
               </span>
@@ -69,6 +78,8 @@ export default function Navbar() {
                   className={`font-medium transition-colors ${
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
+                      : atBottom
+                      ? "text-black hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
                 >
@@ -115,6 +126,8 @@ export default function Navbar() {
                   className={`block py-3 px-4 rounded-md font-medium transition-colors ${
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
+                      : atBottom
+                      ? "text-black hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
                 >
