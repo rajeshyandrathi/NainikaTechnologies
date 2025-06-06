@@ -328,41 +328,39 @@ export default function AboutPage() {
         className="flex gap-16 w-max"
       >
         {[
-          "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/0/0e/Oracle_logo.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/3/36/Accenture.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/6/6a/Deloitte.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/f/fb/Capgemini_201x_logo.svg"
-        ]
-          .concat([
-            // Duplicate logos for seamless loop
-            "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
-          ])
-          .map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center grayscale hover:grayscale-0 transition"
-            >
-              <Image
-                src={logo}
-                alt={`Client ${index + 1}`}
-                width={120}
-                height={60}
-                className="object-contain"
-              />
-            </div>
-          ))}
+          "/ADA.png",
+          "/CHC.png",
+          "/CharterBrands_Logo_Black.png",
+          "/Hipten.png",
+          "/Navancio.png",
+          "/OBG.png",
+          "/Reliant.png",
+          "/Synatic.png",
+          "/cenegenics.png",
+
+          // Duplicate for seamless scrolling loop
+          "/ADA.png",
+          "/CHC.png",
+          "/CharterBrands_Logo_Black.png",
+          "/Hipten.png"
+        ].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center grayscale hover:grayscale-0 transition"
+          >
+            <Image
+              src={logo}
+              alt={`Client ${index + 1}`}
+              width={120}
+              height={60}
+              className="object-contain"
+            />
+          </div>
+        ))}
       </motion.div>
     </div>
   </div>
 </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
         <div className="max-w-5xl mx-auto text-center">
