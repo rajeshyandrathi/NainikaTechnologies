@@ -18,14 +18,27 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const totalHeight = document.body.scrollHeight;
-      const visibleHeight = window.innerHeight;
+      const innerHeight = window.innerHeight;
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      // Debug logs (remove after confirming it works)
+      // console.log({ scrollY, innerHeight, scrollHeight, atBottom: scrollY + innerHeight >= scrollHeight - 20 });
 
       setScrolled(scrollY > 10);
-      setAtBottom(scrollY + visibleHeight >= totalHeight - 10); // bottom threshold
+
+      // Use a threshold of 20px from bottom
+      if (scrollY + innerHeight >= scrollHeight - 20) {
+        setAtBottom(true);
+      } else {
+        setAtBottom(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Run on mount as well to detect if already at bottom
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -60,7 +73,11 @@ export default function Navbar() {
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
                 Cloudforce{" "}
-                <span className={`${atBottom ? "text-black dark:text-white" : "text-white"}`}>
+                <span
+                  className={`${
+                    atBottom ? "text-black dark:text-white" : "text-white"
+                  }`}
+                >
                   Technologies
                 </span>
               </span>
@@ -79,7 +96,7 @@ export default function Navbar() {
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
                       : atBottom
-                      ? "text-black hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
+                      ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
                 >
@@ -127,7 +144,7 @@ export default function Navbar() {
                     isActive
                       ? "text-cyan-600 dark:text-cyan-400"
                       : atBottom
-                      ? "text-black hover:text-cyan-600 dark:text-white dark:hover:text-cyan-400"
+                      ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                       : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
                   }`}
                 >
