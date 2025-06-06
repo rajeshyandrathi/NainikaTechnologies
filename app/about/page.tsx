@@ -334,7 +334,7 @@ export default function AboutPage() {
             "/ADA.png",
             "/AumentCapital.png",
             "/BCBS.png",
-            "/Cape Union Mart.png",
+            "/Cape-Union-Mart.png",
             "/cenegenics.png",
             "/ChangeHealthCare.png",
             "/CharterBrands_Logo_Black.png",
@@ -352,7 +352,7 @@ export default function AboutPage() {
             "/UrbanFindr.png",
             "/vt_team_logo.png",
           ].map((logo, index) => (
-            <div key={index + logo} className="flex items-center px-8">
+            <div key={index + logo} className="flex items-center px-8 shrink-0">
               <Image
                 src={logo}
                 alt={`Client ${index + 1}`}
@@ -367,6 +367,7 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
+
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
