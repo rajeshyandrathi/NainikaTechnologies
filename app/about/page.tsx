@@ -302,8 +302,8 @@ export default function AboutPage() {
       </section>
    */}
 
-      {/* Our Clients Section */}
-<section className="py-20 px-4 bg-white dark:bg-slate-900">
+{/* Our Clients Section */}
+<section className="py-20 px-4 bg-white dark:bg-slate-900 overflow-hidden">
   <div className="max-w-7xl mx-auto">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -320,40 +320,49 @@ export default function AboutPage() {
       </p>
     </motion.div>
 
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      variants={staggerContainer}
-      viewport={{ once: true }}
-      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center"
-    >
-      {[
-        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/0/0e/Oracle_logo.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/3/36/Accenture.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/6/6a/Deloitte.svg",
-        "https://upload.wikimedia.org/wikipedia/commons/f/fb/Capgemini_201x_logo.svg"
-      ].map((logo, index) => (
-        <motion.div
-          key={index}
-          variants={fadeIn}
-          className="flex items-center justify-center grayscale hover:grayscale-0 transition"
-        >
-          <Image
-            src={logo}
-            alt={`Client ${index + 1}`}
-            width={120}
-            height={60}
-            className="object-contain"
-          />
-        </motion.div>
-      ))}
-    </motion.div>
+    <div className="relative overflow-hidden">
+      <motion.div
+        initial={{ x: "100%" }}
+        animate={{ x: "-100%" }}
+        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+        className="flex gap-16 w-max"
+      >
+        {[
+          "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/0/0e/Oracle_logo.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/3/36/Accenture.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/Deloitte.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/f/fb/Capgemini_201x_logo.svg"
+        ]
+          .concat([
+            // Duplicate logos for seamless loop
+            "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/08/Google_2015_logo.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+          ])
+          .map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center grayscale hover:grayscale-0 transition"
+            >
+              <Image
+                src={logo}
+                alt={`Client ${index + 1}`}
+                width={120}
+                height={60}
+                className="object-contain"
+              />
+            </div>
+          ))}
+      </motion.div>
+    </div>
   </div>
 </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
         <div className="max-w-5xl mx-auto text-center">
