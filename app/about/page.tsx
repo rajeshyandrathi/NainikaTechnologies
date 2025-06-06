@@ -324,21 +324,33 @@ export default function AboutPage() {
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "-50%" }}
-        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
         className="flex w-[200%]"
       >
-        {/* Duplicate logos once for seamless loop */}
         {[...Array(2)].flatMap(() =>
           [
+            "/AbinBev.png",
+            "/ABSA.png",
             "/ADA.png",
-            "/CHC.png",
+            "/AumentCapital.png",
+            "/BCBS.png",
+            "/Cape Union Mart.png",
+            "/cenegenics.png",
+            "/ChangeHealthCare.png",
             "/CharterBrands_Logo_Black.png",
+            "/CHC.png",
+            "/GymShark.png",
+            "/HCSC.png",
             "/Hipten.png",
+            "/House-Of-Makers.png",
+            "/Hudl-logo-print-pantone.png",
+            "/LANDSA.png",
             "/Navancio.png",
             "/OBG.png",
             "/Reliant.png",
             "/Synatic.png",
-            "/cenegenics.png",
+            "/UrbanFindr.png",
+            "/vt_team_logo.png",
           ].map((logo, index) => (
             <div key={index + logo} className="flex items-center px-8">
               <Image
