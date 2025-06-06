@@ -322,45 +322,40 @@ export default function AboutPage() {
 
     <div className="relative overflow-hidden">
       <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: "-100%" }}
-        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-        className="flex gap-16 w-max"
+        initial={{ x: 0 }}
+        animate={{ x: "-50%" }}
+        transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+        className="flex w-[200%]"
       >
-        {[
-          "/ADA.png",
-          "/CHC.png",
-          "/CharterBrands_Logo_Black.png",
-          "/Hipten.png",
-          "/Navancio.png",
-          "/OBG.png",
-          "/Reliant.png",
-          "/Synatic.png",
-          "/cenegenics.png",
-
-          // Duplicate for seamless scrolling loop
-          "/ADA.png",
-          "/CHC.png",
-          "/CharterBrands_Logo_Black.png",
-          "/Hipten.png"
-        ].map((logo, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-center grayscale hover:grayscale-0 transition"
-          >
-            <Image
-              src={logo}
-              alt={`Client ${index + 1}`}
-              width={120}
-              height={60}
-              className="object-contain"
-            />
-          </div>
-        ))}
+        {/* Duplicate logos once for seamless loop */}
+        {[...Array(2)].flatMap(() =>
+          [
+            "/ADA.png",
+            "/CHC.png",
+            "/CharterBrands_Logo_Black.png",
+            "/Hipten.png",
+            "/Navancio.png",
+            "/OBG.png",
+            "/Reliant.png",
+            "/Synatic.png",
+            "/cenegenics.png",
+          ].map((logo, index) => (
+            <div key={index + logo} className="flex items-center px-8">
+              <Image
+                src={logo}
+                alt={`Client ${index + 1}`}
+                width={120}
+                height={60}
+                className="object-contain grayscale hover:grayscale-0 transition"
+              />
+            </div>
+          ))
+        )}
       </motion.div>
     </div>
   </div>
 </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
         <div className="max-w-5xl mx-auto text-center">
