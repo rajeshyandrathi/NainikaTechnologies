@@ -342,7 +342,6 @@ export default function AboutPage() {
             "/LANDSA.jpg",
             "/Aument Capital.jpg:,
             "/Hudl-logo-print-pantone.jpg",
-            "/UrbanFindr.jpeg",
           ].map((logo, index) => (
             <div key={index + logo} className="flex items-center px-8">
               <Image
