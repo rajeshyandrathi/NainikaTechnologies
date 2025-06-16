@@ -128,21 +128,18 @@ export default function AboutPage() {
             {[
               {
                 image: "/Discover.jpeg",
-                icon: <Lightbulb size={32} />,
                 title: "Discover",
                 description:
                   "We begin by deeply understanding your business goals, current systems, and strategic challenges. This phase ensures that we align our solutions with your long-term vision from the outset."
               },
               {
                 image: "/Design.jpeg",
-                icon: <Globe size={32} />,
                 title: "Design",
                 description:
                   "We architect intelligent, scalable, and secure solutions tailored to your needs. Our designs are flexible, future-ready, and optimized for agility, performance, and user experience."
               },
               {
                 image: "/Deliver.jpeg",
-                icon: <Award size={32} />,
                 title: "Deliver",
                 description:
                   "We execute with precision—ensuring seamless deployment, robust change management, and high adoption. We focus on outcomes, not just implementation, to maximize ROI and business impact."
@@ -154,9 +151,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg text-center"
+                className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="w-24 h-24 mx-auto mb-4 relative rounded-lg overflow-hidden">
+                <div className="relative h-48 w-full">
                   <Image
                     src={step.image}
                     alt={step.title}
@@ -164,11 +161,10 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg inline-block mb-4">
-                  {step.icon}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">{step.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-slate-800 dark:text-white">{step.title}</h3>
-                <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
               </motion.div>
             ))}
           </div>
