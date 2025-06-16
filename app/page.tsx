@@ -173,7 +173,7 @@ export default function Home() {
                 icon: <Database size={32} />,
                 title: "API-Driven Integration & Intelligent Automation",
                 description: "ConnEnable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
-                image: "https://static.vecteezy.com/system/resources/previews/008/804/844/original/integration-data-system-system-integration-technology-concept-in-wireframe-hands-industrial-and-smart-technology-business-and-automation-solutions-illustration-vector.jpg"
+                image: "/API Integration.jpeg"
               },
               {
                 icon: <ShoppingBag size={32} />,
