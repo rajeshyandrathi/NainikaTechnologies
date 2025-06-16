@@ -68,10 +68,10 @@ export default function Home() {
         </motion.div>
       </section>
 
-   {/* About Section */}
+{/* About Section */}
 <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
   <div className="max-w-7xl mx-auto">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="flex justify-center items-center"> {/* Changed to flexbox */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
