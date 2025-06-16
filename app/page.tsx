@@ -117,7 +117,7 @@ export default function Home() {
               className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
             >
               <Image
-                src="https://c8.alamy.com/comp/T0F3NK/partnership-business-collaboration-and-modern-technology-concept-vector-of-entrepreneurs-and-freelance-community-members-team-working-on-a-handshake-T0F3NK.jpg"
+                src="/Partner Technology.jpeg"
                 alt="Business Technology Partnership"
                 fill
                 className="object-cover"
