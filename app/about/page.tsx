@@ -129,21 +129,18 @@ export default function AboutPage() {
         {
           icon: <Lightbulb size={32} />,
           title: "Discover",
-           image: "/discover.jpeg",
           description:
             "We begin by deeply understanding your business goals, current systems, and strategic challenges. This phase ensures that we align our solutions with your long-term vision from the outset."
         },
         {
           icon: <Globe size={32} />,
           title: "Design",
-          image: "/design.jpeg",
           description:
             "We architect intelligent, scalable, and secure solutions tailored to your needs. Our designs are flexible, future-ready, and optimized for agility, performance, and user experience."
         },
         {
           icon: <Award size={32} />,
           title: "Deliver",
-          image: "/deliver.jpeg",
           description:
             "We execute with precision—ensuring seamless deployment, robust change management, and high adoption. We focus on outcomes, not just implementation, to maximize ROI and business impact."
         }
