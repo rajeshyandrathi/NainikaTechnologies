@@ -346,7 +346,7 @@ export default function AboutPage() {
             <motion.div
               initial={{ x: 0 }}
               animate={{ x: "-50%" }}
-              transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
               className="flex w-[200%]"
             >
               {[...Array(2)].flatMap(() =>
