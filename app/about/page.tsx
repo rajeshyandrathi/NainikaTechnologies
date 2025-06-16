@@ -230,7 +230,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden"
               >
-                <div className="relative h-32 w-full">
+                <div className="relative h-48 w-full">
                   <Image
                     src={value.image}
                     alt={value.title}
