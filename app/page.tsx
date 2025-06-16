@@ -161,7 +161,7 @@ export default function Home() {
                 icon: <Globe size={32} />,
                 title: "Innovative Web & Mobile Development",
                 description: "Craft sleek, responsive web and mobile applications designed for exceptional user engagement and seamless performance.",
-                image: "https://st4.depositphotos.com/12981370/24312/i/1600/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg"
+                image: "/Website-Mobile-App-Design-Development.jpeg"
               },
               {
                 icon: <Cloud size={32} />,
@@ -179,7 +179,7 @@ export default function Home() {
                 icon: <ShoppingBag size={32} />,
                 title: "AI-Powered E-commerce Solutions",
                 description: "Implement intelligent commerce platforms that deliver personalized customer experiences and boost conversions through advanced analytics and automation.",
-                image: "https://img.freepik.com/premium-photo/ecommerce-hd-8k-wallpaper-stock-photographic-image_890746-30616.jpg?w=2000"
+                image: "/Ecommerce.jpeg"
               },
               {
                 icon: <TestTube size={32} />,
