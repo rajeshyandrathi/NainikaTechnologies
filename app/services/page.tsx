@@ -22,7 +22,7 @@ export default function ServicesPage() {
     },
   };
 
- const services = [
+const services = [
   {
     id: "cloud-application-development",
     icon: <Code size={32} />,
@@ -44,7 +44,7 @@ export default function ServicesPage() {
     icon: <Globe size={32} />,
     title: "Innovative Web & Mobile Development",
     description: "We create engaging, high-performance websites and mobile applications that deliver exceptional user experiences across all platforms and devices.",
-    image: "https://st4.depositphotos.com/12981370/24312/i/1600/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg",
+    image: "/Website-Mobile-App-Design-Development.jpeg",
     features: [
       "Responsive, mobile-first website design",
       "Progressive Web Applications (PWAs)",
@@ -61,7 +61,7 @@ export default function ServicesPage() {
     icon: <Cloud size={32} />,
     title: "Enterprise Cloud Architecture & Migration",
     description: "We help organizations modernize and scale through seamless cloud migration and intelligent architecture design, ensuring cost-effective, secure, and scalable cloud environments.",
-    image: "https://freerangestock.com/sample/140034/cloud-computing--digital-cloud-on-circuit-board.jpg",
+    image: "/Cloud Architecture.jpeg",
     features: [
       "Cloud migration strategy and execution",
       "Cloud infrastructure planning, design, and optimization",
@@ -78,7 +78,7 @@ export default function ServicesPage() {
     icon: <Database size={32} />,
     title: "API-Driven Integration & Intelligent Automation",
     description: "Connecting disparate systems and automating workflows to streamline operations, improve data accuracy, and boost productivity across your enterprise.",
-    image: "https://static.vecteezy.com/system/resources/previews/008/804/844/original/integration-data-system-system-integration-technology-concept-in-wireframe-hands-industrial-and-smart-technology-business-and-automation-solutions-illustration-vector.jpg",
+    image: "/API Integration.jpeg",
     features: [
       "Enterprise application and system integration",
       "Data integration, transformation, and ETL processes",
@@ -124,7 +124,6 @@ export default function ServicesPage() {
     ]
   }
 ];
-
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
