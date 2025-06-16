@@ -194,12 +194,6 @@ export default function ServicesPage() {
                         </motion.li>
                       ))}
                     </ul>
-                    <Link
-                      href="/contact"
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
-                    >
-                      Discuss Your Project <ArrowRight size={18} />
-                    </Link>
                   </div>
                 </motion.div>
               );
