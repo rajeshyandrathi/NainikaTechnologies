@@ -68,7 +68,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* About Section */}
+    {/* About Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -81,15 +81,16 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
                 Your Strategic <span className="text-cyan-600">Technology Partner</span>
               </h2>
-             <p className="text-slate-600 dark:text-slate-300 mb-6">
-                At Cloudforce Technologies, we take a tailored approach to analyze each client's unique needs, maximizing the return on IT investments. Our team of experienced technical experts is dedicated to helping businesses stay ahead in the digital landscape.
+              <p className="text-slate-600 dark:text-slate-300 mb-6">
+                At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Custom solutions tailored to your business",
-                  "Experienced team of technical experts",
-                  "Maximizing return on IT investments",
-                  "Strategic approach to digital transformation"
+                  "Tailored IT Solutions for Your Business Needs: We analyze your unique landscape to develop scalable, future-proof systems that evolve with your goals.",
+                  "Experienced Technical Experts You Can Trust: Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement.",
+                  "Maximizing ROI on Every Technology Investment: We align your IT spend with strategic outcomes—streamlining operations, reducing risk, and unlocking long-term value.",
+                  "A Strategic Approach to Digital Transformation: From legacy modernization to cloud adoption and automation, we help you navigate complex change with clarity and confidence.",
+                  "End-to-End Support and Partnership: We’re with you every step of the way—from consultation and implementation to optimization and long-term support."
                 ].map((item, index) => (
                   <motion.li
                     key={index}
