@@ -299,7 +299,7 @@ interface CounterAnimationProps {
 
 const CounterAnimation: React.FC<CounterAnimationProps> = ({ target, suffix = "", className = "" }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false, // Changed from true to false
     threshold: 0.1,
   });
 
@@ -320,6 +320,7 @@ const CounterAnimation: React.FC<CounterAnimationProps> = ({ target, suffix = ""
     };
 
     if (inView) {
+      setCount(0); // Reset count when coming into view
       animationFrame = requestAnimationFrame(step);
     }
 
