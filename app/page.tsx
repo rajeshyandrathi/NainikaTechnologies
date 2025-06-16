@@ -185,7 +185,7 @@ export default function Home() {
                 icon: <TestTube size={32} />,
                 title: "Intelligent Quality Engineering",
                 description: "Implement advanced testing strategies powered by AI and automation to ensure superior product quality, faster releases, and seamless user experiences.",
-                image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+                image: "/Quality Assurance.jpeg"
               }
             ].map((service, index) => (
               <motion.div
