@@ -68,64 +68,65 @@ export default function Home() {
         </motion.div>
       </section>
 
-    {/* About Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
+   {/* About Section */}
+<section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+  <div className="max-w-7xl mx-auto">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center" // Added text-center class here
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
+          Your Strategic <span className="text-cyan-600">Technology Partner</span>
+        </h2>
+        <p className="text-slate-600 dark:text-slate-300 mb-6">
+          At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+        </p>
+        <ul className="space-y-3">
+          {[
+            "Tailored IT Solutions for Your Business Needs - We analyze your unique landscape to develop scalable, future-proof systems that evolve with your goals.",
+            "Experienced Technical Experts You Can Trust - Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement.",
+            "Maximizing ROI on Every Technology Investment - We align your IT spend with strategic outcomes—streamlining operations, reducing risk, and unlocking long-term value.",
+            "A Strategic Approach to Digital Transformation - From legacy modernization to cloud adoption and automation, we help you navigate complex change with clarity and confidence.",
+            "End-to-End Support and Partnership - We are with you every step of the way—from consultation and implementation to optimization and long-term support."
+          ].map((item, index) => (
+            <motion.li
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
+              className="flex items-start gap-2"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
-                Your Strategic <span className="text-cyan-600">Technology Partner</span>
-              </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
-                At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Tailored IT Solutions for Your Business Needs - We analyze your unique landscape to develop scalable, future-proof systems that evolve with your goals.",
-                  "Experienced Technical Experts You Can Trust - Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement.",
-                  "Maximizing ROI on Every Technology Investment - We align your IT spend with strategic outcomes—streamlining operations, reducing risk, and unlocking long-term value.",
-                  "A Strategic Approach to Digital Transformation - From legacy modernization to cloud adoption and automation, we help you navigate complex change with clarity and confidence.",
-                  "End-to-End Support and Partnership - We are with you every step of the way—from consultation and implementation to optimization and long-term support."
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-                    <span className="text-slate-700 dark:text-slate-200">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-              <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
-                Learn more about us <ArrowRight size={16} className="ml-2" />
-              </Link>
-            </motion.div>
-            {/*  <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
-            >
-              <Image
-                src="/Partner Technology.jpeg"
-                alt="Business Technology Partnership"
-                fill
-                className="object-cover"
-              />
-            </motion.div> */}
-          </div>
-        </div>
-      </section>
+              <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
+              <span className="text-slate-700 dark:text-slate-200">{item}</span>
+            </motion.li>
+          ))}
+        </ul>
+        <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
+          Learn more about us <ArrowRight size={16} className="ml-2" />
+        </Link>
+      </motion.div>
+      {/*  <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
+      >
+        <Image
+          src="/Partner Technology.jpeg"
+          alt="Business Technology Partnership"
+          fill
+          className="object-cover"
+        />
+      </motion.div> */}
+    </div>
+  </div>
+</section>
 
       {/* Services Section */}
       <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
