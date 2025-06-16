@@ -86,11 +86,11 @@ export default function Home() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "Tailored IT Solutions for Your Business Needs: We analyze your unique landscape to develop scalable, future-proof systems that evolve with your goals.",
-                  "Experienced Technical Experts You Can Trust: Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement.",
-                  "Maximizing ROI on Every Technology Investment: We align your IT spend with strategic outcomes—streamlining operations, reducing risk, and unlocking long-term value.",
-                  "A Strategic Approach to Digital Transformation: From legacy modernization to cloud adoption and automation, we help you navigate complex change with clarity and confidence.",
-                  "End-to-End Support and Partnership: We’re with you every step of the way—from consultation and implementation to optimization and long-term support."
+                  "Tailored IT Solutions for Your Business Needs - We analyze your unique landscape to develop scalable, future-proof systems that evolve with your goals.",
+                  "Experienced Technical Experts You Can Trust - Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement.",
+                  "Maximizing ROI on Every Technology Investment - We align your IT spend with strategic outcomes—streamlining operations, reducing risk, and unlocking long-term value.",
+                  "A Strategic Approach to Digital Transformation - From legacy modernization to cloud adoption and automation, we help you navigate complex change with clarity and confidence.",
+                  "End-to-End Support and Partnership - We are with you every step of the way—from consultation and implementation to optimization and long-term support."
                 ].map((item, index) => (
                   <motion.li
                     key={index}
