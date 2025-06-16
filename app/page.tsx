@@ -89,9 +89,9 @@ export default function Home() {
           {[
             "Tailored IT Solutions for Your Business Needs",
             "Experienced Technical Experts You Can Trust",
-            "Maximizing ROI on Every Technology Investment",
-            "A Strategic Approach to Digital Transformation",
-            "End-to-End Support and Partnership"
+            <span style={{ paddingLeft: '25px' }}>Maximizing ROI on Every Technology Investment</span>,
+            <span style={{ paddingLeft: '8px' }}>A Strategic Approach to Digital Transformation</span>,
+            <span style={{ paddingRight: '69px' }}>End-to-End Support and Partnership</span>
           ].map((item, index) => (
             <motion.li
               key={index}
