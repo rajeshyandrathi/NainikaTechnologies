@@ -81,15 +81,29 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
                 Your Strategic <span className="text-cyan-600">Technology Partner</span>
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
-                At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+             <p className="text-slate-600 dark:text-slate-300 mb-6">
+                At Cloudforce Technologies, we take a tailored approach to analyze each client's unique needs, maximizing the return on IT investments. Our team of experienced technical experts is dedicated to helping businesses stay ahead in the digital landscape.
               </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
-                We provide tailored IT solutions for your business needs, analyzing your unique landscape to develop scalable, future-proof systems that evolve with your goals. Our team brings deep industry experience, hands-on technical knowledge, and a results-driven mindset to every engagement, ensuring you have experienced technical experts you can trust.
-              </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-6">
-                We focus on maximizing ROI on every technology investment, aligning your IT spend with strategic outcomes to streamline operations, reduce risk, and unlock long-term value. From legacy modernization to cloud adoption and automation, we offer a strategic approach to digital transformation, helping you navigate complex change with clarity and confidence. We provide end-to-end support and partnership, ensuring we're with you every step of the way—from consultation and implementation to optimization and long-term support.
-              </p>
+              <ul className="space-y-3">
+                {[
+                  "Custom solutions tailored to your business",
+                  "Experienced team of technical experts",
+                  "Maximizing return on IT investments",
+                  "Strategic approach to digital transformation"
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-2"
+                  >
+                    <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-slate-700 dark:text-slate-200">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
               <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
                 Learn more about us <ArrowRight size={16} className="ml-2" />
               </Link>
