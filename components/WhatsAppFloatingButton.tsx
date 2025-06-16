@@ -24,7 +24,7 @@ export default function WhatsAppFloatingButton() {
       aria-label="Chat with us on WhatsApp"
     >
       <Image
-        src="/whatsappicon.jpeg"
+        src="/Whatsappicon.jpeg"
         alt="WhatsApp"
         width={48}
         height={48}
