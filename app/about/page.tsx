@@ -192,26 +192,32 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                image: "/Excellence.jpeg",
                 title: "Excellence",
                 description: "We engineer with precision, uphold the highest standards, and deliver scalable, future-proof digital solutions."
               },
               {
+                image: "/Innovation.jpeg",
                 title: "Innovation",
                 description: "We foster a culture of continuous innovation, leveraging emerging tech to unlock untapped opportunities."
               },
               {
+                image: "/Integrity.jpeg",
                 title: "Integrity",
                 description: "We build trust through transparency, secure development practices, and ethical use of technology."
               },
               {
+                image: "/Accountability.jpeg",
                 title: "Accountability",
                 description: "We take full ownership—from ideation to execution—ensuring every solution delivers measurable business value."
               },
               {
+                image: "/Customer Centricity.jpeg",
                 title: "Customer Centricity",
                 description: "We co-create with clients, aligning digital strategy with user experience and long-term transformation goals."
               },
               {
+                image: "/Partnership.jpeg",
                 title: "Partnership",
                 description: "We serve as strategic allies, embedding ourselves in your mission to accelerate growth through technology."
               }
@@ -222,10 +228,20 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-left"
+                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden"
               >
-                <h3 className="text-xl font-bold mb-3 text-cyan-300">{value.title}</h3>
-                <p className="text-gray-200">{value.description}</p>
+                <div className="relative h-32 w-full">
+                  <Image
+                    src={value.image}
+                    alt={value.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-cyan-300">{value.title}</h3>
+                  <p className="text-gray-200">{value.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
