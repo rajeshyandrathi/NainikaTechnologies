@@ -34,6 +34,8 @@ export default function ServicesPage() {
         "Legacy system modernization with minimal disruption",
         "Mobile and web app development",
         "API-first development and microservices architecture",
+        "Serverless computing and event-driven architecture implementation",
+        "Robust security design and compliance adherence",
         "Integration with platforms like Salesforce, AWS, Azure, Google Cloud, and HubSpot"
       ]
     },
@@ -66,7 +68,6 @@ export default function ServicesPage() {
     "Serverless architecture implementation for scalability and cost-efficiency",
     "Cloud security, governance, and regulatory compliance",
     "Hybrid and multi-cloud environment setup and management",
-    "Cloud-native DevOps and CI/CD implementation",
     "Cost control, performance tuning, and monitoring setup",
     "Disaster recovery planning and high availability design",
     "Cloud resource automation using Terraform and CloudFormation"
@@ -103,7 +104,6 @@ export default function ServicesPage() {
     "Omnichannel retail solutions for unified customer engagement",
     "AI-powered product recommendations and personalized shopping experiences",
     "Automated marketing and customer segmentation using AI analytics",
-    "Integration with CRM, ERP, and third-party tools",
     "Scalable cloud hosting and performance optimization"
   ]
 },
@@ -120,7 +120,6 @@ export default function ServicesPage() {
     "User acceptance testing (UAT) to meet business requirements",
     "Continuous integration and continuous delivery (CI/CD) pipelines",
     "Test automation strategy and maintenance",
-    "Regression testing to ensure stability",
     "Real-time monitoring and analytics for quality metrics"
   ]
 }
