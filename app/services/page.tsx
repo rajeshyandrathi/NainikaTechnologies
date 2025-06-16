@@ -35,8 +35,7 @@ export default function ServicesPage() {
         "Mobile app development",
         "API development and integration",
         "Enterprise software solutions"
-      ],
-      caseStudy: "Helped a financial services company reduce operational costs by 35% through custom workflow automation software."
+      ]
     },
     {
       id: "web-development",
@@ -50,8 +49,7 @@ export default function ServicesPage() {
         "Content Management Systems",
         "Web portal development",
         "UI/UX design and optimization"
-      ],
-      caseStudy: "Developed a customer portal for a healthcare provider that improved patient engagement by 45%."
+      ]
     },
     {
       id: "cloud-implementation",
@@ -65,8 +63,7 @@ export default function ServicesPage() {
         "Cloud infrastructure optimization",
         "Serverless architecture implementation",
         "Cloud security and compliance"
-      ],
-      caseStudy: "Migrated a manufacturing company to AWS, resulting in 40% cost reduction and 99.9% uptime."
+      ]
     },
     {
       id: "custom-integrations",
@@ -80,8 +77,7 @@ export default function ServicesPage() {
         "CRM and ERP integration",
         "Third-party API integration",
         "Middleware development"
-      ],
-      caseStudy: "Integrated CRM and ERP systems for a retail chain, reducing data entry time by 70% and improving data accuracy."
+      ]
     },
     {
       id: "ecommerce-solutions",
@@ -95,8 +91,7 @@ export default function ServicesPage() {
         "Payment gateway integration",
         "Inventory management systems",
         "Omnichannel retail solutions"
-      ],
-      caseStudy: "Launched an ecommerce platform for a specialty retailer that increased online sales by 120% in the first year."
+      ]
     },
     {
       id: "quality-assurance",
@@ -110,8 +105,7 @@ export default function ServicesPage() {
         "Security testing",
         "User acceptance testing",
         "Continuous integration/continuous delivery"
-      ],
-      caseStudy: "Implemented automated testing for a fintech application, reducing testing time by 60% and improving release quality."
+      ]
     }
   ];
 
@@ -200,14 +194,6 @@ export default function ServicesPage() {
                         </motion.li>
                       ))}
                     </ul>
-                    <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg border-l-4 border-cyan-500 mb-6">
-                      <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">
-                        Success Story
-                      </h3>
-                      <p className="text-slate-600 dark:text-slate-300">
-                        {service.caseStudy}
-                      </p>
-                    </div>
                     <Link
                       href="/contact"
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
