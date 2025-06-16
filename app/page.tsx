@@ -155,7 +155,7 @@ export default function Home() {
                 icon: <Code size={32} />,
                 title: "Cloud-Native Application Development",
                 description: "Build scalable, resilient cloud-native applications optimized for performance, agility, and seamless scalability to accelerate business innovation.",
-                image: "https://cdn.pixabay.com/photo/2023/06/23/05/08/software-8082767_1280.jpg"
+                image: "/Cloud-Application-Development.jpeg"
               },
               {
                 icon: <Globe size={32} />,
