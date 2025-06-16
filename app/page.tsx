@@ -87,8 +87,8 @@ export default function Home() {
         </p>
         <ul className="space-y-3 text-center">
           {[
-            { text: "Tailored IT Solutions for Your Business Needs", paddingLeft: null },
-            { text: "Experienced Technical Experts You Can Trust", paddingLeft: null },
+            { text: "Tailored IT Solutions for Your Business Needs" },
+            { text: "Experienced Technical Experts You Can Trust" },
             { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
             { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
             { text: "End-to-End Support and Partnership", paddingRight: '69px' }
@@ -100,7 +100,10 @@ export default function Home() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
               className="flex items-start gap-2 justify-center"
-              style={{ paddingLeft: item.paddingLeft, paddingRight: item.paddingRight }}
+              style={{
+                ...(item.paddingLeft && { paddingLeft: item.paddingLeft }),
+                ...(item.paddingRight && { paddingRight: item.paddingRight })
+              }}
             >
               <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
               <span className="text-slate-700 dark:text-slate-200">{item.text}</span>
