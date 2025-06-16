@@ -9,7 +9,7 @@ import { ArrowRight, CheckCircle, Cloud, Code, Database, Globe, ShoppingBag, Tes
 
 export default function Home() {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [statsRef, statsInView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [statsRef, statsInView] = useInView({ threshold: 0.1 });
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
       </section>
 
-     {/* Stats Section */}
+      {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
