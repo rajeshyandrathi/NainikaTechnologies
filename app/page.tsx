@@ -220,8 +220,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+     {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our <span className="text-cyan-400">Experience</span>
+          </h2>
+        </div>
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={statsRef}
