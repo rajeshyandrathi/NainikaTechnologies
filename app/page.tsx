@@ -206,7 +206,7 @@ export default function Home() {
                     <div className="p-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-slate-800 dark:text-white">{service.title}</h3>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300">{service.description}</p>
                   <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
