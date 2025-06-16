@@ -77,7 +77,7 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center" // Added text-center class here
+        className="text-center"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
           Your Strategic <span className="text-cyan-600">Technology Partner</span>
@@ -85,13 +85,13 @@ export default function Home() {
         <p className="text-slate-600 dark:text-slate-300 mb-6">
           At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
         </p>
-        <ul className="space-y-3 text-center"> {/* Added text-center class here */}
+        <ul className="space-y-3 text-center">
           {[
-            "Tailored IT Solutions for Your Business Needs",
-            "Experienced Technical Experts You Can Trust",
-            <span style={{ paddingLeft: '25px' }}>Maximizing ROI on Every Technology Investment</span>,
-            <span style={{ paddingLeft: '8px' }}>A Strategic Approach to Digital Transformation</span>,
-            <span style={{ paddingRight: '69px' }}>End-to-End Support and Partnership</span>
+            { text: "Tailored IT Solutions for Your Business Needs", paddingLeft: null },
+            { text: "Experienced Technical Experts You Can Trust", paddingLeft: null },
+            { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
+            { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
+            { text: "End-to-End Support and Partnership", paddingRight: '69px' }
           ].map((item, index) => (
             <motion.li
               key={index}
@@ -99,10 +99,11 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-start gap-2 justify-center" // Added justify-center here
+              className="flex items-start gap-2 justify-center"
+              style={{ paddingLeft: item.paddingLeft, paddingRight: item.paddingRight }}
             >
               <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-              <span className="text-slate-700 dark:text-slate-200">{item}</span>
+              <span className="text-slate-700 dark:text-slate-200">{item.text}</span>
             </motion.li>
           ))}
         </ul>
@@ -110,20 +111,6 @@ export default function Home() {
           Learn more about us <ArrowRight size={16} className="ml-2" />
         </Link>
       </motion.div>
-      {/*  <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
-      >
-        <Image
-          src="/Partner Technology.jpeg"
-          alt="Business Technology Partnership"
-          fill
-          className="object-cover"
-        />
-      </motion.div> */}
     </div>
   </div>
 </section>
