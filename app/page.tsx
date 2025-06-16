@@ -34,7 +34,7 @@ export default function Home() {
       <section className="relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://static.vecteezy.com/system/resources/previews/022/406/036/large_2x/cloud-technology-cloud-computing-devices-connected-to-digital-storage-in-data-center-ai-generated-free-photo.jpeg"
+            src="/Partner Technology.jpeg"
             alt="Cloud Technology"
             fill
             className="object-cover brightness-[0.4]"
