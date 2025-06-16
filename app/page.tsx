@@ -85,7 +85,7 @@ export default function Home() {
         <p className="text-slate-600 dark:text-slate-300 mb-6">
           At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
         </p>
-        <ul className="space-y-3">
+        <ul className="space-y-3 text-center"> {/* Added text-center class here */}
           {[
             "Tailored IT Solutions for Your Business Needs",
             "Experienced Technical Experts You Can Trust",
@@ -99,7 +99,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-start gap-2"
+              className="flex items-start gap-2 justify-center" // Added justify-center here
             >
               <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
               <span className="text-slate-700 dark:text-slate-200">{item}</span>
