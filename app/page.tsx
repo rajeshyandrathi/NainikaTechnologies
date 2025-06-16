@@ -167,7 +167,7 @@ export default function Home() {
                 icon: <Cloud size={32} />,
                 title: "Enterprise Cloud Architecture & Migration",
                 description: "Architect, migrate, and optimize mission-critical workloads to the cloud for enhanced agility, operational efficiency, seamless scalability, and accelerated innovation.",
-                image: "https://freerangestock.com/sample/140034/cloud-computing--digital-cloud-on-circuit-board.jpg"
+                image: "/Cloud Architecture.jpeg"
               },
               {
                 icon: <Database size={32} />,
