@@ -109,20 +109,20 @@ export default function Home() {
                 Learn more about us <ArrowRight size={16} className="ml-2" />
               </Link>
             </motion.div>
-            <motion.div
+            {/*  <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
             >
-              {/* <Image
+              <Image
                 src="/Partner Technology.jpeg"
                 alt="Business Technology Partnership"
                 fill
                 className="object-cover"
-              /> */}
-            </motion.div>
+              />
+            </motion.div> */}
           </div>
         </div>
       </section>
