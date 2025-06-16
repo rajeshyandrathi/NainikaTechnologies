@@ -116,12 +116,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative aspect-video rounded-xl overflow-hidden shadow-xl"
             >
-              <Image
+              {/* <Image
                 src="/Partner Technology.jpeg"
                 alt="Business Technology Partnership"
                 fill
                 className="object-cover"
-              />
+              /> */}
             </motion.div>
           </div>
         </div>
