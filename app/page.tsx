@@ -30,90 +30,87 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-  {/* Hero Section */}
-<section className="relative bg-blue-400">
-    <div className="absolute inset-0 z-0">
- 
-    </div>
-    <motion.div
-      ref={heroRef}
-      initial="hidden"
-      animate={heroInView ? "visible" : "hidden"}
-      variants={fadeIn}
-      className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center text-white"
-    >
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-600">
-          <span className="text-black">Empowering</span> Businesses Through{" "}
-          <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-          Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-            Explore Our Services <ArrowRight size={18} />
-          </Link>
-          <Link href="/contact" className="bg-transparent hover:bg-white/10 border border-white text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </motion.div>
-  </section>
+      {/* Hero Section */}
+      <section className="relative bg-blue-400 pt-20 md:pt-24">
+        <motion.div
+          ref={heroRef}
+          initial="hidden"
+          animate={heroInView ? "visible" : "hidden"}
+          variants={fadeIn}
+          className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center"
+        >
+          <div className="max-w-5xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-600">
+              <span className="text-black">Empowering</span> Businesses Through{" "}
+              <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
+            </h1>
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
+              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+                Explore Our Services <ArrowRight size={18} />
+              </Link>
+              <Link href="/contact" className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </section>
       
-{/* About Section */}
-<section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex justify-center items-center"> {/* Changed to flexbox */}
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800 dark:text-white">
-          Your Strategic <span className="text-cyan-600">Technology Partner</span>
-        </h2>
-        <p className="text-slate-600 dark:text-slate-300 mb-6">
-          At Nainika Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
-        </p>
-        <ul className="space-y-3 text-center">
-          {[
-            { text: "Tailored IT Solutions for Your Business Needs" },
-            { text: "Experienced Technical Experts You Can Trust" },
-            { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
-            { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
-            { text: "End-to-End Support and Partnership", paddingRight: '69px' }
-          ].map((item, index) => (
-            <motion.li
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
+      {/* About Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="flex items-start gap-2 justify-center"
-              style={{
-                ...(item.paddingLeft && { paddingLeft: item.paddingLeft }),
-                ...(item.paddingRight && { paddingRight: item.paddingRight })
-              }}
+              className="text-center"
             >
-              <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-              <span className="text-slate-700 dark:text-slate-200">{item.text}</span>
-            </motion.li>
-          ))}
-        </ul>
-        <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
-          Learn more about us <ArrowRight size={16} className="ml-2" />
-        </Link>
-      </motion.div>
-    </div>
-  </div>
-</section>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
+                Your Strategic <span className="text-cyan-600">Technology Partner</span>
+              </h2>
+              <p className="text-slate-600 mb-6">
+                At Nainika Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+              </p>
+              <ul className="space-y-3 text-center">
+                {[
+                  { text: "Tailored IT Solutions for Your Business Needs" },
+                  { text: "Experienced Technical Experts You Can Trust" },
+                  { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
+                  { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
+                  { text: "End-to-End Support and Partnership", paddingRight: '69px' }
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-2 justify-center"
+                    style={{
+                      ...(item.paddingLeft && { paddingLeft: item.paddingLeft }),
+                      ...(item.paddingRight && { paddingRight: item.paddingRight })
+                    }}
+                  >
+                    <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-slate-700">{item.text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+              <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
+                Learn more about us <ArrowRight size={16} className="ml-2" />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+      <section className="py-20 px-4 bg-slate-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={servicesRef}
@@ -122,10 +119,10 @@ export default function Home() {
             variants={fadeIn}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
               Our Core <span className="text-cyan-600">Services</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-600 max-w-3xl mx-auto">
               We offer a comprehensive range of technology solutions designed to help your business thrive in the digital age.
             </p>
           </motion.div>
@@ -158,7 +155,7 @@ export default function Home() {
               {
                 icon: <Database size={32} />,
                 title: "API-Driven Integration & Intelligent Automation",
-                description: "ConnEnable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
+                description: "Enable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
                 image: "/API Integration.jpeg"
               },
               {
@@ -177,7 +174,7 @@ export default function Home() {
               <motion.div
                 key={index}
                 variants={fadeIn}
-                className="service-card bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg"
+                className="service-card bg-white rounded-xl overflow-hidden shadow-lg"
               >
                 <div className="relative h-48">
                   <Image
@@ -189,13 +186,13 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
+                    <div className="p-2 bg-cyan-100 text-cyan-600 rounded-lg">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-cyan-600 dark:text-cyan-400">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-cyan-600">{service.title}</h3>
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300">{service.description}</p>
-                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300">
+                  <p className="text-slate-600">{service.description}</p>
+                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700">
                     Learn more <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>
@@ -207,11 +204,11 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
-      <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-          Our <span className="text-cyan-600">Experience</span>
-        </h2>
-      </div>
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Our <span className="text-cyan-300">Experience</span>
+          </h2>
+        </div>
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={statsRef}
@@ -244,13 +241,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-4 bg-gray-20">
+      <section className="relative py-20 px-4 bg-blue-50">
         <motion.div
           ref={ctaRef}
           initial="hidden"
           animate={ctaInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="relative z-10 max-w-5xl mx-auto text-center text-white"
+          className="relative z-10 max-w-5xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
             Ready to Transform Your Business with Technology?
@@ -276,7 +273,7 @@ interface CounterAnimationProps {
 
 const CounterAnimation: React.FC<CounterAnimationProps> = ({ target, suffix = "", className = "" }) => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // Changed from true to false
+    triggerOnce: false,
     threshold: 0.1,
   });
 
@@ -297,7 +294,7 @@ const CounterAnimation: React.FC<CounterAnimationProps> = ({ target, suffix = ""
     };
 
     if (inView) {
-      setCount(0); // Reset count when coming into view
+      setCount(0);
       animationFrame = requestAnimationFrame(step);
     }
 
