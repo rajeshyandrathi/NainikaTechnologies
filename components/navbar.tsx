@@ -59,7 +59,7 @@ export default function Navbar() {
                 className="h-8 w-8 md:h-10 md:w-10 object-contain"
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
-                Cloudforce{" "}
+                Nainika{" "}
                 <span
                   className={`${
                     scrolled ? "text-black dark:text-white" : "text-white"
