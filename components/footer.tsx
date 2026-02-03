@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-cyan-400">Cloudforce Technologies</h3>
+            <h3 className="text-xl font-bold mb-4 text-cyan-400">Nainika Technologies</h3>
             <p className="text-slate-300 mb-4">
               Empowering Innovation, Driving Digital Transformation
             </p>
@@ -121,10 +121,11 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
           <p>
-            &copy; {currentYear} Cloudforce Technologies. All rights reserved.
+            &copy; {currentYear} Nainika Technologies. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
 }
+
