@@ -43,7 +43,7 @@ export default function Home() {
           className="relative z-10 flex flex-col items-center justify-center min-h-[90vh] px-4 py-20 text-center text-white"
         >
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-400">
               Empowering Businesses Through{" "}
               <span className="text-cyan-400">Innovative Technology</span>
             </h1>
