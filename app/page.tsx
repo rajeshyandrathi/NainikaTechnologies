@@ -47,7 +47,7 @@ export default function Home() {
               Empowering Businesses Through{" "}
               <span className="text-cyan-400">Innovative Technology</span>
             </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black-200">
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
               Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
