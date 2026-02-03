@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-400 pt-20 md:pt-24">
+      <section className="relative bg-blue-20 pt-20 md:pt-24">
         <motion.div
           ref={heroRef}
           initial="hidden"
