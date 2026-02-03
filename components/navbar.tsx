@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +43,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-md"
+          ? "bg-white/90 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -58,11 +57,11 @@ export default function Navbar() {
                 alt="Cloudforce Logo"
                 className="h-8 w-8 md:h-10 md:w-10 object-contain"
               />
-              <span className="text-xl md:text-2xl font-bold text-cyan-600 dark:text-cyan-400">
+              <span className="text-xl md:text-2xl font-bold text-cyan-600">
                 Nainika{" "}
                 <span
                   className={`${
-                    scrolled ? "text-black dark:text-white" : "text-white"
+                    scrolled ? "text-black" : "text-white"
                   }`}
                 >
                   Technologies
@@ -80,28 +79,26 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`font-medium transition-colors ${
-                    isActive
-                      ? "text-cyan-600 dark:text-cyan-400"
+                    isActive || link.href !== "/"
+                      ? "text-cyan-600 hover:text-cyan-700"
                       : scrolled
-                      ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
-                      : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
+                      ? "text-black hover:text-cyan-600"
+                      : "text-white hover:text-cyan-600"
                   }`}
                 >
                   {link.label}
                 </Link>
               );
             })}
-            <ThemeToggle />
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
-            <ThemeToggle />
             <button
               onClick={toggleMenu}
-              className={`ml-2 p-2 rounded-md focus:outline-none ${
+              className={`p-2 rounded-md focus:outline-none ${
                 scrolled || pathname !== "/"
-                  ? "text-slate-700 dark:text-white"
+                  ? "text-slate-700"
                   : "text-white"
               }`}
             >
@@ -118,7 +115,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white dark:bg-slate-900 shadow-lg"
+          className="md:hidden bg-white shadow-lg"
         >
           <div className="px-4 pt-2 pb-4 space-y-1">
             {navLinks.map((link) => {
@@ -128,11 +125,9 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={`block py-3 px-4 rounded-md font-medium transition-colors ${
-                    isActive
-                      ? "text-cyan-600 dark:text-cyan-400"
-                      : scrolled
-                      ? "text-black dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400"
-                      : "text-white hover:text-cyan-600 dark:hover:text-cyan-400"
+                    isActive || link.href !== "/"
+                      ? "text-cyan-600 hover:text-cyan-700"
+                      : "text-black hover:text-cyan-600"
                   }`}
                 >
                   {link.label}
