@@ -51,7 +51,7 @@ export default function AboutPage() {
           className="relative z-10 max-w-7xl mx-auto text-center text-white"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-cyan-400">Cloudforce Technologies</span>
+            About <span className="text-cyan-400">Nainika Technologies</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
             Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions.
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 Our <span className="text-cyan-600">Story</span>
               </h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Cloudforce Technologies was born out of a vision to turn technology into a strategic growth engine. In a world of constant digital acceleration, we saw the need for a partner that goes beyond implementation—to help organizations think bigger, move faster, and scale smarter.
+                Nainika Technologies was born out of a vision to turn technology into a strategic growth engine. In a world of constant digital acceleration, we saw the need for a partner that goes beyond implementation—to help organizations think bigger, move faster, and scale smarter.
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Our mission is simple yet powerful: enable businesses to lead with technology that's aligned to purpose, built for agility, and designed to drive measurable impact.
@@ -118,7 +118,7 @@ export default function AboutPage() {
               Our <span className="text-cyan-600">Approach</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              At Cloudforce Technologies, we believe digital transformation must be intentional, iterative, and impact-driven. Our proven three-phase methodology—<strong>Discover, Design, Deliver</strong>—ensures that every solution we create is tightly aligned with your goals and built to scale with your vision.
+              At Nainika Technologies, we believe digital transformation must be intentional, iterative, and impact-driven. Our proven three-phase methodology—<strong>Discover, Design, Deliver</strong>—ensures that every solution we create is tightly aligned with your goals and built to scale with your vision.
               <br /><br />
               We don't believe in one-size-fits-all solutions. Each engagement begins with a deep understanding of your business environment, continues through thoughtful and agile design, and culminates in execution that prioritizes performance, security, and user adoption. Whether modernizing existing infrastructure or building next-generation digital capabilities, we guide our clients through every phase of transformation—with clarity, confidence, and measurable results.
             </p>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               Our <span className="text-cyan-300">Values</span>
             </h2>
             <p className="text-gray-200 max-w-3xl mx-auto">
-              At Cloudforce Technologies, our values fuel transformative outcomes. They guide how we innovate, collaborate, and scale technology for impact.
+              At Nainika Technologies, our values fuel transformative outcomes. They guide how we innovate, collaborate, and scale technology for impact.
             </p>
           </motion.div>
 
@@ -400,7 +400,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
-              Ready to Partner with <span className="text-cyan-600">Cloudforce Technologies</span>?
+              Ready to Partner with <span className="text-cyan-600">Nainika Technologies</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
               Contact us today to discuss how we can help your business leverage technology for growth and success.
