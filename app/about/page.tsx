@@ -36,14 +36,6 @@ export default function AboutPage() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://thumbs.dreamstime.com/b/digital-handshake-blue-technology-background-concept-business-technology-partnership-digital-handshake-blue-339455562.jpg"
-            alt="Digital Handshake"
-            fill
-            className="object-cover brightness-[0.4]"
-          />
-        </div>
         <motion.div
           initial="hidden"
           animate="visible"
