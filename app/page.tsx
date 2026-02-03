@@ -40,7 +40,7 @@ export default function Home() {
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[90vh] px-4 py-20 text-center text-white"
+          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 py-12 text-center text-white"
         >
           <div className="max-w-5xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-400">
