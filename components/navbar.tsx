@@ -61,7 +61,7 @@ export default function Navbar() {
                 Nainika{" "}
                 <span
                   className={`${
-                    scrolled ? "text-black" : "text-white"
+                    scrolled ? "text-black" : "text-black"
                   }`}
                 >
                   Technologies
