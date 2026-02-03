@@ -11,7 +11,7 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cloudforce Technologies | Strategic Technology Partner",
+  title: "Nainika Technologies | Strategic Technology Partner",
   description: "Empowering businesses through cutting-edge Cloud Services and innovative IT solutions.",
 };
 
