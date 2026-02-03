@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
   {/* Hero Section */}
-  <section className="relative bg-gray-50">
+  <section className="relative bg-gray-20">
     <div className="absolute inset-0 z-0">
  
     </div>
