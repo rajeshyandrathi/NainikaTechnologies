@@ -30,38 +30,38 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative">
-        <div className="absolute inset-0 z-0">
+  {/* Hero Section */}
+  <section className="relative bg-gray-50">
+    <div className="absolute inset-0 z-0">
  
+    </div>
+    <motion.div
+      ref={heroRef}
+      initial="hidden"
+      animate={heroInView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center text-white"
+    >
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-400">
+          <span className="text-black">Empowering</span> Businesses Through{" "}
+          <span className="text-black">Innovative</span> <span className="text-cyan-400">Technology</span>
+        </h1>
+        <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
+          Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+            Explore Our Services <ArrowRight size={18} />
+          </Link>
+          <Link href="/contact" className="bg-transparent hover:bg-white/10 border border-white text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+            Contact Us
+          </Link>
         </div>
-        <motion.div
-          ref={heroRef}
-          initial="hidden"
-          animate={heroInView ? "visible" : "hidden"}
-          variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center text-white"
-        >
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-400">
-              <span className="text-black">Empowering</span> Businesses Through{" "}
-              <span className="text-black">Innovative</span> <span className="text-cyan-400">Technology</span>
-            </h1>
-            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                Explore Our Services <ArrowRight size={18} />
-              </Link>
-              <Link href="/contact" className="bg-transparent hover:bg-white/10 border border-white text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
+      </div>
+    </motion.div>
+  </section>
+      
 {/* About Section */}
 <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
   <div className="max-w-7xl mx-auto">
