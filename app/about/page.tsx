@@ -35,7 +35,7 @@ export default function AboutPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative bg-blue-50 py-20 px-4">
         <motion.div
           initial="hidden"
           animate="visible"
