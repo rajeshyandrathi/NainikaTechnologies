@@ -43,9 +43,9 @@ export default function Home() {
       className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center text-white"
     >
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-400">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-600">
           <span className="text-black">Empowering</span> Businesses Through{" "}
-          <span className="text-black">Innovative</span> <span className="text-cyan-400">Technology</span>
+          <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
           Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
@@ -209,7 +209,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-          Our <span className="text-cyan-400">Experience</span>
+          Our <span className="text-cyan-600">Experience</span>
         </h2>
       </div>
         <div className="max-w-7xl mx-auto">
@@ -252,10 +252,10 @@ export default function Home() {
           variants={fadeIn}
           className="relative z-10 max-w-5xl mx-auto text-center text-white"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
             Ready to Transform Your Business with Technology?
           </h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto text-gray-200">
+          <p className="text-lg mb-8 max-w-3xl mx-auto text-black">
             Let's discuss how Nainika Technologies can help you achieve your business goals through innovative IT solutions.
           </p>
           <Link href="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
