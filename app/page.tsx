@@ -244,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-20 px-4 bg-gray-20">
         <motion.div
           ref={ctaRef}
           initial="hidden"
