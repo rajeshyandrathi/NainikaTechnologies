@@ -43,9 +43,9 @@ export default function AboutPage() {
           className="relative z-10 max-w-7xl mx-auto text-center text-white"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-cyan-400">Nainika Technologies</span>
+            <span className="text-cyan-400">Nainika Technologies</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
             Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions.
           </p>
         </motion.div>
