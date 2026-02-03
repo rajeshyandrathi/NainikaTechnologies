@@ -66,7 +66,7 @@ export default function ContactPage() {
             Contact <span className="text-cyan-400">Us</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Get in touch with our team to discuss how Cloudforce Technologies can help your business succeed.
+            Get in touch with our team to discuss how Nainika Technologies can help your business succeed.
           </p>
         </motion.div>
       </section>
@@ -295,3 +295,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
