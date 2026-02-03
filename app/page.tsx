@@ -207,11 +207,11 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Our <span className="text-cyan-400">Experience</span>
-          </h2>
-        </div>
+      <div className="max-w-7xl mx-auto text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          Our <span className="text-cyan-400">Experience</span>
+        </h2>
+      </div>
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={statsRef}
@@ -245,14 +245,6 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="relative py-20 px-4">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
-            alt="IT Infrastructure"
-            fill
-            className="object-cover brightness-[0.3]"
-          />
-        </div>
         <motion.div
           ref={ctaRef}
           initial="hidden"
