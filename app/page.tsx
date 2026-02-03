@@ -54,7 +54,7 @@ export default function Home() {
               <span className="text-cyan-400">Innovative Technology</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
-              Cloudforce Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
+              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
@@ -83,7 +83,7 @@ export default function Home() {
           Your Strategic <span className="text-cyan-600">Technology Partner</span>
         </h2>
         <p className="text-slate-600 dark:text-slate-300 mb-6">
-          At Cloudforce Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+          At Nainika Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
         </p>
         <ul className="space-y-3 text-center">
           {[
@@ -270,7 +270,7 @@ export default function Home() {
             Ready to Transform Your Business with Technology?
           </h2>
           <p className="text-lg mb-8 max-w-3xl mx-auto text-gray-200">
-            Let's discuss how Cloudforce Technologies can help you achieve your business goals through innovative IT solutions.
+            Let's discuss how Nainika Technologies can help you achieve your business goals through innovative IT solutions.
           </p>
           <Link href="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
             Get Started Today <ArrowRight size={18} />
