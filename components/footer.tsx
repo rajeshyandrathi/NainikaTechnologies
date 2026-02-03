@@ -101,8 +101,8 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin size={20} className="text-cyan-400 mr-2 mt-1 flex-shrink-0" />
                 <span className="text-slate-300">
-                  1 Boschendal, 28 Harry Galaun<br />
-                  Halfway Gardens, Midrand, South Africa, 1686
+                  13 Glen Abbey Rd, Cape Farms<br />
+                  Sunningdale, Cape Town, South Africa, 7441
                 </span>
               </li>
               <li className="flex items-center">
@@ -111,8 +111,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-cyan-400 mr-2 flex-shrink-0" />
-                <a href="mailto:info@cftechnologies.co.za" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  info@cftechnologies.co.za
+                <a href="mailto:info@nainikatechnologies.co.za" className="text-slate-300 hover:text-cyan-400 transition-colors">
+                  info@nainikatechnologies.co.za
                 </a>
               </li>
             </ul>
@@ -128,4 +128,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
