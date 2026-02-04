@@ -253,7 +253,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
             Ready to Transform Your Business with Technology?
           </h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto text-black">
+          <p className="text-slate-600 mb-6">
             Let's discuss how Nainika Technologies can help you achieve your business goals through innovative IT solutions.
           </p>
           <Link href="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
