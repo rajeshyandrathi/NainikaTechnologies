@@ -45,7 +45,7 @@ export default function Home() {
               <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs.
+              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs. We empower organizations to accelerate digital transformation and achieve sustainable growth through innovative, scalable, and secure technology architectures.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
