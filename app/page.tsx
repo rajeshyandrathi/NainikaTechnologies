@@ -40,7 +40,7 @@ export default function Home() {
           className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center"
         >
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-cyan-600">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
               <span className="text-black">Empowering</span> Businesses Through{" "}
               <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
             </h1>
