@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
+        <section className="py-12 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
         <motion.div
           ref={heroRef}
           initial="hidden"
