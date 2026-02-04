@@ -22,7 +22,6 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Run on mount to set initial state
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -78,13 +77,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium transition-colors ${
-                    isActive || link.href !== "/"
-                      ? "text-cyan-600 hover:text-cyan-700"
-                      : scrolled
-                      ? "text-black hover:text-cyan-600"
-                      : "text-white hover:text-cyan-600"
-                  }`}
+                  className="font-medium text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -124,11 +117,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block py-3 px-4 rounded-md font-medium transition-colors ${
-                    isActive || link.href !== "/"
-                      ? "text-cyan-600 hover:text-cyan-700"
-                      : "text-black hover:text-cyan-600"
-                  }`}
+                  className="block py-3 px-4 rounded-md font-medium text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   {link.label}
                 </Link>
