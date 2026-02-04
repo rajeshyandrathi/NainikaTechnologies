@@ -42,11 +42,9 @@ export default function AboutPage() {
           variants={fadeIn}
           className="relative z-10 max-w-7xl mx-auto text-center text-white"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-cyan-400">Nainika Technologies</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-            Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions.
+        <p className="text-slate-600 mb-6">
+            Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions. We specialize in delivering scalable digital architectures and secure infrastructure management that drive operational efficiency and long-term competitive advantage. By bridging the gap between complex technology and business goals, we ensure your organization is equipped to thrive in an ever-evolving global marketplace.
+            Our comprehensive IT services encompass everything from managed infrastructure and cybersecurity to custom software development and strategic consulting. We provide end-to-end support designed to optimize your technology stack, minimize downtime, and ensure your business remains agile in a digital-first world.
           </p>
         </motion.div>
       </section>
