@@ -31,13 +31,13 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-        <section className="py-12 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
+        <section className="py-6 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
         <motion.div
           ref={heroRef}
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[75vh] px-4 py-12 text-center"
+          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 py-6 text-center"
         >
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
