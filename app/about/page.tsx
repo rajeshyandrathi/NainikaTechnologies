@@ -165,7 +165,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-black">
+      <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 bg-blue-50 text-black">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
