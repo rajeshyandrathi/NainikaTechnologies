@@ -44,7 +44,9 @@ export default function AboutPage() {
         >
         <p className="text-slate-600 mb-6">
             Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions. We specialize in delivering scalable digital architectures and secure infrastructure management that drive operational efficiency and long-term competitive advantage. By bridging the gap between complex technology and business goals, we ensure your organization is equipped to thrive in an ever-evolving global marketplace.
-            Our comprehensive IT services encompass everything from managed infrastructure and cybersecurity to custom software development and strategic consulting. We provide end-to-end support designed to optimize your technology stack, minimize downtime, and ensure your business remains agile in a digital-first world.
+        </p> 
+          <p className="text-slate-600 mb-6">  
+          Our comprehensive IT services encompass everything from managed infrastructure and cybersecurity to custom software development and strategic consulting. We provide end-to-end support designed to optimize your technology stack, minimize downtime, and ensure your business remains agile in a digital-first world.
           </p>
         </motion.div>
       </section>
@@ -82,7 +84,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
+              className="relative aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-xl"
             >
               <Image
                 src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
