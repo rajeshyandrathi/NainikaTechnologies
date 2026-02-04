@@ -58,6 +58,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center mb-16"
             >
               <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
                 Our <span className="text-cyan-600">Story</span>
