@@ -392,7 +392,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
               Ready to Partner with <span className="text-cyan-600">Nainika Technologies</span>?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss how we can help your business leverage technology for growth and success.
             </p>
             <Link
