@@ -252,7 +252,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-black">
               Our <span className="text-cyan-600">Team</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
@@ -327,7 +327,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-black">
               Our <span className="text-cyan-600">Clients</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
