@@ -79,12 +79,12 @@ export default function AboutPage() {
               </p>
             </motion.div>
 
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-xl"
+              className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
             >
               <Image
                 src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
