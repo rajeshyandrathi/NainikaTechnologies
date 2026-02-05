@@ -42,6 +42,9 @@ export default function AboutPage() {
           variants={fadeIn}
           className="relative z-10 max-w-7xl mx-auto text-center text-white"
         >
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            About <span className="text-cyan-600">Us</span>
+        </h1>
         <p className="text-slate-600 mb-6">
             Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions. We specialize in delivering scalable digital architectures and secure infrastructure management that drive operational efficiency and long-term competitive advantage. By bridging the gap between complex technology and business goals, we ensure your organization is equipped to thrive in an ever-evolving global marketplace.
         </p> 
