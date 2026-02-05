@@ -392,12 +392,13 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
-              Ready to Partner with Nainika Technologies ?
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss how we can help your business leverage technology for growth and success.
-            </p>
+          <h2 className="text-3xl font-bold mb-6 text-white">
+            Ready to Partner with Nainika Technologies?
+          </h2>
+          <p className="text-white mb-8 max-w-2xl mx-auto">
+            Contact us today to discuss how we can help your business leverage technology for growth and success.
+          </p>
+
             <Link
               href="/contact"
               className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2"
