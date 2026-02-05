@@ -55,7 +55,7 @@ export default function ContactPage() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative bg-blue-50 py-20 px-4">
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-900 to-blue-900"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-900"></div>
         <motion.div
           initial="hidden"
           animate="visible"
@@ -295,5 +295,6 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
 
