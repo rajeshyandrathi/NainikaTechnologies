@@ -277,23 +277,23 @@ export default function ContactPage() {
       viewport={{ once: true }}
       className="overflow-hidden rounded-xl shadow-lg"
     >
-      <iframe
-        title="Our Location"
-        src="https://www.google.com/maps/place/13+Glen+Abbey+Rd,+Cape+Farms,+Cape+Town,+7441/@-33.7887207,18.4881199,960m/data=!3m2!1e3!4b1!4m6!3m5!1s0x1dccf58f96da1411:0x56f666679f919f97!8m2!3d-33.7887207!4d18.4881199!16s%2Fg%2F11jwlbfc84?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D"
-        width="100%"
-        height="450"
-        style={{ border: 0 }}
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="w-full h-[450px] rounded-xl border-0"
-      ></iframe>
+    <iframe
+      title="Our Location"
+      src="https://www.google.com/maps?q=13+Glen+Abbey+Rd,+Cape+Farms,+Cape+Town,+7441&output=embed"
+      width="100%"
+      height="450"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      className="w-full h-[450px] rounded-xl border-0"
+    ></iframe>
+
     </motion.div>
   </div>
 </section>
     </div>
   );
 }
+
 
 
 
