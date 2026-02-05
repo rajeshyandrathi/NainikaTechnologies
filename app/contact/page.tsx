@@ -59,12 +59,12 @@ export default function ContactPage() {
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="relative z-10 max-w-7xl mx-auto text-center text-white"
+          className="relative z-10 max-w-7xl mx-auto text-center text-black"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Contact <span className="text-cyan-400">Us</span>
+            Contact <span className="text-cyan-600">Us</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
             Get in touch with our team to discuss how Nainika Technologies can help your business succeed.
           </p>
         </motion.div>
@@ -294,6 +294,7 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
 
 
