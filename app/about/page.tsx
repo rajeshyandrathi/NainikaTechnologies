@@ -384,7 +384,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+      <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
         <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -393,7 +393,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
-              Ready to Partner with <span className="text-cyan-600">Nainika Technologies</span>?
+              Ready to Partner with Nainika Technologies ?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss how we can help your business leverage technology for growth and success.
