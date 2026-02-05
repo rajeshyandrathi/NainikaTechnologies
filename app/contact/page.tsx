@@ -113,7 +113,7 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300">
-                      info@cftechnologies.co.za
+                      info@nainikatechnologies.co.za
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
         Our <span className="text-cyan-600">Location</span>
       </h2>
       <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-        Visit us at our Midrand office. Use the map below to find directions.
+        Visit us at our office. Use the map below to find directions.
       </p>
     </motion.div>
 
@@ -280,7 +280,7 @@ export default function ContactPage() {
     >
       <iframe
         title="Our Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.3641594263954!2d28.108304876139076!3d-25.988885777209912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9571df982b26bd%3A0xef20e9f5752b34f8!2sBoschendal%20Complex%20-%20Midrand.!5e0!3m2!1sen!2sza!4v1748522390986!5m2!1sen!2sza"
+        src="https://maps.app.goo.gl/PRTpBdqw7aTDuvLf7"
         width="100%"
         height="450"
         style={{ border: 0 }}
@@ -295,6 +295,7 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
 
 
