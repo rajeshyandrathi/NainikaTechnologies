@@ -97,8 +97,8 @@ export default function ContactPage() {
                       Our Location
                     </h3>
                     <p className="text-slate-600 dark:text-slate-300">
-                  1 Boschendal, 28 Harry Galaun Dr<br />
-                  Halfway Gardens, Midrand, South Africa, 1686
+                  13 Glen Abbey Rd, Cape Farms<br />
+                  Sunningdale, Cape Town, South Africa, 7441
                     </p>
                   </div>
                 </div>
@@ -293,6 +293,7 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
 
 
