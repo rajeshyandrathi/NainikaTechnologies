@@ -137,7 +137,7 @@ const services = [
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="text-cyan-600">Services</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
             Explore our comprehensive range of technology solutions designed to help your business thrive in the digital age.
           </p>
         </motion.div>
