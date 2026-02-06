@@ -127,16 +127,15 @@ const services = [
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-cyan-900 to-blue-900"></div>
+      <section className="relative bg-blue-50 py-20 px-4">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="relative z-10 max-w-7xl mx-auto text-center text-white"
+          className="relative z-10 max-w-7xl mx-auto text-center text-black"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-cyan-400">Services</span>
+            Our <span className="text-cyan-600">Services</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-200">
             Explore our comprehensive range of technology solutions designed to help your business thrive in the digital age.
