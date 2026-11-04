@@ -24,7 +24,7 @@ const sections = [
   {
     heading: "What we collect",
     body: [
-      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name.",
+      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page.",
       "If you contact us by email, phone, or WhatsApp, we receive your contact details and whatever you send us.",
       "When you browse the site, we collect anonymised usage and performance information, such as pages viewed, country, device type, and page speed, through Vercel Analytics and Speed Insights. This also includes whether our contact form was submitted or our WhatsApp button was clicked. Our hosting provider may also keep technical logs for security and reliability.",
     ],
@@ -42,7 +42,7 @@ const sections = [
     body: [
       "We share information only with service providers that help us run this website and our business, such as our hosting, analytics, and communication providers, or where the law requires it.",
       "Some of these providers operate outside South Africa, so your information may be stored or processed in other countries. Where this happens, we take steps to confirm that it's protected as POPIA requires.",
-      "Our contact page includes an embedded Google Map, and our WhatsApp button takes you to WhatsApp. Google and WhatsApp handle any information they collect under their own privacy policies.",
+      "Our contact page includes an embedded Google Map, our WhatsApp button takes you to WhatsApp, and our consultation booking links take you to Calendly. Google, WhatsApp, and Calendly handle any information they collect under their own privacy policies.",
     ],
   },
   {
