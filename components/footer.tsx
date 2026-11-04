@@ -19,7 +19,7 @@ export default function Footer() {
               width={194}
               height={70}
               unoptimized
-              className="mb-4 h-16 w-auto"
+              className="mb-4 h-20 w-auto"
             />
             <p className="text-slate-300 mb-4">
               AI agents and RevOps systems for B2B SaaS companies
