@@ -55,7 +55,7 @@ export default function ServicesPage() {
                 <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
                   <group.icon size={32} />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800">{group.title}</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-slate-800">{group.title}</h2>
               </div>
               <p className="text-slate-600 max-w-3xl mb-8">{group.summary}</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg mb-8 max-w-3xl mx-auto text-gray-200">

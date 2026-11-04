@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import Link from "next/link";
-import LogoWatermark from "@/components/logo-watermark";
+import PageHero from "@/components/page-hero";
 import { site } from "@/lib/site";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -60,22 +60,12 @@ export default function ContactPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-blue-50 pt-32 pb-16 px-4">
-        <LogoWatermark />
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          className="relative z-10 max-w-7xl mx-auto text-center text-black"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Contact <span className="text-cyan-600">Us</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-            Get in touch with our team to discuss how Nainika Technologies can help your business succeed.
-          </p>
-        </motion.div>
-      </section>
+      <PageHero
+        eyebrow="Contact Us"
+        title="Let's Talk About"
+        highlight="Your Revenue Systems"
+        description="Tell us what you're working on, and we'll show you where AI agents and RevOps can help."
+      />
 
       {/* Contact Form Section */}
       <section className="py-20 px-4 bg-white">
@@ -87,7 +77,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-800">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800">
                 Get in <span className="text-cyan-600">Touch</span>
               </h2>
               <p className="text-slate-600 mb-8">
@@ -292,7 +282,7 @@ export default function ContactPage() {
       viewport={{ once: true }}
       className="text-center mb-12"
     >
-      <h2 className="text-3xl font-bold mb-4 text-slate-800">
+      <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
         Our <span className="text-cyan-600">Location</span>
       </h2>
       <p className="text-slate-600 max-w-2xl mx-auto">

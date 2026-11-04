@@ -4,7 +4,7 @@ import LogoWatermark from "@/components/logo-watermark";
 type PageHeroProps = {
   eyebrow: string;
   title: string;
-  highlight: string;
+  highlight?: string;
   description: string;
   children?: ReactNode;
 };
@@ -18,7 +18,7 @@ export default function PageHero({ eyebrow, title, highlight, description, child
           {eyebrow}
         </p>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-4xl">
-          {title} <span className="text-cyan-300">{highlight}</span>
+          {title}{highlight && <span className="text-cyan-300"> {highlight}</span>}
         </h1>
         <p className="text-lg md:text-xl text-slate-200 max-w-3xl">{description}</p>
         {children}

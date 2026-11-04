@@ -22,24 +22,21 @@ export default function HowWeWork() {
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
             How We <span className="text-cyan-600">Work</span>
           </h2>
           <p className="text-slate-600 max-w-3xl mx-auto">
             A clear path from your first conversation with us to systems your team relies on every day.
           </p>
         </div>
-        <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step) => (
             <li key={step.title} className="bg-slate-50 rounded-xl p-6 shadow-lg">
-              <div className="w-10 h-10 mb-4 rounded-full bg-cyan-600 text-white font-bold flex items-center justify-center">
-                {index + 1}
-              </div>
               <h3 className="text-xl font-bold mb-3 text-cyan-600">{step.title}</h3>
               <p className="text-slate-600">{step.description}</p>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );

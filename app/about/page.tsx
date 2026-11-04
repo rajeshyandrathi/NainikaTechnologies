@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import HowWeWork from "@/components/how-we-work";
 import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 import { useInView } from "react-intersection-observer";
@@ -91,9 +92,8 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-800">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800">
                 Our <span className="text-cyan-600">Story</span>
               </h2>
               <p className="text-slate-600 mb-4">
@@ -129,73 +129,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Approach Section */}
-      <section className="py-20 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800">
-              Our <span className="text-cyan-600">Approach</span>
-            </h2>
-            <p className="text-slate-600 max-w-3xl mx-auto">
-              At Nainika Technologies, we believe digital transformation must be intentional, iterative, and impact-driven. Our proven three-phase methodology—<strong>Discover, Design, Deliver</strong>—ensures that every solution we create is tightly aligned with your goals and built to scale with your vision.
-              <br /><br />
-              We don't believe in one-size-fits-all solutions. Each engagement begins with a deep understanding of your business environment, continues through thoughtful and agile design, and culminates in execution that prioritizes performance, security, and user adoption. Whether modernizing existing infrastructure or building next-generation digital capabilities, we guide our clients through every phase of transformation—with clarity, confidence, and measurable results.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                image: "/Discover.jpeg",
-                title: "Discover",
-                description:
-                  "We begin by deeply understanding your business goals, current systems, and strategic challenges. This phase ensures that we align our solutions with your long-term vision from the outset."
-              },
-              {
-                image: "/Design.jpeg",
-                title: "Design",
-                description:
-                  "We architect intelligent, scalable, and secure solutions tailored to your needs. Our designs are flexible, future-ready, and optimized for agility, performance, and user experience."
-              },
-              {
-                image: "/Deliver.jpeg",
-                title: "Deliver",
-                description:
-                  "We execute with precision—ensuring seamless deployment, robust change management, and high adoption. We focus on outcomes, not just implementation, to maximize ROI and business impact."
-              }
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
-              >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={step.image}
-                    alt={step.title}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-cyan-600">{step.title}</h3>
-                  <p className="text-slate-600">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowWeWork />
 
       {/* Our Values Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-500 text-black">
@@ -207,7 +141,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">
               Our <span className="text-cyan-300">Values</span>
             </h2>
             <p className="text-gray-200 max-w-3xl mx-auto">
@@ -286,7 +220,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
               Our <span className="text-cyan-600">Team</span>
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
@@ -361,7 +295,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
               Our <span className="text-cyan-600">Clients</span>
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
@@ -426,7 +360,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-          <h2 className="text-3xl font-bold mb-6 text-white">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-white">
             Ready to Connect Your Revenue Systems?
           </h2>
           <p className="text-white mb-8 max-w-2xl mx-auto">
