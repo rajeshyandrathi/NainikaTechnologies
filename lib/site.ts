@@ -13,6 +13,6 @@ export const site = {
   cta: {
     label: "Book a Free 30-Minute Consultation",
     shortLabel: "Book a Free Consultation",
-    href: "/contact",
+    href: "https://calendly.com/rajeshyandrathi/30min",
   },
 };

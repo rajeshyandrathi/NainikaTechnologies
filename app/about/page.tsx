@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { site } from "@/lib/site";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, Award, CheckCircle, Clock, Globe, Lightbulb, Users } from "lucide-react";
 
@@ -406,10 +407,10 @@ export default function AboutPage() {
           </p>
 
             <Link
-              href="/contact"
+              href={site.cta.href}
               className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2"
             >
-              Get in Touch <ArrowRight size={18} />
+              {site.cta.label} <ArrowRight size={18} />
             </Link>
           </motion.div>
         </div>
