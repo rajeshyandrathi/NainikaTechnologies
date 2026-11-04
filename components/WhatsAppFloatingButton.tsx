@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { track } from "@vercel/analytics";
 
 const whatsappNumber = "27688906854";
 
@@ -8,6 +11,7 @@ export default function WhatsAppFloatingButton() {
       href={`https://wa.me/${whatsappNumber}`}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => track("whatsapp_click")}
       style={{
         position: "fixed",
         bottom: "24px",

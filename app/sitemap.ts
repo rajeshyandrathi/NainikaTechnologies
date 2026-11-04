@@ -1,9 +1,19 @@
 import type { MetadataRoute } from "next";
-
-const baseUrl = "https://www.nainikatechnologies.co.za";
+import { insights } from "@/lib/insights";
+import { services } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ["", "/about", "/services", "/contact"].map((path) => ({
-    url: `${baseUrl}${path}`,
-  }));
+  const paths = [
+    "",
+    "/about",
+    "/services",
+    ...services.map((service) => `/services/${service.slug}`),
+    "/insights",
+    ...insights.map((insight) => `/insights/${insight.slug}`),
+    "/contact",
+    "/privacy",
+  ];
+
+  return paths.map((path) => ({ url: `${site.url}${path}` }));
 }

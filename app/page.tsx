@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, CheckCircle, Cloud, Code, Database, Globe, ShoppingBag, TestTube } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import ServiceVisual from "@/components/service-visual";
+import { services } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export default function Home() {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -37,23 +39,23 @@ export default function Home() {
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 py-6 text-center"
+          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24 pb-6 text-center"
         >
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
-              <span className="text-black">Empowering</span> Businesses Through{" "}
-              <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
+              <span className="text-black">AI Agents, RevOps and Cloud Software</span> That Get{" "}
+              <span className="text-cyan-600">Real Work Done</span>
             </h1>
             {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black"> */}
             <p className="text-slate-600 mb-6">
-              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs. We empower organizations to accelerate digital transformation and achieve sustainable growth through innovative, scalable, and secure technology architectures.
+              Nainika Technologies designs and builds agentic AI, Claude AI agents, RevOps and CRM systems, cloud platforms, and digital products for growing businesses. If work can be delegated to an agent, we can build it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
                 Explore Our Services <ArrowRight size={18} />
               </Link>
-              <Link href="/contact" className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                Contact Us
+              <Link href={site.cta.href} className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+                {site.cta.label}
               </Link>
             </div>
           </div>
@@ -134,66 +136,22 @@ export default function Home() {
             variants={staggerContainer}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {[
-              {
-                icon: <Code size={32} />,
-                title: "Next-Gen Cloud Application Development",
-                description: "Build scalable, resilient next-gen cloud applications optimized for performance, agility, and seamless scalability to accelerate business innovation.",
-                image: "/Cloud-Application-Development.jpeg"
-              },
-              {
-                icon: <Globe size={32} />,
-                title: "Innovative Web & Mobile Development",
-                description: "Craft sleek, responsive web and mobile applications designed for exceptional user engagement and seamless performance.",
-                image: "/Website-Mobile-App-Design-Development.jpeg"
-              },
-              {
-                icon: <Cloud size={32} />,
-                title: "Enterprise Cloud Architecture & Migration",
-                description: "Architect, migrate, and optimize mission-critical workloads to the cloud for enhanced agility, operational efficiency, seamless scalability, and accelerated innovation.",
-                image: "/Cloud Architecture.jpeg"
-              },
-              {
-                icon: <Database size={32} />,
-                title: "API-Driven Integration & Intelligent Automation",
-                description: "Enable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
-                image: "/API Integration.jpeg"
-              },
-              {
-                icon: <ShoppingBag size={32} />,
-                title: "AI-Powered E-commerce Solutions",
-                description: "Implement intelligent commerce platforms that deliver personalized customer experiences and boost conversions through advanced analytics and automation.",
-                image: "/Ecommerce.jpeg"
-              },
-              {
-                icon: <TestTube size={32} />,
-                title: "Intelligent Quality Engineering",
-                description: "Implement advanced testing strategies powered by AI and automation to ensure superior product quality, faster releases, and seamless user experiences.",
-                image: "/Quality Assurance.jpeg"
-              }
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <motion.div
                 key={index}
                 variants={fadeIn}
                 className="service-card bg-white rounded-xl overflow-hidden shadow-lg"
               >
-                <div className="relative h-48">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <ServiceVisual service={service} className="h-48" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-cyan-100 text-cyan-600 rounded-lg">
-                      {service.icon}
+                      <service.icon size={32} />
                     </div>
                     <h3 className="text-xl font-bold text-cyan-600">{service.title}</h3>
                   </div>
                   <p className="text-slate-600">{service.description}</p>
-                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700">
+                  <Link href={`/services/${service.slug}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700">
                     Learn more <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>
@@ -254,10 +212,10 @@ export default function Home() {
             Ready to Transform Your Business with Technology?
           </h2>
           <p className="text-slate-600 mb-6">
-            Let's discuss how Nainika Technologies can help you achieve your business goals through innovative IT solutions.
+            Let's discuss how Nainika Technologies can help you achieve your business goals through agentic AI and innovative IT solutions.
           </p>
-          <Link href="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
-            Get Started Today <ArrowRight size={18} />
+          <Link href={site.cta.href} className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
+            {site.cta.label} <ArrowRight size={18} />
           </Link>
         </motion.div>
       </section>

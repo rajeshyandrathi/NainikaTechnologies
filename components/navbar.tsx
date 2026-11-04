@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { site } from "@/lib/site";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +37,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
+    { href: "/insights", label: "Insights" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -51,9 +54,12 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <img
+              <Image
                 src="/Logo-Transparent.png"
                 alt="Nainika Technologies Logo"
+                width={64}
+                height={64}
+                priority
                 className="h-8 w-8 md:h-10 md:w-10 object-contain"
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600">
@@ -83,17 +89,20 @@ export default function Navbar() {
                 </Link>
               );
             })}
+            <Link
+              href={site.cta.href}
+              className="hidden lg:inline-flex bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all"
+            >
+              {site.cta.shortLabel}
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
-              className={`p-2 rounded-md focus:outline-none ${
-                scrolled || pathname !== "/"
-                  ? "text-slate-700"
-                  : "text-white"
-              }`}
+              className="p-2 rounded-md focus:outline-none text-slate-700"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -123,6 +132,12 @@ export default function Navbar() {
                 </Link>
               );
             })}
+            <Link
+              href={site.cta.href}
+              className="block py-3 px-4 rounded-md font-medium text-center bg-cyan-600 hover:bg-cyan-700 text-white transition-all"
+            >
+              {site.cta.shortLabel}
+            </Link>
           </div>
         </motion.div>
       )}

@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { track } from "@vercel/analytics";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -38,6 +40,7 @@ export default function ContactPage() {
     
     setIsSubmitting(false);
     setIsSuccess(true);
+    track("contact_form_submit");
     reset();
     
     // Reset success message after 5 seconds
@@ -71,7 +74,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-4 bg-white dark:bg-slate-900">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <motion.div
@@ -80,23 +83,23 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
+              <h2 className="text-3xl font-bold mb-6 text-slate-800">
                 Get in <span className="text-cyan-600">Touch</span>
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-8">
+              <p className="text-slate-600 mb-8">
                 We'd love to hear from you. Fill out the form and our team will get back to you as soon as possible.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
+                  <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-1">
+                    <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Our Location
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-slate-600">
                   13 Glen Abbey Rd, Cape Farms<br />
                   Sunningdale, Cape Town, South Africa, 7441
                     </p>
@@ -104,28 +107,28 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
+                  <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-1">
+                    <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Email Us
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-slate-600">
                       info@nainikatechnologies.co.za
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-lg">
+                  <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-1">
+                    <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Call Us
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-slate-600">
                       +27 68 890 6854
                     </p>
                   </div>
@@ -138,23 +141,23 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-slate-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg"
+              className="bg-slate-50 p-8 rounded-xl shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-6 text-slate-800 dark:text-white">
+              <h3 className="text-2xl font-bold mb-6 text-slate-800">
                 Send us a Message
               </h3>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
                     Full Name *
                   </label>
                   <input
                     id="name"
                     type="text"
                     className={`w-full px-4 py-2 rounded-md border ${
-                      errors.name ? "border-red-500" : "border-slate-300 dark:border-slate-600"
-                    } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
+                      errors.name ? "border-red-500" : "border-slate-300"
+                    } bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500`}
                     placeholder=""
                     {...register("name")}
                   />
@@ -164,15 +167,15 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
                     Email Address *
                   </label>
                   <input
                     id="email"
                     type="email"
                     className={`w-full px-4 py-2 rounded-md border ${
-                      errors.email ? "border-red-500" : "border-slate-300 dark:border-slate-600"
-                    } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
+                      errors.email ? "border-red-500" : "border-slate-300"
+                    } bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500`}
                     placeholder=""
                     {...register("email")}
                   />
@@ -183,26 +186,26 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
                       Phone Number
                     </label>
                     <input
                       id="phone"
                       type="tel"
-                      className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-4 py-2 rounded-md border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                       placeholder=""
                       {...register("phone")}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1">
                       Company Name
                     </label>
                     <input
                       id="company"
                       type="text"
-                      className="w-full px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-4 py-2 rounded-md border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                       placeholder=""
                       {...register("company")}
                     />
@@ -210,15 +213,15 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
                     Message *
                   </label>
                   <textarea
                     id="message"
                     rows={5}
                     className={`w-full px-4 py-2 rounded-md border ${
-                      errors.message ? "border-red-500" : "border-slate-300 dark:border-slate-600"
-                    } bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-cyan-500`}
+                      errors.message ? "border-red-500" : "border-slate-300"
+                    } bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-500`}
                     placeholder=""
                     {...register("message")}
                   ></textarea>
@@ -226,6 +229,14 @@ export default function ContactPage() {
                     <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
                   )}
                 </div>
+
+                <p className="text-sm text-slate-500">
+
+                  By submitting this form, you agree that we may use your details to respond to your enquiry, as described in our{" "}
+
+                  <Link href="/privacy" className="text-cyan-600 hover:text-cyan-700 underline">Privacy Policy</Link>.
+
+                </p>
 
                 <button
                   type="submit"
@@ -253,7 +264,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-  <section className="py-20 px-4 bg-slate-100 dark:bg-slate-800/50">
+  <section className="py-20 px-4 bg-slate-100">
   <div className="max-w-7xl mx-auto">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -262,10 +273,10 @@ export default function ContactPage() {
       viewport={{ once: true }}
       className="text-center mb-12"
     >
-      <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+      <h2 className="text-3xl font-bold mb-4 text-slate-800">
         Our <span className="text-cyan-600">Location</span>
       </h2>
-      <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+      <p className="text-slate-600 max-w-2xl mx-auto">
         Visit us at our office. Use the map below to find directions.
       </p>
     </motion.div>

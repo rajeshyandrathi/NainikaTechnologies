@@ -55,7 +55,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 px-4 bg-white dark:bg-slate-900">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -65,19 +65,19 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl font-bold mb-6 text-slate-800 dark:text-white">
+              <h2 className="text-3xl font-bold mb-6 text-slate-800">
                 Our <span className="text-cyan-600">Story</span>
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 Nainika Technologies was born out of a vision to turn technology into a strategic growth engine. In a world of constant digital acceleration, we saw the need for a partner that goes beyond implementation—to help organizations think bigger, move faster, and scale smarter.
               </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 Our mission is simple yet powerful: enable businesses to lead with technology that's aligned to purpose, built for agility, and designed to drive measurable impact.
               </p>
-              <p className="text-slate-600 dark:text-slate-300 mb-4">
+              <p className="text-slate-600 mb-4">
                 With a team of technologists, architects, and strategists, we deliver intelligent, cloud-native, and data-driven solutions that reimagine operations, elevate customer experiences, and future-proof digital infrastructure.
               </p>
-              <p className="text-slate-600 dark:text-slate-300">
+              <p className="text-slate-600">
                 Today, we proudly serve visionary organizations across industries—as a transformation partner that's as committed to innovation as we are to outcomes.
               </p>
             </motion.div>
@@ -93,6 +93,7 @@ export default function AboutPage() {
                 src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
                 alt="IT Infrastructure"
                 fill
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </motion.div>
@@ -101,7 +102,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 px-4 bg-slate-50 dark:bg-slate-800/50">
+      <section className="py-20 px-4 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,10 +111,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-white">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800">
               Our <span className="text-cyan-600">Approach</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-600 max-w-3xl mx-auto">
               At Nainika Technologies, we believe digital transformation must be intentional, iterative, and impact-driven. Our proven three-phase methodology—<strong>Discover, Design, Deliver</strong>—ensures that every solution we create is tightly aligned with your goals and built to scale with your vision.
               <br /><br />
               We don't believe in one-size-fits-all solutions. Each engagement begins with a deep understanding of your business environment, continues through thoughtful and agile design, and culminates in execution that prioritizes performance, security, and user adoption. Whether modernizing existing infrastructure or building next-generation digital capabilities, we guide our clients through every phase of transformation—with clarity, confidence, and measurable results.
@@ -147,19 +148,20 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
                 <div className="relative h-48 w-full">
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-cyan-600">{step.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-300">{step.description}</p>
+                  <p className="text-slate-600">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -231,6 +233,7 @@ export default function AboutPage() {
                     src={value.image}
                     alt={value.title}
                     fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -246,7 +249,7 @@ export default function AboutPage() {
 
       {/* Our Team Section */}
       {/*
-      <section className="py-20 px-4 bg-white dark:bg-slate-900">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -255,10 +258,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-black">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800">
               Our <span className="text-cyan-600">Team</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-600 max-w-3xl mx-auto">
               Our team of experienced technical experts is dedicated to helping businesses stay ahead in the digital landscape.
             </p>
           </motion.div>
@@ -305,14 +308,14 @@ export default function AboutPage() {
               <motion.div
                 key={index}
                 variants={fadeIn}
-                className="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl shadow-lg"
+                className="bg-slate-50 p-6 rounded-xl shadow-lg"
               >
-                <div className="w-16 h-16 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-600 dark:text-cyan-400 rounded-full flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mb-4">
                   <Users size={32} />
                 </div>
-                <h3 className="text-xl font-bold mb-1 text-slate-800 dark:text-white">{member.name}</h3>
-                <p className="text-cyan-600 dark:text-cyan-400 mb-3">{member.role}</p>
-                <p className="text-slate-600 dark:text-slate-300">{member.bio}</p>
+                <h3 className="text-xl font-bold mb-1 text-slate-800">{member.name}</h3>
+                <p className="text-cyan-600 mb-3">{member.role}</p>
+                <p className="text-slate-600">{member.bio}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -321,7 +324,7 @@ export default function AboutPage() {
       */}
 
       {/* Our Clients Section */}
-      <section className="py-20 px-4 bg-white dark:bg-slate-900 overflow-hidden">
+      <section className="py-20 px-4 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -330,10 +333,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-slate-800 dark:text-black">
+            <h2 className="text-3xl font-bold mb-4 text-slate-800">
               Our <span className="text-cyan-600">Clients</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-600 max-w-3xl mx-auto">
               We proudly partner with forward-thinking businesses, public sector organizations, and global enterprises. Our clients trust us to turn complexity into clarity and ideas into outcomes.
             </p>
           </motion.div>
@@ -361,7 +364,7 @@ export default function AboutPage() {
                   "/HCSC.png",
                   "/Hipten.png",
                   "/House-Of-Makers.png",
-                  "/Hudl-logo-print-pantone.png",
+                  "/Hudl-logo-print-pantone.jpg",
                   "/LANDSA.png",
                   "/Navancio.png",
                   "/OBG.png",

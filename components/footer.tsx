@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { services } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,6 +16,9 @@ export default function Footer() {
             <p className="text-slate-300 mb-4">
               Empowering Innovation, Driving Digital Transformation
             </p>
+            <Link href={site.cta.href} className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all">
+              {site.cta.shortLabel}
+            </Link>
           </div>
 
           {/* Quick Links */}
@@ -36,6 +41,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/insights" className="text-slate-300 hover:text-cyan-400 transition-colors">
+                  Insights
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-slate-300 hover:text-cyan-400 transition-colors">
                   Contact Us
                 </Link>
@@ -47,36 +57,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/services#software-development" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Cloud-Native Application Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#web-development" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Innovative Web & Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#cloud-implementation" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  Enterprise Cloud Architecture & Migration
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#custom-integrations" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  API-Driven Integration & Intelligent Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#ecommerce-solutions" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                  AI-Powered E-commerce Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="/services#quality-assurance" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                 Intelligent Quality Engineering
-                </Link>
-              </li>
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <Link href={`/services/${service.slug}`} className="text-slate-300 hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -107,7 +94,10 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
           <p>
-            &copy; {currentYear} Nainika Technologies. All rights reserved.
+            &copy; {currentYear} Nainika Technologies. All rights reserved.{" "}
+            <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
+              Privacy Policy
+            </Link>
           </p>
         </div>
       </div>
