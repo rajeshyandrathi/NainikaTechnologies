@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import HomeHero from "@/components/home-hero";
 import HowWeWork from "@/components/how-we-work";
 import ServiceVisual from "@/components/service-visual";
 import StarterOffers from "@/components/starter-offers";
@@ -13,7 +13,6 @@ import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export default function Home() {
-  const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [statsRef, statsInView] = useInView({ threshold: 0.1 });
   const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [ctaRef, ctaInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -35,43 +34,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-        <section className="overflow-hidden relative py-6 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
-        <Image
-          src="/logo-mark.svg"
-          alt=""
-          width={560}
-          height={618}
-          unoptimized
-          className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 opacity-[0.07] pointer-events-none select-none"
-        />
-        <motion.div
-          ref={heroRef}
-          initial="hidden"
-          animate={heroInView ? "visible" : "hidden"}
-          variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24 pb-6 text-center"
-        >
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
-              <span className="text-black">AI Agents and RevOps Systems</span>{" "}
-              <span className="text-cyan-600">for B2B SaaS Companies</span>
-            </h1>
-            {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black"> */}
-            <p className="text-slate-600 mb-6">
-              We build AI agents and connect your CRM, marketing, billing, and finance tools, so your revenue teams spend less time on manual work. If work can be delegated to an agent, we can build it.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                Explore Our Services <ArrowRight size={18} />
-              </Link>
-              <Link href={site.cta.href} className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                {site.cta.label}
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </section>
+      <HomeHero />
       
       {/* About Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">

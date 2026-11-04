@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 
 const title = "Privacy Policy";
@@ -67,7 +68,8 @@ const sections = [
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-32 pb-20 px-4 bg-white">
+    <div className="relative overflow-hidden pt-32 pb-20 px-4 bg-white">
+      <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-black mb-4">{title}</h1>
         <p className="text-slate-600 mb-10">Last updated: 4 November 2026</p>

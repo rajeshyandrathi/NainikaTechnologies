@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LogoWatermark from "@/components/logo-watermark";
 import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import ServiceVisual from "@/components/service-visual";
@@ -38,7 +39,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   return (
     <div className="overflow-hidden">
-      <section className="bg-blue-50 pt-32 pb-16 px-4">
+      <section className="relative overflow-hidden bg-blue-50 pt-32 pb-16 px-4">
+        <LogoWatermark />
         <div className="max-w-5xl mx-auto">
           <Link href="/services" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
             All services

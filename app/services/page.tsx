@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import PageHero from "@/components/page-hero";
 import { ArrowRight } from "lucide-react";
 import HowWeWork from "@/components/how-we-work";
 import ServiceVisual from "@/components/service-visual";
@@ -18,21 +19,30 @@ export default function ServicesPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          className="relative z-10 max-w-7xl mx-auto text-center text-black"
+      <PageHero
+        eyebrow="Our Services"
+        title="Everything Your Revenue Engine Needs,"
+        highlight="in One Partner"
+        description="From AI agents to RevOps, CRM, and cloud, we design, build, and run the systems B2B SaaS companies grow on. One connected team, from first strategy session to long-term support."
+      >
+        <div className="flex flex-wrap gap-3 mt-8 mb-8">
+          {serviceGroups.map((group) => (
+            <Link
+              key={group.id}
+              href={`#${group.id}`}
+              className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 text-slate-100 transition-colors"
+            >
+              {group.title}
+            </Link>
+          ))}
+        </div>
+        <Link
+          href={site.cta.href}
+          className="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold py-3 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-cyan-600">Services</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-            AI agents, RevOps systems, and the cloud and digital products behind them, built for B2B SaaS companies.
-          </p>
-        </motion.div>
-      </section>
+          {site.cta.label} <ArrowRight size={18} />
+        </Link>
+      </PageHero>
 
       {/* Services List */}
       <section className="py-16 px-4 bg-slate-50">
