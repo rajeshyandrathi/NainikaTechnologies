@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { serviceGroups } from "@/lib/services";
@@ -12,7 +13,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-cyan-400">Nainika Technologies</h3>
+            <Image
+              src="/logo-dark.svg"
+              alt="Nainika Technologies"
+              width={194}
+              height={70}
+              unoptimized
+              className="mb-4 h-16 w-auto"
+            />
             <p className="text-slate-300 mb-4">
               AI agents and RevOps systems for B2B SaaS companies
             </p>
