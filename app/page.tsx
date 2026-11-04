@@ -43,7 +43,7 @@ export default function Home() {
           width={560}
           height={618}
           unoptimized
-          className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 opacity-[0.07] pointer-events-none select-none"
+          className="absolute -right-12 lg:-right-16 top-1/2 -translate-y-1/2 h-auto w-64 lg:w-[560px] opacity-[0.07] pointer-events-none select-none"
         />
         <motion.div
           ref={heroRef}
