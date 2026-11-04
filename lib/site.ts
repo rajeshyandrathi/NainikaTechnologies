@@ -3,6 +3,7 @@ export const site = {
   url: "https://www.nainikatechnologies.co.za",
   email: "info@nainikatechnologies.co.za",
   phone: "+27 68 890 6854",
+  linkedin: "https://www.linkedin.com/company/nainikatechnologies/",
   address: {
     street: "13 Glen Abbey Rd, Cape Farms",
     locality: "Cape Town",

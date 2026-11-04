@@ -53,6 +53,7 @@ const organizationJsonLd = {
   email: site.email,
   telephone: site.phone.replace(/\s/g, ""),
   description: defaultDescription,
+  sameAs: [site.linkedin],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,
