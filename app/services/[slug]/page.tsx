@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LogoWatermark from "@/components/logo-watermark";
+import PageHero from "@/components/page-hero";
 import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import ServiceVisual from "@/components/service-visual";
-import { services } from "@/lib/services";
+import { serviceGroups, services } from "@/lib/services";
 import { site } from "@/lib/site";
 
 type ServicePageProps = {
@@ -37,28 +37,24 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = services.find((item) => item.slug === slug);
   if (!service) notFound();
 
+  const group = serviceGroups.find((item) => item.id === service.group);
+
   return (
     <div className="overflow-hidden">
-      <section className="relative overflow-hidden bg-blue-50 pt-32 pb-16 px-4">
-        <LogoWatermark />
-        <div className="max-w-5xl mx-auto">
-          <Link href="/services" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
-            All services
-          </Link>
-          <div className="flex items-center gap-4 mt-6 mb-6">
-            <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
-              <service.icon size={32} />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-black">{service.title}</h1>
-          </div>
-          <p className="text-lg md:text-xl text-slate-700 max-w-3xl">{service.description}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={group?.title ?? "Our Services"}
+        title={service.title}
+        description={service.description}
+      >
+        <Link href="/services" className="inline-block mt-6 py-2 text-cyan-300 font-medium hover:text-cyan-200">
+          All services
+        </Link>
+      </PageHero>
 
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6">What We Deliver</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-6">What We Deliver</h2>
             <ul className="space-y-3">
               {service.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-2">
@@ -74,7 +70,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Let&apos;s Talk About Your Project</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">Let&apos;s Talk About Your Project</h2>
           <p className="text-lg mb-8 text-gray-200">
             Tell us what you want to achieve and we&apos;ll show you how we can help.
           </p>

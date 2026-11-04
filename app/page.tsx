@@ -47,10 +47,10 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800">
                 Your Partner for <span className="text-cyan-600">AI and RevOps</span>
               </h2>
-              <p className="text-slate-600 mb-6">
+              <p className="text-slate-600 mb-6 max-w-3xl mx-auto">
                 Nainika Technologies helps B2B SaaS companies turn scattered tools and manual processes into connected revenue systems. We learn how your business runs, then build the agents, integrations, and processes that move it forward.
               </p>
               <ul className="space-y-3 inline-block text-left">
@@ -92,7 +92,7 @@ export default function Home() {
             variants={fadeIn}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-800">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">
               Our Core <span className="text-cyan-600">Services</span>
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
@@ -147,7 +147,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
             Our <span className="text-cyan-300">Experience</span>
           </h2>
         </div>
@@ -191,10 +191,10 @@ export default function Home() {
           variants={fadeIn}
           className="relative z-10 max-w-5xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-cyan-600">
             Ready to Transform Your Business with Technology?
           </h2>
-          <p className="text-slate-600 mb-6">
+          <p className="text-slate-600 mb-6 max-w-3xl mx-auto">
             Let's discuss how Nainika Technologies can help you achieve your business goals with AI agents and connected revenue systems.
           </p>
           <Link href={site.cta.href} className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
