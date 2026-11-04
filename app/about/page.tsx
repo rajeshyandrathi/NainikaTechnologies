@@ -58,7 +58,7 @@ export default function AboutPage() {
           <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl">
             We connect your revenue systems from first lead to final invoice, then put AI agents to work on the tasks slowing your team down, so your people can focus on customers and growth.
           </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: "Built Around You",
@@ -79,12 +79,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <Link
-            href={site.cta.href}
-            className="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold py-3 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
-          >
-            {site.cta.label} <ArrowRight size={18} />
-          </Link>
         </motion.div>
       </section>
 

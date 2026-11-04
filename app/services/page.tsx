@@ -25,7 +25,7 @@ export default function ServicesPage() {
         highlight="in One Partner"
         description="From AI agents to RevOps, CRM, and cloud, we design, build, and run the systems B2B SaaS companies grow on. One connected team, from first strategy session to long-term support."
       >
-        <div className="flex flex-wrap gap-3 mt-8 mb-8">
+        <div className="flex flex-wrap gap-3 mt-8">
           {serviceGroups.map((group) => (
             <Link
               key={group.id}
@@ -36,12 +36,6 @@ export default function ServicesPage() {
             </Link>
           ))}
         </div>
-        <Link
-          href={site.cta.href}
-          className="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold py-3 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
-        >
-          {site.cta.label} <ArrowRight size={18} />
-        </Link>
       </PageHero>
 
       {/* Services List */}
