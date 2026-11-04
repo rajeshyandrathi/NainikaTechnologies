@@ -102,7 +102,7 @@ export default function Home() {
                   </motion.li>
                 ))}
               </ul>
-              <Link href="/about" className="flex items-center justify-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
+              <Link href="/about" className="flex items-center justify-center mt-6 py-2 text-cyan-600 font-medium hover:text-cyan-700">
                 Learn more about us <ArrowRight size={16} className="ml-2" />
               </Link>
             </motion.div>
@@ -149,16 +149,16 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-cyan-600">{group.title}</h3>
                   </div>
                   <p className="text-slate-600 mb-4">{group.summary}</p>
-                  <ul className="space-y-2 mb-4 flex-1">
+                  <ul className="mb-4 flex-1">
                     {servicesInGroup(group.id).map((service) => (
                       <li key={service.slug}>
-                        <Link href={`/services/${service.slug}`} className="text-slate-700 hover:text-cyan-600 transition-colors">
+                        <Link href={`/services/${service.slug}`} className="block py-2 text-slate-700 hover:text-cyan-600 transition-colors">
                           {service.title}
                         </Link>
                       </li>
                     ))}
                   </ul>
-                  <Link href={`/services#${group.id}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+                  <Link href={`/services#${group.id}`} className="inline-flex items-center py-2 text-cyan-600 font-medium hover:text-cyan-700">
                     Explore {group.title} <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>

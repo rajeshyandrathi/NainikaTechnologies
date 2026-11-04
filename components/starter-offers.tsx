@@ -48,7 +48,7 @@ export default function StarterOffers() {
                   </li>
                 ))}
               </ul>
-              <Link href={site.cta.href} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+              <Link href={site.cta.href} className="inline-flex items-center py-2 text-cyan-600 font-medium hover:text-cyan-700">
                 {site.cta.shortLabel} <ArrowRight size={16} className="ml-2" />
               </Link>
             </div>

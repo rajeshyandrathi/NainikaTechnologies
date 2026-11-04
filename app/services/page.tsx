@@ -61,7 +61,7 @@ export default function ServicesPage() {
                     <div className="p-6 flex flex-col flex-1">
                       <h3 className="text-xl font-bold mb-3 text-cyan-600">{service.title}</h3>
                       <p className="text-slate-600 mb-4 flex-1">{service.summary}</p>
-                      <Link href={`/services/${service.slug}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+                      <Link href={`/services/${service.slug}`} className="inline-flex items-center py-2 text-cyan-600 font-medium hover:text-cyan-700">
                         Learn more <ArrowRight size={16} className="ml-2" />
                       </Link>
                     </div>

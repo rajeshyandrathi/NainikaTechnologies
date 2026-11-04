@@ -45,7 +45,7 @@ export default async function InsightPage({ params }: InsightPageProps) {
   return (
     <article className="pt-32 pb-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
-        <Link href="/insights" className="text-cyan-600 font-medium hover:text-cyan-700">
+        <Link href="/insights" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
           All insights
         </Link>
         <h1 className="text-3xl md:text-4xl font-bold text-black mt-6 mb-4">{insight.title}</h1>

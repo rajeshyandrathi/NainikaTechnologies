@@ -59,7 +59,7 @@ export default function ContactPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 py-20 px-4">
+      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Email Us
                     </h3>
-                    <a href={`mailto:${site.email}`} className="text-slate-600 hover:text-cyan-600">
+                    <a href={`mailto:${site.email}`} className="inline-block py-2 break-all text-slate-600 hover:text-cyan-600">
                       {site.email}
                     </a>
                   </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Call Us
                     </h3>
-                    <a href="tel:+27688906854" className="text-slate-600 hover:text-cyan-600">
+                    <a href="tel:+27688906854" className="inline-block py-2 break-all text-slate-600 hover:text-cyan-600">
                       {site.phone}
                     </a>
                   </div>

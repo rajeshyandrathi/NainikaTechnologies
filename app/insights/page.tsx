@@ -32,7 +32,7 @@ export default function InsightsPage() {
             <article key={insight.slug} className="bg-white rounded-xl shadow-lg p-6 flex flex-col">
               <h2 className="text-xl font-bold mb-3 text-cyan-600">{insight.title}</h2>
               <p className="text-slate-600 mb-4 flex-1">{insight.description}</p>
-              <Link href={`/insights/${insight.slug}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+              <Link href={`/insights/${insight.slug}`} className="inline-flex items-center py-2 text-cyan-600 font-medium hover:text-cyan-700">
                 Read more <ArrowRight size={16} className="ml-2" />
               </Link>
             </article>

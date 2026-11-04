@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 py-1">
               <Image
                 src="/Logo-Transparent.png"
                 alt="Nainika Technologies Logo"
@@ -83,7 +83,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-medium text-cyan-600 hover:text-cyan-700 transition-colors"
+                  className="py-2 font-medium text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   {link.label}
                 </Link>
