@@ -6,7 +6,20 @@ import { ArrowRight, Bot, CheckCircle } from "lucide-react";
 import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 
-const tools = ["Salesforce", "HubSpot", "Marketo", "Outreach", "CPQ", "Chargebee", "Sage Intacct"];
+const tools = [
+  "Salesforce",
+  "HubSpot",
+  "Marketo",
+  "Outreach",
+  "Salesloft",
+  "Gong",
+  "CPQ",
+  "Chargebee",
+  "Sage Intacct",
+  "Zapier",
+  "AWS",
+  "Azure",
+];
 
 const agentSteps = [
   "New lead qualified and routed",
