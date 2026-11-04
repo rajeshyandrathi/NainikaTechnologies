@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import Link from "next/link";
+import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -59,7 +60,8 @@ export default function ContactPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
+      <section className="relative overflow-hidden bg-blue-50 pt-32 pb-16 px-4">
+        <LogoWatermark />
         <motion.div
           initial="hidden"
           animate="visible"

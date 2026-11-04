@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, Award, CheckCircle, Clock, Globe, Lightbulb, Users } from "lucide-react";
@@ -36,22 +37,54 @@ export default function AboutPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-[#08283C] to-cyan-900 text-white pt-28 md:pt-36 pb-16 md:pb-24 px-4">
+        <LogoWatermark />
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeIn}
-          className="relative z-10 max-w-7xl mx-auto text-center text-black"
+          className="relative z-10 max-w-7xl mx-auto"
         >
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-cyan-800">Us</span>
-        </h1>
-        <p className="text-slate-600 mb-6">
-            We help B2B SaaS companies put AI agents to work and connect the systems that run their revenue. By bridging the gap between your tools, data, and teams, we reduce manual work and give leaders a clearer view of the business.
-        </p> 
-          <p className="text-slate-600 mb-6">  
-          Our work spans agentic AI, RevOps and CRM systems, cloud platforms, integrations, and digital products. We stay with you from the first audit or pilot through rollout and long-term support.
+          <p className="inline-block mb-6 px-4 py-1.5 rounded-full border border-cyan-400/40 bg-cyan-400/10 text-sm font-medium text-cyan-200">
+            About Nainika Technologies
           </p>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+            Your Revenue Systems Should Work as Hard as{" "}
+            <span className="text-cyan-300">Your Team</span>
+          </h1>
+          <p className="text-lg md:text-xl text-slate-200 mb-4 max-w-3xl">
+            Too many B2B SaaS teams lose hours to manual work, disconnected tools, and numbers nobody trusts. We fix that.
+          </p>
+          <p className="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl">
+            We connect your revenue systems from first lead to final invoice, then put AI agents to work on the tasks slowing your team down, so your people can focus on customers and growth.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {[
+              {
+                title: "Built Around You",
+                description: "We start with your goals, tools, and processes, not a one-size-fits-all template.",
+              },
+              {
+                title: "Proof Before Scale",
+                description: "Begin with an audit or pilot, see real results, and then decide what comes next.",
+              },
+              {
+                title: "With You After Launch",
+                description: "We monitor, support, and improve your systems as your business and tools change.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-xl border border-white/15 bg-white/10 p-6">
+                <h2 className="text-lg font-bold mb-2 text-cyan-300">{item.title}</h2>
+                <p className="text-slate-200">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <Link
+            href={site.cta.href}
+            className="bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold py-3 px-6 rounded-md transition-all inline-flex items-center justify-center gap-2"
+          >
+            {site.cta.label} <ArrowRight size={18} />
+          </Link>
         </motion.div>
       </section>
 

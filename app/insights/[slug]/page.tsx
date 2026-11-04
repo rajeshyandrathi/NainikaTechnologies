@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LogoWatermark from "@/components/logo-watermark";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { insights } from "@/lib/insights";
@@ -43,7 +44,8 @@ export default async function InsightPage({ params }: InsightPageProps) {
   if (!insight) notFound();
 
   return (
-    <article className="pt-32 pb-20 px-4 bg-white">
+    <article className="relative overflow-hidden pt-32 pb-20 px-4 bg-white">
+      <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
         <Link href="/insights" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
           All insights
