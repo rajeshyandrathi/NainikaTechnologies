@@ -37,9 +37,9 @@ export const insights: Insight[] = [
     ],
   },
   {
-    slug: "agents-skills-and-plugins",
-    title: "Agents, Skills, and Plugins: What's the Difference?",
-    description: "These three terms are often used interchangeably. Here's what each one means and when your business needs it.",
+    slug: "agents-plugins-and-connectors",
+    title: "AI Agents, Plugins, and Connectors: What's the Difference?",
+    description: "These terms are often used interchangeably. Here's what each one means and when your business needs it.",
     date: "2026-11-04",
     sections: [
       {
@@ -49,21 +49,155 @@ export const insights: Insight[] = [
         ],
       },
       {
+        heading: "Connectors give it access",
+        paragraphs: [
+          "A connector links an agent to another system, such as your CRM, email, documents, or billing platform. Without connectors, an agent can only work with what you paste into it. With them, it can look up a customer, read a contract, or update a record.",
+          "Each connector also sets a security boundary, so decide carefully what it can read and what it can change. Many teams start with read-only access and add write access later.",
+        ],
+      },
+      {
         heading: "Skills teach it how",
         paragraphs: [
           "A skill is a packaged set of instructions, and sometimes supporting files, that shows an agent how to carry out a particular task. Think of it as a playbook. If your team has a set way to write a proposal or review a contract, a skill captures that so the agent follows it each time.",
         ],
       },
       {
-        heading: "Plugins add and package abilities",
+        heading: "Plugins package it all together",
         paragraphs: [
-          "A plugin extends an AI product, usually by bundling things like commands, skills, and connections to other tools into something that's easy to install. Plugins help a whole team share the same setup instead of each person configuring their own.",
+          "A plugin extends an AI product, usually by bundling commands, skills, and connectors into something that's easy to install. Plugins help a whole team share the same setup instead of each person configuring their own.",
         ],
       },
       {
         heading: "Which do you need?",
         paragraphs: [
-          "If people are repeating a process with an AI assistant, start with a skill. If the assistant needs access to your systems, add a connection or plugin. If you want the work done end to end with little supervision, you need an agent, and it will probably use the other two.",
+          "If the AI needs access to your systems, start with a connector. If people are repeating a process, add a skill. If several people need the same setup, package it as a plugin. If you want the work done end to end with little supervision, you need an agent, and it will probably use all three.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "salesforce-audit-checklist",
+    title: "What a Good Salesforce Audit Should Cover",
+    description: "A practical checklist for finding the security gaps, technical debt, and unused features in your Salesforce org.",
+    date: "2026-11-04",
+    sections: [
+      {
+        heading: "Why audit Salesforce?",
+        paragraphs: [
+          "Salesforce orgs tend to grow one request at a time. After a few years, you may have fields nobody uses, automation nobody fully understands, and more admin access than you intended. An audit shows you what's really there, what's at risk, and what to fix first.",
+        ],
+      },
+      {
+        heading: "Security and access",
+        paragraphs: [
+          "Start with who can see and change what. Review admin users, profiles, permission sets, sharing rules, and connected apps, and make sure multi-factor authentication is in place. Too many people with broad permissions is one of the most common findings.",
+        ],
+      },
+      {
+        heading: "Automation and code",
+        paragraphs: [
+          "List every automation and check for overlap. Older Workflow Rules and Process Builders should be moved to Flow, because Salesforce ended support for them at the end of 2025. Review your Apex code too, including test quality and not just the 75% coverage Salesforce requires for deployment.",
+        ],
+      },
+      {
+        heading: "Data quality",
+        paragraphs: [
+          "Look for duplicates, empty required information, and stale records. Bad data affects everything built on top of it, from reports and forecasts to any AI agent you connect to your CRM.",
+        ],
+      },
+      {
+        heading: "Limits, licenses, and unused features",
+        paragraphs: [
+          "Check storage and API usage against your org limits, then compare licenses with actual logins. Reports, dashboards, profiles, and queues that nobody uses add clutter, and unused licenses are direct savings.",
+        ],
+      },
+      {
+        heading: "Turn findings into a plan",
+        paragraphs: [
+          "A useful audit ends with priorities, not a long list. Fix security risks first, then whatever is slowing your team down, and schedule the rest. Repeating the audit once or twice a year stops the same problems from building up again.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "revops-audit-guide",
+    title: "How to Run a RevOps Audit",
+    description: "Find where leads, data, and revenue are slipping through the gaps between marketing, sales, and finance.",
+    date: "2026-11-04",
+    sections: [
+      {
+        heading: "What a RevOps audit looks for",
+        paragraphs: [
+          "A RevOps audit follows your revenue from first touch to final invoice. The aim is to find the places where leads stall, data breaks, or teams work from different numbers.",
+        ],
+      },
+      {
+        heading: "Definitions and funnel",
+        paragraphs: [
+          "Start by checking that everyone agrees on the basics. What counts as a qualified lead? When does an opportunity become real? If marketing, sales, and finance answer differently, your reports won't match, however good your tools are.",
+        ],
+      },
+      {
+        heading: "Lead flow and handoffs",
+        paragraphs: [
+          "Trace real leads through your systems. How quickly are they routed, who owns follow-up, and what happens when a deal moves from marketing to sales or from sales to customer success? Most revenue leaks appear at these handoffs.",
+        ],
+      },
+      {
+        heading: "CRM and data health",
+        paragraphs: [
+          "Your CRM should be the reliable source of truth. Review your pipeline stages, required fields, duplicates, and how well your team actually uses it. If people keep their real numbers in spreadsheets, that tells you something important.",
+        ],
+      },
+      {
+        heading: "Tech stack and quote-to-cash",
+        paragraphs: [
+          "List every tool across marketing automation, sales engagement, quoting, billing, and finance. Look for overlapping software, manual exports, and broken syncs. Then check that a closed deal flows cleanly through CPQ and billing into your finance system.",
+        ],
+      },
+      {
+        heading: "Reporting and next steps",
+        paragraphs: [
+          "Finally, ask whether leaders can trust the forecast and see pipeline, conversion, and retention without someone building a spreadsheet. Rank what you find by revenue impact and effort, then start with the fixes that give you the quickest return.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "choosing-agentic-ai-tools",
+    title: "How to Choose the Right Agentic AI Tools",
+    description: "A vendor-neutral guide to the parts of an agentic AI setup and the questions to ask before you commit.",
+    date: "2026-11-04",
+    sections: [
+      {
+        heading: "Start with the job, not the tool",
+        paragraphs: [
+          "New AI tools appear constantly, and it's easy to choose one because of a good demo. Instead, define the task you want done, the systems involved, and how you'll measure success. The right tools usually become clearer once that's written down.",
+        ],
+      },
+      {
+        heading: "The parts of an agentic AI setup",
+        paragraphs: [
+          "Most setups have four layers: the AI model that does the thinking, an agent platform or framework that manages the steps, connectors that reach your business systems, and monitoring that shows you what the agent did and how well it performed.",
+          "You don't need to buy all of these separately. Some products include several layers, while custom builds let you choose each one.",
+        ],
+      },
+      {
+        heading: "What to compare",
+        paragraphs: [
+          "Test the options on your own real examples rather than relying on published benchmarks. Compare the quality of the results, cost at your expected volume, speed, and how well each option works with the tools you already use.",
+        ],
+      },
+      {
+        heading: "Security and control",
+        paragraphs: [
+          "Ask where your data goes, whether it's used for training, and who can access it. Check that you can limit what an agent is allowed to do, require human approval for sensitive actions, and review a record of its activity.",
+        ],
+      },
+      {
+        heading: "Stay flexible",
+        paragraphs: [
+          "AI models improve quickly, so avoid tying your whole system to one vendor if you can. Keeping your business logic, data, and evaluations separate from the model makes it much easier to switch as better options appear.",
         ],
       },
     ],

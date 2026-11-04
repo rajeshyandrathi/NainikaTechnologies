@@ -40,7 +40,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     <div className="overflow-hidden">
       <section className="bg-blue-50 pt-32 pb-16 px-4">
         <div className="max-w-5xl mx-auto">
-          <Link href="/services" className="text-cyan-600 font-medium hover:text-cyan-700">
+          <Link href="/services" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
             All services
           </Link>
           <div className="flex items-center gap-4 mt-6 mb-6">

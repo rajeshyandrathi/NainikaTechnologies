@@ -36,7 +36,7 @@ export default function AboutPage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 py-20 px-4">
+      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -47,10 +47,10 @@ export default function AboutPage() {
             About <span className="text-cyan-800">Us</span>
         </h1>
         <p className="text-slate-600 mb-6">
-            Your strategic technology partner focused on empowering businesses through cutting-edge Cloud Services and innovative IT solutions. We specialize in delivering scalable digital architectures and secure infrastructure management that drive operational efficiency and long-term competitive advantage. By bridging the gap between complex technology and business goals, we ensure your organization is equipped to thrive in an ever-evolving global marketplace.
+            We help B2B SaaS companies put AI agents to work and connect the systems that run their revenue. By bridging the gap between your tools, data, and teams, we reduce manual work and give leaders a clearer view of the business.
         </p> 
           <p className="text-slate-600 mb-6">  
-          Our comprehensive IT services encompass everything from managed infrastructure and cybersecurity to custom software development and strategic consulting. We provide end-to-end support designed to optimize your technology stack, minimize downtime, and ensure your business remains agile in a digital-first world.
+          Our work spans agentic AI, RevOps and CRM systems, cloud platforms, integrations, and digital products. We stay with you from the first audit or pilot through rollout and long-term support.
           </p>
         </motion.div>
       </section>
@@ -91,8 +91,8 @@ export default function AboutPage() {
               className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
             >
               <Image
-                src="/Cloud Architecture.jpeg"
-                alt="Cloud architecture illustration"
+                src="/Quality Assurance.jpeg"
+                alt="Team reviewing business charts"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -346,8 +346,8 @@ export default function AboutPage() {
             <motion.div
               initial={{ x: 0 }}
               animate={{ x: "-50%" }}
-              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
-              className="flex w-[200%]"
+              transition={{ duration: 45, ease: "linear", repeat: Infinity }}
+              className="flex w-max"
             >
               {[...Array(2)].flatMap(() =>
                 [
@@ -400,7 +400,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
           <h2 className="text-3xl font-bold mb-6 text-white">
-            Ready to Partner with Nainika Technologies?
+            Ready to Connect Your Revenue Systems?
           </h2>
           <p className="text-white mb-8 max-w-2xl mx-auto">
             Tell us about your revenue systems and we'll show you where AI agents and RevOps can help.

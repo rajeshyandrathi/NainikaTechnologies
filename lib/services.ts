@@ -2,6 +2,7 @@ import {
   Bot,
   ChartNoAxesCombined,
   Cloud,
+  Code,
   Database,
   Globe,
   Layers,
@@ -45,14 +46,14 @@ export const serviceGroups: ServiceGroup[] = [
     title: "RevOps & CRM",
     summary: "One connected revenue engine across your CRM, marketing, sales, billing, and finance tools.",
     icon: ChartNoAxesCombined,
-    image: "/Deliver.jpeg",
+    image: "/Excellence.jpeg",
   },
   {
     id: "cloud-integration",
     title: "Cloud & Integration",
     summary: "Secure, scalable cloud platforms and the integrations that keep your systems in sync.",
     icon: Cloud,
-    image: "/Cloud Architecture.jpeg",
+    image: "/Cloud-Application-Development.jpeg",
   },
   {
     id: "digital-products",
@@ -85,16 +86,17 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "claude-ai-agents",
+    slug: "custom-ai-agents",
     group: "agentic-ai",
-    summary: "Custom agents built on Claude and connected securely to the tools your team already uses.",
+    summary: "Custom agents built on the leading AI models and connected securely to the tools your team already uses.",
     icon: Sparkles,
-    title: "Claude AI Agents",
-    description: "We build custom agents on Claude, Anthropic's AI models, and connect them to the systems your business runs on. Your agents work with your own context, tools, and rules, so they fit how your team already operates.",
+    title: "Custom AI Agents",
+    description: "We build custom agents on the major AI platforms, choose the right model for each job, and connect your agents to the systems your business runs on. Your agents work with your own context, tools, and rules, so they fit how your team already operates.",
     image: "/Design.jpeg",
     features: [
-      "Custom agents built with the Claude API and Agent SDK",
-      "Claude Code setup and workflows for engineering teams",
+      "Custom agents built on leading AI models and platforms",
+      "Model selection based on quality, cost, and data requirements",
+      "AI coding assistant setup and workflows for engineering teams",
       "Tool and data connections through the Model Context Protocol (MCP)",
       "Team rollouts with clear permissions and guardrails",
       "Evaluation of agent quality, reliability, and cost"
@@ -109,7 +111,7 @@ export const services: Service[] = [
     description: "We make AI assistants and agents more useful for your business. Plugins package your tools, commands, and connections into one install, while skills turn your team's know-how into reusable instructions an agent can follow your way.",
     image: "/Innovation.jpeg",
     features: [
-      "Custom plugins for Claude and other AI platforms",
+      "Custom plugins for leading AI platforms",
       "Connectors for your internal systems and third-party apps",
       "Custom skills for your company's processes and standards",
       "Conversion of existing playbooks and SOPs into skills",
@@ -172,22 +174,38 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "cloud-development-migration",
+    slug: "cloud-application-development",
     group: "cloud-integration",
-    summary: "Build new cloud applications, modernize legacy systems, and migrate critical workloads securely.",
+    summary: "Build scalable, resilient cloud applications optimized for performance, agility, and seamless scalability.",
+    icon: Code,
+    title: "Cloud Application Development",
+    description: "We design and build scalable, secure, and high-performance cloud-native applications tailored to your business goals, from modernizing legacy systems to developing next-generation products.",
+    image: "/Cloud-Application-Development.jpeg",
+    features: [
+      "Custom application development for cloud environments",
+      "Legacy system modernization with minimal disruption",
+      "API-first development and microservices architecture",
+      "Serverless computing and event-driven architecture",
+      "Robust security design and compliance adherence",
+      "Integration with platforms like Salesforce, AWS, Azure, Google Cloud, and HubSpot"
+    ]
+  },
+  {
+    slug: "cloud-architecture-migration",
+    group: "cloud-integration",
+    summary: "Architect, migrate, and optimize critical workloads for better agility, efficiency, and cost control.",
     icon: Cloud,
-    title: "Cloud Development & Migration",
-    description: "We design and build secure, scalable cloud applications and help organizations move existing systems to the cloud. From modernizing legacy software to planning a full migration, we create cloud environments that are reliable and cost-effective.",
+    title: "Cloud Architecture & Migration",
+    description: "We help organizations modernize and scale through seamless cloud migration and intelligent architecture design, creating cost-effective, secure, and scalable cloud environments.",
     image: "/Cloud Architecture.jpeg",
     features: [
-      "Custom cloud-native application development",
-      "Legacy system modernization with minimal disruption",
       "Cloud migration strategy and execution",
-      "Serverless, microservices, and event-driven architecture",
-      "Hybrid and multi-cloud setup on AWS, Azure, and Google Cloud",
+      "Cloud infrastructure planning, design, and optimization",
       "Cloud security, governance, and regulatory compliance",
+      "Hybrid and multi-cloud environment setup and management",
       "Cost control, performance tuning, and monitoring",
-      "Disaster recovery and infrastructure automation with Terraform and CloudFormation"
+      "Disaster recovery planning and high availability design",
+      "Cloud resource automation using Terraform and CloudFormation"
     ]
   },
   {
