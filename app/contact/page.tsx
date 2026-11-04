@@ -4,49 +4,51 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import Link from "next/link";
+import { site } from "@/lib/site";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import { type ContactValues, contactSchema } from "@/lib/contact-schema";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  phone: z.string().optional(),
-  company: z.string().optional(),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
-
-type FormValues = z.infer<typeof formSchema>;
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+  } = useForm<ContactValues>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async (data: ContactValues) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    track("contact_form_submit");
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSuccess(false);
-    }, 5000);
+    setIsError(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error("The enquiry was not sent.");
+
+      setIsSuccess(true);
+      track("contact_form_submit");
+      reset();
+
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 5000);
+    } catch {
+      setIsError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const fadeIn = {
@@ -114,9 +116,9 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Email Us
                     </h3>
-                    <p className="text-slate-600">
-                      info@nainikatechnologies.co.za
-                    </p>
+                    <a href={`mailto:${site.email}`} className="text-slate-600 hover:text-cyan-600">
+                      {site.email}
+                    </a>
                   </div>
                 </div>
 
@@ -128,9 +130,9 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-slate-800 mb-1">
                       Call Us
                     </h3>
-                    <p className="text-slate-600">
-                      +27 68 890 6854
-                    </p>
+                    <a href="tel:+27688906854" className="text-slate-600 hover:text-cyan-600">
+                      {site.phone}
+                    </a>
                   </div>
                 </div>
               </div>
@@ -148,6 +150,14 @@ export default function ContactPage() {
               </h3>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <input
+                  type="text"
+                  {...register("website")}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
                     Full Name *
@@ -251,6 +261,13 @@ export default function ContactPage() {
                     </>
                   )}
                 </button>
+
+                {isError && (
+                  <div className="p-4 bg-red-100 text-red-800 rounded-md" role="alert">
+                    Sorry, we couldn't send your message. Please email us at{" "}
+                    <a href={`mailto:${site.email}`} className="underline">{site.email}</a>.
+                  </div>
+                )}
 
                 {isSuccess && (
                   <div className="p-4 bg-green-100 text-green-800 rounded-md">

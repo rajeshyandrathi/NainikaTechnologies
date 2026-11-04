@@ -10,8 +10,8 @@ import { site } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const defaultTitle = "Nainika Technologies | Agentic AI, RevOps & Cloud Partner";
-const defaultDescription = "Agentic AI, Claude AI agents, RevOps and CRM systems, cloud platforms, and digital products for growing businesses. If work can be delegated to an agent, we can build it.";
+const defaultTitle = "Nainika Technologies | AI Agents & RevOps for B2B SaaS";
+const defaultDescription = "We build AI agents and RevOps systems for B2B SaaS companies, connecting your CRM, marketing, billing, and finance tools. If work can be delegated to an agent, we can build it.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

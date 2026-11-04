@@ -75,10 +75,10 @@ export default function AboutPage() {
                 Our mission is simple yet powerful: enable businesses to lead with technology that's aligned to purpose, built for agility, and designed to drive measurable impact.
               </p>
               <p className="text-slate-600 mb-4">
-                With a team of technologists, architects, and strategists, we deliver intelligent, cloud-native, and data-driven solutions that reimagine operations, elevate customer experiences, and future-proof digital infrastructure.
+                Our team designs AI agents, RevOps and CRM systems, and cloud platforms that reduce manual work, connect revenue data, and give leaders a clearer view of their business.
               </p>
               <p className="text-slate-600">
-                Today, we proudly serve visionary organizations across industries—as a transformation partner that's as committed to innovation as we are to outcomes.
+                Today, our focus is helping B2B SaaS companies connect their revenue systems and put AI agents to work, while continuing to support organizations across other industries.
               </p>
             </motion.div>
 
@@ -90,8 +90,8 @@ export default function AboutPage() {
               className="relative aspect-square rounded-xl overflow-hidden shadow-xl"
             >
               <Image
-                src="https://i.pinimg.com/originals/53/75/08/5375082f5c4787caa60715ed0e42faa8.jpg"
-                alt="IT Infrastructure"
+                src="/Cloud Architecture.jpeg"
+                alt="Cloud architecture illustration"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -350,33 +350,33 @@ export default function AboutPage() {
             >
               {[...Array(2)].flatMap(() =>
                 [
-                  "/AbinBev.png",
-                  "/ABSA.png",
-                  "/ADA.png",
-                  "/AumentCapital.png",
-                  "/BCBS.png",
-                  "/CapeUnionMart.png",
-                  "/cenegenics.png",
-                  "/ChangeHealthCare.png",
-                  "/CharterBrands_Logo_Black.png",
-                  "/CHC.png",
-                  "/GymShark.png",
-                  "/HCSC.png",
-                  "/Hipten.png",
-                  "/House-Of-Makers.png",
-                  "/Hudl-logo-print-pantone.jpg",
-                  "/LANDSA.png",
-                  "/Navancio.png",
-                  "/OBG.png",
-                  "/Reliant.png",
-                  "/Synatic.png",
-                  "/UrbanFindr.png",
-                  "/vt_team_logo.png",
+                  { src: "/AbinBev.png", name: "AB InBev" },
+                  { src: "/ABSA.png", name: "Absa" },
+                  { src: "/ADA.png", name: "ADA" },
+                  { src: "/AumentCapital.png", name: "Aument Capital" },
+                  { src: "/BCBS.png", name: "Blue Cross Blue Shield" },
+                  { src: "/CapeUnionMart.png", name: "Cape Union Mart" },
+                  { src: "/cenegenics.png", name: "Cenegenics" },
+                  { src: "/ChangeHealthCare.png", name: "Change Healthcare" },
+                  { src: "/CharterBrands_Logo_Black.png", name: "Charter Brands" },
+                  { src: "/CHC.png", name: "CHC" },
+                  { src: "/GymShark.png", name: "Gymshark" },
+                  { src: "/HCSC.png", name: "HCSC" },
+                  { src: "/Hipten.png", name: "Hipten" },
+                  { src: "/House-Of-Makers.png", name: "House of Makers" },
+                  { src: "/Hudl-logo-print-pantone.jpg", name: "Hudl" },
+                  { src: "/LANDSA.png", name: "LANDSA" },
+                  { src: "/Navancio.png", name: "Navancio" },
+                  { src: "/OBG.png", name: "OBG" },
+                  { src: "/Reliant.png", name: "Reliant" },
+                  { src: "/Synatic.png", name: "Synatic" },
+                  { src: "/UrbanFindr.png", name: "UrbanFindr" },
+                  { src: "/vt_team_logo.png", name: "VT Team" },
                 ].map((logo, index) => (
-                  <div key={index + logo} className="flex items-center px-8 shrink-0">
+                  <div key={`${index}-${logo.src}`} className="flex items-center px-8 shrink-0">
                     <Image
-                      src={logo}
-                      alt={`Client ${index + 1}`}
+                      src={logo.src}
+                      alt={`${logo.name} logo`}
                       width={120}
                       height={60}
                       className="object-contain grayscale hover:grayscale-0 transition"
@@ -402,7 +402,7 @@ export default function AboutPage() {
             Ready to Partner with Nainika Technologies?
           </h2>
           <p className="text-white mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss how we can help your business leverage technology for growth and success.
+            Tell us about your revenue systems and we'll show you where AI agents and RevOps can help.
           </p>
 
             <Link

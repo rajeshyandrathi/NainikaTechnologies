@@ -1,6 +1,2 @@
-const nextConfig = {
-  images: {
-    remotePatterns: [{ protocol: "https", hostname: "i.pinimg.com" }],
-  },
-};
+const nextConfig = {};
 module.exports = nextConfig;

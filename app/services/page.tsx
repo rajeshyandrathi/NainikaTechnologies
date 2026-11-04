@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import HowWeWork from "@/components/how-we-work";
 import ServiceVisual from "@/components/service-visual";
+import StarterOffers from "@/components/starter-offers";
 import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
 
@@ -27,7 +29,7 @@ export default function ServicesPage() {
             Our <span className="text-cyan-600">Services</span>
           </h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black">
-            Explore our comprehensive range of technology solutions designed to help your business thrive in the digital age.
+            AI agents, RevOps systems, and the cloud and digital products behind them, built for B2B SaaS companies.
           </p>
         </motion.div>
       </section>
@@ -70,6 +72,10 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <HowWeWork />
+
+      <StarterOffers />
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">

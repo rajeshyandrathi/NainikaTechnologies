@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import HowWeWork from "@/components/how-we-work";
 import ServiceVisual from "@/components/service-visual";
+import StarterOffers from "@/components/starter-offers";
 import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
 
@@ -43,12 +45,12 @@ export default function Home() {
         >
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
-              <span className="text-black">AI Agents, RevOps and Cloud Software</span> That Get{" "}
-              <span className="text-cyan-600">Real Work Done</span>
+              <span className="text-black">AI Agents and RevOps Systems</span>{" "}
+              <span className="text-cyan-600">for B2B SaaS Companies</span>
             </h1>
             {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black"> */}
             <p className="text-slate-600 mb-6">
-              Nainika Technologies designs and builds agentic AI, Claude AI agents, RevOps and CRM systems, cloud platforms, and digital products for growing businesses. If work can be delegated to an agent, we can build it.
+              We build AI agents and connect your CRM, marketing, billing, and finance tools, so your revenue teams spend less time on manual work. If work can be delegated to an agent, we can build it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
@@ -74,33 +76,29 @@ export default function Home() {
               className="text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
-                Your Strategic <span className="text-cyan-600">Technology Partner</span>
+                Your Partner for <span className="text-cyan-600">AI and RevOps</span>
               </h2>
               <p className="text-slate-600 mb-6">
-                At Nainika Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+                Nainika Technologies helps B2B SaaS companies turn scattered tools and manual processes into connected revenue systems. We learn how your business runs, then build the agents, integrations, and processes that move it forward.
               </p>
-              <ul className="space-y-3 text-center">
+              <ul className="space-y-3 inline-block text-left">
                 {[
-                  { text: "Tailored IT Solutions for Your Business Needs" },
-                  { text: "Experienced Technical Experts You Can Trust" },
-                  { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
-                  { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
-                  { text: "End-to-End Support and Partnership", paddingRight: '69px' }
+                  "AI Agents That Complete Real Work",
+                  "Clean Data Across Your Revenue Tools",
+                  "Hands-On Salesforce and HubSpot Expertise",
+                  "Focused Pilots Before Bigger Rollouts",
+                  "End-to-End Support After Launch"
                 ].map((item, index) => (
                   <motion.li
-                    key={index}
+                    key={item}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-2 justify-center"
-                    style={{
-                      ...(item.paddingLeft && { paddingLeft: item.paddingLeft }),
-                      ...(item.paddingRight && { paddingRight: item.paddingRight })
-                    }}
+                    className="flex items-start gap-2"
                   >
                     <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-                    <span className="text-slate-700">{item.text}</span>
+                    <span className="text-slate-700">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -126,7 +124,7 @@ export default function Home() {
               Our Core <span className="text-cyan-600">Services</span>
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of technology solutions designed to help your business thrive in the digital age.
+              From AI agents to RevOps and the cloud platforms behind them, we build systems that work together.
             </p>
           </motion.div>
 
@@ -170,10 +168,14 @@ export default function Home() {
         </div>
       </section>
 
+      <HowWeWork />
+
+      <StarterOffers />
+
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Our <span className="text-cyan-300">Experience</span>
           </h2>
         </div>
@@ -221,7 +223,7 @@ export default function Home() {
             Ready to Transform Your Business with Technology?
           </h2>
           <p className="text-slate-600 mb-6">
-            Let's discuss how Nainika Technologies can help you achieve your business goals through agentic AI and innovative IT solutions.
+            Let's discuss how Nainika Technologies can help you achieve your business goals with AI agents and connected revenue systems.
           </p>
           <Link href={site.cta.href} className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
             {site.cta.label} <ArrowRight size={18} />

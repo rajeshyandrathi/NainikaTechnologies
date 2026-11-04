@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-cyan-400">Nainika Technologies</h3>
             <p className="text-slate-300 mb-4">
-              Empowering Innovation, Driving Digital Transformation
+              AI agents and RevOps systems for B2B SaaS companies
             </p>
             <Link href={site.cta.href} className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all">
               {site.cta.shortLabel}
@@ -80,7 +80,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="text-cyan-400 mr-2 flex-shrink-0" />
-                <span className="text-slate-300">+27 68 890 6854</span>
+                <a href="tel:+27688906854" className="text-slate-300 hover:text-cyan-400 transition-colors">
+                  +27 68 890 6854
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-cyan-400 mr-2 flex-shrink-0" />
