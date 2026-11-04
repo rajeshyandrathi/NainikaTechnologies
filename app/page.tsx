@@ -2,10 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, CheckCircle, Cloud, Code, Database, Globe, ShoppingBag, TestTube } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import HowWeWork from "@/components/how-we-work";
+import ServiceVisual from "@/components/service-visual";
+import StarterOffers from "@/components/starter-offers";
+import { serviceGroups, servicesInGroup } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export default function Home() {
   const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -37,23 +41,23 @@ export default function Home() {
           initial="hidden"
           animate={heroInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 py-6 text-center"
+          className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24 pb-6 text-center"
         >
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-600">
-              <span className="text-black">Empowering</span> Businesses Through{" "}
-              <span className="text-black">Innovative</span> <span className="text-cyan-600">Technology</span>
+              <span className="text-black">AI Agents and RevOps Systems</span>{" "}
+              <span className="text-cyan-600">for B2B SaaS Companies</span>
             </h1>
             {/* <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-black"> */}
             <p className="text-slate-600 mb-6">
-              Nainika Technologies is your strategic technology partner, delivering cutting-edge cloud services and IT solutions tailored to your unique business needs. We empower organizations to accelerate digital transformation and achieve sustainable growth through innovative, scalable, and secure technology architectures.
+              We build AI agents and connect your CRM, marketing, billing, and finance tools, so your revenue teams spend less time on manual work. If work can be delegated to an agent, we can build it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
                 Explore Our Services <ArrowRight size={18} />
               </Link>
-              <Link href="/contact" className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
-                Contact Us
+              <Link href={site.cta.href} className="bg-transparent hover:bg-slate-100 border-2 border-cyan-600 text-cyan-600 font-medium py-3 px-6 rounded-md transition-all flex items-center justify-center gap-2">
+                {site.cta.label}
               </Link>
             </div>
           </div>
@@ -72,37 +76,33 @@ export default function Home() {
               className="text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">
-                Your Strategic <span className="text-cyan-600">Technology Partner</span>
+                Your Partner for <span className="text-cyan-600">AI and RevOps</span>
               </h2>
               <p className="text-slate-600 mb-6">
-                At Nainika Technologies, we go beyond one-size-fits-all solutions. We partner with you to deeply understand your business objectives, operational challenges, and future vision—delivering customized technology strategies that drive growth and efficiency.
+                Nainika Technologies helps B2B SaaS companies turn scattered tools and manual processes into connected revenue systems. We learn how your business runs, then build the agents, integrations, and processes that move it forward.
               </p>
-              <ul className="space-y-3 text-center">
+              <ul className="space-y-3 inline-block text-left">
                 {[
-                  { text: "Tailored IT Solutions for Your Business Needs" },
-                  { text: "Experienced Technical Experts You Can Trust" },
-                  { text: "Maximizing ROI on Every Technology Investment", paddingLeft: '25px' },
-                  { text: "A Strategic Approach to Digital Transformation", paddingLeft: '8px' },
-                  { text: "End-to-End Support and Partnership", paddingRight: '69px' }
+                  "AI Agents That Complete Real Work",
+                  "Clean Data Across Your Revenue Tools",
+                  "Hands-On Salesforce and HubSpot Expertise",
+                  "Focused Pilots Before Bigger Rollouts",
+                  "End-to-End Support After Launch"
                 ].map((item, index) => (
                   <motion.li
-                    key={index}
+                    key={item}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-2 justify-center"
-                    style={{
-                      ...(item.paddingLeft && { paddingLeft: item.paddingLeft }),
-                      ...(item.paddingRight && { paddingRight: item.paddingRight })
-                    }}
+                    className="flex items-start gap-2"
                   >
                     <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-                    <span className="text-slate-700">{item.text}</span>
+                    <span className="text-slate-700">{item}</span>
                   </motion.li>
                 ))}
               </ul>
-              <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
+              <Link href="/about" className="flex items-center justify-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
                 Learn more about us <ArrowRight size={16} className="ml-2" />
               </Link>
             </motion.div>
@@ -124,7 +124,7 @@ export default function Home() {
               Our Core <span className="text-cyan-600">Services</span>
             </h2>
             <p className="text-slate-600 max-w-3xl mx-auto">
-              We offer a comprehensive range of technology solutions designed to help your business thrive in the digital age.
+              From AI agents to RevOps and the cloud platforms behind them, we build systems that work together.
             </p>
           </motion.div>
 
@@ -132,69 +132,34 @@ export default function Home() {
             initial="hidden"
             animate={servicesInView ? "visible" : "hidden"}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8"
           >
-            {[
-              {
-                icon: <Code size={32} />,
-                title: "Next-Gen Cloud Application Development",
-                description: "Build scalable, resilient next-gen cloud applications optimized for performance, agility, and seamless scalability to accelerate business innovation.",
-                image: "/Cloud-Application-Development.jpeg"
-              },
-              {
-                icon: <Globe size={32} />,
-                title: "Innovative Web & Mobile Development",
-                description: "Craft sleek, responsive web and mobile applications designed for exceptional user engagement and seamless performance.",
-                image: "/Website-Mobile-App-Design-Development.jpeg"
-              },
-              {
-                icon: <Cloud size={32} />,
-                title: "Enterprise Cloud Architecture & Migration",
-                description: "Architect, migrate, and optimize mission-critical workloads to the cloud for enhanced agility, operational efficiency, seamless scalability, and accelerated innovation.",
-                image: "/Cloud Architecture.jpeg"
-              },
-              {
-                icon: <Database size={32} />,
-                title: "API-Driven Integration & Intelligent Automation",
-                description: "Enable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
-                image: "/API Integration.jpeg"
-              },
-              {
-                icon: <ShoppingBag size={32} />,
-                title: "AI-Powered E-commerce Solutions",
-                description: "Implement intelligent commerce platforms that deliver personalized customer experiences and boost conversions through advanced analytics and automation.",
-                image: "/Ecommerce.jpeg"
-              },
-              {
-                icon: <TestTube size={32} />,
-                title: "Intelligent Quality Engineering",
-                description: "Implement advanced testing strategies powered by AI and automation to ensure superior product quality, faster releases, and seamless user experiences.",
-                image: "/Quality Assurance.jpeg"
-              }
-            ].map((service, index) => (
+            {serviceGroups.map((group) => (
               <motion.div
-                key={index}
+                key={group.id}
                 variants={fadeIn}
-                className="service-card bg-white rounded-xl overflow-hidden shadow-lg"
+                className="service-card bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <div className="relative h-48">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
+                <ServiceVisual service={group} className="h-56" sizes="(min-width: 768px) 50vw, 100vw" />
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-cyan-100 text-cyan-600 rounded-lg">
-                      {service.icon}
+                      <group.icon size={32} />
                     </div>
-                    <h3 className="text-xl font-bold text-cyan-600">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-cyan-600">{group.title}</h3>
                   </div>
-                  <p className="text-slate-600">{service.description}</p>
-                  <Link href={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700">
-                    Learn more <ArrowRight size={16} className="ml-2" />
+                  <p className="text-slate-600 mb-4">{group.summary}</p>
+                  <ul className="space-y-2 mb-4 flex-1">
+                    {servicesInGroup(group.id).map((service) => (
+                      <li key={service.slug}>
+                        <Link href={`/services/${service.slug}`} className="text-slate-700 hover:text-cyan-600 transition-colors">
+                          {service.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={`/services#${group.id}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+                    Explore {group.title} <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>
               </motion.div>
@@ -203,10 +168,14 @@ export default function Home() {
         </div>
       </section>
 
+      <HowWeWork />
+
+      <StarterOffers />
+
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-cyan-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Our <span className="text-cyan-300">Experience</span>
           </h2>
         </div>
@@ -254,10 +223,10 @@ export default function Home() {
             Ready to Transform Your Business with Technology?
           </h2>
           <p className="text-slate-600 mb-6">
-            Let's discuss how Nainika Technologies can help you achieve your business goals through innovative IT solutions.
+            Let's discuss how Nainika Technologies can help you achieve your business goals with AI agents and connected revenue systems.
           </p>
-          <Link href="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
-            Get Started Today <ArrowRight size={18} />
+          <Link href={site.cta.href} className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-md transition-all inline-flex items-center justify-center gap-2">
+            {site.cta.label} <ArrowRight size={18} />
           </Link>
         </motion.div>
       </section>

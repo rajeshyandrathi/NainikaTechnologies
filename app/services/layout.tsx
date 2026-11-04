@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 const title = "Services";
 const fullTitle = `${title} | Nainika Technologies`;
-const description = "Explore our comprehensive range of technology solutions designed to help your business thrive in the digital age.";
+const description = "AI agents, RevOps systems, and the cloud and digital products behind them, built for B2B SaaS companies.";
 
 export const metadata: Metadata = {
   title,
