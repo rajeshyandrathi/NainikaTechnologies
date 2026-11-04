@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, CheckCircle } from "lucide-react";
@@ -35,7 +36,15 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-        <section className="py-6 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
+        <section className="overflow-hidden relative py-6 px-4 bg-gradient-to-b from-slate-50 bg-blue-50">
+        <Image
+          src="/logo-mark.svg"
+          alt=""
+          width={560}
+          height={618}
+          unoptimized
+          className="hidden lg:block absolute -right-16 top-1/2 -translate-y-1/2 opacity-[0.07] pointer-events-none select-none"
+        />
         <motion.div
           ref={heroRef}
           initial="hidden"

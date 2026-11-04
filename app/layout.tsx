@@ -48,7 +48,7 @@ const organizationJsonLd = {
   "@type": "ProfessionalService",
   name: site.name,
   url: site.url,
-  logo: `${site.url}/Logo-Transparent.png`,
+  logo: `${site.url}/logo.png`,
   image: `${site.url}/og-image.png`,
   email: site.email,
   telephone: site.phone.replace(/\s/g, ""),
