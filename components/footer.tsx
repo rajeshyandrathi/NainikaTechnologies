@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,20 +14,6 @@ export default function Footer() {
             <p className="text-slate-300 mb-4">
               Empowering Innovation, Driving Digital Transformation
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.facebook.com/people/Cloudforce-Technologies/61576771890468/" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="https://x.com/cloudforceSA" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="https://www.linkedin.com/company/cloudforce-technologies" className="text-slate-300 hover:text-cyan-400 transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
