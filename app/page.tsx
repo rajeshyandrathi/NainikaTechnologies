@@ -102,7 +102,7 @@ export default function Home() {
                   </motion.li>
                 ))}
               </ul>
-              <Link href="/about" className="inline-flex items-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
+              <Link href="/about" className="flex items-center justify-center mt-8 text-cyan-600 font-medium hover:text-cyan-700">
                 Learn more about us <ArrowRight size={16} className="ml-2" />
               </Link>
             </motion.div>
