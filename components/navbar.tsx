@@ -57,20 +57,21 @@ export default function Navbar() {
               <Image
                 src="/logo-mark.svg"
                 alt=""
-                width={48}
-                height={48}
+                width={56}
+                height={62}
                 unoptimized
                 priority
-                className="h-10 w-10 md:h-12 md:w-12 object-contain"
+                className="h-11 md:h-14 w-auto"
               />
-              <span className="flex flex-col leading-none">
-                <span className="text-lg md:text-xl font-bold tracking-[0.2em] text-cyan-600">
-                  NAINIKA
-                </span>
-                <span className="mt-1 text-[10px] md:text-xs font-semibold tracking-[0.17em] text-slate-700">
-                  TECHNOLOGIES
-                </span>
-              </span>
+              <Image
+                src="/logo-wordmark.svg"
+                alt="Nainika Technologies"
+                width={140}
+                height={39}
+                unoptimized
+                priority
+                className="h-9 md:h-10 w-auto"
+              />
             </Link>
           </div>
 
