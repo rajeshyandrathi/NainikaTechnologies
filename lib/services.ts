@@ -2,37 +2,79 @@ import {
   Bot,
   ChartNoAxesCombined,
   Cloud,
-  Code,
   Database,
   Globe,
   Layers,
   type LucideIcon,
-  Palette,
   Puzzle,
   ShoppingBag,
   Sparkles,
   TestTube,
   UsersRound,
-  Wand2,
 } from "lucide-react";
+
+export type ServiceGroup = {
+  id: string;
+  title: string;
+  summary: string;
+  icon: LucideIcon;
+  image: string;
+};
 
 export type Service = {
   slug: string;
+  group: string;
   summary: string;
   icon: LucideIcon;
   title: string;
   description: string;
-  image?: string;
+  image: string;
   features: string[];
 };
+
+export const serviceGroups: ServiceGroup[] = [
+  {
+    id: "agentic-ai",
+    title: "Agentic AI",
+    summary: "AI agents that do real work. If a task can be delegated to an agent, we can build it.",
+    icon: Bot,
+    image: "/Customer Centricity.jpeg",
+  },
+  {
+    id: "revops-crm",
+    title: "RevOps & CRM",
+    summary: "One connected revenue engine across your CRM, marketing, sales, billing, and finance tools.",
+    icon: ChartNoAxesCombined,
+    image: "/Deliver.jpeg",
+  },
+  {
+    id: "cloud-integration",
+    title: "Cloud & Integration",
+    summary: "Secure, scalable cloud platforms and the integrations that keep your systems in sync.",
+    icon: Cloud,
+    image: "/Cloud Architecture.jpeg",
+  },
+  {
+    id: "digital-products",
+    title: "Digital Products",
+    summary: "Well-designed, well-tested websites, apps, and online stores that your customers enjoy using.",
+    icon: Globe,
+    image: "/Website-Mobile-App-Design-Development.jpeg",
+  },
+];
+
+export const servicesInGroup = (groupId: string) =>
+  services.filter((service) => service.group === groupId);
 
 export const services: Service[] = [
   {
     slug: "agentic-ai",
+    group: "agentic-ai",
     summary: "Put AI agents to work on real business tasks. If work can be delegated to an agent, we can build it.",
     icon: Bot,
     title: "Agentic AI Services",
     description: "We design, build, and run AI agents that plan, use your tools, and complete multi-step work instead of only answering questions. If a task can be delegated to an agent, we can build it, from research and reporting to customer operations and back-office workflows.",
+    image: "/Customer Centricity.jpeg",
     features: [
       "Agentic AI strategy and use-case discovery",
       "Custom single-agent and multi-agent systems",
@@ -44,10 +86,12 @@ export const services: Service[] = [
   },
   {
     slug: "claude-ai-agents",
+    group: "agentic-ai",
     summary: "Custom agents built on Claude and connected securely to the tools your team already uses.",
     icon: Sparkles,
     title: "Claude AI Agents",
     description: "We build custom agents on Claude, Anthropic's AI models, and connect them to the systems your business runs on. Your agents work with your own context, tools, and rules, so they fit how your team already operates.",
+    image: "/Design.jpeg",
     features: [
       "Custom agents built with the Claude API and Agent SDK",
       "Claude Code setup and workflows for engineering teams",
@@ -57,55 +101,30 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "ai-plugins",
-    summary: "Extend AI assistants with plugins that bundle your tools, commands, and connections into one install.",
+    slug: "ai-plugins-skills",
+    group: "agentic-ai",
+    summary: "Extend AI agents with plugins that connect your tools and skills that teach them how your business works.",
     icon: Puzzle,
-    title: "AI Agent Plugins",
-    description: "We build plugins that extend AI assistants and agents with new abilities. A plugin packages your tools, commands, and connections so your whole team can install the same setup and use it consistently.",
+    title: "AI Plugins & Skills",
+    description: "We make AI assistants and agents more useful for your business. Plugins package your tools, commands, and connections into one install, while skills turn your team's know-how into reusable instructions an agent can follow your way.",
+    image: "/Innovation.jpeg",
     features: [
       "Custom plugins for Claude and other AI platforms",
       "Connectors for your internal systems and third-party apps",
-      "Custom commands and automations for repeat tasks",
-      "Packaging and distribution across your organization",
-      "Maintenance as your tools and platforms change"
-    ]
-  },
-  {
-    slug: "ai-skills",
-    summary: "Teach agents how your business works with reusable skills that capture your processes and standards.",
-    icon: Wand2,
-    title: "AI Agent Skills",
-    description: "We turn your team's know-how into reusable skills: packaged instructions that show an agent how to do a task your way. Skills make results more consistent, and they let everyone on your team benefit from your best processes.",
-    features: [
       "Custom skills for your company's processes and standards",
-      "Skills for documents, reports, and repeat workflows",
       "Conversion of existing playbooks and SOPs into skills",
-      "Testing to confirm skills give reliable results",
-      "Shared skill libraries for your team"
-    ]
-  },
-  {
-    slug: "ui-ux-design",
-    summary: "Design clear, usable products, from research and wireframes to polished interfaces, including AI experiences.",
-    icon: Palette,
-    image: "/Design.jpeg",
-    title: "UI/UX Design",
-    description: "We design digital products that are clear, attractive, and easy to use. From user research to finished interfaces, we shape web, mobile, and AI experiences around what your users actually need.",
-    features: [
-      "User research and journey mapping",
-      "Wireframes and interactive prototypes",
-      "Visual interface design for web and mobile",
-      "Design systems and reusable components",
-      "Interface design for AI assistants and agents",
-      "Usability and accessibility reviews"
+      "Testing to confirm plugins and skills give reliable results",
+      "Packaging and sharing across your organization"
     ]
   },
   {
     slug: "revenue-operations",
+    group: "revops-crm",
     summary: "Align marketing, sales, and customer success around one process, one set of data, and one view of revenue.",
     icon: ChartNoAxesCombined,
     title: "Revenue Operations (RevOps)",
     description: "We connect your marketing, sales, and customer success teams through shared processes, clean data, and reliable reporting. You get a clear view of your funnel, fewer leads lost between teams, and forecasts you can trust.",
+    image: "/Deliver.jpeg",
     features: [
       "RevOps audits and roadmaps",
       "Lead capture, routing, and qualification",
@@ -117,10 +136,12 @@ export const services: Service[] = [
   },
   {
     slug: "crm-implementation",
+    group: "revops-crm",
     summary: "Implement, migrate, and optimize Salesforce, HubSpot, and other CRMs so your team actually uses them.",
     icon: UsersRound,
     title: "CRM Implementation & Optimization",
     description: "We set up, migrate, and improve CRMs around the way your revenue teams really work. Whether you're starting from scratch or fixing a system nobody trusts, we make your CRM the reliable source of truth for customers and pipeline.",
+    image: "/Excellence.jpeg",
     features: [
       "Salesforce and HubSpot implementation",
       "CRM migration and data cleanup",
@@ -132,10 +153,12 @@ export const services: Service[] = [
   },
   {
     slug: "revops-tools",
+    group: "revops-crm",
     summary: "Connect Marketo, Outreach, CPQ, Chargebee, and Sage Intacct around your CRM, from first lead to final invoice.",
     icon: Layers,
     title: "RevOps Apps & Tools",
     description: "We configure and connect the apps your revenue teams rely on, with Salesforce or HubSpot at the centre. Data flows cleanly from marketing and sales through to quoting, billing, and finance, so manual work drops away and your numbers match.",
+    image: "/Discover.jpeg",
     features: [
       "Marketing automation with Marketo and HubSpot",
       "Sales engagement with Outreach and Salesloft",
@@ -149,63 +172,30 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "cloud-application-development",
-    summary: "Build scalable, resilient cloud applications optimized for performance, agility, and seamless scalability to accelerate business innovation.",
-    icon: Code,
-    title: "Cloud Application Development",
-    description: "We design and build scalable, secure, and high-performance cloud-native applications tailored to your business goals. From modernizing legacy systems to developing next-generation applications, we deliver solutions that are agile, future-ready, and cloud-optimized.",
-    image: "/Cloud-Application-Development.jpeg",
-    features: [
-      "Custom application development for cloud environments",
-      "Legacy system modernization with minimal disruption",
-      "Mobile and web app development",
-      "API-first development and microservices architecture",
-      "Serverless computing and event-driven architecture implementation",
-      "Robust security design and compliance adherence",
-      "Integration with platforms like Salesforce, AWS, Azure, Google Cloud, and HubSpot"
-    ]
-  },
-  {
-    slug: "web-development",
-    summary: "Craft sleek, responsive web and mobile applications designed for exceptional user engagement and seamless performance.",
-    icon: Globe,
-    title: "Innovative Web & Mobile Development",
-    description: "We create engaging, high-performance websites and mobile applications that deliver exceptional user experiences across all platforms and devices.",
-    image: "/Website-Mobile-App-Design-Development.jpeg",
-    features: [
-      "Responsive, mobile-first website design",
-      "Progressive Web Applications (PWAs)",
-      "Custom Content Management Systems (CMS)",
-      "Web portals for internal and external users",
-      "UI/UX design, wireframing, and performance optimization",
-      "Custom iOS and Android app development",
-      "Native and cross-platform apps using React Native, Flutter, Swift, or Kotlin",
-      "API integration and scalable backend development"
-    ]
-  },
-  {
-    slug: "cloud-implementation",
-    summary: "Architect, migrate, and optimize mission-critical workloads to the cloud for enhanced agility, operational efficiency, and accelerated innovation.",
+    slug: "cloud-development-migration",
+    group: "cloud-integration",
+    summary: "Build new cloud applications, modernize legacy systems, and migrate critical workloads securely.",
     icon: Cloud,
-    title: "Enterprise Cloud Architecture & Migration",
-    description: "We help organizations modernize and scale through seamless cloud migration and intelligent architecture design, ensuring cost-effective, secure, and scalable cloud environments.",
+    title: "Cloud Development & Migration",
+    description: "We design and build secure, scalable cloud applications and help organizations move existing systems to the cloud. From modernizing legacy software to planning a full migration, we create cloud environments that are reliable and cost-effective.",
     image: "/Cloud Architecture.jpeg",
     features: [
+      "Custom cloud-native application development",
+      "Legacy system modernization with minimal disruption",
       "Cloud migration strategy and execution",
-      "Cloud infrastructure planning, design, and optimization",
-      "Serverless architecture implementation for scalability and cost-efficiency",
+      "Serverless, microservices, and event-driven architecture",
+      "Hybrid and multi-cloud setup on AWS, Azure, and Google Cloud",
       "Cloud security, governance, and regulatory compliance",
-      "Hybrid and multi-cloud environment setup and management",
-      "Cost control, performance tuning, and monitoring setup",
-      "Disaster recovery planning and high availability design",
-      "Cloud resource automation using Terraform and CloudFormation"
+      "Cost control, performance tuning, and monitoring",
+      "Disaster recovery and infrastructure automation with Terraform and CloudFormation"
     ]
   },
   {
     slug: "custom-integrations",
+    group: "cloud-integration",
     summary: "Enable seamless, secure connectivity across systems with API-first strategies and smart automation to optimize workflows and boost operational efficiency.",
     icon: Database,
-    title: "API-Driven Integration & Intelligent Automation",
+    title: "API Integration & Automation",
     description: "Connecting disparate systems and automating workflows to streamline operations, improve data accuracy, and boost productivity across your enterprise.",
     image: "/API Integration.jpeg",
     features: [
@@ -220,10 +210,29 @@ export const services: Service[] = [
     ]
   },
   {
+    slug: "web-mobile-design",
+    group: "digital-products",
+    summary: "Design and build clear, engaging websites, mobile apps, and portals, from user research to launch.",
+    icon: Globe,
+    title: "Web, Mobile & UI/UX Design",
+    description: "We design and build digital products that are clear, attractive, and easy to use. From user research and interface design through to development, we create websites and mobile apps around what your users actually need.",
+    image: "/Website-Mobile-App-Design-Development.jpeg",
+    features: [
+      "User research, journey mapping, and prototypes",
+      "Visual interface design and design systems",
+      "Interface design for AI assistants and agents",
+      "Responsive, mobile-first websites and web portals",
+      "Custom Content Management Systems (CMS)",
+      "iOS and Android apps using React Native, Flutter, Swift, or Kotlin",
+      "Usability and accessibility reviews"
+    ]
+  },
+  {
     slug: "ecommerce-solutions",
+    group: "digital-products",
     summary: "Implement intelligent commerce platforms that deliver personalized customer experiences and boost conversions through advanced analytics and automation.",
     icon: ShoppingBag,
-    title: "AI-Powered E-commerce Solutions",
+    title: "AI-Powered E-commerce",
     description: "Building scalable, intelligent e-commerce platforms designed to drive growth, optimize customer experience, and streamline online business operations.",
     image: "/Ecommerce.jpeg",
     features: [
@@ -239,9 +248,10 @@ export const services: Service[] = [
   },
   {
     slug: "quality-assurance",
+    group: "digital-products",
     summary: "Implement advanced testing strategies powered by AI and automation to ensure superior product quality, faster releases, and seamless user experiences.",
     icon: TestTube,
-    title: "Intelligent Quality Engineering",
+    title: "Quality Engineering",
     description: "Implementing rigorous and intelligent testing methodologies to ensure flawless performance, security, and reliability throughout the software development lifecycle.",
     image: "/Quality Assurance.jpeg",
     features: [

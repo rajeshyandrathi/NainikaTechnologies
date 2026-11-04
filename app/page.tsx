@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import ServiceVisual from "@/components/service-visual";
-import { services } from "@/lib/services";
+import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export default function Home() {
@@ -134,25 +134,34 @@ export default function Home() {
             initial="hidden"
             animate={servicesInView ? "visible" : "hidden"}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 gap-8"
           >
-            {services.map((service, index) => (
+            {serviceGroups.map((group) => (
               <motion.div
-                key={index}
+                key={group.id}
                 variants={fadeIn}
-                className="service-card bg-white rounded-xl overflow-hidden shadow-lg"
+                className="service-card bg-white rounded-xl overflow-hidden shadow-lg flex flex-col"
               >
-                <ServiceVisual service={service} className="h-48" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
-                <div className="p-6">
+                <ServiceVisual service={group} className="h-56" sizes="(min-width: 768px) 50vw, 100vw" />
+                <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-cyan-100 text-cyan-600 rounded-lg">
-                      <service.icon size={32} />
+                      <group.icon size={32} />
                     </div>
-                    <h3 className="text-xl font-bold text-cyan-600">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-cyan-600">{group.title}</h3>
                   </div>
-                  <p className="text-slate-600">{service.description}</p>
-                  <Link href={`/services/${service.slug}`} className="inline-flex items-center mt-4 text-cyan-600 font-medium hover:text-cyan-700">
-                    Learn more <ArrowRight size={16} className="ml-2" />
+                  <p className="text-slate-600 mb-4">{group.summary}</p>
+                  <ul className="space-y-2 mb-4 flex-1">
+                    {servicesInGroup(group.id).map((service) => (
+                      <li key={service.slug}>
+                        <Link href={`/services/${service.slug}`} className="text-slate-700 hover:text-cyan-600 transition-colors">
+                          {service.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={`/services#${group.id}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+                    Explore {group.title} <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </div>
               </motion.div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { services } from "@/lib/services";
+import { serviceGroups } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export default function Footer() {
@@ -57,10 +57,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">Our Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.slug}>
-                  <Link href={`/services/${service.slug}`} className="text-slate-300 hover:text-cyan-400 transition-colors">
-                    {service.title}
+              {serviceGroups.map((group) => (
+                <li key={group.id}>
+                  <Link href={`/services#${group.id}`} className="text-slate-300 hover:text-cyan-400 transition-colors">
+                    {group.title}
                   </Link>
                 </li>
               ))}

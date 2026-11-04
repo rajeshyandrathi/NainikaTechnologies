@@ -2,10 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import ServiceVisual from "@/components/service-visual";
-import { services } from "@/lib/services";
+import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export default function ServicesPage() {
@@ -14,20 +13,10 @@ export default function ServicesPage() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative bg-blue-50 py-20 px-4">
+      <section className="relative bg-blue-50 pt-32 pb-16 px-4">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -45,70 +34,40 @@ export default function ServicesPage() {
 
       {/* Services List */}
       <section className="py-16 px-4 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="space-y-24"
-          >
-            {services.map((service, index) => {
-              const [ref, inView] = useInView({
-                triggerOnce: true,
-                threshold: 0.1,
-              });
-
-              return (
-                <motion.div
-                  key={service.slug}
-                  id={service.slug}
-                  ref={ref}
-                  variants={fadeIn}
-                  className={`grid md:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? "md:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div className={`order-1 ${index % 2 === 1 ? "md:order-2" : "md:order-1"}`}>
-                    <ServiceVisual service={service} className="aspect-video rounded-xl shadow-xl" sizes="(min-width: 768px) 50vw, 100vw" />
-                  </div>
-                  <div className={`order-2 ${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
-                        <service.icon size={32} />
-                      </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
-                        {service.title}
-                      </h2>
+        <div className="max-w-7xl mx-auto space-y-20">
+          {serviceGroups.map((group) => (
+            <motion.div
+              key={group.id}
+              id={group.id}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={fadeIn}
+              className="scroll-mt-24"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-3 bg-cyan-100 text-cyan-600 rounded-lg">
+                  <group.icon size={32} />
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800">{group.title}</h2>
+              </div>
+              <p className="text-slate-600 max-w-3xl mb-8">{group.summary}</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {servicesInGroup(group.id).map((service) => (
+                  <div key={service.slug} className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <ServiceVisual service={service} className="h-44" sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="text-xl font-bold mb-3 text-cyan-600">{service.title}</h3>
+                      <p className="text-slate-600 mb-4 flex-1">{service.summary}</p>
+                      <Link href={`/services/${service.slug}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
+                        Learn more <ArrowRight size={16} className="ml-2" />
+                      </Link>
                     </div>
-                    <p className="text-slate-600 mb-6">
-                      {service.description}
-                    </p>
-                    <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                      Key Features:
-                    </h3>
-                    <ul className="space-y-3 mb-6">
-                      {service.features.map((feature, idx) => (
-                        <motion.li
-                          key={idx}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                          transition={{ delay: idx * 0.1, duration: 0.5 }}
-                          className="flex items-start gap-2"
-                        >
-                          <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-                          <span className="text-slate-700">{feature}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                    <Link href={`/services/${service.slug}`} className="inline-flex items-center text-cyan-600 font-medium hover:text-cyan-700">
-                      Learn more <ArrowRight size={16} className="ml-2" />
-                    </Link>
                   </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
