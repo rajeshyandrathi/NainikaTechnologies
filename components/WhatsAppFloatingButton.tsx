@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const whatsappNumber = "270688906854";
+const whatsappNumber = "27688906854";
 
 export default function WhatsAppFloatingButton() {
   return (

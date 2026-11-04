@@ -53,7 +53,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center space-x-2">
               <img
                 src="/Logo-Transparent.png"
-                alt="Cloudforce Logo"
+                alt="Nainika Technologies Logo"
                 className="h-8 w-8 md:h-10 md:w-10 object-contain"
               />
               <span className="text-xl md:text-2xl font-bold text-cyan-600">
