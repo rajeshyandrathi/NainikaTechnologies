@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Bot, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import LogoWatermark from "@/components/logo-watermark";
 import { site } from "@/lib/site";
 
@@ -21,18 +22,12 @@ const tools = [
   "Azure",
 ];
 
-const agentSteps = [
-  "New lead qualified and routed",
-  "CRM record updated",
-  "Quote created in CPQ",
-  "Invoice sent to billing",
-  "Revenue report updated",
-];
-
 export default function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-[#08283C] to-cyan-900 text-white pt-28 md:pt-36 pb-16 md:pb-24 px-4">
-      <LogoWatermark />
+      <div className="lg:hidden">
+        <LogoWatermark />
+      </div>
       <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,35 +69,19 @@ export default function HomeHero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-6 md:p-8 shadow-2xl"
-          aria-hidden="true"
+          className="hidden lg:flex justify-center"
         >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-lg bg-cyan-400 text-slate-950">
-              <Bot size={24} />
-            </div>
-            <div>
-              <p className="font-semibold">Example revenue agent</p>
-              <p className="text-sm text-slate-300">Lead to invoice workflow</p>
-            </div>
-          </div>
-          <ul className="space-y-3">
-            {agentSteps.map((step, index) => (
-              <motion.li
-                key={step}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.35 }}
-                className="flex items-center gap-3 rounded-lg bg-slate-950/40 px-4 py-3"
-              >
-                <CheckCircle size={20} className="text-cyan-300 flex-shrink-0" />
-                <span className="text-slate-100">{step}</span>
-              </motion.li>
-            ))}
-          </ul>
+          <Image
+            src="/logo-mark-dark.svg"
+            alt=""
+            width={420}
+            height={463}
+            unoptimized
+            className="h-auto w-[420px] drop-shadow-[0_0_40px_rgba(45,187,238,0.35)]"
+          />
         </motion.div>
       </div>
     </section>
