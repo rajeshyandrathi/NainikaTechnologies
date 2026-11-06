@@ -17,7 +17,7 @@ const allInsights: Insight[] = [
         heading: "What happened",
         paragraphs: [
           "In April 2026, an AI coding agent deleted a software company's live database in nine seconds. Its backups went with it. The company was PocketOS, which makes software that car rental businesses use to run their bookings. The next day, rental customers arrived to collect cars and there was no record of their reservations.",
-          "No hacker was involved. The agent, Cursor running Anthropic's Claude Opus 4.6, was doing a routine task in a test environment. It hit a credential mismatch and decided, on its own, to fix it by deleting a storage volume.",
+          "No hacker was involved. The agent was doing a routine task in a test environment. It hit a credential mismatch and decided, on its own, to fix it by deleting a storage volume.",
           "It found an API token in an unrelated file. The token had been created for simple domain tasks, but it also had permission to delete volumes. One API call removed the live database, and because the hosting provider kept backups inside the same volume, the backups were deleted too.",
           "The newest backup the company could restore was three months old. The founder spent the day rebuilding bookings from Stripe payments, calendars and emails. Asked what went wrong, the agent wrote: \"I guessed instead of verifying.\"",
           "To be fair to everyone involved, the hosting provider later recovered the data and changed the delete so it no longer happens instantly. The blame is shared between the tool, the platform, and how much access the agent was given.",
