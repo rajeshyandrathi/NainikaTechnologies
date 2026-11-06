@@ -6,7 +6,110 @@ export type Insight = {
   sections: { heading: string; paragraphs: string[] }[];
 };
 
-export const insights: Insight[] = [
+const allInsights: Insight[] = [
+  {
+    slug: "ai-agent-deleted-database-nine-seconds",
+    title: "Nine Seconds, Three Months of Bookings Gone: What One AI Agent Teaches Every SaaS Team",
+    description: "An AI agent deleted a company's live database and its backups in nine seconds. Here is what happened, and the checks that would have stopped it.",
+    date: "2026-11-06",
+    sections: [
+      {
+        heading: "What happened",
+        paragraphs: [
+          "In April 2026, an AI coding agent deleted a software company's live database in nine seconds. Its backups went with it. The company was PocketOS, which makes software that car rental businesses use to run their bookings. The next day, rental customers arrived to collect cars and there was no record of their reservations.",
+          "No hacker was involved. The agent, Cursor running Anthropic's Claude Opus 4.6, was doing a routine task in a test environment. It hit a credential mismatch and decided, on its own, to fix it by deleting a storage volume.",
+          "It found an API token in an unrelated file. The token had been created for simple domain tasks, but it also had permission to delete volumes. One API call removed the live database, and because the hosting provider kept backups inside the same volume, the backups were deleted too.",
+          "The newest backup the company could restore was three months old. The founder spent the day rebuilding bookings from Stripe payments, calendars and emails. Asked what went wrong, the agent wrote: \"I guessed instead of verifying.\"",
+          "To be fair to everyone involved, the hosting provider later recovered the data and changed the delete so it no longer happens instantly. The blame is shared between the tool, the platform, and how much access the agent was given.",
+        ],
+      },
+      {
+        heading: "Why this matters if you run on Salesforce or HubSpot",
+        paragraphs: [
+          "Swap \"database\" for \"CRM\" and this is the risk many B2B SaaS teams are taking right now. AI agents and integrations are being connected to Salesforce and HubSpot with whatever access was quickest to set up.",
+          "Common examples include an integration user in Salesforce with Modify All Data, a HubSpot private app with every scope ticked, an API key in a shared file that nobody remembers creating, and no tested backup of the CRM at all.",
+          "The agent doesn't need to be malicious. It only needs to guess once.",
+        ],
+      },
+      {
+        heading: "How Nainika Technologies would have helped upfront",
+        paragraphs: [
+          "An access review first. Our RevOps Audit lists every integration user, connected app and API token in your CRM, what each one can do, and who owns it. A token built for small tasks should never be able to delete records.",
+          "Least access for every agent. Each agent gets its own user with only the permissions its one workflow needs, and read-only access is the default.",
+          "The agent suggests and a person approves. In our AI Agent Pilot, the agent drafts the update, email or task, and a person approves it. Any delete or bulk change always needs approval.",
+          "A real test environment. Agents are built and tested in a sandbox with no route to live data.",
+          "Backups that live somewhere else. Regular CRM exports or a backup tool, stored outside the system they protect, with a restore tested at least once.",
+          "A log and an off switch. Every agent action is logged, and one named person can switch the agent off in seconds.",
+          "None of these is new or expensive. They just have to be in place before the agent is.",
+        ],
+      },
+      {
+        heading: "A 10-minute self-check for your team",
+        paragraphs: [
+          "Can you list every app and token connected to your CRM today? Does any of them have permission to delete or bulk-edit records? Can any AI tool act without a person approving it? When did you last restore your CRM from a backup? Who can switch off an agent, and how fast?",
+          "If any answer is \"not sure\", start there. Our RevOps Audit checks access, integrations and backups, and our AI Agent Pilot starts with one workflow and a person approving every action.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "one-laptop-six-billion-security-lesson",
+    title: "One Laptop, $6.3 Billion: The Security Lesson Every Growing Company Needs",
+    description: "The largest crypto theft on record started with one compromised laptop. It is a lesson about trusted access that applies to every growing company.",
+    date: "2026-11-05",
+    sections: [
+      {
+        heading: "Not a crypto story",
+        paragraphs: [
+          "On the evening of 29 October, the world's largest crypto exchange started losing money. By the next morning, Binance put the damage at about $6.3 billion. That makes it the largest crypto theft on record, more than four times the $1.5 billion taken from Bybit in February 2025.",
+          "The cause was not broken encryption or a stolen master key. According to Binance's preliminary investigation, it started with one compromised laptop belonging to a DevOps engineer.",
+          "This is not a crypto story. It is a story about access, and almost every growing company has the same weak point.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "Binance says the attacker used the engineer's laptop to reach a service container. From there, they could submit withdrawal requests that the system treated as genuine.",
+          "Binance says it found no evidence that any wallet private keys were leaked. The attacker did not need them. They only needed to control something that was already allowed to ask for a payment.",
+          "As reported, funds started leaving the exchange at 20:24 UTC on 29 October, and withdrawals were suspended at 22:15 UTC. On 30 October, Binance confirmed an estimated $6.3 billion impact, with about $3 billion frozen, and pledged to cover all losses from its user protection fund and company funds.",
+          "It took almost two hours to stop the outflow. In that time, a single trusted path moved billions.",
+        ],
+      },
+      {
+        heading: "The real lesson: trust was given to a path, not checked at the moment of action",
+        paragraphs: [
+          "Most security budgets go into protecting the vault: strong passwords, encrypted data and locked-down keys.",
+          "This attack went around the vault. It used a system that was already trusted to make requests. Once the attacker was inside that trusted path, nothing stopped a very large request from going through. One hacked device should never be enough to move money.",
+        ],
+      },
+      {
+        heading: "How it could have been avoided",
+        paragraphs: [
+          "None of these ideas are new. The hard part is applying them to the systems you already trust.",
+          "No single point of approval. Any high-value action, such as a large payment, a bulk data export or a mass delete, needs a second approver who is not on the same device or system.",
+          "Limits on every automated path. Each service, integration or agent gets a ceiling: how much, how many and how often. A request above the ceiling stops and waits for a person.",
+          "Least privilege. Engineers and service accounts get only the access their job needs today. Access that is not used is removed.",
+          "Locked-down work devices. Admin and production access only from managed devices, with phishing-resistant sign-in and short sessions.",
+          "Watch for unusual behaviour, not just failed logins. A trusted account doing something it has never done before, at a size it has never done before, should raise an alarm in minutes, not hours.",
+          "A kill switch you have practised. Know who can pause outgoing actions, and test it before you need it.",
+        ],
+      },
+      {
+        heading: "A 10-minute self-check for your business",
+        paragraphs: [
+          "Ask your team four questions this week. Which systems can move money, data or customer records without a second person? Which integrations or service accounts have more access than they use? If one admin's laptop was compromised tonight, what could an attacker do by morning? How fast could we notice, and who would stop it?",
+          "If any answer makes you pause, that is your starting point.",
+        ],
+      },
+      {
+        heading: "Why this matters now",
+        paragraphs: [
+          "More companies are connecting AI agents and automations to their core systems: CRM, billing, support and finance. Each one is a new trusted path, and each one can make requests on your behalf.",
+          "That is not a reason to avoid automation. It is a reason to design it with limits and human approval from day one.",
+        ],
+      },
+    ],
+  },
   {
     slug: "what-is-agentic-ai",
     title: "What Is Agentic AI, and Where Does It Actually Help?",
@@ -235,3 +338,6 @@ export const insights: Insight[] = [
     ],
   },
 ];
+
+// Newest first, so the latest insight is always at the top. Same-day insights keep the order they are listed in above.
+export const insights: Insight[] = [...allInsights].sort((a, b) => b.date.localeCompare(a.date));
