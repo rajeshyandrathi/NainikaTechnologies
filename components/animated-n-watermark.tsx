@@ -6,7 +6,7 @@ import Image from "next/image";
 const upperStroke = "M80 178V88Q80 66 100 66L114 72L300 258H372V96";
 const lowerStroke = "M80 396V228H172L368 424V336";
 
-const upperStub = "M300 76V226";
+const upperStub = "M300 76V212";
 const lowerStub = "M150 416V262";
 
 // One line from each end of the N, out into the background.
