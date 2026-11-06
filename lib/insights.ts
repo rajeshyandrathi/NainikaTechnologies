@@ -6,7 +6,7 @@ export type Insight = {
   sections: { heading: string; paragraphs: string[] }[];
 };
 
-export const insights: Insight[] = [
+const allInsights: Insight[] = [
   {
     slug: "ai-agent-deleted-database-nine-seconds",
     title: "Nine Seconds, Three Months of Bookings Gone: What One AI Agent Teaches Every SaaS Team",
@@ -338,3 +338,6 @@ export const insights: Insight[] = [
     ],
   },
 ];
+
+// Newest first, so the latest insight is always at the top. Same-day insights keep the order they are listed in above.
+export const insights: Insight[] = [...allInsights].sort((a, b) => b.date.localeCompare(a.date));
