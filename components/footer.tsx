@@ -24,15 +24,12 @@ export default function Footer() {
             <p className="text-slate-300 mb-4">
               AI agents and RevOps systems for B2B SaaS companies
             </p>
-            <Link href={site.cta.href} className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all">
-              {site.cta.shortLabel}
-            </Link>
             <a
               href={site.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Nainika Technologies on LinkedIn"
-              className="block w-fit mt-4 p-2 -ml-2 text-slate-300 hover:text-cyan-400 transition-colors"
+              className="block w-fit p-2 -ml-2 text-slate-300 hover:text-cyan-400 transition-colors"
             >
               <Linkedin size={24} />
             </a>
