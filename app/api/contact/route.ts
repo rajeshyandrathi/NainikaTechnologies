@@ -12,15 +12,13 @@ const autoReplyText = [
   "",
   "Thank you for contacting Nainika Technologies.",
   "",
-  "We've received your message, and one of our team will get back to you soon.",
+  "This is an automatic confirmation that your message has reached us. A member of our team will review it and reply within one business day.",
   "",
-  "This is an automatic confirmation.",
-  "",
-  "If you need to add anything, just reply to this email.",
+  "If you would like to add more details, such as your project scope, timeline, or any relevant documents, simply reply to this email and it will be added to your enquiry.",
   "",
   "Kind regards,",
   "",
-  "Nainika Technologies",
+  "The Nainika Technologies Team",
   site.url,
 ].join("\n");
 
