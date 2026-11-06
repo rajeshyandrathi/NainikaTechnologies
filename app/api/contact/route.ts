@@ -4,6 +4,36 @@ import { site } from "@/lib/site";
 
 const bccEmail = "rajeshyandrathi@gmail.com";
 const fromEmail = "Nainika Technologies Website <website@nainikatechnologies.co.za>";
+const autoReplyFromEmail = `Nainika Technologies <${site.email}>`;
+
+// The text is fixed so the form can't be used to send a visitor's words to someone else.
+const autoReplyText = [
+  "Hello,",
+  "",
+  "Thank you for contacting Nainika Technologies.",
+  "",
+  "We've received your message, and one of our team will get back to you soon.",
+  "",
+  "This is an automatic confirmation.",
+  "",
+  "If you need to add anything, just reply to this email.",
+  "",
+  "Kind regards,",
+  "",
+  "Nainika Technologies",
+  site.url,
+].join("\n");
+
+function sendEmail(apiKey: string, email: Record<string, unknown>) {
+  return fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(email),
+  });
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -25,32 +55,40 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Email is not configured." }, { status: 503 });
   }
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from: fromEmail,
-      to: [site.email],
-      bcc: [bccEmail],
-      reply_to: email,
-      subject: `New website enquiry from ${name}`,
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Phone: ${phone || "Not provided"}`,
-        `Company: ${company || "Not provided"}`,
-        "",
-        message,
-      ].join("\n"),
-    }),
+  const response = await sendEmail(apiKey, {
+    from: fromEmail,
+    to: [site.email],
+    bcc: [bccEmail],
+    reply_to: email,
+    subject: `New website enquiry from ${name}`,
+    text: [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || "Not provided"}`,
+      `Company: ${company || "Not provided"}`,
+      "",
+      message,
+    ].join("\n"),
   });
 
   if (!response.ok) {
     console.error(`Resend rejected the enquiry with status ${response.status}.`);
     return NextResponse.json({ error: "The email could not be sent." }, { status: 502 });
+  }
+
+  // The enquiry has arrived, so a failed confirmation shouldn't show the visitor an error.
+  try {
+    const autoReply = await sendEmail(apiKey, {
+      from: autoReplyFromEmail,
+      to: [email],
+      subject: "We've received your message",
+      text: autoReplyText,
+    });
+    if (!autoReply.ok) {
+      console.error(`Resend rejected the auto-reply with status ${autoReply.status}.`);
+    }
+  } catch (error) {
+    console.error("The auto-reply could not be sent.", error);
   }
 
   return NextResponse.json({ ok: true });

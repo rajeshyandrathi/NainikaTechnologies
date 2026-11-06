@@ -4,13 +4,40 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import HomeHero from "@/components/home-hero";
 import HowWeWork from "@/components/how-we-work";
 import ServiceVisual from "@/components/service-visual";
 import StarterOffers from "@/components/starter-offers";
 import { serviceGroups, servicesInGroup } from "@/lib/services";
 import { site } from "@/lib/site";
+
+const strengths = [
+  {
+    title: "AI Agents That Complete Real Work",
+    description: "Agents that qualify leads, update records, and prepare reports inside your tools, not demos that stop at a chat window.",
+  },
+  {
+    title: "Clean Data Across Your Revenue Tools",
+    description: "One shared view of leads, deals, and customers, so marketing, sales, and finance work from the same numbers.",
+  },
+  {
+    title: "Hands-On Salesforce and HubSpot Expertise",
+    description: "We configure, connect, and fix the platforms ourselves, then leave your team with a setup it can run.",
+  },
+  {
+    title: "Focused Pilots Before Bigger Rollouts",
+    description: "Start with one real workflow, measure the result, and decide what comes next before committing further.",
+  },
+  {
+    title: "Guardrails From Day One",
+    description: "Agents get only the access they need, and a person approves important actions until they've earned more trust.",
+  },
+  {
+    title: "End-to-End Support After Launch",
+    description: "We monitor, maintain, and improve your systems as your business and tools change.",
+  },
+];
 
 export default function Home() {
   const [statsRef, statsInView] = useInView({ threshold: 0.1 });
@@ -39,46 +66,41 @@ export default function Home() {
       {/* About Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-center items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800">
-                Your Partner for <span className="text-cyan-600">AI and RevOps</span>
-              </h2>
-              <p className="text-slate-600 mb-6 max-w-3xl mx-auto">
-                Nainika Technologies helps B2B SaaS companies turn scattered tools and manual processes into connected revenue systems. We learn how your business runs, then build the agents, integrations, and processes that move it forward.
-              </p>
-              <ul className="space-y-3 inline-block text-left">
-                {[
-                  "AI Agents That Complete Real Work",
-                  "Clean Data Across Your Revenue Tools",
-                  "Hands-On Salesforce and HubSpot Expertise",
-                  "Focused Pilots Before Bigger Rollouts",
-                  "End-to-End Support After Launch"
-                ].map((item, index) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-2"
-                  >
-                    <CheckCircle className="text-cyan-600 mt-1 flex-shrink-0" size={20} />
-                    <span className="text-slate-700">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-              <Link href="/about" className="flex items-center justify-center mt-6 py-2 text-cyan-600 font-medium hover:text-cyan-700">
-                Learn more about us <ArrowRight size={16} className="ml-2" />
-              </Link>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-slate-800">
+              Your Partner for <span className="text-cyan-600">AI and RevOps</span>
+            </h2>
+            <p className="text-slate-600 mb-4 max-w-3xl mx-auto">
+              Nainika Technologies helps B2B SaaS companies turn scattered tools and manual processes into connected revenue systems. We learn how your business runs, then build the agents, integrations, and processes that move it forward.
+            </p>
+            <p className="text-slate-600 max-w-3xl mx-auto">
+              Most revenue teams don't need another tool. They need the tools they already have to share the same data, and someone to own the work that falls between them. That's where we start.
+            </p>
+          </motion.div>
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {strengths.map((item, index) => (
+              <motion.li
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-slate-50 rounded-xl p-6 shadow-lg"
+              >
+                <h3 className="text-xl font-bold mb-3 text-cyan-600">{item.title}</h3>
+                <p className="text-slate-600">{item.description}</p>
+              </motion.li>
+            ))}
+          </ul>
+          <Link href="/about" className="flex items-center justify-center mt-10 py-2 text-cyan-600 font-medium hover:text-cyan-700">
+            Learn more about us <ArrowRight size={16} className="ml-2" />
+          </Link>
         </div>
       </section>
 
