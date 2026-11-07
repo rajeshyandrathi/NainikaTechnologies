@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import LogoWatermark from "@/components/logo-watermark";
 import { notFound } from "next/navigation";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
   if (!insight) return {};
 
   const fullTitle = `${insight.title} | ${site.name}`;
+  const image = insight.image ?? "/og-image.png";
   return {
     title: insight.title,
     description: insight.description,
@@ -32,9 +34,9 @@ export async function generateMetadata({ params }: InsightPageProps): Promise<Me
       title: fullTitle,
       description: insight.description,
       url: `/insights/${slug}`,
-      images: "/og-image.png",
+      images: image,
     },
-    twitter: { title: fullTitle, description: insight.description, images: "/og-image.png" },
+    twitter: { card: "summary_large_image", title: fullTitle, description: insight.description, images: image },
   };
 }
 
@@ -51,7 +53,18 @@ export default async function InsightPage({ params }: InsightPageProps) {
           All insights
         </Link>
         <h1 className="text-3xl md:text-4xl font-bold text-black mt-6 mb-4">{insight.title}</h1>
-        <p className="text-lg text-slate-600 mb-10">{insight.description}</p>
+        <p className="text-lg text-slate-600 mb-8">{insight.description}</p>
+        {insight.image && (
+          <Image
+            src={insight.image}
+            alt=""
+            width={1200}
+            height={630}
+            priority
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="w-full h-auto rounded-xl shadow-lg mb-10"
+          />
+        )}
         {insight.sections.map((section) => (
           <section key={section.heading} className="mb-8">
             <h2 className="text-2xl font-bold text-slate-800 mb-3">{section.heading}</h2>
@@ -60,6 +73,23 @@ export default async function InsightPage({ params }: InsightPageProps) {
                 {paragraph}
               </p>
             ))}
+            {section.figure && (
+              <figure className="mt-6 mb-2">
+                <a href={section.figure.src} target="_blank" rel="noopener noreferrer" aria-label="Open the full-size diagram">
+                  <Image
+                    src={section.figure.src}
+                    alt={section.figure.alt}
+                    width={section.figure.width}
+                    height={section.figure.height}
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="w-full h-auto rounded-xl shadow-lg"
+                  />
+                </a>
+                {section.figure.caption && (
+                  <figcaption className="mt-3 text-sm text-slate-500 text-center">{section.figure.caption}</figcaption>
+                )}
+              </figure>
+            )}
           </section>
         ))}
         <Link
