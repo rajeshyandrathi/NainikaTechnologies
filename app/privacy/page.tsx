@@ -25,7 +25,7 @@ const sections = [
   {
     heading: "What we collect",
     body: [
-      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page.",
+      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page. When you subscribe to Insights, we collect your email address and a record that you agreed to receive our emails.",
       "If you contact us by email, phone, or WhatsApp, we receive your contact details and whatever you send us.",
       "When you browse the site, we collect anonymised usage and performance information, such as pages viewed, country, device type, and page speed, through Vercel Analytics and Speed Insights. This also includes whether our contact form was submitted or our WhatsApp button was clicked. Our hosting provider may also keep technical logs for security and reliability.",
     ],
@@ -35,7 +35,7 @@ const sections = [
     body: [
       "We use your information to respond to your enquiry, discuss and provide our services, keep records of our communications, improve this website, and meet our legal obligations.",
       "We process it because you asked us to contact you, because it's needed for a contract or potential contract with you, because we have a legitimate interest in running and improving our business, or because the law requires it.",
-      "We don't sell your personal information. We'll only send you marketing if the law allows it, and you can opt out at any time.",
+      "We don't sell your personal information. We'll only send you marketing if the law allows it. We send the Insights newsletter only to people who subscribe and agree to receive it, and every newsletter has an unsubscribe link.",
     ],
   },
   {
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
       <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-black mb-4">{title}</h1>
-        <p className="text-slate-600 mb-10">Last updated: 4 November 2026</p>
+        <p className="text-slate-600 mb-10">Last updated: 8 November 2026</p>
         {sections.map((section) => (
           <section key={section.heading} className="mb-8">
             <h2 className="text-2xl font-bold text-slate-800 mb-3">{section.heading}</h2>

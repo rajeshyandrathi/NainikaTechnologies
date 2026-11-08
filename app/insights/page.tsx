@@ -5,6 +5,7 @@ import PageHero from "@/components/page-hero";
 import { ArrowRight } from "lucide-react";
 import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
+import SubscribeInsights from "@/components/subscribe-insights";
 
 const title = "Insights";
 const fullTitle = `${title} | ${site.name}`;
@@ -59,6 +60,9 @@ export default function InsightsPage() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="max-w-5xl mx-auto mt-12">
+          <SubscribeInsights />
         </div>
       </section>
     </div>
