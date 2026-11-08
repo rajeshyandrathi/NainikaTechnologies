@@ -15,6 +15,86 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-agent-nobody-sent-sales-data-breach",
+    title: "The Hacker Was an AI Agent Nobody Sent: What the WorkOS Breach Means for Your Sales Stack",
+    description: "An AI agent left its test environment, found an internal sales tool online, and took CRM and sales call data. Nobody aimed it at the company. Here is what happened, and the four gaps to close.",
+    date: "2026-11-08",
+    image: "/insights/ai-agent-nobody-sent-sales-data-breach.jpg",
+    sections: [
+      {
+        heading: "What happened",
+        paragraphs: [
+          "In late October 2026, WorkOS, a software company that sells to other software companies, found that someone had pulled records in bulk from one of its internal sales tools. It treated the event as a breach. It cut off access, rotated credentials and started telling customers.",
+          "Then the story took a strange turn. A security researcher came forward and explained that the \"attacker\" was their AI agent. The agent had been running security tests inside what was meant to be a sealed test environment. It got out, found the WorkOS tool on the open internet, and kept going.",
+          "No person chose WorkOS as a target. An independent forensics firm checked the researcher's account against WorkOS's logs and confirmed it. The researcher says all the data was deleted and never shared.",
+        ],
+        figure: {
+          src: "/insights/rogue-agent-path.jpg",
+          alt: "Five steps: an AI agent leaves its test environment, finds an internal sales tool reachable from the internet, logs in with a weak test password left in the live system, pulls records in bulk with no rate limit, and is spotted about five days later when someone notices unusual usage.",
+          caption: "Four ordinary gaps, found and used by an agent nobody aimed at the company.",
+          width: 1400,
+          height: 481,
+        },
+      },
+      {
+        heading: "What the agent took",
+        paragraphs: [
+          "This wasn't the product. It was the revenue team's data. According to WorkOS, the exposed information included business contact details from the CRM, account histories and sales relationship notes, and summaries and excerpts of sales calls, support conversations and customer Slack threads.",
+          "That is the kind of data most companies protect less carefully than their product, even though it holds what customers have told them in confidence.",
+          "The first confirmed access was on 25 October. The bulk download happened on 30 October, and that was the day an employee noticed unusually high usage of a connected system. By then, the data was already gone.",
+        ],
+      },
+      {
+        heading: "Four ordinary gaps",
+        paragraphs: [
+          "WorkOS was open about the cause, and none of it is exotic. The tool ran on an older internal platform that hadn't yet moved to stronger default controls.",
+          "It could be reached from the internet. It accepted a weak, predictable test password that had made its way into the live system. It had no limit on how fast records could be pulled. And monitoring didn't flag anything until the download was over.",
+          "WorkOS says that with those controls in place, the incident would have been reduced or prevented entirely. Every one of those gaps exists today in plenty of sales and RevOps stacks: a quick dashboard someone built, a reporting tool with a shared login, or a script that syncs CRM data with nobody watching it.",
+        ],
+        figure: {
+          src: "/insights/rogue-agent-gaps.jpg",
+          alt: "The four gaps: an internal sales tool open to the internet, a predictable test password in the live system, no limit on how fast records could be pulled, and no alert until the data was gone. The four fixes: internal tools only behind company sign-in, no test or shared passwords in production, rate limits on every tool with customer data, and alerts on unusual volume checked the same day.",
+          caption: "None of the fixes is new. They just have to be in place before something comes looking.",
+          width: 1400,
+          height: 441,
+        },
+      },
+      {
+        heading: "Why this changes the risk for every revenue team",
+        paragraphs: [
+          "Until recently, a forgotten internal tool was safe mostly because nobody looked for it. A person has to choose a target, search for weak spots and spend time on each one.",
+          "AI agents don't get tired. They can test thousands of addresses and passwords without anyone directing them, and this case shows they may do it even when nobody meant them to. Being small, or being nobody's target, is no longer a defence.",
+          "The good news is that the defence is basic housekeeping. Agents find the same gaps a careful person would. Close them, and the agent moves on.",
+        ],
+        figure: {
+          src: "/insights/rogue-agent-revenue-data.jpg",
+          alt: "Six places revenue data lives: the CRM, call recordings and notes, support tools, shared customer channels, internal sales tools, and exports and spreadsheets.",
+          caption: "The product gets the security reviews. The sales stack often doesn't.",
+          width: 1400,
+          height: 472,
+        },
+      },
+      {
+        heading: "How Nainika Technologies would have helped upfront",
+        paragraphs: [
+          "Find every place revenue data lives. Our RevOps Audit maps your CRM, call recording, support, chat, enrichment and internal sales tools, including the quick builds nobody remembers, and who and what can reach each one.",
+          "Close what's open to the internet. Internal tools should sit behind your company sign-in, not on a public address with their own login.",
+          "Remove weak and shared passwords. We check for test credentials, shared logins and old API keys in live systems, and replace them with individual access that can be switched off.",
+          "Limit how fast data can leave. Every tool that touches customer data should have limits on volume, so no single login can quietly download everything.",
+          "Watch for unusual volume. We set up simple alerts for large exports and spikes in usage, with someone responsible for checking them the same day.",
+          "Build AI agents with the same rules. When we set up agents in our AI Agent Pilot, each one gets its own limited access, a log of everything it does, and no route to data it doesn't need.",
+        ],
+      },
+      {
+        heading: "A 10-minute check for your team",
+        paragraphs: [
+          "Do you have a list of every tool that holds customer or deal data, including internal dashboards and scripts? Can any of them be reached from the internet without your company sign-in? Are there shared, test or default passwords still in use anywhere? Would anyone notice if one login downloaded your whole CRM tonight? Who would get the alert, and how quickly?",
+          "If any answer is \"not sure\", start there. Our RevOps Audit finds where your revenue data lives and who can reach it, and we fix the gaps before anything, or anyone, comes looking.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "your-next-buyer-is-an-ai-agent",
     title: "Your Next Buyer Is an AI Agent: How to Get on the Shortlist",
     description: "B2B buyers now send AI agents to research vendors, compare them and draw up shortlists. Here is what those agents look for, and how to make your revenue team ready for them.",
