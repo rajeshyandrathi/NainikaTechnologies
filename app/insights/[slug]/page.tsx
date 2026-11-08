@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
+import SubscribeInsights from "@/components/subscribe-insights";
 
 type InsightPageProps = {
   params: Promise<{ slug: string }>;
@@ -98,6 +99,7 @@ export default async function InsightPage({ params }: InsightPageProps) {
         >
           {site.cta.label} <ArrowRight size={18} />
         </Link>
+        <SubscribeInsights className="mt-12" />
       </div>
     </article>
   );
