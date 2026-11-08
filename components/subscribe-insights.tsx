@@ -55,7 +55,7 @@ export default function SubscribeInsights({ className = "" }: SubscribeInsightsP
 
       {status === "success" ? (
         <p className="text-cyan-300 font-medium" role="status">
-          Thank you. You're subscribed, and a welcome email is on its way.
+          Almost done. We've sent you an email. Please click the link in it to confirm your subscription.
         </p>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -85,7 +85,7 @@ export default function SubscribeInsights({ className = "" }: SubscribeInsightsP
           <label className="flex items-start gap-3 mt-4 text-sm text-slate-300">
             <input type="checkbox" {...register("consent")} className="mt-1 h-4 w-4 accent-cyan-600" />
             <span>
-              I agree to receive Insights emails from Nainika Technologies. See our{" "}
+              I agree to receive Insights emails from Nainika Technologies, about AI agents, Salesforce, HubSpot, and RevOps. I can unsubscribe at any time. See our{" "}
               <Link href="/privacy" className="underline hover:text-white">
                 privacy policy
               </Link>
