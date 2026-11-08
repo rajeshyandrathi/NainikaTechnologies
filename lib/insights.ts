@@ -15,6 +15,85 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "your-next-buyer-is-an-ai-agent",
+    title: "Your Next Buyer Is an AI Agent: How to Get on the Shortlist",
+    description: "B2B buyers now send AI agents to research vendors, compare them and draw up shortlists. Here is what those agents look for, and how to make your revenue team ready for them.",
+    date: "2026-11-08",
+    image: "/insights/your-next-buyer-is-an-ai-agent.jpg",
+    sections: [
+      {
+        heading: "The shift that is already here",
+        paragraphs: [
+          "For years, B2B buyers did most of their research before they spoke to a salesperson. Now a growing share of that research is done by AI agents working on the buyer's behalf.",
+          "In August 2026, IDC research reported that eight in ten B2B technology buyers already use AI agents as part of their purchasing process. In October, Forrester predicted that agentic buying will play a role in 75% of B2B purchases in 2027, handling tasks such as supplier discovery, spend analysis and writing RFPs.",
+          "This is good news for sellers who are ready for it. An agent doesn't care how big your brand is or how many ads you run. It reads what you publish, asks its questions, and compares the answers. A smaller company with clear information and fast replies can beat a bigger one that is hard to read.",
+        ],
+      },
+      {
+        heading: "How a buyer's agent builds a shortlist",
+        paragraphs: [
+          "A person sets the brief: what they need, the budget, and the systems it has to work with. The agent then researches the market, often looking at dozens of vendors instead of the usual three or four a busy person would compare.",
+          "It reads your website, pricing page, documentation and security pages. Where something is missing, it sends questions through your contact form, chat or email, and it notices who answers and how quickly.",
+          "Within hours, a shortlist lands with a person. If your company isn't on it, your sales team may never learn the deal existed.",
+        ],
+        figure: {
+          src: "/insights/buyer-agent-flow.jpg",
+          alt: "Five steps: the buyer sets the brief, the agent researches dozens of vendors, reads each vendor's site, pricing, docs and security pages, sends questions and notes who answers and how fast, and hands a shortlist to a person, often within hours. Vendors it can't read or who don't answer in time are dropped.",
+          caption: "The first round of many deals now happens before your team knows there is a deal.",
+          width: 1400,
+          height: 481,
+        },
+      },
+      {
+        heading: "What the agent can and can't see",
+        paragraphs: [
+          "Agents compare what they can read. Pricing that says only \"contact us\", product details locked in slide decks, and security answers sent as PDFs after a call are all hard for an agent to use. When it can't find an answer, it usually moves on.",
+          "Speed matters just as much. A reply that arrives three days later may arrive after the shortlist is done.",
+          "Consistency matters too. If your website, your sales team and your CRM give three different answers about price or features, an agent will notice the mismatch, and so will the person reading its summary.",
+        ],
+        figure: {
+          src: "/insights/buyer-agent-visible.jpg",
+          alt: "Invisible to agents: pricing only on request, key facts locked in PDFs and slide decks, replies that take days, and out-of-date CRM data. Agent-ready: clear pricing or ranges on the site, integrations, specs and security answers on plain web pages, a first reply within minutes checked by a person, and clean CRM data.",
+          caption: "Agents compare what they can read. What they can't read doesn't count.",
+          width: 1400,
+          height: 467,
+        },
+      },
+      {
+        heading: "People still make the final call",
+        paragraphs: [
+          "None of this removes the human side of selling. Forrester expects buyers to double their human interactions to check what their AI recommends, and it reports that buying groups have grown from an average of 8 people to 13.",
+          "So the agent decides who gets considered, and people decide who wins. Your job is to get through the first round, then give the people involved a clear reason to trust you.",
+        ],
+      },
+      {
+        heading: "How Nainika Technologies helps you get agent-ready",
+        paragraphs: [
+          "Make your website readable. We review your site the way a buyer's agent would and move pricing, integrations, proof points and security answers out of images and PDFs and into plain pages.",
+          "Build one approved answer library. Security questionnaires, legal answers and product facts live in one place, kept current, so every reply says the same thing.",
+          "Answer in minutes, not days. Our AI Agent Pilot sets up an inbound agent that replies to enquiries and RFP questions around the clock, using only your approved answers.",
+          "Clean up the CRM. Our RevOps Audit fixes product, pricing and account data so that what an agent says matches what your sales team would say.",
+          "Set pricing guardrails. Agents can share published prices and ranges, but discounts, quotes and commitments always go to a person for approval.",
+          "Keep people in charge. Every agent action is logged, and your team can see what was asked, what was answered, and step in at any time.",
+        ],
+        figure: {
+          src: "/insights/buyer-agent-ready-stack.jpg",
+          alt: "Six steps: a readable website, one approved answer library, a fast first response from an inbound agent, clean CRM data, pricing guardrails, and a person signing off quotes, discounts and commitments.",
+          caption: "Most of this is RevOps basics. Agents just make the gaps expensive.",
+          width: 1400,
+          height: 522,
+        },
+      },
+      {
+        heading: "Is your revenue team agent-ready? A 10-minute check",
+        paragraphs: [
+          "Could someone find a price or price range on your website without booking a call? Are your integrations, security answers and key proof points on plain web pages, not only in PDFs? How long does it take today to reply to a new enquiry or an RFP question? Do your website, sales team and CRM give the same answers? Is there a clear rule for what can be offered without approval?",
+          "If any answer is \"not sure\" or \"days\", start there. Our RevOps Audit shows where buyers' agents would get stuck, and our AI Agent Pilot starts with one workflow, such as first replies to inbound enquiries, with a person approving every commitment.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "web-form-hijacked-crm-ai-agent",
     title: "A Web Form Told the AI Agent What to Do: The CRM Lesson From SalesBleed",
     description: "Researchers showed that one ordinary web form could turn a CRM's AI agent against the company using it. Here is how it worked, and the checks that stop it.",
@@ -76,12 +155,6 @@ const allInsights: Insight[] = [
         paragraphs: [
           "Which AI features are switched on in your CRM today? Can any of them read web form, email or chat content from outside your company? Can those same agents read deal values, contacts or other sensitive fields? Can an agent post, send, or show content from outside websites without a person approving it? Has anyone tested your agents with a record containing hidden instructions?",
           "If any answer is \"not sure\", start there. Our RevOps Audit maps what your agents can read and reach, and our AI Agent Pilot starts with one workflow and a person approving every action.",
-        ],
-      },
-      {
-        heading: "Sources",
-        paragraphs: [
-          "Zenity Labs research on SalesBleed, as reported by The Register and Infosecurity Magazine in September 2026, and by Paubox in October 2026.",
         ],
       },
     ],
