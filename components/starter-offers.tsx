@@ -25,7 +25,7 @@ const offers = [
 
 export default function StarterOffers() {
   return (
-    <section className="py-20 px-4 bg-slate-100">
+    <section id="get-started" className="py-20 px-4 bg-slate-100 scroll-mt-24">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-slate-800">

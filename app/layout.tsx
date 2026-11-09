@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 const inter = Inter({ subsets: ["latin"] });
 
 const defaultTitle = "Nainika Technologies | AI Agents & RevOps for B2B SaaS";
-const defaultDescription = "We build AI agents and RevOps systems for B2B SaaS companies, connecting your CRM, marketing, billing, and finance tools. If work can be delegated to an agent, we can build it.";
+const defaultDescription = "We build AI agents and RevOps systems for B2B SaaS companies, connecting your CRM, marketing, billing, and finance tools. Less manual admin from lead to cash, and cleaner data your team can trust.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
