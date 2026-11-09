@@ -19,7 +19,7 @@ export default function HomeHero() {
           <p className="inline-block mb-6 px-4 py-1.5 rounded-full border border-cyan-400/40 bg-cyan-400/10 text-sm font-medium text-cyan-200">
             Agentic AI and RevOps for B2B SaaS
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-5xl">
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight mb-6 lg:whitespace-nowrap">
             Let AI Agents Run Your{" "}
             <span className="text-cyan-300">Revenue Ops</span>
           </h1>
