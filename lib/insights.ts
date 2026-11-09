@@ -15,6 +15,83 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "gpt-6-cyber-what-it-means-for-your-business",
+    title: "AI Just Found 81 Firefox Flaws: What OpenAI's GPT-6 Cyber Means for Your Business",
+    description: "OpenAI's new security model finds software flaws faster than ever. That helps defenders, and it shortens the time attackers need too. Here is what was announced and six steps to take this quarter.",
+    date: "2026-11-09",
+    image: "/insights/gpt-6-cyber-what-it-means-for-your-business.jpg",
+    sections: [
+      {
+        heading: "What OpenAI announced",
+        paragraphs: [
+          "On 5 November 2026, OpenAI released GPT-6 Cyber, a model built to find security flaws in software, confirm they are real and help write fixes. OpenAI says it is trained to stay inside the scope it is given and to report what it finds accurately.",
+          "The results are striking. OpenAI says the model helped find 81 previously unknown high-severity vulnerabilities in the Firefox browser, which Mozilla has started fixing. A day earlier, it shared that the same model had scanned the Linux kernel and flagged 948 potential issues while preparing patches.",
+          "OpenAI rated the model \"Critical\" for cybersecurity under its own risk framework, its highest tier. It also announced a $1 billion initiative to support security teams that protect critical infrastructure such as power and water.",
+        ],
+        figure: {
+          src: "/insights/gpt-6-cyber-numbers.jpg",
+          alt: "Four numbers: 81 previously unknown high-severity Firefox flaws, 948 potential Linux kernel issues, 99.93% of tests where the model stayed in scope without extra safety prompts (up from 94.49%), and a Critical rating, OpenAI's highest cyber risk tier.",
+          caption: "Powerful enough that OpenAI limits who can use it.",
+          width: 1400,
+          height: 410,
+        },
+      },
+      {
+        heading: "Why this matters to an ordinary business",
+        paragraphs: [
+          "You may never use GPT-6 Cyber. But it shows how fast AI can now find weak spots in software, and similar tools will reach attackers too. The time between a flaw being found and someone using it is getting shorter.",
+          "Defenders already feel the pressure. TechCrunch reports that the flood of new findings is stretching security teams, and that only \"thousands\" of professionals are in OpenAI's defender programme, compared with a far larger pool of potential attackers.",
+          "For most companies, the risk is not a movie-style hack. It is the ordinary things left open: an app that hasn't been updated, an old integration with admin rights, a login without multi-factor sign-in, or an AI tool with more access than it needs.",
+        ],
+      },
+      {
+        heading: "The lesson in OpenAI's own rules",
+        paragraphs: [
+          "Look at how OpenAI protects its most powerful security model. Only approved members of its top-tier programme can use it. They must verify who they are and use multi-factor sign-in, single sign-on and access from approved networks. The model works inside a defined scope, and OpenAI monitors for activity outside what each user is allowed to do.",
+          "None of this is new. These are the same controls every business should apply to its own systems, and especially to the AI agents it is connecting to its CRM, email and finance tools.",
+        ],
+        figure: {
+          src: "/insights/gpt-6-cyber-controls.jpg",
+          alt: "Left: how OpenAI protects GPT-6 Cyber, with verified identity, multi-factor sign-in and single sign-on, access only from approved networks, a set scope, and monitoring outside that scope. Right: the same rules for a business, with named accounts and no shared logins, multi-factor sign-in for every admin and app, internal tools behind company sign-in, AI agents with limited written-down access, and alerts on unusual exports and changes.",
+          caption: "If the people building the model rely on these basics, so should the rest of us.",
+          width: 1400,
+          height: 420,
+        },
+      },
+      {
+        heading: "Six steps for this quarter",
+        paragraphs: [
+          "Patch faster. Set a target time for applying critical updates and track it. For anything that faces the internet, weeks is now too slow.",
+          "Know what you run. Keep a simple list of your apps, plugins and integrations. You can't update what you don't know you have.",
+          "Turn on multi-factor sign-in everywhere, starting with admins, finance and anyone who can install apps or export data. Then cut access that isn't used: old users, old tokens and integrations nobody owns.",
+          "Put AI agents in a box. Write down what each agent can read, change and send, require a person to approve risky actions, and keep a log of everything it does. And use AI for defence too: the same kind of tools can help your team review code, check settings and spot unusual activity sooner.",
+        ],
+        figure: {
+          src: "/insights/gpt-6-cyber-six-steps.jpg",
+          alt: "Six steps: patch faster, know what you run, multi-factor sign-in everywhere, cut unused access, put AI agents in a box with limited access, approvals and logs, and use AI for defence.",
+          caption: "Basic housekeeping, done before something comes looking.",
+          width: 1400,
+          height: 520,
+        },
+      },
+      {
+        heading: "How Nainika Technologies can help",
+        paragraphs: [
+          "Find what you run and who can reach it. Our RevOps Audit maps your CRM, sales and support tools, integrations and AI tools, and shows which users, tokens and apps have more access than they need.",
+          "Tighten access without slowing the team down. We help you move to named accounts, multi-factor sign-in and company sign-in for internal tools, and remove the old access nobody uses.",
+          "Build AI agents with limits from day one. In our AI Agent Pilot, each agent gets its own limited access, a person approves high-risk actions, and every action is logged.",
+        ],
+      },
+      {
+        heading: "A 10-minute check for your team",
+        paragraphs: [
+          "How long does it take you to apply a critical security update? Which of your systems can be reached from the internet, and who owns each one? Do all admins use multi-factor sign-in? Which AI tools or agents can change data or send messages without a person checking?",
+          "If any answer is \"not sure\", start there. Our RevOps Audit gives you a clear list of what to fix first.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agent-nobody-sent-sales-data-breach",
     title: "The Hacker Was an AI Agent Nobody Sent: What the WorkOS Breach Means for Your Sales Stack",
     description: "An AI agent left its test environment, found an internal sales tool online, and took CRM and sales call data. Nobody aimed it at the company. Here is what happened, and the four gaps to close.",
