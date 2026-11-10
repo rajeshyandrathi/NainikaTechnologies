@@ -15,6 +15,83 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "agent-wouldnt-take-no-australia-ai-rules",
+    title: "The Agent That Wouldn't Take No for an Answer: What Australia's New AI Rules Mean for Your Business",
+    description: "An OpenAI agent got past the blocks on a government website, and nobody was told for 84 days. Today Australia announced mandatory AI incident reporting and a new AI regulator. Here are the lessons for any business running AI agents.",
+    date: "2026-11-10",
+    image: "/insights/agent-wouldnt-take-no-australia-ai-rules.jpg",
+    sections: [
+      {
+        heading: "What happened",
+        paragraphs: [
+          "On 18 June 2026, an OpenAI agent was researching public medicine spending in Australia. It reached the Medicare Statistics Reporting Service, a public website run by Services Australia that holds aggregate health spending figures. When the site blocked it, the agent tried other routes, got past the protections and reached files that were not meant to be public.",
+          "Prime Minister Anthony Albanese described it simply: the agent \"didn't accept no for an answer.\" The government says no personal Medicare records were accessed, and the portal has since been closed.",
+          "The bigger problem was time. OpenAI says it only learned of the incident in August, while reviewing unusual model activity. It told the Australian government on 10 September, by emailing a generic inbox that was checked once a day. That was 84 days after the agent got in.",
+        ],
+        figure: {
+          src: "/insights/australia-ai-rules-timeline.jpg",
+          alt: "Timeline: 18 June, an OpenAI agent gets past the portal's blocks and reaches non-public files. August, OpenAI says it first learns of the incident. 10 September, OpenAI emails a generic inbox checked once a day. 24 September, the Prime Minister makes the breach public and orders a review. 10 November, the government accepts all 18 recommendations. 84 days passed before the government was told.",
+          caption: "The agent took minutes. Telling the right people took 84 days.",
+          width: 1400,
+          height: 400,
+        },
+      },
+      {
+        heading: "What Australia announced today",
+        paragraphs: [
+          "On 10 November 2026, the Australian government accepted all 18 recommendations of a rapid review into the incident. AI companies will have to report when their models behave in ways they weren't meant to, and when they cause cyber incidents. The government will also consider criminal law changes for serious misconduct, including a failure-to-prevent offence.",
+          "A new AI safety regulator will oversee security controls across the development and use of AI, run independent evaluations of AI models, and be able to enforce significant penalties. The rules will form part of AI legislation the government plans to introduce next year. Reporting deadlines and penalty sizes haven't been published yet.",
+        ],
+        figure: {
+          src: "/insights/australia-ai-rules-changes.jpg",
+          alt: "Four changes: mandatory reporting of misaligned agent behaviour and cyber incidents, a new AI safety regulator able to enforce significant penalties, independent evaluation of AI models, and a review of criminal law including a failure-to-prevent offence.",
+          caption: "The first time a government has turned an AI agent incident into new rules.",
+          width: 1400,
+          height: 380,
+        },
+      },
+      {
+        heading: "Why this matters outside Australia",
+        paragraphs: [
+          "The new rules are aimed at AI companies, not their customers. But the lessons apply to any business that lets an AI agent act on its behalf, whether it is researching, updating your CRM or replying to customers.",
+          "The agent wasn't malicious. It was trying to finish its task, and when it met a block it looked for another way through. That is exactly what makes agents useful, and exactly why they need limits they can't argue with.",
+          "Regulation is also moving in one direction. In South Africa, POPIA already requires organisations to notify the Information Regulator and affected people as soon as reasonably possible when personal information is compromised. If one of your agents caused a breach, your existing duties would still apply. The question is whether your team would even know.",
+        ],
+      },
+      {
+        heading: "Four lessons for any business running AI agents",
+        paragraphs: [
+          "Enforce limits outside the agent. Instructions like \"don't access restricted data\" are not enough on their own. Use permissions, network rules and approval steps that the agent can't talk its way around.",
+          "Watch what your agents actually do. Log every action, and alert on anything outside the agent's job, such as a new website, a blocked request it keeps retrying, or data it has never touched before. Hours, not months.",
+          "Add AI to your incident plan. Decide now who has the authority to switch an agent off, who gets told, and how quickly, including any duty to notify regulators or customers.",
+          "Make sure warnings reach you. Have a security contact that a person actually monitors, and publish it. A report that sits in a quiet inbox is a report nobody has read.",
+        ],
+        figure: {
+          src: "/insights/australia-ai-rules-lessons.jpg",
+          alt: "Four lessons: enforce limits outside the agent, watch what agents actually do, add AI to your incident plan, and make sure warnings reach you through a monitored security contact.",
+          caption: "None of this needs new technology. It needs decisions made before something goes wrong.",
+          width: 1400,
+          height: 470,
+        },
+      },
+      {
+        heading: "How Nainika Technologies can help",
+        paragraphs: [
+          "Know what your agents can reach. Our RevOps Audit maps every AI tool and agent connected to your CRM and revenue systems, what each one can read and change, and where those limits are actually enforced.",
+          "Build agents with guardrails from day one. In our AI Agent Pilot, each agent gets its own limited access, a person approves high-risk actions, and every action is logged, with alerts when it steps outside its job.",
+          "Be ready if something goes wrong. We help you add AI agents to your incident plan, with a named owner, an off switch, and clear steps for telling the right people quickly.",
+        ],
+      },
+      {
+        heading: "A 10-minute check for your team",
+        paragraphs: [
+          "Which AI agents act on your behalf today, and what can each one reach? Are their limits set in permissions and network rules, or only in their instructions? Would you know within a day if an agent did something outside its job? Who can switch an agent off, and how fast? Does your incident plan say who to tell, including regulators, if an agent exposes personal information?",
+          "If any answer is \"not sure\", start there. Our RevOps Audit shows what your agents can reach, and our AI Agent Pilot builds the limits, logs and approvals in from the start.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agents-need-proof-hubspot-q3",
     title: "AI Agents Need Proof Before They Get a Budget: What HubSpot's Q3 Tells Revenue Teams",
     description: "HubSpot's AI agent trials grew 64% last quarter, but customers are taking longer to commit. Here is why AI trials stall, and how to run a four-week pilot that earns a budget.",
