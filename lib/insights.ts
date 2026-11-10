@@ -15,6 +15,65 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "one-ai-coworker-not-twenty-agents",
+    title: "One AI Coworker, Not Twenty Agents: What Salesforce's 21x Jump Means for Revenue Teams",
+    description: "Salesforce says Agentforce Coworker usage grew 21 times in three months. Gartner says fewer than 40% of sellers will feel more productive with AI agents. The difference is your CRM data. Here are five checks before you switch an agent on.",
+    date: "2026-11-10",
+    image: "/insights/one-ai-coworker-not-twenty-agents.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "The winning AI for sales teams is not the one with the most agents. It is the one that already knows your customers. Salesforce's latest numbers make that clear, and they carry a warning for any team whose CRM data is messy.",
+          "On 5 November 2026, Salesforce said usage of Agentforce Coworker grew 21 times in three months, to more than 185,000 users. Set that next to Gartner's July forecast that AI agents will outnumber sellers ten to one by 2028. Both point the same way: agents are arriving fast, and the data under them decides whether they help.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "Salesforce is betting on one assistant that hands work to the right agents, instead of asking people to pick from a menu of bots. Coworker now costs US$50 per user per month on a new per-user option.",
+          "Google Workspace and Microsoft 365 connections, reusable Skills and Conversation History are live now. Microsoft Teams, iOS, Mac and Windows apps and a Coworker MCP server are due in November 2026, with scheduled tasks and a Daily Digest following in December.",
+          "Coworker runs inside existing Salesforce permissions, sharing rules and access controls, with approval and audit for supported actions. Salesforce's example: a seller asks Coworker to look into an at-risk renewal. It pulls the service history, finds unresolved cases and drafts the follow-up for the seller to review.",
+          "HubSpot is moving the same way. Its Fall 2026 release added Agent Hub to manage agents in one place, and a Context Home score that rates how complete your customer data is.",
+        ],
+      },
+      {
+        heading: "Why it matters for revenue teams",
+        paragraphs: [
+          "An AI coworker is only as good as the CRM it reads. If your renewal dates are wrong, your cases are not linked to accounts and your deal stages mean different things to different reps, the agent will do the wrong work faster.",
+          "Gartner put it plainly: fewer than 40% of sellers will say agents improved their productivity, even as agents outnumber sellers ten to one. Dan Gottlieb, VP Analyst at Gartner, warned that if your systems are fragmented, \"the agents will scale the fragmentation.\"",
+          "Data quality becomes a revenue issue. It used to slow down reports. Now it decides whether an agent sends the right follow-up to the right customer.",
+          "Permissions become the safety net. Both Salesforce and HubSpot let agents act within your existing access rules. Loose sharing rules now mean loose agents.",
+          "Cost becomes per user or per result. At US$50 per user a month for Coworker, a 50-person sales team pays about US$30,000 a year. That needs a measured result, not a feeling. Analysts are urging care too: Info-Tech says HubSpot's Agent Hub should not yet be treated as a mature control plane, and that a complete record is not the same as an accurate one.",
+        ],
+      },
+      {
+        heading: "Five checks before you switch an agent on",
+        paragraphs: [
+          "Pick one job. Choose a single task with a clear owner, such as at-risk renewal prep. Do not start with \"AI for sales\".",
+          "Fix the fields that job reads. For renewals, that means renewal dates, account owners, open cases and contract values. Check them on 50 real accounts.",
+          "Tighten access. Review who can see and edit what. The agent inherits those rules.",
+          "Agree one definition per stage. If \"Commit\" means three things to three managers, the agent will guess.",
+          "Measure before and after. Track hours spent on the task and the result, such as renewals saved, for 30 days without the agent and 30 days with it. If the pilot works, add the next job. If it does not, you have learned something cheap about your data.",
+        ],
+        figure: {
+          src: "/insights/one-ai-coworker-five-checks.jpg",
+          alt: "Five checks before you switch an AI agent on: pick one job, fix the fields that job reads, tighten access, agree one meaning per deal stage, and measure 30 days without the agent and 30 days with it.",
+          caption: "Get the CRM ready first. The agent can only be as good as the data it reads.",
+          width: 2100,
+          height: 500,
+        },
+      },
+      {
+        heading: "How Nainika Technologies can help",
+        paragraphs: [
+          "AI coworkers are here, and they are getting cheaper and easier to switch on. The teams that win will not be the ones with the most agents. They will be the ones whose data the agents can trust.",
+          "If you are not sure your Salesforce or HubSpot setup is ready, our RevOps Audit finds the data and process gaps first. When you are ready, our AI Agent Pilot puts one agent on one job and measures the result.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "agent-wouldnt-take-no-australia-ai-rules",
     title: "The Agent That Wouldn't Take No for an Answer: What Australia's New AI Rules Mean for Your Business",
     description: "An OpenAI agent got past the blocks on a government website, and nobody was told for 84 days. Today Australia announced mandatory AI incident reporting and a new AI regulator. Here are the lessons for any business running AI agents.",
