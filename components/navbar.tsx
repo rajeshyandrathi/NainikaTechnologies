@@ -75,7 +75,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center md:space-x-5 lg:space-x-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
