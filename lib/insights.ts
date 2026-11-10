@@ -15,6 +15,84 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-agents-need-proof-hubspot-q3",
+    title: "AI Agents Need Proof Before They Get a Budget: What HubSpot's Q3 Tells Revenue Teams",
+    description: "HubSpot's AI agent trials grew 64% last quarter, but customers are taking longer to commit. Here is why AI trials stall, and how to run a four-week pilot that earns a budget.",
+    date: "2026-11-10",
+    image: "/insights/ai-agents-need-proof-hubspot-q3.jpg",
+    sections: [
+      {
+        heading: "What HubSpot reported",
+        paragraphs: [
+          "On 4 November 2026, HubSpot reported third-quarter revenue of $947.6 million, up 17% and ahead of forecasts. Its AI agents are clearly being used: Customer Agent resolved more than 2 million support issues in the quarter, and agent trials grew 64% from the quarter before.",
+          "But the same results showed something every revenue leader should notice. Customers are taking longer to commit to AI agents. CEO Yamini Rangan said customers want proof before they buy, and that \"customers need hands-on support to turn AI trials into real outcomes.\" She added that customers want to see AI work in their own environment, with their own data.",
+          "HubSpot's outlook for the rest of the year was softer as a result. In other words, interest in AI agents is high, but budgets go to the ones that prove they work.",
+        ],
+        figure: {
+          src: "/insights/ai-agents-need-proof-numbers.jpg",
+          alt: "HubSpot Q3 2026: AI agent trials up 64% quarter on quarter, more than 2 million support issues resolved by Customer Agent, 20% of Pro+ customers using HubSpot's agents, and customers wanting proof before they buy.",
+          caption: "Plenty of interest. The money follows the proof.",
+          width: 1400,
+          height: 410,
+        },
+      },
+      {
+        heading: "Why this matters even if you don't sell software",
+        paragraphs: [
+          "Your own leadership team is now the buyer. When someone proposes an AI agent for sales, service or operations, the CFO, the CTO and often the board want to know what it will deliver before they approve it.",
+          "Buying groups for AI are also bigger. Forrester found that generative AI purchases involve buying groups about twice the size of other purchases, around 14 people instead of seven, and that more than 60% of buyers pay for some kind of trial first. More people means more questions, and a vague trial can't answer them.",
+          "HubSpot also said its win rates are nearly three times higher in deals with five or more people from the buying committee involved. Bringing decision-makers in early isn't a delay. It is how deals close.",
+        ],
+      },
+      {
+        heading: "Why AI trials stall",
+        paragraphs: [
+          "Most stalled AI trials fail for ordinary reasons, not because the AI isn't good enough. They start with \"let's see what it can do\" instead of a clear target. Nobody records how the work performs today, so there is nothing to compare against. The agent is pointed at messy CRM data and gives answers people don't trust. Nobody owns the result. And security or finance hear about it at the end, when they can only say no.",
+          "The fix is to treat a pilot like a small business case, not a tech demo.",
+        ],
+        figure: {
+          src: "/insights/ai-agents-need-proof-stall.jpg",
+          alt: "Left: a trial that stalls, with no target, no before number, messy CRM data, no owner, and security and finance told last. Right: a pilot that earns a budget, with one workflow and one measurable outcome, a baseline taken first, the data it touches cleaned, a named owner and a person approving actions, and decision-makers agreeing the success test upfront.",
+          caption: "Same AI. Different setup. Very different result.",
+          width: 1400,
+          height: 440,
+        },
+      },
+      {
+        heading: "A four-week pilot that proves value",
+        paragraphs: [
+          "Week 0: pick and measure. Choose one workflow that repeats often, such as answering common support questions, enriching new leads or preparing meeting notes. Record how it performs today: time spent, volume, response time or cost per case.",
+          "Week 0: agree the test. Write down the target, the stop rule and who decides. For example: the agent resolves 30% of common questions with a satisfaction score at least as good as today, or we stop. Bring finance and security in now, not at the end.",
+          "Week 1: clean the data. Fix only the fields and records the agent will use. A focused clean-up of one object is achievable in days and makes the results far more trustworthy.",
+          "Weeks 2 and 3: run with approval. The agent drafts and a person approves, with every action logged. This keeps risk low and shows reviewers exactly what the agent did.",
+          "Week 4: report and decide. Compare before and after in terms the buying committee cares about: hours saved, cost per resolution, faster replies or more meetings booked. Then expand, adjust or stop.",
+        ],
+        figure: {
+          src: "/insights/ai-agents-need-proof-pilot.jpg",
+          alt: "A four-week pilot timeline: week 0 pick and measure one workflow, week 0 agree the target, stop rule and decision-maker, week 1 clean only the data it touches, weeks 2 and 3 run with a person approving, week 4 report before versus after in money and hours.",
+          caption: "Small, measured and easy to say yes to.",
+          width: 1400,
+          height: 380,
+        },
+      },
+      {
+        heading: "How Nainika Technologies can help",
+        paragraphs: [
+          "Get the data ready first. Our RevOps Audit checks the CRM data, integrations and access an agent would rely on, so the pilot starts on a clean, trusted base.",
+          "Run a pilot built to be measured. In our AI Agent Pilot, we pick one workflow with you, record the baseline, agree the success test with your decision-makers, and build the agent with limited access and a person approving every action.",
+          "Report in business terms. At the end you get a clear before-and-after on time, cost and quality, and an honest recommendation to expand, adjust or stop.",
+        ],
+      },
+      {
+        heading: "A 10-minute check for your team",
+        paragraphs: [
+          "Is there one AI trial running today that nobody could put a number on? Do you know how the workflow performed before the AI was added? Has finance or security seen the plan? Is the CRM data the agent uses trusted by the people who use it every day? Who decides, and when, whether the trial becomes a real project?",
+          "If any answer is \"not sure\", start there. Our AI Agent Pilot is designed to give you that proof in about four weeks.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "gpt-6-cyber-what-it-means-for-your-business",
     title: "AI Just Found 81 Firefox Flaws: What OpenAI's GPT-6 Cyber Means for Your Business",
     description: "OpenAI's new security model finds software flaws faster than ever. That helps defenders, and it shortens the time attackers need too. Here is what was announced and six steps to take this quarter.",
