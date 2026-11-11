@@ -20,6 +20,49 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "ai-agents-for-a-us-retailer",
+    title: "AI Across Support, Sales and Operations for a US Retailer",
+    client: "Retailer and online store, USA",
+    description:
+      "AI agents that help a US retailer and online store with customer support, product content, sales and leads, and operations reporting, connected to Salesforce, HubSpot, email and chat.",
+    tools: ["AI agents", "Salesforce", "HubSpot", "Email", "Chat"],
+    image: "/case-studies/retail-ai-agents.jpg",
+    sections: [
+      {
+        heading: "The challenge",
+        paragraphs: [
+          "A US retailer with physical stores and an online store wanted to use AI in its day-to-day work. The goal was to help the team in four areas at once: answering customers, writing product content, following up on sales leads, and preparing operations reports.",
+          "Customer and sales data lived across Salesforce, HubSpot, email and chat, so the AI needed to work with those systems rather than sit beside them.",
+        ],
+      },
+      {
+        heading: "What we built",
+        paragraphs: [
+          "We designed and built AI agents connected to the retailer's Salesforce, HubSpot, email and chat tools, each focused on one area of work.",
+        ],
+        bullets: [
+          "Customer support: helping answer common customer questions over email and chat, and passing harder cases to the team.",
+          "Product content: drafting product descriptions and listing content for the online store.",
+          "Sales and leads: helping follow up on leads and keeping records up to date in the CRM.",
+          "Operations and reporting: preparing regular reports from the retailer's data.",
+        ],
+      },
+      {
+        heading: "How it fits together",
+        paragraphs: [
+          "Each agent reads from and writes back to the systems the team already uses, so customer conversations, leads and reports stay in Salesforce and HubSpot instead of a separate AI tool.",
+        ],
+      },
+      {
+        heading: "The outcome",
+        bullets: [
+          "One AI setup covering support, product content, sales and reporting, instead of separate tools for each.",
+          "AI that works inside Salesforce, HubSpot, email and chat, where the team already works.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "student-portal-salesforce-experience-cloud",
     title: "One Portal for Students, Enrolments and Payments",
     client: "Education and training provider, Cape Town",
