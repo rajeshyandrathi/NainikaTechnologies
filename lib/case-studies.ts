@@ -20,6 +20,53 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "revops-for-a-b2b-saas-company",
+    title: "One Revenue Engine for a B2B SaaS Company",
+    client: "B2B SaaS company",
+    description:
+      "How we connected Salesforce, HubSpot, Marketo, Clay and Chargebee for a B2B SaaS company, with clean data, lead routing, a trusted pipeline and forecast, and one view of revenue.",
+    tools: ["Salesforce", "HubSpot", "Marketo", "Clay", "Chargebee"],
+    image: "/case-studies/revops-b2b-saas.jpg",
+    sections: [
+      {
+        heading: "The challenge",
+        paragraphs: [
+          "A B2B SaaS company was running its revenue work across several tools: Salesforce and HubSpot for sales and marketing, Marketo for campaigns, Clay for lead data, and Chargebee for subscriptions and billing.",
+          "Each team worked from its own system, so leads, opportunities, customer cases and billing were hard to see in one place, and the pipeline and forecast were hard to trust.",
+        ],
+      },
+      {
+        heading: "What we built",
+        paragraphs: [
+          "We set up revenue operations across the full customer journey, from first lead to closed deal, billing and support.",
+        ],
+        bullets: [
+          "Connected systems: Salesforce and HubSpot synced together, with Marketo, Clay and Chargebee feeding the same customer records.",
+          "Lead routing and handoff: leads enriched with Clay, then scored and routed to the right sales rep, with a clear handoff from marketing to sales.",
+          "Data cleanup: duplicates removed and data rules added, so new records stay clean.",
+          "Opportunities, pipeline and forecasting: clear opportunity stages and a forecast the leadership team can rely on.",
+          "Cases: customer support cases tracked in the CRM alongside each account.",
+          "Dashboards and reporting: one view of pipeline, revenue and customers for leadership.",
+        ],
+      },
+      {
+        heading: "How it fits together",
+        paragraphs: [
+          "Marketing, sales, billing and support now work from the same customer data. A lead captured in HubSpot or Marketo, enriched in Clay, worked as an opportunity in Salesforce, billed in Chargebee and supported through cases is one connected record, not five separate ones.",
+        ],
+      },
+      {
+        heading: "The outcome",
+        bullets: [
+          "One connected revenue system instead of separate tools for each team.",
+          "Leads reach the right person, with a clear handoff from marketing to sales.",
+          "Cleaner data, and a pipeline and forecast built on it.",
+          "Leadership sees pipeline, revenue and customers in one set of dashboards.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agents-for-a-us-retailer",
     title: "AI Across Support, Sales and Operations for a US Retailer",
     client: "Retailer and online store, USA",
