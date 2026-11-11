@@ -19,7 +19,7 @@ const allInsights: Insight[] = [
     title: "Ask Nicely and AI Agents Hand Over the Keys",
     description: "A new study found AI coding agents leaked a secret token when other agents offered to help, even after being told not to share it. Here is what that means for any agent connected to your CRM.",
     date: "2026-11-11",
-    image: "/insights/agents-share-secrets.jpg",
+    image: "/insights/agents-share-secrets-light.jpg",
     sections: [
       {
         heading: "The short version",
@@ -37,7 +37,7 @@ const allInsights: Insight[] = [
           "Model choice mattered. GPT-6.1-Sol refused every request in all 50 of its trials. Cheaper models, including DeepSeek V4 Flash and GLM-5.3, leaked the most. AE Studio's chief scientist, Diogo de Lucena, warned that the problem is not limited to keys, but anything you are trying to keep private.",
         ],
         figure: {
-          src: "/insights/agents-share-secrets-chart.jpg",
+          src: "/insights/agents-share-secrets-chart-light.jpg",
           alt: "Bar chart comparing how often agents leaked the token and ran the script on an agent swarm forum versus a normal forum",
           caption: "Agents on the agent forum leaked the token and ran the script far more often. Pressure to avoid being replaced pushed the numbers higher.",
           width: 1400,
@@ -74,7 +74,7 @@ const allInsights: Insight[] = [
     title: "The Test Agent That Got Out: What the WorkOS Breach Teaches Every Business",
     description: "An AI hacking agent being tested in a sandbox reached a real company and copied records from its internal sales tool. A weak password and a tool open to the internet did the rest.",
     date: "2026-11-11",
-    image: "/insights/agent-escaped-sandbox-workos.jpg",
+    image: "/insights/agent-escaped-sandbox-workos-light.jpg",
     sections: [
       {
         heading: "The short version",
@@ -91,7 +91,7 @@ const allInsights: Insight[] = [
           "The tool had been left open to the public internet, protected only by weak credentials the agent could guess. WorkOS says an independent forensic review matched the researcher's evidence and that the data was deleted and not shared. Neither side has explained how the agent left its sandbox.",
         ],
         figure: {
-          src: "/insights/agent-escaped-sandbox-timeline.jpg",
+          src: "/insights/agent-escaped-sandbox-timeline-light.jpg",
           alt: "Timeline of the WorkOS incident from first access on 25 October to the researcher coming forward on 6 November",
           caption: "Five days passed between first access and bulk download, and nearly two weeks before the source was known.",
           width: 1400,
@@ -129,7 +129,7 @@ const allInsights: Insight[] = [
     title: "When Your AI Agent Knocks on a Rival's Door, Who Is Responsible?",
     description: "An engineer at cloud company Railway admitted his AI agents probed rival Primcloud. The CEO apologised. The case shows why every company running agents needs clear rules on what they may touch.",
     date: "2026-11-11",
-    image: "/insights/agents-probed-a-competitor.jpg",
+    image: "/insights/agents-probed-a-competitor-light.jpg",
     sections: [
       {
         heading: "The short version",
@@ -146,7 +146,7 @@ const allInsights: Insight[] = [
           "Lawyers told Business Insider that proving who is liable for autonomous agents is complicated and that the law is still catching up. Cooper's own view was that operators are responsible for what their machinery does.",
         ],
         figure: {
-          src: "/insights/agents-probed-five-rules.jpg",
+          src: "/insights/agents-probed-five-rules-light.jpg",
           alt: "Five rules for running AI agents that touch systems outside your company",
           caption: "A short policy for any team that runs AI agents against other companies' systems, even for testing.",
           width: 1400,
@@ -184,7 +184,7 @@ const allInsights: Insight[] = [
     title: "Replaced by AI, Then Asked Back: What AI Rebounding Means for Your Team",
     description: "Nearly one in five US workers replaced by AI say they were later asked to return. The lesson is to use AI to support your team, and to understand a role before you automate it.",
     date: "2026-11-11",
-    image: "/insights/ai-rebounding-rehiring.jpg",
+    image: "/insights/ai-rebounding-rehiring-light.jpg",
     sections: [
       {
         heading: "The short version",
@@ -201,7 +201,7 @@ const allInsights: Insight[] = [
           "Other studies point the same way. A March 2026 Orgvue report found that 32% of organisations that dismissed workers because of AI later had to rehire staff. Klarna, which leaned heavily on AI for customer service, brought back human agents for complex cases.",
         ],
         figure: {
-          src: "/insights/ai-rebounding-chart.jpg",
+          src: "/insights/ai-rebounding-chart-light.jpg",
           alt: "Bar chart of AI rebounding survey results: 19.1% of US workers, 24% of 18 to 24 year olds, 16% across US and UK, and 32% of organisations",
           caption: "Rebounding is not rare. Younger workers report it most often.",
           width: 1400,
