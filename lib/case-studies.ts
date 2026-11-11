@@ -116,7 +116,7 @@ export const caseStudies: CaseStudy[] = [
     description:
       "A self-service student portal on Salesforce Experience Cloud, with course enrolment, lead management and payments, connected to WhatsApp, Slack, Brevo, Marketo and AI.",
     tools: ["Salesforce Experience Cloud", "AI", "WhatsApp", "Slack", "Brevo", "Marketo"],
-    image: "/case-studies/student-portal-experience-cloud.jpg",
+    image: "/case-studies/student-portal-v2.jpg",
     sections: [
       {
         heading: "The challenge",
@@ -156,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
     description:
       "How we built SF Org Health Checker, a read-only AI tool that reviews a Salesforce org across security, limits, code, automation, licences and unused components, with a fix for each finding.",
     tools: ["Salesforce", "Claude", "MCP", "TypeScript", "Salesforce CLI"],
-    image: "/case-studies/sf-org-health-checker.jpg",
+    image: "/case-studies/sf-org-health-checker-v2.jpg",
     sections: [
       {
         heading: "The problem",
