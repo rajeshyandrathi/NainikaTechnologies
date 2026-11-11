@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
     description:
       "AI agents that help a US retailer and online store with customer support, product content, sales and leads, and operations reporting, connected to Salesforce, HubSpot, email and chat.",
     tools: ["AI agents", "Salesforce", "HubSpot", "Email", "Chat"],
-    image: "/case-studies/retail-ai-agents.jpg",
+    image: "/case-studies/retail-ai-agents-v2.jpg",
     sections: [
       {
         heading: "The challenge",
