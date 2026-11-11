@@ -26,7 +26,7 @@ export const caseStudies: CaseStudy[] = [
     description:
       "How we connected Salesforce, HubSpot, Marketo, Clay and Chargebee for a B2B SaaS company, with clean data, lead routing, a trusted pipeline and forecast, and one view of revenue.",
     tools: ["Salesforce", "HubSpot", "Marketo", "Clay", "Chargebee"],
-    image: "/case-studies/revops-b2b-saas.jpg",
+    image: "/case-studies/revops-b2b-saas-flow.jpg",
     sections: [
       {
         heading: "The challenge",
