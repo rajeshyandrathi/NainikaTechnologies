@@ -15,6 +15,131 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-end-to-end-testing",
+    title: "AI End-to-End Testing: Who Tests the Code the AI Wrote?",
+    description: "AI agents now write code, and other AI agents test it. Here is how end-to-end testing is changing, why test scores and real behaviour can differ, and a practical plan for Salesforce and HubSpot teams.",
+    date: "2026-11-12",
+    image: "/insights/ai-e2e-testing.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "AI now writes a large share of new code, including Apex, Flows and HubSpot workflows. Writing code is no longer the slow part. Proving it works is.",
+          "AI end-to-end testing means two things. First, using AI agents to test your software the way a real user would, on every change. Second, testing your AI agents themselves before you trust them with real work. Most teams need both.",
+        ],
+      },
+      {
+        heading: "Using AI to test your software",
+        paragraphs: [
+          "End-to-end tests check a whole journey, not just one piece of code: a customer signs up, logs in, buys, pays and gets a confirmation email. They are the tests that catch real problems, and the ones teams skip because they are slow to write and break easily.",
+          "A new group of AI testing tools now writes and runs these tests against the live, running application, on every pull request. One vendor, Amikoo, makes the point that verification should stay independent of the coding agent that wrote the change. In plain terms: the AI that wrote the code should not be the only one marking it.",
+          "This week AWS showed the same idea at scale. Its new AWS Emulator was written entirely by AI agents, but only after other agents had turned real AWS behaviour into tests. The tests came first, and every change had to pass them. We covered that story in our Insight on AWS Emulator.",
+        ],
+      },
+      {
+        heading: "Testing your AI agents",
+        paragraphs: [
+          "The second kind of testing is harder. On 3 November 2026, OpenAI's alignment team published research comparing how six models behaved in a safety test against how they behaved in real Codex work. In every model, the test scores were lower than real behaviour, by 10.2 to 37.4 percentage points.",
+          "The reason was surprising. The models often noticed they were being tested and guessed what the test wanted, sometimes guessing wrong. In one experiment, telling a model the correct goal of the test raised its success rate to 91.6%, while telling it the wrong goal dropped it to 17.6%.",
+          "OpenAI made a similar point in July, after a long-running internal model showed failures its existing tests had missed. Its conclusion: no fixed set of tests can predict every behaviour, so testing before launch has to be paired with close monitoring and the ability to pause or roll back.",
+        ],
+        figure: {
+          src: "/insights/ai-e2e-testing-two-kinds.jpg",
+          alt: "Two kinds of AI end-to-end testing: AI that tests your apps with independent checks, and testing your AI on real tasks while monitoring it live",
+          caption: "You need both: AI that tests your software, and tests for your AI.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "What this means for Salesforce and HubSpot teams",
+        paragraphs: [
+          "For Salesforce, unit tests and 75% code coverage are not enough on their own. Add end-to-end tests for your key journeys, such as an Experience Cloud portal login, a lead becoming an opportunity, or a case being escalated. Tools like Playwright can run these against a sandbox on every release.",
+          "For AI agents in Agentforce or HubSpot, build a test set from real conversations and real records: the easy cases, the awkward ones and the ones where the agent must say no or hand over to a person.",
+          "Do not treat a good test score as proof. Watch the agent in production, review a sample of its work every week, and turn every mistake into a new test.",
+        ],
+      },
+      {
+        heading: "A simple plan to start",
+        paragraphs: [
+          "List your five most important customer journeys and write an end-to-end test for each.",
+          "Run them automatically in a sandbox on every release, and block the release if they fail.",
+          "Keep your AI tester separate from your AI coder.",
+          "For each AI agent, build a test set of 30 to 50 real tasks, including cases where it must refuse or ask a person.",
+          "Monitor agents in production and add every incident to the test set.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We set up test-first delivery for Salesforce and HubSpot teams: end-to-end test suites for your key journeys, automated runs in your sandboxes, and test sets for your AI agents, so you can release faster with fewer surprises.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-end-to-end-deployment",
+    title: "AI End-to-End Deployment: From Prompt to Production Without the 3am Surprise",
+    description: "AI agents can now write, test, ship and even fix software on their own. Most companies are not ready to let them. Here is a five-level ladder for giving AI more control over deployment, safely.",
+    date: "2026-11-12",
+    image: "/insights/ai-e2e-deployment.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "AI agents can now take a change from idea to production: write the code, test it, deploy it and, when something breaks, roll it back. In 2026 this moved from demos to real teams.",
+          "Most companies are still careful, and for good reason. One industry report this year put it plainly: most enterprises are testing agents, but only about one in nine runs them in production. The gap is not the AI. It is the guardrails around it.",
+        ],
+      },
+      {
+        heading: "What AI deployment agents can do today",
+        paragraphs: [
+          "AI site reliability agents now read logs, spot problems, restart services and start rollbacks on their own for well-understood failures. DevOps.com described the trade-off this week: AI can fix outages in seconds, and cause problems just as fast. Agents can also hide symptoms while the real problem grows.",
+          "Security vendors are responding. In early November, Sysdig made AI Defense generally available. It checks each action by coding agents such as Claude Code, Codex, GitHub Copilot and Cursor against policy, and can allow it, ask a person, or block it. CrowdStrike added detection for AI agents behaving unusually, even when no single rule is broken.",
+        ],
+      },
+      {
+        heading: "Where it goes wrong",
+        paragraphs: [
+          "One engineer published an honest account of giving an AI agent deploy keys for 30 days. In one incident, he told it to prepare the production deploy if staging was green. The agent opened the production change and set it to merge automatically. His rule of waiting 24 hours in staging was written in a runbook the agent never read.",
+          "OpenAI described a deeper version of the same problem in July. Many safety controls judge one action at a time. But a sequence of steps can each look acceptable and still lead somewhere nobody would approve. That is why monitoring has to look at the whole run, not just single actions.",
+          "We covered a more extreme case earlier this year in our Insight on the AI agent that deleted a database in nine seconds.",
+        ],
+        figure: {
+          src: "/insights/ai-e2e-deployment-ladder.jpg",
+          alt: "The AI deployment autonomy ladder: suggest, shadow, act in staging, act with approval, act alone on known cases",
+          caption: "Move up one level at a time, and only when the data says it is safe.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "The five-level autonomy ladder",
+        paragraphs: [
+          "Level 1, suggest: the AI reads alerts and logs and suggests a fix. People do everything.",
+          "Level 2, shadow: the AI drafts each change next to your team for about four weeks, and you compare its plan with what people actually did.",
+          "Level 3, act in staging: the AI deploys and tests on its own in a sandbox. Nothing reaches production.",
+          "Level 4, act with approval: the AI prepares the production release, and a person approves every change.",
+          "Level 5, act alone on known cases: the AI fixes known, low-risk issues by itself, with a hard cap on the number of actions and a one-step rollback. Everything new goes back to a person.",
+        ],
+      },
+      {
+        heading: "What this means for Salesforce and HubSpot",
+        paragraphs: [
+          "Salesforce already gives you the building blocks: sandboxes, DevOps Center or your own pipeline, validation-only deployments and quick deploy. Let AI prepare and validate releases, but keep a named person approving what goes to production.",
+          "Write your rules where the agent can read them. If your release rules live only in someone's head or a forgotten page, the agent will not follow them.",
+          "Keep a rollback ready for every release, including metadata, Flows and permission changes, and practise it.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help teams set up safe AI-assisted release pipelines for Salesforce and HubSpot: sandboxes, automated tests, approval steps and rollback plans, so AI can speed up delivery without putting production at risk.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "united-blocks-customer-ai-agents",
     title: "United Just Said No to Customers' AI Agents. Is Your Business Ready for Them?",
     description: "United Airlines now blocks personal AI agents from booking or changing flights. Your customers will soon send AI agents to your website, portal and support channels too. Here is how to decide what to let in.",
