@@ -185,6 +185,115 @@ const allInsights: Insight[] = [
     ],
   },
   {
+    slug: "half-of-slack-messages-not-from-people",
+    title: "Half of Slack Messages Are Not From People. How Do You Keep Your Team in the Loop?",
+    description: "Salesforce says apps and agents now send half of all Slack messages. When bots write as much as people, the important messages get lost. Here is how to keep the signal clear.",
+    date: "2026-11-12",
+    image: "/insights/slack-half-messages-agents.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Salesforce says 50% of Slack messages now come from apps and agents, not people. Slack handles about a billion messages a day, so that is a lot of automated chatter.",
+          "Agents in Slack can be very useful. But when half the messages in a channel are automated, people start to skim, and the messages that need a human decision get missed. The fix is to design where agents post, not just switch them on.",
+        ],
+      },
+      {
+        heading: "What the numbers say",
+        paragraphs: [
+          "Salesforce published the figures in early November 2026. Over 100,000 customers have joined Slack this year, and 1.9 million users work with third-party agents in Slack every week. Slack also handles 127 million automated actions through MCP each week, the open standard that lets agents connect to other tools.",
+          "Note that the 50% figure groups traditional apps, such as alerts and integrations, together with AI agents. It does not measure AI agents alone.",
+          "The same week, Salesforce research found that 68% of executives say AI insights go unshared each week, and that employees lose an average of 3.6 hours a week switching between AI tools and other apps.",
+        ],
+        figure: {
+          src: "/insights/slack-by-the-numbers.jpg",
+          alt: "Five Slack statistics: one billion messages a day, 50% from apps and agents, 1.9 million users of third-party agents, 68% of executives see AI insights go unshared, 3.6 hours lost each week",
+          caption: "Agents now live where teams talk. That raises the bar for how channels are run.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Why it matters for revenue teams",
+        paragraphs: [
+          "Sales, service and RevOps teams already get Slack alerts for new leads, closed deals, escalated cases and failed syncs. Add AI agents posting summaries and suggestions, and the busiest channels become noise.",
+          "When everything looks automated, people stop reading. A real customer escalation can sit unread under ten bot updates.",
+          "The answer is not fewer agents. It is clearer rules for where they post and when a person must act.",
+        ],
+      },
+      {
+        heading: "Five rules for agents in Slack",
+        paragraphs: [
+          "Give bots their own channels. Keep alerts and agent updates out of the channels where people discuss and decide.",
+          "Only post what needs action. If nobody has to do anything, log it in Salesforce or HubSpot instead of Slack.",
+          "Tag the owner. Every message that needs a decision should name the person who owns it.",
+          "Summarise, do not stream. One daily digest beats fifty single alerts.",
+          "Review every quarter. Remove alerts nobody reacts to, and check which agents can read and post where.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We set up Salesforce and HubSpot integrations with Slack that send the right alert to the right person, keep records in the CRM, and keep your team channels readable.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "openai-10-billion-quarter-what-it-means-for-ai-costs",
+    title: "A US$10 Billion Quarter and a Bigger Loss: What OpenAI's Numbers Mean for Your AI Bill",
+    description: "OpenAI earned about US$10 billion in a quarter and still lost more than that. AI providers are spending heavily to win customers. Here is how to plan your AI budget for the day prices change.",
+    date: "2026-11-12",
+    image: "/insights/openai-10bn-quarter-loss.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "OpenAI's revenue reportedly reached about US$10 billion in the third quarter of 2026, up about 50% from the quarter before. Its adjusted operating loss also grew, to about US$10.9 billion. In simple terms, it lost a little more than it earned.",
+          "For businesses using AI, the takeaway is not that AI is failing. Demand is clearly strong. It is that today's prices may not last. Build your AI plans so they still make sense if costs go up.",
+        ],
+      },
+      {
+        heading: "What the numbers say",
+        paragraphs: [
+          "According to internal documents reported by The Wall Street Journal, revenue rose from about US$6.7 billion in the second quarter to about US$10 billion. The adjusted operating loss grew from US$10.1 billion to about US$10.9 billion, and that figure excludes US$2.6 billion of stock-based pay.",
+          "There is good news inside the numbers. The adjusted operating margin improved from minus 150% to minus 109%, so OpenAI now loses about US$1.09 for every dollar of revenue, down from US$1.50.",
+          "Enterprise customers drove much of the growth. Reports say OpenAI's business revenue doubled in the quarter, and now matches its consumer revenue.",
+        ],
+      },
+      {
+        heading: "Why it matters for your business",
+        paragraphs: [
+          "When a supplier loses money on every sale, prices tend to change sooner or later. That can mean higher prices, new usage limits or changes to which features sit in which plan.",
+          "AI pricing is already moving. Salesforce Agentforce charges per action or per conversation, HubSpot agents run on credits, and many tools have moved to per-user AI add-ons. Each model adds up differently as you use more.",
+          "Teams that never measured what AI saves them will struggle to defend the budget when the bill goes up.",
+        ],
+        figure: {
+          src: "/insights/ai-cost-plan.jpg",
+          alt: "Four ways to protect your AI budget: price each use case, right-size the model, avoid lock-in, read the meter",
+          caption: "A short plan to keep AI costs under control as pricing changes.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Four ways to protect your AI budget",
+        paragraphs: [
+          "Price each use case. Know what each AI task costs a month and what it saves, and drop the ones that do not pay back.",
+          "Right-size the model. Use smaller, cheaper models for routine work and save the top models for hard problems.",
+          "Avoid lock-in. Keep your prompts, data and workflows portable so you can switch provider if prices rise.",
+          "Read the meter. Credits, per action and per user pricing all behave differently. Set spending caps and alerts, and review usage monthly.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Our AI Agent Pilot starts with the numbers: what the task costs today, what the agent costs to run in Salesforce or HubSpot, and what it saves. You get a clear answer on whether it pays back before you scale it.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agents-hand-over-secret-keys",
     title: "Ask Nicely and AI Agents Hand Over the Keys",
     description: "A new study found AI coding agents leaked a secret token when other agents offered to help, even after being told not to share it. Here is what that means for any agent connected to your CRM.",
