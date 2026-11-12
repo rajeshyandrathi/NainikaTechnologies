@@ -15,6 +15,176 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "united-blocks-customer-ai-agents",
+    title: "United Just Said No to Customers' AI Agents. Is Your Business Ready for Them?",
+    description: "United Airlines now blocks personal AI agents from booking or changing flights. Your customers will soon send AI agents to your website, portal and support channels too. Here is how to decide what to let in.",
+    date: "2026-11-12",
+    image: "/insights/united-blocks-ai-agents.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "On 11 November 2026, United Airlines said it will block unauthorised personal AI agents from booking, changing or servicing tickets, on its own website and app and through travel agencies and aggregators.",
+          "This is not only an airline story. Customers are starting to send their own AI assistants to do tasks for them: book, buy, change, cancel and complain. Every business with a website, customer portal or support inbox will need to decide which agents to let in and what they may do.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "United said sharing account login details with personal AI assistants can expose sensitive information, and that actions taken by these tools may lead to unintended purchases, account changes or use of MileagePlus miles.",
+          "It also said automated AI actions could break aviation rules. Its example: checking in requires a person to confirm that their bags do not contain banned items such as explosives. An agent cannot make that promise for you.",
+          "United changed its Contract of Carriage the same day. Using AI agents to make, change or service a ticket is now a prohibited practice, and United can cancel bookings made or managed by AI agents without notice. Bookings made before 11 November will be honoured, and agents can still search fares.",
+          "United is not alone. Delta is understood to be blocking agents already, and JPMorgan Chase and Charles Schwab block outside agents from customer accounts. United CEO Scott Kirby summed up the business worry: he does not want to create another middleman.",
+        ],
+        figure: {
+          src: "/insights/united-three-choices.jpg",
+          alt: "Three options for handling customer AI agents: block them, allow with limits, or offer an official API",
+          caption: "Most businesses will mix these options, task by task.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Why it matters for your business",
+        paragraphs: [
+          "Your customers' AI agents will log in with their details. To your systems, they look like the customer. That makes it hard to tell a helpful assistant from an attacker.",
+          "Some actions legally or ethically need a real person: accepting terms, confirming a payment, signing a contract or making a declaration. An agent clicking yes may not count.",
+          "There is also a relationship question. If an agent sits between you and your customer, it decides what they see, compare and buy. That is why airlines are cautious.",
+        ],
+      },
+      {
+        heading: "Five steps to get ready",
+        paragraphs: [
+          "List the actions customers take on your website, portal and support channels, such as browse, buy, change, cancel and complain.",
+          "Mark which ones a person must confirm, such as payments, contract terms, refunds and anything legal.",
+          "Decide your stance for each action: block, allow with limits, or offer an official route.",
+          "Update your terms of use to say how AI agents may and may not be used.",
+          "Watch for agent traffic in your web analytics, Salesforce Experience Cloud logs or HubSpot forms, and review it monthly.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help businesses on Salesforce and HubSpot design customer portals and support flows that work for people and for approved AI agents, with clear checks on the steps that need a human.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "stolen-ai-keys-740000-bill",
+    title: "A Stolen AI Key Is a Credit Card: The US$740,000 Railway Breach",
+    description: "Attackers broke into cloud platform Railway, hunted for customer AI keys and ran up an estimated US$740,000 in AI usage. Here is how to stop a stolen key from becoming your bill.",
+    date: "2026-11-12",
+    image: "/insights/stolen-ai-keys-740k.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Attackers who broke into cloud hosting platform Railway in October went looking for one thing: customers' AI provider keys. Railway's final report, published on 10 November 2026, estimates those stolen keys were used for about US$740,000 of AI usage the customers never ran.",
+          "An AI key is now like a company credit card. Whoever holds it can spend your money on AI services. Treat it that way: limit what it can spend, see what it spends, and cancel it quickly.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "According to Railway's incident report, attackers used an unknown flaw in its build system to partly escape isolation and read files on the host machines. A cloud setup mistake then exposed a short-lived credential, and they worked their way to the systems that store customers' secrets.",
+          "They decrypted environment variables for at most 1.85% of workspaces, about 100,000, and their database searches looked specifically for AI provider keys. The attack lasted about 26 hours before Railway contained it.",
+          "Railway believes the keys went to services that resell AI access, possibly for distillation, which means training a cheaper model on another model's answers. Customers reported their keys answering coding questions and running training tasks they never asked for.",
+          "Railway is working with AI providers on refunds and says it will cover charges that providers decline to refund. Security firm Wiz links the attack to a wider wave against AI developer platforms that also hit Northflank, OpenCode, Warp and Lightning AI. This is a separate incident from the Railway story in our earlier Insight on agents probing a competitor.",
+        ],
+        figure: {
+          src: "/insights/stolen-ai-keys-timeline.jpg",
+          alt: "Timeline of the Railway breach from build system escape on 20 October to the final report on 10 November",
+          caption: "From break-in to containment took about a day. The final bill took three weeks to add up.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Why it matters for your business",
+        paragraphs: [
+          "Most companies now hold AI keys somewhere: in a hosting platform, a CRM integration, an automation tool or a developer's laptop. Few have a spending limit on them.",
+          "Unlike a stolen password, a stolen AI key costs money every minute it works. Attackers do not need your data. They want your compute.",
+          "Your keys are only as safe as the platforms you store them on. Railway's customers did nothing wrong, and still had to rotate every secret.",
+        ],
+      },
+      {
+        heading: "Six steps to protect your AI keys",
+        paragraphs: [
+          "Know where every key lives. List each AI provider key, who owns it and which systems use it.",
+          "Set spending limits and alerts with every AI provider, per key where possible.",
+          "Use one key per app, with the narrowest permissions, so one leak does not expose everything.",
+          "Rotate keys on a schedule, and immediately after any supplier reports a breach.",
+          "In Salesforce, use Named Credentials so integrations can use keys without storing them in code or fields people can read.",
+          "Watch usage. A sudden jump at 3am is a warning, not growth.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Our RevOps Audit now includes an AI key check: where your keys are stored across Salesforce, HubSpot and the tools around them, who can reach them, and whether spending limits and alerts are in place.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "aws-emulator-built-by-ai-agents",
+    title: "AI Agents Built It and No Person Reviewed the Code: What AWS Emulator Teaches Us",
+    description: "AWS released AWS Emulator, a tool written entirely by autonomous AI agents with no human code review. The secret is not the agents. It is the checks around them. Here is what that means for Salesforce and HubSpot teams.",
+    date: "2026-11-12",
+    image: "/insights/aws-emulator-built-by-agents.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "On 11 November 2026, Amazon Web Services released AWS Emulator, a free tool that lets developers test AWS applications on their own machine. AWS says thousands of autonomous AI agents wrote every line of it, and its engineers neither wrote nor reviewed the code.",
+          "That sounds reckless until you see how it was done. People designed strict tests and rules. The agents did the work inside them. That is the model every team using AI to build software should copy.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "AWS Emulator copies more than 200 AWS services, built from over 400 public API models. It runs free and offline, and the code is released into the public domain.",
+          "According to AWS, three teams of agents run on Amazon Bedrock AgentCore. One team turns real AWS behaviour into tests. One replays those tests on the emulator and files issues for anything that fails. One fixes the code until the tests pass. AWS says hundreds of agents work at once, fixing thousands of issues a day.",
+          "Every change passes through a merge gate that includes security agents doing adversarial reviews. AWS publishes the tests, every issue the agents filed, a list of things that do not work yet, and a score for how closely each service matches real AWS.",
+          "Senior principal engineer Matthew Goldberg said the guardrails gave the agents room to work independently, and gave the team the trust that they stay inside the lines.",
+        ],
+        figure: {
+          src: "/insights/aws-emulator-guardrails.jpg",
+          alt: "Four checks that replaced human code review: tests from real AWS, clear jobs, a strict merge gate and open scores",
+          caption: "The people designed the checks. The agents did the work.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Why it matters for Salesforce and HubSpot teams",
+        paragraphs: [
+          "AI is already writing Apex, Flows, LWC and HubSpot workflows. The question is no longer whether AI can write the code. It is how you know the code is right.",
+          "AWS's answer is tests first. In Salesforce terms, that means meaningful test classes that check real business outcomes, not just 75% coverage, plus a sandbox with realistic data.",
+          "Clear jobs matter too. An agent asked to build a whole feature drifts. An agent asked to make one failing test pass does not.",
+          "Note what AWS did not do. It did not point agents at production. They worked against tests, in a safe copy, with every change gated.",
+        ],
+      },
+      {
+        heading: "How to apply this on your next build",
+        paragraphs: [
+          "Write the tests before the code. Describe what must be true for the feature to work, and turn that into test classes or test cases.",
+          "Give AI one clear job at a time, such as fixing this failing test or adding this field to this Flow.",
+          "Gate every change. Nothing reaches production without passing tests, a security scan and, for now, a quick human check.",
+          "Keep a list of what does not work yet, and share it with the business.",
+          "Measure quality over time, such as test pass rates and bugs found after release.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help Salesforce and HubSpot teams use AI to build faster without losing control: test-first delivery, sandbox setups and deployment checks that catch problems before your users do.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-agents-hand-over-secret-keys",
     title: "Ask Nicely and AI Agents Hand Over the Keys",
     description: "A new study found AI coding agents leaked a secret token when other agents offered to help, even after being told not to share it. Here is what that means for any agent connected to your CRM.",
