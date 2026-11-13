@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Bot, GraduationCap, Mail, Rocket, Users } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import { roles, talentAreas } from "@/lib/careers";
 import { site } from "@/lib/site";
@@ -20,22 +19,18 @@ export const metadata: Metadata = {
 
 const reasons = [
   {
-    icon: Bot,
     title: "Real AI work",
     text: "Build AI agents, integrations and automation that clients use every day, not demos that sit on a shelf.",
   },
   {
-    icon: GraduationCap,
     title: "Learn by building",
     text: "Work alongside senior Salesforce and AI architects, with time to learn, certify and grow.",
   },
   {
-    icon: Rocket,
     title: "Modern tools",
     text: "Salesforce, HubSpot, Agentforce, Playwright, cloud platforms and the latest AI models.",
   },
   {
-    icon: Users,
     title: "Ownership",
     text: "A small team where your work is seen, your ideas count and you own what you deliver.",
   },
@@ -59,11 +54,8 @@ export default function CareersPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-10 text-center">Why Work With Us</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {reasons.map(({ icon: Icon, title, text }) => (
+            {reasons.map(({ title, text }) => (
               <div key={title} className="bg-slate-50 rounded-xl p-6 shadow-sm">
-                <div className="w-12 h-12 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center mb-4">
-                  <Icon size={24} />
-                </div>
                 <h3 className="text-lg font-bold text-slate-800 mb-2">{title}</h3>
                 <p className="text-slate-600">{text}</p>
               </div>
@@ -89,9 +81,9 @@ export default function CareersPage() {
                     </div>
                     <Link
                       href={applyHref(`Application: ${role.title}`)}
-                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-5 rounded-md transition-all inline-flex items-center gap-2"
+                      className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-5 rounded-md transition-all inline-flex items-center"
                     >
-                      Apply <ArrowRight size={16} />
+                      Apply
                     </Link>
                   </div>
                   <p className="text-slate-600 mb-6">{role.summary}</p>
@@ -132,9 +124,9 @@ export default function CareersPage() {
               </ul>
               <Link
                 href={applyHref("General application")}
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all inline-flex items-center gap-2"
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all inline-flex items-center"
               >
-                <Mail size={18} /> Send us your CV
+                Send us your CV
               </Link>
             </div>
           )}
