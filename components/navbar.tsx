@@ -39,6 +39,7 @@ export default function Navbar() {
     { href: "/services", label: "Services" },
     { href: "/case-studies", label: "Case Studies" },
     { href: "/insights", label: "Insights" },
+    { href: "/careers", label: "Careers" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -75,7 +76,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center md:space-x-5 lg:space-x-8">
+          <nav className="hidden lg:flex items-center lg:space-x-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -90,14 +91,14 @@ export default function Navbar() {
             })}
             <Link
               href={site.cta.href}
-              className="hidden lg:inline-flex bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all"
+              className="hidden xl:inline-flex bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all"
             >
               {site.cta.shortLabel}
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={toggleMenu}
               className="p-2 rounded-md focus:outline-none text-slate-700"
@@ -116,7 +117,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white shadow-lg"
+          className="lg:hidden bg-white shadow-lg"
         >
           <div className="px-4 pt-2 pb-4 space-y-1">
             {navLinks.map((link) => {
