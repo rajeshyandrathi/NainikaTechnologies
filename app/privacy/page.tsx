@@ -26,6 +26,7 @@ const sections = [
     heading: "What we collect",
     body: [
       "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page. When you subscribe to Insights, we collect your email address and a record of your consent, including when you confirmed it.",
+      "If you apply for a job through our careers page, we collect your name, email address, the role or area you are interested in, your CV and cover letter, and, if you choose to give them, your phone number and a LinkedIn, GitHub or portfolio link. We use these only to consider you for current and future roles.",
       "If you contact us by email, phone, or WhatsApp, we receive your contact details and whatever you send us.",
       "When you browse the site, we collect anonymised usage and performance information, such as pages viewed, country, device type, and page speed, through Vercel Analytics and Speed Insights. This also includes whether our contact form was submitted or our WhatsApp button was clicked. Our hosting provider may also keep technical logs for security and reliability.",
     ],
@@ -50,6 +51,7 @@ const sections = [
     heading: "How long we keep it and how we protect it",
     body: [
       "We keep personal information only for as long as we need it for the purposes above, or for as long as the law requires, and then we delete or anonymise it.",
+      "We keep job applications for up to 12 months so we can consider you for future roles, unless you ask us to delete yours sooner.",
       "We use reasonable technical and organisational measures to protect your information against loss, misuse, and unauthorised access.",
     ],
   },
@@ -72,7 +74,7 @@ export default function PrivacyPage() {
       <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold text-black mb-4">{title}</h1>
-        <p className="text-slate-600 mb-10">Last updated: 8 November 2026</p>
+        <p className="text-slate-600 mb-10">Last updated: 13 November 2026</p>
         {sections.map((section) => (
           <section key={section.heading} className="mb-8">
             <h2 className="text-2xl font-bold text-slate-800 mb-3">{section.heading}</h2>
