@@ -71,6 +71,23 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                 {paragraph}
               </p>
             ))}
+            {section.figure && (
+              <figure className="mt-6 mb-6">
+                <a href={section.figure.src} target="_blank" rel="noopener noreferrer" aria-label="Open the full-size diagram">
+                  <Image
+                    src={section.figure.src}
+                    alt={section.figure.alt}
+                    width={section.figure.width}
+                    height={section.figure.height}
+                    sizes="(min-width: 768px) 768px, 100vw"
+                    className="w-full h-auto rounded-xl shadow-lg"
+                  />
+                </a>
+                {section.figure.caption && (
+                  <figcaption className="mt-3 text-sm text-slate-500 text-center">{section.figure.caption}</figcaption>
+                )}
+              </figure>
+            )}
             {section.bullets && (
               <ul className="list-disc pl-6 space-y-2 text-slate-700 leading-relaxed">
                 {section.bullets.map((bullet) => (

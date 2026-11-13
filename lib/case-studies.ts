@@ -13,6 +13,8 @@ export type CaseStudy = {
     heading: string;
     paragraphs?: string[];
     bullets?: string[];
+    /** Optional diagram shown under the section. */
+    figure?: { src: string; alt: string; caption?: string; width: number; height: number };
   }[];
   /** Optional external link, such as a public repository. */
   link?: { label: string; href: string };
@@ -29,35 +31,73 @@ export const caseStudies: CaseStudy[] = [
       "Genesys",
       "Omni-Channel",
       "Apex",
-      "Campaigns"
+      "Campaigns",
+      "Custom Metadata"
     ],
     "image": "/case-studies/contact-centre-cti.jpg",
     "sections": [
       {
+        "heading": "About the client",
+        "paragraphs": [
+          "The client is a large beverage company that sells through thousands of trade outlets, such as shops, bars and restaurants. Its contact centre calls these outlets every day to take orders and to remind them when licences are due for renewal.",
+          "Those calls are a direct line to revenue. A missed order call is a missed sale, and an outlet that lets its licence lapse may not be able to sell the client's products at all."
+        ]
+      },
+      {
         "heading": "The challenge",
         "paragraphs": [
-          "A beverage company runs outbound calls to its trade customers, for example to take orders and to remind outlets about licence renewals.",
-          "Agents worked between the phone system and Salesforce, and each call needed the right customer, the right campaign and the right script in front of them."
-        ]
-      },
-      {
-        "heading": "What we built",
-        "paragraphs": [
-          "Our team connected the Genesys phone system to Salesforce Service Cloud and built the full outbound flow."
+          "Agents were working across two systems. The phone system handled the calls, while customer details, order history and requests lived in Salesforce.",
+          "That created three problems:"
         ],
         "bullets": [
-          "Campaigns: contacts are imported as campaign members, with the request type and reason on the import sheet.",
-          "Call requests: each campaign member creates one call request automatically, so no customer is called twice for the same campaign.",
-          "Routing: when an agent goes online, the next call request arrives through Omni-Channel.",
-          "Voice call record: the agent sees the account, contact, campaign and call request on one screen.",
-          "Call scripts: the right script appears on the call, based on the request type.",
-          "Housekeeping in Apex: email handling, a do-not-call list cleanup job, and status sync driven by Custom Metadata, so rules change without code."
+          "Agents had to search for the customer while the call was already ringing.",
+          "There was no reliable link between a campaign, the customer being called and the result of the call.",
+          "Each agent ran the conversation their own way, so calls were not consistent."
         ]
       },
       {
-        "heading": "Quality and handover",
+        "heading": "Our approach",
         "paragraphs": [
-          "We brought test coverage above the 75% Salesforce needs for production, took the solution through user acceptance testing, and completed a formal handover to the client team."
+          "We decided early that Salesforce should be the one place where a call starts, runs and ends. Genesys stays the telephony engine, but the agent should never need to leave Salesforce to make or log a call.",
+          "We also kept the setup in the hands of the business. Campaign teams load contacts from a simple sheet, and rules such as call status mapping live in Custom Metadata, so they can change without new code."
+        ]
+      },
+      {
+        "heading": "How it works",
+        "paragraphs": [
+          "Every outbound call follows the same six steps, from campaign to script."
+        ],
+        "figure": {
+          "src": "/case-studies/contact-centre-call-flow.jpg",
+          "alt": "Six steps: campaign, import contacts, call request, Omni-Channel routing, voice call record, and the call script for the request type.",
+          "caption": "Every outbound call follows the same path inside Salesforce.",
+          "width": 1400,
+          "height": 700
+        },
+        "bullets": [
+          "Campaign: the team creates a campaign for an order run or a licence renewal drive.",
+          "Import: contacts are loaded as campaign members, with the request type and reason on the import sheet.",
+          "Call request: each campaign member creates one call request automatically. Each request is unique per campaign, so no outlet is called twice for the same thing.",
+          "Routing: when an agent goes online, the next call request arrives through Omni-Channel.",
+          "Voice call: the agent sees the account, contact, campaign and call request together on one screen.",
+          "Script: the right call script appears on the call, based on the request type."
+        ]
+      },
+      {
+        "heading": "What we built behind the scenes",
+        "bullets": [
+          "Apex trigger handlers for voice calls and campaign members, so records stay linked automatically.",
+          "An email service that runs in the background, so emails do not slow down the agent.",
+          "A scheduled job that keeps the do-not-call list clean, so people who opted out are never called.",
+          "A campaign service that manages call requests across campaigns.",
+          "Status sync between Genesys and Salesforce, driven by Custom Metadata."
+        ]
+      },
+      {
+        "heading": "Challenges along the way",
+        "paragraphs": [
+          "Outbound campaigns change often, and early designs included rescheduling inside the call scripts. We removed rescheduling from the order and licence renewal scripts, which kept the scripts simple and the data clean.",
+          "Getting to production also meant raising test coverage across the integration code above the 75% Salesforce needs. We remediated the test classes so every key path is tested, not just covered."
         ]
       },
       {
@@ -65,8 +105,26 @@ export const caseStudies: CaseStudy[] = [
         "bullets": [
           "Outbound calling now runs from inside Salesforce, from campaign to call.",
           "Agents see the full customer story the moment a call connects.",
-          "Scripts follow the request type, so every call follows the same steps.",
-          "The solution went live in July 2026."
+          "Every call follows the script for its request type, so conversations are consistent.",
+          "Each call request is linked to its campaign, which makes results easy to report.",
+          "The solution passed user acceptance testing and went live in July 2026, with a formal handover to the client team."
+        ]
+      },
+      {
+        "heading": "Thinking about this for your contact centre?",
+        "paragraphs": [
+          "Ask yourself three questions:"
+        ],
+        "bullets": [
+          "Do your agents leave the CRM to make or log a call?",
+          "Can you link every call to a campaign and a result?",
+          "Does every agent follow the same script for the same type of call?"
+        ]
+      },
+      {
+        "heading": "How we can help",
+        "paragraphs": [
+          "If any answer is no, we can help you connect your phone system to Salesforce or HubSpot and design call flows your team will actually use. Book a call and tell us how your contact centre works today."
         ]
       }
     ]
@@ -80,50 +138,104 @@ export const caseStudies: CaseStudy[] = [
       "Salesforce Financial Services Cloud",
       "Batch Apex",
       "Platform Events",
-      "Data migration"
+      "Data migration",
+      "Reconciliation"
     ],
     "image": "/case-studies/member-data-migration.jpg",
     "sections": [
       {
-        "heading": "The challenge",
+        "heading": "About the client",
         "paragraphs": [
-          "A retirement fund administrator needed to move its members onto Salesforce Financial Services Cloud. That meant more than 4 million member accounts and over 20 years of transaction history from an external administration system.",
-          "At that size, a migration cannot simply be run once and hoped for. It has to be repeatable, checked at every step, and safe to stop and restart."
+          "The client administers retirement savings for millions of members. Every member has an account, balances and a history of contributions and payments, in some cases going back more than 20 years.",
+          "For a retirement business, that history is not optional. Members, regulators and auditors all rely on it being complete and correct."
         ]
       },
       {
-        "heading": "What we built",
+        "heading": "The challenge",
         "paragraphs": [
-          "Our team built a migration platform with three ways of loading data, working side by side:"
+          "The client was moving its members from an external administration system onto Salesforce Financial Services Cloud. That meant more than 4 million member accounts and over 20 years of transaction history.",
+          "At that size, a migration cannot be run once and hoped for. It had to meet four tests:"
         ],
         "bullets": [
-          "Before go-live: a full load, accounts first, through a seven-step pipeline: profile and cleanse, load staging, controlled start, accounts, transactions, reconcile, and accept.",
+          "Repeatable: the same load can be run again with the same result.",
+          "Checked: every batch is reconciled against the source before it is accepted.",
+          "Recoverable: a failure in one batch must not break the rest.",
+          "Ongoing: the source system kept running, so changes after the first load still had to arrive."
+        ]
+      },
+      {
+        "heading": "Our approach",
+        "paragraphs": [
+          "We treated the migration as a platform, not a one-off script. Data never goes straight into live records. It lands in staging first, is checked, and only then moves into Financial Services Cloud.",
+          "We also planned where each kind of data should live. Recent activity belongs in Salesforce, where people work with it every day. Twenty years of history does not, so it sits in a separate tier built for long-term and regulatory reporting."
+        ]
+      },
+      {
+        "heading": "How it works",
+        "paragraphs": [
+          "Data arrives in three ways, is checked before it lands, and is stored according to how often it is used."
+        ],
+        "figure": {
+          "src": "/case-studies/member-migration-loading-modes.jpg",
+          "alt": "Three columns: how data arrives (before go-live, nightly, real time), how it is checked (staging, reconciliation gate, exception log), and where it lives (hot, warm and cold tiers).",
+          "caption": "Three loading modes share one safe path into Salesforce.",
+          "width": 1400,
+          "height": 700
+        },
+        "bullets": [
+          "Before go-live: a full load, accounts first, through seven steps: profile and cleanse, load staging, controlled start, accounts, transactions, reconcile, and accept.",
           "Every night: a delta load that pulls only what changed since the last run.",
           "In real time: new activity is processed as it happens."
         ]
       },
       {
-        "heading": "Built to fail safely",
+        "heading": "The data model",
+        "paragraphs": [
+          "We used the standard Financial Services Cloud model, so the client gets the full benefit of the product and future Salesforce releases:"
+        ],
         "bullets": [
-          "Data lands in staging objects first, so nothing reaches live records until it passes checks.",
-          "A reconciliation gate compares source and target before any batch is accepted.",
-          "Records that fail are logged as exceptions for the team to fix, instead of stopping the whole run.",
-          "Every batch and event is logged, so the team can see exactly what ran and when."
+          "Members as person accounts.",
+          "Financial accounts for each retirement product, linked to members through account relationships.",
+          "Balances stored as snapshots, and transactions stored as history.",
+          "Custom objects for control and monitoring: staging for accounts and transactions, integration batches, reconciliation exceptions and integration log events."
         ]
       },
       {
-        "heading": "The right data in the right place",
-        "paragraphs": [
-          "Members, their accounts, balances and transactions use the standard Financial Services Cloud data model. Recent activity stays in Salesforce for day-to-day work, while long-term history and regulatory reporting sit in a separate analytics tier, so the org stays fast as it grows."
+        "heading": "Built to fail safely",
+        "bullets": [
+          "Nothing reaches live records until it passes the checks in staging.",
+          "A reconciliation gate compares source and target before a batch is accepted.",
+          "Partial success is allowed: records that fail are logged as exceptions for the team to fix, instead of stopping the whole run.",
+          "Every batch and event is logged, so the team can see exactly what ran, when, and with what result.",
+          "The whole process is coordinated by one orchestration service, so steps always run in the right order."
         ]
       },
       {
         "heading": "The outcome",
         "bullets": [
-          "A migration approach that scales to millions of records and decades of history.",
+          "A migration approach that scales to more than 4 million accounts and over 20 years of history.",
           "Every load is checked and reconciled before it is accepted.",
-          "Failures are contained and recoverable, not all-or-nothing.",
-          "A platform that keeps working after go-live, through nightly and real-time loads."
+          "Failures are contained and recoverable, not all or nothing.",
+          "A platform that keeps running after go-live, through nightly and real-time loads.",
+          "A clear split between day-to-day data in Salesforce and long-term history for reporting, so the org stays fast as it grows."
+        ]
+      },
+      {
+        "heading": "Planning a migration of your own?",
+        "paragraphs": [
+          "Before you start, check that you can answer these:"
+        ],
+        "bullets": [
+          "How will you prove the data in the new system matches the old one?",
+          "What happens if one batch fails halfway through?",
+          "How will changes made after the first load reach the new system?",
+          "Which history really needs to be in your CRM, and which belongs in a reporting store?"
+        ]
+      },
+      {
+        "heading": "How we can help",
+        "paragraphs": [
+          "We help teams plan and run Salesforce and HubSpot migrations that are checked, repeatable and safe to restart. Book a call to talk through your data and your timeline."
         ]
       }
     ]
@@ -143,26 +255,59 @@ export const caseStudies: CaseStudy[] = [
     "image": "/case-studies/merchant-service-cases.jpg",
     "sections": [
       {
-        "heading": "The challenge",
+        "heading": "About the client",
         "paragraphs": [
-          "A bank's merchant services team handles cases from the businesses that take card payments with it. Agents needed every case linked to the right merchant, and a clear, guided way to work each type of case.",
-          "The work also had to fit the bank's strict engineering standards, with every change reviewed and released safely."
+          "The client is a bank with a merchant services team. That team looks after the businesses that accept card payments through the bank, from small shops to larger retailers.",
+          "When a merchant has a problem, such as a card machine fault, a settlement question or a change to their details, they contact the bank and a case is created. How quickly and accurately that case is handled affects whether the merchant can keep trading."
         ]
       },
       {
-        "heading": "What we built",
+        "heading": "The challenge",
         "bullets": [
-          "A suite of screen flows that guide agents through each type of merchant case, step by step.",
-          "A merchant matching service in Apex, so each case is linked to the right merchant record.",
-          "Lightning Web Components that show agents the merchant details they need on the case.",
-          "All Apex built on the fflib enterprise patterns the bank requires, with code reviews on every pull request."
+          "Cases needed to be linked to the right merchant every time, even when merchants have similar names or several outlets.",
+          "Each type of merchant case needed a clear, guided way of working, so agents handle it the same way every time.",
+          "As a bank, every change had to meet strict engineering standards, with code reviews and safe releases.",
+          "Case handling also had to stand up to compliance checks."
+        ]
+      },
+      {
+        "heading": "Our approach",
+        "paragraphs": [
+          "We designed around the agent. Each type of case gets its own guided flow, so the agent always knows the next step, and the merchant's details are on screen throughout.",
+          "On the technical side, we followed the bank's required fflib enterprise patterns, so our code fits the bank's standards and is easy for its own developers to maintain."
+        ]
+      },
+      {
+        "heading": "How it works",
+        "paragraphs": [
+          "Every merchant case follows the same path, from the moment it is raised to resolution."
+        ],
+        "figure": {
+          "src": "/case-studies/merchant-case-path.jpg",
+          "alt": "Four steps: case raised, merchant matched, guided flow, resolved. Below, every release goes through code review, fflib patterns and controlled deployment.",
+          "caption": "One path for every merchant case, and one controlled path for every release.",
+          "width": 1400,
+          "height": 700
+        },
+        "bullets": [
+          "Case raised: a merchant contacts the bank and a case is created.",
+          "Merchant matched: an Apex service links the case to the right merchant record.",
+          "Guided flow: the agent works the case through a screen flow for that type of case.",
+          "Resolved: the agent sees the merchant's details in Lightning Web Components on the case, from start to finish."
         ]
       },
       {
         "heading": "Safe releases",
         "paragraphs": [
-          "We managed a large production release of 63 components covering more than 27 user stories, including recovery work overnight to bring it in safely.",
-          "We also reviewed the case setup for compliance and flagged a gap: agents could change a high-risk case to a lower-risk type. We set out the options to close it, either a hard block or an audit-based control, for the bank to decide."
+          "We managed a large production release of 63 components covering more than 27 user stories. When the release ran into problems, our team worked through the night to recover it and bring it in safely.",
+          "Every pull request was reviewed before merge, so problems were caught before they reached production."
+        ]
+      },
+      {
+        "heading": "Compliance, raised early",
+        "paragraphs": [
+          "While reviewing the case setup, we found a compliance gap: agents could change a case marked as high risk to a lower-risk type, with no restriction. In a bank, that can weaken the audit trail.",
+          "We raised it as critical before production and set out two options: a hard block using a validation rule or Apex, or a lighter control using training and audit logging. We gave the bank the trade-offs of each so it could decide."
         ]
       },
       {
@@ -171,7 +316,26 @@ export const caseStudies: CaseStudy[] = [
           "Agents follow one guided path for each type of merchant case.",
           "Cases are linked to the right merchant from the start.",
           "Large releases reach production in a controlled way.",
-          "Compliance risks are raised early, before they reach production."
+          "Code follows the bank's standards and is easy for its team to maintain.",
+          "Compliance risks are raised before they reach production, not after."
+        ]
+      },
+      {
+        "heading": "Is your case handling working?",
+        "paragraphs": [
+          "A quick check for any service team:"
+        ],
+        "bullets": [
+          "Is every case linked to the right customer, automatically?",
+          "Do agents follow the same steps for the same type of case?",
+          "Can a high-risk case be quietly downgraded?",
+          "Do your releases go through review before production?"
+        ]
+      },
+      {
+        "heading": "How we can help",
+        "paragraphs": [
+          "We build case management on Salesforce Service Cloud and HubSpot Service Hub, with guided flows, clean data and safe releases. Book a call to talk through how your service team works today."
         ]
       }
     ]
@@ -186,40 +350,63 @@ export const caseStudies: CaseStudy[] = [
       "JavaScript",
       "Cucumber",
       "GitHub Actions",
-      "Salesforce"
+      "Salesforce",
+      "AI agents"
     ],
     "image": "/case-studies/playwright-test-automation.jpg",
     "sections": [
       {
-        "heading": "The problem",
+        "heading": "Why we built it",
         "paragraphs": [
           "Most teams test the important journeys in their apps by hand, if at all. Unit tests and code coverage show that the code runs, not that a customer can actually sign up, pay or raise a case.",
-          "As AI writes more of the code, proving that it works becomes the slow part."
+          "As AI writes more of the code, writing code is no longer the slow part. Proving it works is. We built NainuTest AI so that the teams we work with can test real journeys automatically, on every change."
+        ]
+      },
+      {
+        "heading": "Our approach",
+        "paragraphs": [
+          "We set three rules for the framework:"
+        ],
+        "bullets": [
+          "Readable: test cases are written in plain language, so business users can read and agree them.",
+          "Maintainable: tests are built so that a change to one screen means one fix, not fifty.",
+          "Safe: no passwords in code, and a record of every run."
         ]
       },
       {
         "heading": "What we built",
-        "paragraphs": [
-          "NainuTest AI is our end-to-end test automation framework:"
-        ],
         "bullets": [
-          "Tests are written in plain language with Cucumber, so business users can read and agree them.",
-          "Playwright runs them in a real browser, using the Page Object Model so tests stay easy to maintain.",
-          "Tests run headless on every change, with results posted to Slack or Microsoft Teams.",
-          "Passwords and keys are kept in GitHub Secrets, never in the test code.",
-          "Every run is recorded, giving a full audit trail."
+          "Plain-language test cases with Cucumber, written as Given, When and Then steps.",
+          "Playwright tests that run in a real browser, using the Page Object Model, so each screen is described once and reused.",
+          "Headless runs on every change, with results posted to Slack or Microsoft Teams.",
+          "Passwords and keys stored in GitHub Secrets, never in the test code.",
+          "A full record of every run, for teams that need an audit trail."
         ]
       },
       {
-        "heading": "The AI agent we are adding",
+        "heading": "How the AI agent works",
         "paragraphs": [
-          "We are building an AI agent on top of the framework, in phases:"
+          "On top of the framework, we are building an AI agent that writes tests and keeps them working. We are delivering it in phases, starting with turning stories into tests and then adding self-healing."
         ],
+        "figure": {
+          "src": "/case-studies/test-agent-loop.jpg",
+          "alt": "A loop: user story, test cases, Playwright script, run. When a test fails, the agent finds the cause, proposes a fix, and runs the test again.",
+          "caption": "The agent turns stories into tests, and repairs tests when they fail.",
+          "width": 1400,
+          "height": 700
+        },
         "bullets": [
           "It reads a user story from Jira or Azure DevOps and writes the test cases.",
           "It turns those test cases into Playwright scripts.",
           "When a test fails, it looks for the cause, proposes a fix, updates the script and runs it again.",
-          "It flags flaky tests and tracks performance over time."
+          "It flags flaky tests and tracks performance over time.",
+          "Every change it makes is committed to GitHub, so people can review it."
+        ]
+      },
+      {
+        "heading": "Where it fits",
+        "paragraphs": [
+          "The same approach works for Salesforce and for web apps. On Salesforce, it complements Apex unit tests: unit tests check the code, and end-to-end tests check that a user can complete the journey."
         ]
       },
       {
@@ -228,7 +415,22 @@ export const caseStudies: CaseStudy[] = [
           "Key customer journeys are tested automatically, not by hand.",
           "Test cases are readable by the whole team, not just developers.",
           "A clear path from user story to tested release.",
-          "The same approach works for Salesforce and for web apps."
+          "Fewer broken tests to fix by hand, as the agent takes on repairs."
+        ]
+      },
+      {
+        "heading": "How ready is your testing?",
+        "bullets": [
+          "Are your most important customer journeys tested automatically?",
+          "Do tests run on every change, or only before big releases?",
+          "Can a business user read your test cases?",
+          "Who fixes tests when the screens change?"
+        ]
+      },
+      {
+        "heading": "How we can help",
+        "paragraphs": [
+          "We set up end-to-end test automation with Playwright for Salesforce and web apps, and help teams build the habit of testing every change. Book a call to see the framework in action."
         ]
       }
     ]
