@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
+import CareersApplicationForm from "@/components/careers-application-form";
 import { roles, talentAreas } from "@/lib/careers";
 import { site } from "@/lib/site";
 
@@ -39,6 +40,11 @@ const reasons = [
 function applyHref(subject: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
 }
+
+const applyOptions = [
+  ...roles.map((r) => ({ value: r.slug, label: r.title })),
+  ...talentAreas.map((a) => ({ value: a, label: a })),
+];
 
 export default function CareersPage() {
   return (
@@ -80,7 +86,7 @@ export default function CareersPage() {
                       </p>
                     </div>
                     <Link
-                      href={applyHref(`Application: ${role.title}`)}
+                      href={`/careers?role=${role.slug}#apply`}
                       className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-5 rounded-md transition-all inline-flex items-center"
                     >
                       Apply
@@ -123,38 +129,29 @@ export default function CareersPage() {
                 ))}
               </ul>
               <Link
-                href={applyHref("General application")}
+                href="#apply"
                 className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all inline-flex items-center"
               >
-                Send us your CV
+                Apply below
               </Link>
             </div>
           )}
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white" id="apply">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-8 text-center">How to Apply</h2>
-          <ol className="space-y-4 text-slate-600">
-            <li>
-              <span className="font-semibold text-slate-800">1. Email us.</span> Send your CV to{" "}
-              <a href={applyHref("General application")} className="text-cyan-600 hover:text-cyan-700 underline">
-                {site.email}
-              </a>{" "}
-              with the role or area in the subject line.
-            </li>
-            <li>
-              <span className="font-semibold text-slate-800">2. Show your work.</span> Include links to your GitHub,
-              Trailhead profile, certifications or anything you have built.
-            </li>
-            <li>
-              <span className="font-semibold text-slate-800">3. We will reply.</span> If there is a fit, we will invite
-              you to a short call.
-            </li>
-          </ol>
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-4 text-center">Apply Now</h2>
+          <p className="text-slate-600 text-center mb-10">
+            Send us your CV and cover letter. We read every application and will contact you if there is a fit.
+          </p>
+          <CareersApplicationForm options={applyOptions} />
           <p className="mt-8 text-sm text-slate-500 bg-slate-50 rounded-lg p-4">
-            Nainika Technologies will never ask you to pay a fee or share bank details during hiring. If anyone does,
+            Prefer email? Send your CV to{" "}
+            <a href={applyHref("General application")} className="text-cyan-600 hover:text-cyan-700 underline">
+              {site.email}
+            </a>
+            . Nainika Technologies will never ask you to pay a fee or share bank details during hiring. If anyone does,
             please report it to {site.email}.
           </p>
         </div>
