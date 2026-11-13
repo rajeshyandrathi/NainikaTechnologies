@@ -22,7 +22,7 @@ export const caseStudies: CaseStudy[] = [
   {
     "slug": "salesforce-genesys-contact-centre",
     "title": "Outbound Calling Inside Salesforce for a Beverage Company",
-    "client": "Beverage company, South Africa",
+    "client": "Beverage company, Vietnam",
     "description": "How our team connected Genesys to Salesforce for a beverage company's contact centre, so outbound campaigns, call requests and call scripts all run from one screen.",
     "tools": [
       "Salesforce Service Cloud",
