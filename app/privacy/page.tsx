@@ -25,7 +25,7 @@ const sections = [
   {
     heading: "What we collect",
     body: [
-      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page. When you subscribe to Insights, we collect your email address and a record of your consent, including when you confirmed it.",
+      "When you complete our contact form, we collect your name, email address, message, and, if you choose to give them, your phone number and company name. When you book a consultation, we receive the details you enter on the booking page. When you subscribe to Insights, we collect your email address and a record of your consent, including when you subscribed.",
       "If you apply for a job through our careers page, we collect your name, email address, the role or area you are interested in, your CV and cover letter, and, if you choose to give them, your phone number and a LinkedIn, GitHub or portfolio link. We use these only to consider you for current and future roles.",
       "If you contact us by email, phone, or WhatsApp, we receive your contact details and whatever you send us.",
       "When you browse the site, we collect anonymised usage and performance information, such as pages viewed, country, device type, and page speed, through Vercel Analytics and Speed Insights. This also includes whether our contact form was submitted or our WhatsApp button was clicked. Our hosting provider may also keep technical logs for security and reliability.",
@@ -36,7 +36,7 @@ const sections = [
     body: [
       "We use your information to respond to your enquiry, discuss and provide our services, keep records of our communications, improve this website, and meet our legal obligations.",
       "We process it because you asked us to contact you, because it's needed for a contract or potential contract with you, because we have a legitimate interest in running and improving our business, or because the law requires it.",
-      "We don't sell your personal information. We'll only send you marketing if the law allows it. We send the Insights newsletter only to people who tick the consent box and then confirm from their own inbox. Every email has an unsubscribe link, and we act on an unsubscribe straight away. If you unsubscribe, we keep only your email address on a do-not-email list so we don't contact you again.",
+      "We don't sell your personal information. We'll only send you marketing if the law allows it. We send the Insights newsletter only to people who tick a box to receive it, either when they subscribe, on our contact form, or when they apply for a job. Every email has an unsubscribe link, and we act on an unsubscribe straight away. If you unsubscribe, we keep only your email address on a do-not-email list so we don't contact you again.",
     ],
   },
   {

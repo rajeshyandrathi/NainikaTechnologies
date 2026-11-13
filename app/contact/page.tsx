@@ -232,6 +232,11 @@ export default function ContactPage() {
                   )}
                 </div>
 
+                <label className="flex items-start gap-3 text-sm text-slate-600">
+                  <input type="checkbox" {...register("subscribe")} className="mt-1 h-4 w-4 accent-cyan-600" />
+                  <span>Also send me Insights emails about AI agents, Salesforce, HubSpot, and RevOps. I can unsubscribe at any time.</span>
+                </label>
+
                 <p className="text-sm text-slate-500">
 
                   By submitting this form, you agree that we may use your details to respond to your enquiry, as described in our{" "}

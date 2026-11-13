@@ -6,6 +6,7 @@ export const contactSchema = z.object({
   phone: z.string().trim().max(50).optional(),
   company: z.string().trim().max(200).optional(),
   message: z.string().trim().min(10, { message: "Message must be at least 10 characters." }).max(5000),
+  subscribe: z.boolean().optional(),
   website: z.string().optional(),
 });
 
