@@ -15,6 +15,170 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-attackers-inside-salesforce-orgs-artex",
+    title: "AI Attackers Are Now Inside Salesforce Orgs: What Salesforce's ARTEX Warning Means for You",
+    description: "Salesforce has warned of an AI-driven campaign that uses stolen integration credentials to get into customer orgs and deploy custom Apex at machine speed. Here are six checks to run on your org this week.",
+    date: "2026-11-13",
+    image: "/insights/artex-salesforce-attacks.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Salesforce Threat Intelligence has published a warning about attackers using ARTEX, an AI hacking framework, against Salesforce customer orgs. They get in using stolen application credentials and trusted integration sessions, then let AI agents explore the org and deploy their own code.",
+          "Salesforce is clear that this did not come from a flaw in the Salesforce platform. It came through access that customers had already granted to integrations. That means the fix sits with each org: who and what you have let in, and what they are allowed to do.",
+        ],
+      },
+      {
+        heading: "What Salesforce is seeing",
+        paragraphs: [
+          "According to Salesforce, the attackers use compromised application credentials and trusted integration sessions to get into customer environments. Once inside, the AI agents read the org's existing Apex code and integration settings.",
+          "They then deploy custom Apex, REST endpoints and Visualforce components tailored to that org, to pull data, send outbound requests and keep access. Salesforce says this automated deployment of custom Apex straight after getting in is a hallmark of this AI-driven style of attack, and it happens far faster than a human attacker could work.",
+          "They also use the Salesforce org as a stepping stone. By running outbound requests through Apex and abusing configured Named Credentials, they reach other connected systems. Salesforce says it has notified the customers affected.",
+        ],
+      },
+      {
+        heading: "Why this is a bigger deal than it sounds",
+        paragraphs: [
+          "ARTEX is the same AI attack framework we wrote about in our Insight on the test agent that escaped its sandbox at WorkOS. Microsoft has linked it to a state-aligned group that reached privileged cloud access in under three hours in some attacks, and to a financially motivated group that started using it in October. Industry reports now describe it as a capability many attackers can use.",
+          "Many Salesforce orgs have integration users with far more access than they need: system administrator profiles, Modify All Data or the ability to author Apex. Those permissions turn one stolen token into full control of the org.",
+          "Integrations are easy to forget. The marketing tool connected three years ago, the old data loader account, the app a contractor installed. Each one is a door.",
+        ],
+        figure: {
+          src: "/insights/artex-salesforce-checks.jpg",
+          alt: "Six checks for your Salesforce org: integration users, least access, IP restrictions and MFA, alerts on new code, Named Credentials review, and secret rotation",
+          caption: "Salesforce says this campaign came through trusted access, not a platform flaw.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Six checks for your org this week",
+        paragraphs: [
+          "Integration users: list every connected app and integration user, who owns it and what it does. Remove anything nobody can explain.",
+          "Least access: integration users should not hold System Administrator, Modify All Data or Author Apex unless they truly need them. Use a dedicated, minimal profile and permission sets.",
+          "Lock the door: set login IP ranges for integration users where possible, and make sure every human user signs in with MFA.",
+          "Watch for new code: set alerts for any new or changed Apex class, REST endpoint or Visualforce page in production, using Setup Audit Trail or Event Monitoring.",
+          "Named Credentials: review where each one points, and limit which users and code can use it.",
+          "Rotate secrets: rotate integration secrets and tokens now, and again after any supplier reports a breach.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Our Salesforce security review covers exactly these points: integration users, connected apps, permissions, Named Credentials and alerts for new code in production. It is the fastest way to close the doors this kind of attack looks for.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "hubspot-founder-returns-what-changes-for-customers",
+    title: "HubSpot's Founder Is Back as CEO. What Should HubSpot Customers Do Now?",
+    description: "Brian Halligan has returned as HubSpot CEO to lead a \"refounding\", and HubSpot has named pricing and packaging changes as a risk. Here is what it means for HubSpot customers and four practical steps.",
+    date: "2026-11-13",
+    image: "/insights/hubspot-halligan-refounding.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "On 12 November 2026, HubSpot announced that co-founder Brian Halligan has returned as CEO, replacing Yamini Rangan, who led the company since September 2021. Halligan and co-founder Dharmesh Shah describe it as a refounding of the company.",
+          "For the more than 300,000 businesses that run on HubSpot, nothing changes overnight. But a refounding usually means changes to product, packaging and pricing. If you rely on HubSpot, now is a good time to check your contract and your plans.",
+        ],
+      },
+      {
+        heading: "What happened",
+        paragraphs: [
+          "HubSpot's filing says Rangan stepped down as CEO and from the board on 12 November, and will stay with the company until 1 December to help with the handover. Halligan, who co-founded HubSpot in 2005 and was CEO for 16 years, takes over immediately.",
+          "HubSpot also named Karen Burgess as its next CFO. She joins on 30 November and succeeds Kate Bueker, who retires in February 2027. The company reaffirmed its fourth-quarter and full-year 2026 guidance.",
+          "Halligan described the next chapter as building a customer relationship harness. He has said he will share more about why he returned and what he plans. Reports note HubSpot's share price had fallen by about half this year amid slower growth and worries about AI disrupting software companies. The shares rose about 9% in early trading on the news.",
+        ],
+      },
+      {
+        heading: "What it could mean for customers",
+        paragraphs: [
+          "A refounding is a signal that the company plans big changes. Expect a stronger push on AI agents across the platform, and possibly new ways of packaging and pricing them.",
+          "HubSpot itself names changes to pricing, packaging and go-to-market strategy as a risk in its forward-looking statements. That does not mean prices will rise, but it does mean terms may change.",
+          "Leadership changes can also shift roadmaps. Features you are waiting for may move up, move back or change shape.",
+        ],
+        figure: {
+          src: "/insights/hubspot-customer-actions.jpg",
+          alt: "Four steps for HubSpot customers: check your renewal, lock in terms early, know your data, watch the roadmap",
+          caption: "No need to panic, and no reason to sit still.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Four steps to take now",
+        paragraphs: [
+          "Check your renewal: find your renewal date, your current tiers and any price protection in your contract.",
+          "Lock in terms early: if you renew in the first half of 2027, start the conversation with HubSpot now rather than in the last month.",
+          "Know your data: make sure you can cleanly export your contacts, companies, deals and activity history, and that your CRM data is in good shape whatever happens.",
+          "Watch the roadmap: follow Halligan's plans over the coming weeks, especially around AI agents and pricing, and adjust your own plans.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help HubSpot customers review their setup and contracts, clean up their CRM data, and plan for AI agents, so you can make the most of what is coming without being caught out by changes.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "airbnb-ai-customer-support-results",
+    title: "AI Customer Support That Actually Worked: Airbnb Cut Costs 17% and Kept Customers Happy",
+    description: "Airbnb's AI assistant now resolves about 40% of all support issues without a person, and support cost per booking fell more than 17%. Customer satisfaction is as high as ever. Here is what other businesses can learn.",
+    date: "2026-11-13",
+    image: "/insights/airbnb-ai-support-results.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "This week has been full of AI warnings. Here is a success story. Airbnb says its AI assistant resolved about 40% of all customer support issues without a human agent in the third quarter of 2026, and its support cost per booking fell more than 17% compared with a year earlier.",
+          "The important part: CEO Brian Chesky said customer service satisfaction is as high as it has ever been. Lower cost with happy customers is what every AI support project is trying to reach.",
+        ],
+      },
+      {
+        heading: "What Airbnb reported",
+        paragraphs: [
+          "Airbnb's AI assistant is now available in more than 50 languages. In the third quarter, about 40% of all support issues were resolved without a person, up from about a third in the second quarter. Airbnb notes this counts all issues, not only those that start with the AI assistant.",
+          "Support cost per booking fell more than 17% year on year, driven in large part by improvements to the AI assistant. In the second quarter the drop was about 16%.",
+          "Airbnb is now expanding the assistant to voice support in the US, and plans to start rolling out its own AI travel agent to guests in the first half of 2027.",
+        ],
+      },
+      {
+        heading: "Why this worked when others did not",
+        paragraphs: [
+          "Earlier this week we wrote about AI rebounding: companies that cut staff for AI and then had to ask them back. Airbnb shows the other path.",
+          "It started with one clear, high-volume job, customer support, where success is easy to measure. It grew step by step, from a third of issues to 40%, rather than switching everything over at once. And it watched customer satisfaction alongside cost, so savings did not come at the customer's expense.",
+          "It also measured honestly. Counting all support issues, not just the easy ones that start in the chat window, gives a number leaders can trust.",
+        ],
+        figure: {
+          src: "/insights/airbnb-what-worked.jpg",
+          alt: "What Airbnb did right: started with support, measured honestly, grew step by step, watched satisfaction",
+          caption: "A useful contrast to companies rehiring after cutting staff for AI.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "How to apply this to your support team",
+        paragraphs: [
+          "Pick one clear job first, such as order status, password resets or booking changes, and measure how many of those the AI resolves fully.",
+          "Measure the whole picture: cost per case, time to resolve, and customer satisfaction. If satisfaction drops, slow down.",
+          "Make handover easy. When the AI cannot help, the customer should reach a person quickly, with the conversation history attached.",
+          "Grow in steps. Add new types of issues only when the current ones are working well.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We build AI support agents on Salesforce Service Cloud, Agentforce and HubSpot that start small, hand over cleanly to your team and track the numbers that matter: resolution rate, cost and customer satisfaction.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-end-to-end-testing",
     title: "AI End-to-End Testing: Who Tests the Code the AI Wrote?",
     description: "AI agents now write code, and other AI agents test it. Here is how end-to-end testing is changing, why test scores and real behaviour can differ, and a practical plan for Salesforce and HubSpot teams.",
