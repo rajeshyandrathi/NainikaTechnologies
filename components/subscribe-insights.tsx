@@ -55,7 +55,7 @@ export default function SubscribeInsights({ className = "" }: SubscribeInsightsP
 
       {status === "success" ? (
         <p className="text-cyan-300 font-medium" role="status">
-          Almost done. We've sent you an email. Please click the link in it to confirm your subscription.
+          You're subscribed. We've sent a welcome email to your inbox.
         </p>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>

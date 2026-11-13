@@ -172,6 +172,11 @@ export default function CareersApplicationForm({ options }: Props) {
         </span>
       </label>
 
+      <label className="flex items-start gap-3 text-sm text-slate-600">
+        <input type="checkbox" name="subscribe" value="true" className="mt-1 h-4 w-4 accent-cyan-600" />
+        <span>Also send me Insights emails about AI agents, Salesforce, HubSpot, and RevOps. I can unsubscribe at any time.</span>
+      </label>
+
       {error && (
         <p role="alert" className="text-sm text-red-600 bg-red-50 rounded-md p-3">
           {error}

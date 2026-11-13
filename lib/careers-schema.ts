@@ -16,6 +16,7 @@ export const careersSchema = z.object({
     .refine((v) => !v || /^https?:\/\/\S+$/i.test(v), { message: "Please enter a full link starting with https://" }),
   coverLetterText: z.string().trim().max(6000).optional(),
   consent: z.literal(true, { message: "Please confirm we may use your details for recruitment." }),
+  subscribe: z.boolean().optional(),
   website: z.string().optional(),
 });
 

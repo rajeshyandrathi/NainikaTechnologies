@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { careersSchema, fileProblem } from "@/lib/careers-schema";
 import { notifyEmail, websiteFromEmail } from "@/lib/resend";
 import { site } from "@/lib/site";
+import { saveSubscriber } from "@/lib/subscribe-save";
 
 export const runtime = "nodejs";
 
@@ -70,12 +71,13 @@ export async function POST(request: Request) {
     link: text("link"),
     coverLetterText: text("coverLetterText"),
     consent: form.get("consent") === "true",
+    subscribe: form.get("subscribe") === "true",
     website: text("website"),
   });
   if (!parsed.success) {
     return NextResponse.json({ error: parsed.error.issues[0]?.message ?? "Invalid form details." }, { status: 400 });
   }
-  const { name, email, phone, role, link, coverLetterText, website } = parsed.data;
+  const { name, email, phone, role, link, coverLetterText, subscribe, website } = parsed.data;
 
   // Bots fill in the hidden website field, so accept the request without sending it.
   if (website) return NextResponse.json({ ok: true });
@@ -122,6 +124,7 @@ export async function POST(request: Request) {
       `Role or area: ${role}`,
       `LinkedIn or portfolio: ${link || "Not provided"}`,
       `Consent to use details for recruitment: Yes`,
+      `Subscribed to Insights: ${subscribe ? "Yes" : "No"}`,
       "",
       coverFile ? "Cover letter: attached" : "Cover letter:",
       coverFile ? "" : coverLetterText ?? "",
@@ -144,6 +147,15 @@ export async function POST(request: Request) {
     if (!autoReply.ok) console.error(`Resend rejected the application auto-reply with status ${autoReply.status}.`);
   } catch (error) {
     console.error("The application auto-reply could not be sent.", error);
+  }
+
+  // Only applicants who ticked the Insights box are added to the list
+  if (subscribe) {
+    try {
+      await saveSubscriber(apiKey, email.toLowerCase(), "ticked the Insights box on the careers form");
+    } catch (error) {
+      console.error("The applicant could not be subscribed to Insights.", error);
+    }
   }
 
   return NextResponse.json({ ok: true });

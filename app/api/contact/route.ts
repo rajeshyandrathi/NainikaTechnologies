@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/contact-schema";
 import { site } from "@/lib/site";
+import { saveSubscriber } from "@/lib/subscribe-save";
 
 const bccEmail = "rajeshyandrathi@gmail.com";
 const fromEmail = "Nainika Technologies Website <website@nainikatechnologies.co.za>";
@@ -40,7 +41,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid form details." }, { status: 400 });
   }
 
-  const { name, email, phone, company, message, website } = parsed.data;
+  const { name, email, phone, company, message, subscribe, website } = parsed.data;
 
   // Bots fill in the hidden website field, so accept the request without sending it
   if (website) {
@@ -64,6 +65,7 @@ export async function POST(request: Request) {
       `Email: ${email}`,
       `Phone: ${phone || "Not provided"}`,
       `Company: ${company || "Not provided"}`,
+      `Subscribed to Insights: ${subscribe ? "Yes" : "No"}`,
       "",
       message,
     ].join("\n"),
@@ -87,6 +89,15 @@ export async function POST(request: Request) {
     }
   } catch (error) {
     console.error("The auto-reply could not be sent.", error);
+  }
+
+  // Only people who ticked the Insights box are added to the list
+  if (subscribe) {
+    try {
+      await saveSubscriber(apiKey, email.toLowerCase(), "ticked the Insights box on the contact form");
+    } catch (error) {
+      console.error("The contact could not be subscribed to Insights.", error);
+    }
   }
 
   return NextResponse.json({ ok: true });
