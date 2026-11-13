@@ -70,11 +70,11 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-slate-50" id="open-roles">
+      {roles.length > 0 && (
+        <section className="py-16 px-4 bg-slate-50" id="open-roles">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-10 text-center">Open Roles</h2>
 
-          {roles.length > 0 ? (
             <div className="space-y-6">
               {roles.map((role) => (
                 <article key={role.slug} id={role.slug} className="bg-white rounded-xl shadow-lg p-6 md:p-8">
@@ -114,39 +114,18 @@ export default function CareersPage() {
                 </article>
               ))}
             </div>
-          ) : (
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center max-w-3xl mx-auto">
-              <h3 className="text-xl font-bold text-slate-800 mb-3">No open roles right now</h3>
-              <p className="text-slate-600 mb-6">
-                We are growing, and we are always happy to hear from talented people. If you work in one of these areas,
-                send us your CV and a short note about what you would like to build.
-              </p>
-              <ul className="flex flex-wrap justify-center gap-2 mb-8" aria-label="Areas we hire for">
-                {talentAreas.map((area) => (
-                  <li key={area} className="text-sm font-medium text-cyan-700 bg-cyan-50 rounded-full px-4 py-2">
-                    {area}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="#apply"
-                className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-md transition-all inline-flex items-center"
-              >
-                Apply below
-              </Link>
-            </div>
-          )}
         </div>
       </section>
+      )}
 
-      <section className="py-16 px-4 bg-white" id="apply">
+      <section className="py-16 px-4 bg-slate-50" id="apply">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-4 text-center">Apply Now</h2>
           <p className="text-slate-600 text-center mb-10">
             Send us your CV and cover letter. We read every application and will contact you if there is a fit.
           </p>
           <CareersApplicationForm options={applyOptions} />
-          <p className="mt-8 text-sm text-slate-500 bg-slate-50 rounded-lg p-4">
+          <p className="mt-8 text-sm text-slate-500 bg-white rounded-lg p-4">
             Prefer email? Send your CV to{" "}
             <a href={applyHref("General application")} className="text-cyan-600 hover:text-cyan-700 underline">
               {site.email}
