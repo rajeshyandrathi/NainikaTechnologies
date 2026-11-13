@@ -20,6 +20,220 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    "slug": "salesforce-genesys-contact-centre",
+    "title": "Outbound Calling Inside Salesforce for a Beverage Company",
+    "client": "Beverage company, South Africa",
+    "description": "How our team connected Genesys to Salesforce for a beverage company's contact centre, so outbound campaigns, call requests and call scripts all run from one screen.",
+    "tools": [
+      "Salesforce Service Cloud",
+      "Genesys",
+      "Omni-Channel",
+      "Apex",
+      "Campaigns"
+    ],
+    "image": "/case-studies/contact-centre-cti.jpg",
+    "sections": [
+      {
+        "heading": "The challenge",
+        "paragraphs": [
+          "A beverage company runs outbound calls to its trade customers, for example to take orders and to remind outlets about licence renewals.",
+          "Agents worked between the phone system and Salesforce, and each call needed the right customer, the right campaign and the right script in front of them."
+        ]
+      },
+      {
+        "heading": "What we built",
+        "paragraphs": [
+          "Our team connected the Genesys phone system to Salesforce Service Cloud and built the full outbound flow."
+        ],
+        "bullets": [
+          "Campaigns: contacts are imported as campaign members, with the request type and reason on the import sheet.",
+          "Call requests: each campaign member creates one call request automatically, so no customer is called twice for the same campaign.",
+          "Routing: when an agent goes online, the next call request arrives through Omni-Channel.",
+          "Voice call record: the agent sees the account, contact, campaign and call request on one screen.",
+          "Call scripts: the right script appears on the call, based on the request type.",
+          "Housekeeping in Apex: email handling, a do-not-call list cleanup job, and status sync driven by Custom Metadata, so rules change without code."
+        ]
+      },
+      {
+        "heading": "Quality and handover",
+        "paragraphs": [
+          "We brought test coverage above the 75% Salesforce needs for production, took the solution through user acceptance testing, and completed a formal handover to the client team."
+        ]
+      },
+      {
+        "heading": "The outcome",
+        "bullets": [
+          "Outbound calling now runs from inside Salesforce, from campaign to call.",
+          "Agents see the full customer story the moment a call connects.",
+          "Scripts follow the request type, so every call follows the same steps.",
+          "The solution went live in July 2026."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "financial-services-cloud-data-migration",
+    "title": "Moving 20 Years of Member History into Financial Services Cloud",
+    "client": "Retirement fund administrator, South Africa",
+    "description": "How our team designed and built a safe migration of more than 4 million member accounts and over 20 years of transaction history into Salesforce Financial Services Cloud.",
+    "tools": [
+      "Salesforce Financial Services Cloud",
+      "Batch Apex",
+      "Platform Events",
+      "Data migration"
+    ],
+    "image": "/case-studies/member-data-migration.jpg",
+    "sections": [
+      {
+        "heading": "The challenge",
+        "paragraphs": [
+          "A retirement fund administrator needed to move its members onto Salesforce Financial Services Cloud. That meant more than 4 million member accounts and over 20 years of transaction history from an external administration system.",
+          "At that size, a migration cannot simply be run once and hoped for. It has to be repeatable, checked at every step, and safe to stop and restart."
+        ]
+      },
+      {
+        "heading": "What we built",
+        "paragraphs": [
+          "Our team built a migration platform with three ways of loading data, working side by side:"
+        ],
+        "bullets": [
+          "Before go-live: a full load, accounts first, through a seven-step pipeline: profile and cleanse, load staging, controlled start, accounts, transactions, reconcile, and accept.",
+          "Every night: a delta load that pulls only what changed since the last run.",
+          "In real time: new activity is processed as it happens."
+        ]
+      },
+      {
+        "heading": "Built to fail safely",
+        "bullets": [
+          "Data lands in staging objects first, so nothing reaches live records until it passes checks.",
+          "A reconciliation gate compares source and target before any batch is accepted.",
+          "Records that fail are logged as exceptions for the team to fix, instead of stopping the whole run.",
+          "Every batch and event is logged, so the team can see exactly what ran and when."
+        ]
+      },
+      {
+        "heading": "The right data in the right place",
+        "paragraphs": [
+          "Members, their accounts, balances and transactions use the standard Financial Services Cloud data model. Recent activity stays in Salesforce for day-to-day work, while long-term history and regulatory reporting sit in a separate analytics tier, so the org stays fast as it grows."
+        ]
+      },
+      {
+        "heading": "The outcome",
+        "bullets": [
+          "A migration approach that scales to millions of records and decades of history.",
+          "Every load is checked and reconciled before it is accepted.",
+          "Failures are contained and recoverable, not all-or-nothing.",
+          "A platform that keeps working after go-live, through nightly and real-time loads."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "service-cloud-merchant-cases",
+    "title": "Faster Merchant Case Handling on Service Cloud for a Bank",
+    "client": "Bank, merchant services team, South Africa",
+    "description": "How our team built guided case flows, merchant matching and reliable releases on Salesforce Service Cloud for a bank's merchant services team.",
+    "tools": [
+      "Salesforce Service Cloud",
+      "Screen Flows",
+      "Lightning Web Components",
+      "Apex",
+      "fflib"
+    ],
+    "image": "/case-studies/merchant-service-cases.jpg",
+    "sections": [
+      {
+        "heading": "The challenge",
+        "paragraphs": [
+          "A bank's merchant services team handles cases from the businesses that take card payments with it. Agents needed every case linked to the right merchant, and a clear, guided way to work each type of case.",
+          "The work also had to fit the bank's strict engineering standards, with every change reviewed and released safely."
+        ]
+      },
+      {
+        "heading": "What we built",
+        "bullets": [
+          "A suite of screen flows that guide agents through each type of merchant case, step by step.",
+          "A merchant matching service in Apex, so each case is linked to the right merchant record.",
+          "Lightning Web Components that show agents the merchant details they need on the case.",
+          "All Apex built on the fflib enterprise patterns the bank requires, with code reviews on every pull request."
+        ]
+      },
+      {
+        "heading": "Safe releases",
+        "paragraphs": [
+          "We managed a large production release of 63 components covering more than 27 user stories, including recovery work overnight to bring it in safely.",
+          "We also reviewed the case setup for compliance and flagged a gap: agents could change a high-risk case to a lower-risk type. We set out the options to close it, either a hard block or an audit-based control, for the bank to decide."
+        ]
+      },
+      {
+        "heading": "The outcome",
+        "bullets": [
+          "Agents follow one guided path for each type of merchant case.",
+          "Cases are linked to the right merchant from the start.",
+          "Large releases reach production in a controlled way.",
+          "Compliance risks are raised early, before they reach production."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "playwright-test-automation-framework",
+    "title": "From User Story to Tested Release with Playwright",
+    "client": "Built by Nainika Technologies",
+    "description": "How we built NainuTest AI, a Playwright test automation framework with plain-language test cases, and the AI agent that turns user stories into tests.",
+    "tools": [
+      "Playwright",
+      "JavaScript",
+      "Cucumber",
+      "GitHub Actions",
+      "Salesforce"
+    ],
+    "image": "/case-studies/playwright-test-automation.jpg",
+    "sections": [
+      {
+        "heading": "The problem",
+        "paragraphs": [
+          "Most teams test the important journeys in their apps by hand, if at all. Unit tests and code coverage show that the code runs, not that a customer can actually sign up, pay or raise a case.",
+          "As AI writes more of the code, proving that it works becomes the slow part."
+        ]
+      },
+      {
+        "heading": "What we built",
+        "paragraphs": [
+          "NainuTest AI is our end-to-end test automation framework:"
+        ],
+        "bullets": [
+          "Tests are written in plain language with Cucumber, so business users can read and agree them.",
+          "Playwright runs them in a real browser, using the Page Object Model so tests stay easy to maintain.",
+          "Tests run headless on every change, with results posted to Slack or Microsoft Teams.",
+          "Passwords and keys are kept in GitHub Secrets, never in the test code.",
+          "Every run is recorded, giving a full audit trail."
+        ]
+      },
+      {
+        "heading": "The AI agent we are adding",
+        "paragraphs": [
+          "We are building an AI agent on top of the framework, in phases:"
+        ],
+        "bullets": [
+          "It reads a user story from Jira or Azure DevOps and writes the test cases.",
+          "It turns those test cases into Playwright scripts.",
+          "When a test fails, it looks for the cause, proposes a fix, updates the script and runs it again.",
+          "It flags flaky tests and tracks performance over time."
+        ]
+      },
+      {
+        "heading": "The outcome",
+        "bullets": [
+          "Key customer journeys are tested automatically, not by hand.",
+          "Test cases are readable by the whole team, not just developers.",
+          "A clear path from user story to tested release.",
+          "The same approach works for Salesforce and for web apps."
+        ]
+      }
+    ]
+  },
+  {
     slug: "revops-for-a-b2b-saas-company",
     title: "One Revenue Engine for a B2B SaaS Company",
     client: "B2B SaaS company",
