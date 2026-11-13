@@ -179,6 +179,179 @@ const allInsights: Insight[] = [
     ],
   },
   {
+    slug: "deepfake-ceo-fraud-129-million",
+    title: "The CEO on the Call Was Not the CEO: Lessons From a US$129 Million Deepfake Fraud",
+    description: "US prosecutors say a fraud ring used AI to copy the voices and faces of CEOs and lawyers, and talked staff into sending about US$129 million. Here are five rules that stop a deepfake payment.",
+    date: "2026-11-13",
+    image: "/insights/deepfake-ceo-129m.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "US prosecutors have charged three men over a scheme that allegedly used AI to copy the voices and, at times, the faces of company CEOs and lawyers. Over about 19 months, they targeted thousands of companies and talked staff into sending about US$129 million.",
+          "The lesson for every business: a familiar voice or face on a call is no longer proof. Payments need a process that does not depend on recognising the person asking.",
+        ],
+      },
+      {
+        heading: "How the scheme worked",
+        paragraphs: [
+          "According to the indictment unsealed in New York in early November 2026, an employee, often in accounts, would get a call from someone posing as their CEO. Using AI, the caller copied the CEO's voice, and sometimes their image. The fake CEO asked for help with a confidential deal and told the employee to contact a lawyer at a large international law firm.",
+          "The lawyer was fake too. Prosecutors say one defendant even used a handwritten script titled Lawyer Call. The lawyer then supplied bank details for the transfer, sometimes after an NDA and an e-signature email to make it look official.",
+          "Victims included hospital systems in Missouri and California, a Rhode Island bank, a Massachusetts mutual fund company, a Florida pet food company and a UK fintech firm, which reportedly lost about US$11.6 million. The three men were arrested in Spain and the UK and face extradition. The charges are allegations, and the men are presumed innocent.",
+        ],
+      },
+      {
+        heading: "Why this matters now",
+        paragraphs: [
+          "Voice cloning used to need a lot of recordings and skill. Now a few minutes of a CEO speaking in a podcast, webinar or LinkedIn video can be enough.",
+          "The trick was not technical. It used secrecy, urgency and authority, then moved the victim to a second trusted person, the lawyer, before asking for money.",
+          "Finance and sales teams are the target, because they move money and change bank details every day.",
+        ],
+        figure: {
+          src: "/insights/deepfake-five-rules.jpg",
+          alt: "Five rules that stop a deepfake payment: call back, two people approve, secrecy is a red flag, lock bank changes, train and rehearse",
+          caption: "A familiar voice or face is no longer proof.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Five rules to put in place this month",
+        paragraphs: [
+          "Call back: verify any payment request on a number you already have, never one given in the call or email.",
+          "Two people approve: no single person can release a large or urgent payment alone.",
+          "Secrecy is a red flag: a real CEO will not mind a check. Keep this between us is the warning sign.",
+          "Lock bank changes: any change to supplier or payee bank details needs separate verification and a short waiting period.",
+          "Train and rehearse: show your finance and sales teams what deepfakes sound like, and practise the process.",
+        ],
+      },
+      {
+        heading: "Build the rules into your systems",
+        paragraphs: [
+          "Rules on paper get skipped under pressure. Rules in your systems do not. In Salesforce or your finance tools, you can require two approvals for payments above a limit, flag any change to bank details for a second check, and log who approved what and when.",
+          "Field history tracking, approval processes and validation rules make it much harder for one rushed person to send money to the wrong account.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help businesses build payment and bank detail controls into Salesforce and their CRM: approval steps, change alerts and a clear audit trail, so a convincing voice on the phone is never enough to move money.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-built-apps-open-to-the-world",
+    title: "Built With AI in Minutes, Open to the World: 35,000 Apps That Leaked by Default",
+    description: "Researchers found 35,578 apps built with Grok that anyone could open, some holding patient records, passwords and sales data. If your teams build apps with AI, here is a five-step checklist.",
+    date: "2026-11-13",
+    image: "/insights/ai-built-apps-public.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Security firm Claroc checked 37,571 live apps built with Grok Build, the AI app builder from SpaceXSI, formerly xAI. 35,578 of them, about 94.7%, opened for anyone with the link, no sign-in needed.",
+          "Most held nothing sensitive. But Claroc estimates 650 to 800 exposed private information, including patient lab results, staff rosters, plain-text passwords and confidential sales plans. AI makes building an app easy. It does not make it safe by default.",
+        ],
+      },
+      {
+        heading: "What the researchers found",
+        paragraphs: [
+          "In Grok Build, people describe an app in a chat and Grok writes it. When the creator clicks Publish, the app gets its own web address. Claroc found those addresses could be discovered through public DNS records, so links people assumed were private could be found.",
+          "The exposed apps came from 30 organisations besides SpaceXSI and X, including six Fortune 500 companies and a hospital group. SpaceXSI's own staff had published 24 open apps, including a sales territory map covering 594 strategic accounts. SpaceXSI removed its own apps after reporters asked, but other users' apps were still online when Claroc published.",
+          "SpaceXSI's position is that nothing goes public until the builder clicks Publish. Claroc's answer is that once the default is anyone with the link, extra clicks do not protect the data.",
+        ],
+      },
+      {
+        heading: "Why this matters for your business",
+        paragraphs: [
+          "Your staff are probably already building small apps with AI tools: a dashboard for the sales team, a tracker for onboarding, a tool that pulls data from the CRM. They are fast and useful, and they rarely go through IT.",
+          "Each one can hold real customer or staff data, and each one has its own sharing settings. Nobody has a list of them.",
+          "This is the same problem companies had with shared spreadsheets and public cloud folders, only faster.",
+        ],
+        figure: {
+          src: "/insights/ai-built-apps-checklist.jpg",
+          alt: "Five steps before anyone publishes an AI-built app: sign-in by default, no real data in tests, no passwords in apps, keep a register, review before launch",
+          caption: "AI tools make building easy. They do not make it safe by default.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Five steps before anyone publishes an AI-built app",
+        paragraphs: [
+          "Sign-in by default: every app that touches company data must require a login. No anyone with the link.",
+          "No real data in tests: use made-up data while building, never live customer or staff records.",
+          "No passwords in apps: keys and passwords belong in a secrets store, not in the app or its data.",
+          "Keep a register: list every AI-built app, who owns it, what data it uses and who can open it.",
+          "Review before launch: a quick security check before anything goes live, and again every quarter.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "If your team needs a dashboard, portal or internal tool, we build it properly on Salesforce, HubSpot or the cloud: sign-in, permissions and data rules from day one. We can also review the AI-built apps your teams already use and close any open doors.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "enterprise-ai-spend-grew-5x-menlo-2026",
+    title: "Enterprise AI Spend Grew 5.4x in a Year: What Menlo Ventures' 2026 Report Means for Your Plans",
+    description: "Menlo Ventures estimates enterprise AI spending reached US$177 billion, up 5.4x in a year, and companies spent about 2.5 times what they budgeted. Here is what that means for your AI, Salesforce and HubSpot plans.",
+    date: "2026-11-13",
+    image: "/insights/menlo-enterprise-ai-2026.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Venture firm Menlo Ventures published its 2026 State of Enterprise AI report on 3 November. It estimates enterprise spending on using AI reached a US$176.8 billion annual run rate by September 2026, up from US$33 billion a year earlier.",
+          "Two findings matter most for businesses. Companies spent about 2.5 times what they budgeted for AI. And most new AI spending is coming from new budgets, not from replacing existing software. AI is adding to your stack, not swapping it out.",
+        ],
+      },
+      {
+        heading: "What the report found",
+        paragraphs: [
+          "Growth is coming from companies that already use AI spending more, not from many new buyers. The share of enterprises paying for AI rose from 55% to 65%.",
+          "On average, companies spent 4.7 times their 2025 AI spend, against a plan of 1.9 times, roughly 2.5 times what they budgeted. Part of the reason is a shift to the most capable frontier models, which rose from 35% to 63% of enterprise AI spend.",
+          "Agents are now the biggest users of AI. On OpenRouter, a service that gives access to many models, agents generate about 80% of tokens. That measures one platform, not all enterprise use.",
+          "AI is mostly expanding the software market. New budgets funded 55% of new AI spend, against 22% from existing software budgets. Menlo estimates AI has slowed enterprise application software growth from about 13% a year to about 11%, but in established categories, incumbents still have the advantage.",
+          "Note that the figures are annualised run rates combining survey results and modelled estimates. Menlo is an investor in Anthropic and OpenRouter.",
+        ],
+      },
+      {
+        heading: "Why it matters for your business",
+        paragraphs: [
+          "Budgets are breaking because agents use far more AI than people do. If you plan AI costs per user seat, you will likely underestimate.",
+          "Your existing platforms are not going away. For most companies, the smart move is to build AI agents into the systems where the work and data already live, such as Salesforce and HubSpot, rather than starting from scratch.",
+          "Spending is growing faster than proof of value. As one analysis of the report put it, suppliers can grow revenue while customers are still working out which uses justify the cost.",
+        ],
+        figure: {
+          src: "/insights/menlo-what-it-means.jpg",
+          alt: "What the report means for your AI plans: budget for growth, agents drive the bill, keep your platforms, measure the return",
+          caption: "Demand for AI is real. Value still has to be proven, one use case at a time.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Four things to do with this",
+        paragraphs: [
+          "Budget for growth: set spending caps and alerts, and review AI usage monthly, not yearly.",
+          "Price each agent: estimate cost per agent and per task, not per seat.",
+          "Build on your platforms: add AI agents to Salesforce and HubSpot where your data and processes already are.",
+          "Measure the return: tie every AI project to one number the business cares about, such as hours saved, cases resolved or pipeline created.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Our AI Agent Pilot is built for exactly this moment. We pick one high-value use case, build the agent into your Salesforce or HubSpot, and measure cost and return before you scale, so your AI budget goes where it pays back.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-end-to-end-testing",
     title: "AI End-to-End Testing: Who Tests the Code the AI Wrote?",
     description: "AI agents now write code, and other AI agents test it. Here is how end-to-end testing is changing, why test scores and real behaviour can differ, and a practical plan for Salesforce and HubSpot teams.",
