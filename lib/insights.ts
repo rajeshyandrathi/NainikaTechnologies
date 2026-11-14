@@ -15,6 +15,138 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "chatgpt-wallet-ai-agents-can-pay",
+    title: "ChatGPT Can Now Pay for Things. Is Your Business Ready for Customers Who Buy Through AI Agents?",
+    description: "OpenAI has launched ChatGPT Wallet with American Express, Mastercard and Visa, so AI agents can complete purchases with the buyer's approval. Here is how it works and five things to get ready.",
+    date: "2026-11-14",
+    image: "/insights/chatgpt-wallet-agent-payments.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "On 13 November 2026, OpenAI launched ChatGPT Wallet. It lets OpenAI's personal AI agents, called dots, complete purchases for a user. It was built with American Express, Mastercard and Visa.",
+          "Until now, most people used AI to research and compare products, then bought them somewhere else. With Wallet, the agent can finish the purchase too. For any business that sells online, that means some customers will soon arrive as an AI agent acting for a person, not as a person clicking through your site.",
+        ],
+      },
+      {
+        heading: "What OpenAI launched",
+        paragraphs: [
+          "ChatGPT Wallet starts as a limited rollout. It is open to ChatGPT Pro subscribers in the United States who are 18 or older and have a US-issued Visa, Mastercard or American Express card. OpenAI says the small start lets it test and improve the feature before a wider release.",
+          "OpenAI says 1.2 billion people use ChatGPT each week, and many already use it to research products and decide what to buy. Wallet is OpenAI's move to keep the whole journey, from question to checkout, inside ChatGPT.",
+          "Buyers keep their usual card rewards and card protections, including the right to dispute a charge. The merchant still handles the order, returns and customer service.",
+        ],
+      },
+      {
+        heading: "How a purchase works",
+        paragraphs: [
+          "The user adds an eligible card to Wallet once. They then ask their dot to help with a purchase. The dot helps them choose and prepares the order.",
+          "Before anything is charged, the user sees the items, the total and the card. They approve each purchase with a security check such as Face ID or a fingerprint. OpenAI says this also creates a record of the transaction.",
+          "After approval, the card network issues a payment token, a stand-in for the real card number. The charge goes to the user's card, but neither the agent nor the merchant ever sees the card details. The dot sends the merchant what it needs to deliver the order, such as the shipping address and contact details.",
+        ],
+        figure: {
+          src: "/insights/chatgpt-wallet-purchase-flow.jpg",
+          alt: "Four steps of a ChatGPT Wallet purchase: add a card once, the agent finds and fills the order, the buyer approves with Face ID or fingerprint, the network pays with a token",
+          caption: "The person stays in control of every payment, and the card number never leaves the network.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "What comes next",
+        paragraphs: [
+          "OpenAI has said it plans to let users set spending limits and rules, for example by category or time period, so some purchases can be approved in advance and handled by the agent on its own. No date has been given.",
+          "There are limits today. Some retailers block AI agents from their sites, and Wallet will not work on those sites. TechCrunch, citing Business Insider, reports that Amazon is the largest retailer to ban agents, and that DoorDash and Uber have seen low numbers of orders placed by agents so far.",
+          "Visa, Mastercard and American Express have all been building their own rules and tools for agent payments. With all three behind Wallet, paying through an agent is moving from an idea to plumbing that works with the systems businesses already use.",
+        ],
+      },
+      {
+        heading: "Why this matters even if you sell to businesses",
+        paragraphs: [
+          "Most of the first purchases will be consumer goods. But the same pattern is coming to business buying: an agent that finds suppliers, compares offers, books a demo or renews a subscription for a person who approves the final step.",
+          "If an agent cannot read your pricing, find your product details or get through your checkout or booking flow, it will move on to a competitor that it can understand. You will not see the lost deal in your CRM, because the buyer never reached a form.",
+        ],
+      },
+      {
+        heading: "Five things to get ready",
+        paragraphs: [
+          "Make your product and pricing readable: OpenAI's Commerce Partner Playbook asks businesses to make product information available to agents. Plain pages with clear names, prices, plans and stock beat details hidden in images or PDFs.",
+          "Decide your policy on agents: check whether your site, bot protection or firewall blocks AI agents today. Blocking may be the right choice for some pages, but it should be a decision, not an accident.",
+          "Talk to your payment and fraud providers: the playbook also asks businesses to work with payment and risk providers to cut unnecessary declines. Rules built to stop bots can also stop a genuine buyer whose agent is paying with a token.",
+          "Track agent orders in your CRM: add a way to mark orders, bookings and leads that came through an AI agent, in Salesforce, HubSpot or whatever you use. Without that, you cannot measure the channel or spot problems in it.",
+          "Check the handoff after the sale: the merchant still owns delivery, returns and service. Make sure orders placed by agents flow into the same fulfilment and support process as every other order, with the right contact details on the record.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help companies get their websites, CRM and revenue processes ready for AI agents, from clear product data and agent-friendly booking flows to tracking agent-led orders in Salesforce and HubSpot. If you want to know where an AI agent would get stuck on your site today, start with our free RevOps Audit.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "impostor-sites-in-ai-answers",
+    title: "Fake Sites Are Showing Up in AI Answers as the Real Brand. Here Is How to Protect Yours",
+    description: "New research from Scrunch found impostor websites cited in AI answers for 17% of the Fortune 500, and in three out of four cases the AI presented the fake as the official source. Here are five checks to run.",
+    date: "2026-11-14",
+    image: "/insights/impostor-sites-ai-answers.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "More people now ask ChatGPT, Gemini or Copilot how to contact a company, get a refund or log in, instead of searching and clicking. That shift has opened a new door for fraud.",
+          "Scrunch, a company that tracks how brands appear in AI answers, published research on 12 November 2026. It found that 17% of Fortune 500 companies had an impostor website cited in AI answers. In three out of four answers that cited a known impostor, the AI presented the fake site as the brand's official source.",
+        ],
+      },
+      {
+        heading: "What the research found",
+        paragraphs: [
+          "Scrunch looked at answers from ChatGPT, Perplexity, Gemini, Google AI Overviews, Google AI Mode and Microsoft Copilot. It estimates that AI assistants give more than one million answers a year that cite websites pretending to be real brands.",
+          "Scrunch says only 0.3% of the answers that cited an impostor warned the reader that the site might be fake. It also found that most of these sites are not on any list of known fakes, almost none appear on public threat feeds, and Google rarely ranks them on its first page.",
+          "The impostors show up in exactly the questions where a customer is most exposed: refunds, cancellations, account login help and support. Scrunch says about 1 in 13 of its own customers were affected.",
+        ],
+      },
+      {
+        heading: "Why AI falls for fake sites",
+        paragraphs: [
+          "AI assistants answer many questions by searching the web in real time and summarising what they find. They have to judge new sources quickly and with little information. A page written to look helpful and official can be picked up and repeated with the full confidence of the assistant.",
+          "In the past, a fake support site might sit on page 20 of the search results, where almost nobody saw it. Now the AI can lift it to the top of a single, confident answer. Other security researchers have reported the same pattern, with attackers planting fake phone numbers and login pages in content designed for AI to find.",
+          "For the customer, the result looks trustworthy. They asked a well-known assistant and got a clear answer with a link. That is why the damage lands on your brand, even though you did nothing wrong.",
+        ],
+      },
+      {
+        heading: "Five checks to run",
+        paragraphs: [
+          "Ask the assistants: every month, run your most common support, refund, cancellation and login questions through ChatGPT, Gemini, Copilot, Perplexity and Google's AI answers. Write down which sites they cite and which phone numbers and links they give.",
+          "Publish one clear source: put your official phone numbers, support links and login pages on your own website, in plain text that is easy to read and quote. If the real answer is hard to find, the AI will find someone else's.",
+          "Mark your site as official: use Organization structured data with links to your real social pages, and publish an llms.txt file that tells AI tools who you are and where your key pages live. These help assistants tell the real site from a copy.",
+          "Treat scam complaints as a signal: when a customer says they called a number or used a site that was not yours, log it as its own case type in your service system, such as Salesforce Service Cloud. A pattern of these cases is often the first sign that an impostor is being cited.",
+          "Act fast on fakes: report impostor domains to the host and registrar, involve your legal team for takedowns, and register obvious lookalike domains of your brand before someone else does.",
+        ],
+        figure: {
+          src: "/insights/brand-checks-ai-answers.jpg",
+          alt: "Five checks to protect your brand in AI answers: ask the assistants, publish one clear source, mark your site as official, treat scam complaints as a signal, act fast on fakes",
+          caption: "You cannot control what AI says, but you can make the real answer easy to find.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "This is a revenue issue, not only a security issue",
+        paragraphs: [
+          "When a customer is sent to a fake support line, you lose more than one call. You may lose their trust, their renewal and their recommendation, and your service team spends time cleaning up a problem it did not create.",
+          "That is why marketing, service and security should own this together. Marketing knows which questions customers ask, service sees the complaints first, and security can take the fakes down.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help companies make their websites clear and trustworthy for AI tools, set up structured data and llms.txt, and build Salesforce and HubSpot processes that flag scam complaints early. If you want to see what AI assistants say about your brand today, start with our free RevOps Audit.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-attackers-inside-salesforce-orgs-artex",
     title: "AI Attackers Are Now Inside Salesforce Orgs: What Salesforce's ARTEX Warning Means for You",
     description: "Salesforce has warned of an AI-driven campaign that uses stolen integration credentials to get into customer orgs and deploy custom Apex at machine speed. Here are six checks to run on your org this week.",
