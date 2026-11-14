@@ -31,6 +31,7 @@ export function GET() {
     lines.push(`### ${group.title}`, "", group.summary, "");
     for (const service of services.filter((item) => item.group === group.id)) {
       lines.push(`- [${service.title}](${link(`/services/${service.slug}`)}): ${service.summary}`);
+      if (service.definition) lines.push(`  ${service.definition.text}`);
     }
     lines.push("");
   }

@@ -52,6 +52,15 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </PageHero>
 
+      {service.definition && (
+        <section className="pt-16 px-4 bg-white">
+          <div className="max-w-5xl mx-auto border-l-4 border-cyan-600 bg-slate-50 rounded-r-xl p-6">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">{service.definition.term}</h2>
+            <p className="text-slate-700 text-lg">{service.definition.text}</p>
+          </div>
+        </section>
+      )}
+
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>

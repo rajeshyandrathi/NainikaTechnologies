@@ -31,6 +31,7 @@ export type Service = {
   description: string;
   image: string;
   features: string[];
+  definition?: { term: string; text: string };
 };
 
 export const serviceGroups: ServiceGroup[] = [
@@ -122,16 +123,21 @@ export const services: Service[] = [
   {
     slug: "revenue-operations",
     group: "revops-crm",
-    summary: "Align marketing, sales, and customer success around one process, one set of data, and one view of revenue.",
+    summary: "Align marketing, sales, customer success, and finance around one process, one set of data, and one view of revenue.",
     icon: ChartNoAxesCombined,
     title: "Revenue Operations (RevOps)",
-    description: "We connect your marketing, sales, and customer success teams through shared processes, clean data, and reliable reporting. You get a clear view of your funnel, fewer leads lost between teams, and forecasts you can trust.",
+    description: "We connect your marketing, sales, customer success, and finance teams through shared processes, clean data, and reliable reporting. You get a clear view of your funnel, fewer leads lost between teams, and forecasts you can trust.",
+    definition: {
+      term: "What is RevOps?",
+      text: "RevOps, short for Revenue Operations, is a business function that aligns marketing, sales, customer success, and finance teams under a single, unified strategy."
+    },
     image: "/Deliver.jpeg",
     features: [
       "RevOps audits and roadmaps",
       "Lead capture, routing, and qualification",
       "Pipeline stages, sales processes, and handoffs",
       "Forecasting, dashboards, and revenue reporting",
+      "Quote-to-cash, billing, and revenue handoffs to finance",
       "Data quality, deduplication, and governance",
       "AI agents for repetitive RevOps work"
     ]
