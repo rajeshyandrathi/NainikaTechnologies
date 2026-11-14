@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { insights } from "@/lib/insights";
 import { site } from "@/lib/site";
 import SubscribeInsights from "@/components/subscribe-insights";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 type InsightPageProps = {
   params: Promise<{ slug: string }>;
@@ -50,9 +51,7 @@ export default async function InsightPage({ params }: InsightPageProps) {
     <article className="relative overflow-hidden pt-32 pb-20 px-4 bg-white">
       <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
-        <Link href="/insights" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
-          All insights
-        </Link>
+        <Breadcrumbs items={[{ name: "Insights", href: "/insights" }, { name: insight.title, href: `/insights/${insight.slug}` }]} />
         <h1 className="text-3xl md:text-4xl font-bold text-black mt-6 mb-4">{insight.title}</h1>
         <p className="text-lg text-slate-600 mb-8">{insight.description}</p>
         {insight.image && (

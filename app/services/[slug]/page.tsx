@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import ServiceVisual from "@/components/service-visual";
 import { serviceGroups, services } from "@/lib/services";
 import { site } from "@/lib/site";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 type ServicePageProps = {
   params: Promise<{ slug: string }>;
@@ -46,9 +47,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
         title={service.title}
         description={service.description}
       >
-        <Link href="/services" className="inline-block mt-6 py-2 text-cyan-300 font-medium hover:text-cyan-200">
-          All services
-        </Link>
+        <div className="mt-6">
+          <Breadcrumbs tone="dark" items={[{ name: "Services", href: "/services" }, { name: service.title, href: `/services/${service.slug}` }]} />
+        </div>
       </PageHero>
 
       <section className="py-16 px-4 bg-white">

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { caseStudies } from "@/lib/case-studies";
 import { site } from "@/lib/site";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 type CaseStudyPageProps = {
   params: Promise<{ slug: string }>;
@@ -41,9 +42,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     <article className="relative overflow-hidden pt-32 pb-20 px-4 bg-white">
       <LogoWatermark className="top-24" />
       <div className="max-w-3xl mx-auto">
-        <Link href="/case-studies" className="inline-block py-2 text-cyan-600 font-medium hover:text-cyan-700">
-          All case studies
-        </Link>
+        <Breadcrumbs items={[{ name: "Case Studies", href: "/case-studies" }, { name: study.title, href: `/case-studies/${study.slug}` }]} />
         <p className="text-sm font-medium text-slate-500 mt-6">{study.client}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-black mt-2 mb-4">{study.title}</h1>
         <p className="text-lg text-slate-600 mb-6">{study.description}</p>
