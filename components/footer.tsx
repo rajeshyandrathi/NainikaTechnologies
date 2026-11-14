@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { serviceGroups } from "@/lib/services";
 import { site } from "@/lib/site";
 
@@ -24,15 +24,26 @@ export default function Footer() {
             <p className="text-slate-300 mb-4">
               AI agents and RevOps systems for B2B SaaS companies
             </p>
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Nainika Technologies on LinkedIn"
-              className="block w-fit p-2 -ml-2 text-slate-300 hover:text-cyan-400 transition-colors"
-            >
-              <Linkedin size={24} />
-            </a>
+            <div className="flex items-center gap-2 -ml-2">
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nainika Technologies on LinkedIn"
+                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a
+                href={site.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nainika Technologies on Facebook"
+                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors"
+              >
+                <Facebook size={24} />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
