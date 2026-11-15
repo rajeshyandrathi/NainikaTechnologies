@@ -15,6 +15,141 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-agents-value-gap",
+    title: "Most Companies Now Run AI Agents. Only 15% Can Show the Money",
+    description: "New Genpact research of more than 2,000 executives finds 79% of enterprises have AI agents in production, but only 15% can tie AI spend to the P&L. Here is where the value gets lost and how to close the gap.",
+    date: "2026-11-15",
+    image: "/insights/ai-agents-value-gap.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "AI agents are no longer an experiment. New research from Genpact, based on a survey of 2,005 senior executives across 17 industries, found that 79% of enterprises now have AI agents in production.",
+          "But running agents is not the same as getting value from them. Only 15% of companies have fully tied their AI spend to profit and loss results. On average, only 49% of the AI projects funded over the past two years delivered the business value that was expected.",
+          "Genpact's Chief Technology and Innovation Officer, Sanjeev Vohra, summed it up: enterprises have become effective at deploying AI agents, and running them is the hard part.",
+        ],
+      },
+      {
+        heading: "What the research found",
+        paragraphs: [
+          "Deployment is wide but shallow. While 79% have agents in production, only 20% use them broadly and consistently across their business functions. Only 9% say they have completed a major change to how they operate.",
+          "Spending keeps rising anyway. Genpact found that 85% of companies plan to increase AI spending, even though about half of past AI projects fell short of the value expected.",
+          "Agents are working alongside people, not replacing them. Among companies with agents in production, 92% kept their workforce the same size or grew it. AI now leads or fully handles around 40% of decisions, more than twice the share a year earlier.",
+          "One honest caveat: the numbers are self-reported, and Genpact's research lead has said that some respondents may count chatbot or copilot use as having agents in production. The real number of agents doing end-to-end work is likely lower.",
+        ],
+      },
+      {
+        heading: "Why the value gets lost",
+        paragraphs: [
+          "Most companies add an agent to one step of an old process. The step gets faster, but the work before and after it stays the same, so the business result barely moves. A sales team that gets AI-drafted emails still loses deals if lead routing is slow and the CRM data is wrong.",
+          "Nobody owns the number. When an agent goes live, the project team moves on. If no one is accountable for a specific result, such as cost per case, days to close or revenue per rep, the agent becomes another tool that people may or may not use.",
+          "The data is not ready. Agents act on whatever data they are given. Duplicate records, missing fields and disconnected systems turn a smart agent into a fast way of making mistakes.",
+        ],
+      },
+      {
+        heading: "Five building blocks the leaders get right",
+        paragraphs: [
+          "Genpact names a group of AI Leaders, about 17% of companies, who work on five areas at the same time rather than one by one.",
+          "Redesign the process: change the whole workflow end to end, not one step inside it.",
+          "Define human and agent roles: be clear about where agents act, where people decide and check, and who owns the combined result.",
+          "Build the data foundation: clean, connected data that agents can trust.",
+          "Govern agents for their whole life: watch how agents act across systems over time, not only when they first go live.",
+          "Tie gains to the P&L: connect each agent to a specific line in the profit and loss, with a named owner.",
+        ],
+        figure: {
+          src: "/insights/ai-value-building-blocks.jpg",
+          alt: "Five building blocks that turn AI agents into value: redesign the process, define human and agent roles, build the data foundation, govern agents for life, tie gains to the P&L",
+          caption: "Most companies have some of these in place. The leaders connect all five.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "What this means for revenue teams",
+        paragraphs: [
+          "Sales, marketing, service and finance are where many companies start with agents, because the work is repetitive and the data already sits in Salesforce or HubSpot. That also makes these teams the easiest place to prove value, because the numbers are already in the CRM.",
+          "Before you add another agent, pick one workflow, such as lead follow-up, case triage or renewals. Write down today's numbers: how long it takes, how much it costs and what it produces. Then set the target the agent must hit and name the person who owns it.",
+          "If the agent hits the target, scale it. If it does not, you have learned that cheaply, and you have not spread an unproven tool across the whole business.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Our AI Agent Pilot is built for exactly this gap. We start with one real workflow, fix the process and the data around it, set a clear before and after measure, and only then help you scale. If you are not sure which workflow to start with, our free RevOps Audit will show you where the biggest gains are.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "self-hosted-ai-agents-inside-your-walls",
+    title: "You Can Now Run AI Agents Inside Your Own Walls. Here Is What That Means",
+    description: "Anthropic now lets companies run the whole Claude Managed Agents service in their own cloud or data centre, including credentials and session history. Here is what changes and who it is for.",
+    date: "2026-11-15",
+    image: "/insights/self-hosted-ai-agents.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "One of the biggest blockers to AI agents in banks, insurers and other regulated companies has been simple: where does the data go, and who holds the keys?",
+          "Anthropic has opened a private beta of self-hosted Claude Managed Agents. Companies can now run the whole agent service in their own cloud account or their own data centre. That includes the agent harness, the sandboxes where agents run their tools, the credentials agents use, and the full history of what each agent did.",
+        ],
+      },
+      {
+        heading: "What Claude Managed Agents is",
+        paragraphs: [
+          "Claude Managed Agents is a set of building blocks for running long-running AI agents in production. It handles the parts that are hard to build yourself: the loop that lets an agent plan and act, isolated sandboxes where it can run code and use tools, safe handling of passwords and keys, and a record of every session.",
+          "Until now there were two options. In the hosted option, Anthropic runs everything for you. In the self-hosted sandbox option, your company runs the sandboxes, so your code stays in your environment, but Anthropic still runs the rest, including credential handling and session history.",
+        ],
+      },
+      {
+        heading: "What changes with full self-hosting",
+        paragraphs: [
+          "With the new option, every part of the service runs on your side. You operate the Managed Agents server, its database and the workers where agents run their shell and file tools.",
+          "Credentials can stay in your own secrets manager. A proxy outside the sandbox attaches the credential to each request, so the agent itself does not hold your keys.",
+          "You also choose where the calls to the AI model go: the Claude API, Amazon Bedrock, Claude models on Google Cloud, Microsoft Foundry, or your own model gateway. If you do not pick Anthropic as the provider, your data does not go to Anthropic.",
+        ],
+        figure: {
+          src: "/insights/self-hosted-agents-who-runs-what.jpg",
+          alt: "Table comparing hosted, self-hosted sandbox and fully self-hosted Claude Managed Agents, showing which parts Anthropic runs and which you run",
+          caption: "With full self-hosting, only the model calls leave your environment, to a provider you choose.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "The trade-offs",
+        paragraphs: [
+          "More control means more work. With self-hosting, your team is responsible for running, securing and updating the server, the database and the sandboxes, and for installing each new release.",
+          "Not every feature is available yet. Reports on the documentation note that some hosted features, such as hosted cloud environments, the Files API, scheduled deployments and webhooks, are not available on the self-hosted server.",
+          "It is a private beta. Access is only for eligible organisations, by request through an Anthropic account team, and pricing is agreed with that team.",
+        ],
+      },
+      {
+        heading: "Who this is for",
+        paragraphs: [
+          "Anthropic points to work that needs access to internal code and systems: fixing broken builds, testing releases, triaging alerts and working through bug backlogs. These are agents that run unattended inside a company's own network.",
+          "For South African banks, insurers and healthcare companies, it also speaks to a familiar question. POPIA places conditions on sending personal information outside the country, and many internal policies require sensitive data and logs to stay in approved environments. Keeping the agent service, credentials and history inside your own cloud region makes that conversation with risk and compliance teams much easier.",
+          "The wider trend matters too. AWS, Google Cloud and Microsoft already offer agent runtimes that run in a customer's own cloud account. Enterprises increasingly expect to choose where their agents live, not just which model they use.",
+        ],
+      },
+      {
+        heading: "Questions to ask before you choose",
+        paragraphs: [
+          "Where must our data and logs stay? Check POPIA, your industry rules and your own policies before choosing hosted or self-hosted.",
+          "Do we have the team to run it? Self-hosting needs people who can operate, patch and monitor the service around the clock.",
+          "Which model provider fits our contracts? If you already buy cloud from AWS, Google or Microsoft, routing model calls through them may simplify procurement and data agreements.",
+          "What will the agent be allowed to touch? Whatever the hosting choice, give each agent the narrowest access it needs and log everything it does.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We help companies design and run AI agents that fit their security and compliance needs, from choosing the right hosting model to connecting agents safely to Salesforce, HubSpot and internal systems. If you want to test an agent on one real workflow before committing, start with our AI Agent Pilot.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "chatgpt-wallet-ai-agents-can-pay",
     title: "ChatGPT Can Now Pay for Things. Is Your Business Ready for Customers Who Buy Through AI Agents?",
     description: "OpenAI has launched ChatGPT Wallet with American Express, Mastercard and Visa, so AI agents can complete purchases with the buyer's approval. Here is how it works and five things to get ready.",
