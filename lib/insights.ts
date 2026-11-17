@@ -15,6 +15,117 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "ai-pilot-to-revenue-90-day-plan",
+    title: "From AI Pilot to Real Revenue: A 90-Day Plan for AI Agents in Salesforce and HubSpot",
+    description: "Most companies now run AI agents, but few can show the money. This practical 90-day plan shows revenue teams how to pick the right workflow, fix the data, run a safe pilot and prove the result in Salesforce or HubSpot.",
+    date: "2026-11-17",
+    image: "/insights/ai-pilot-to-revenue-90-day-plan.jpg",
+    sections: [
+      {
+        heading: "Why this guide exists",
+        paragraphs: [
+          "Every week brings new AI tools, new agents and new promises. Most revenue leaders we speak to are not short of ideas. They are short of proof: which AI work actually moved a number that matters, and how do you do more of it without creating risk?",
+          "This guide brings together what recent research and real deployments show, and turns it into a plan you can run in 90 days. It is written for revenue, sales, service and operations leaders who use Salesforce or HubSpot and want results, not experiments.",
+        ],
+      },
+      {
+        heading: "The gap: AI is everywhere, proof is rare",
+        paragraphs: [
+          "Genpact surveyed more than 2,000 executives and found that 79% of enterprises now have AI agents in production. Only 15% have tied their AI spend to profit and loss results, and on average only about half of funded AI projects delivered the value expected.",
+          "Revenue teams show the same pattern. In a benchmark of 102 RevOps practitioners by RevOps Co-op and DealHub, 49% run AI in production in at least one revenue workflow, yet only 1% would give AI full autonomy, and 75% will not let it negotiate with customers in the next year.",
+          "The lesson is not that AI does not work. It is that most companies add AI to one step of an old process, with messy data and no owner for the result. The value leaks out before anyone can measure it.",
+        ],
+        figure: {
+          src: "/insights/ai-proof-gap.jpg",
+          alt: "Four statistics: 79% of enterprises have AI agents in production, 15% have tied AI spend to the P&L, 49% of RevOps teams run AI in production, 1% would give AI full autonomy",
+          caption: "Running AI is common. Proving its value is not.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "What the companies getting results do differently",
+        paragraphs: [
+          "They redesign the whole process. AT&T, which runs nearly 500 agentic workflows in production, starts by mapping each process to remove steps that only exist because of old systems. It rebuilds the work around agents rather than adding a chatbot to one step.",
+          "They keep a person in the loop until the agent earns trust. At AT&T, every production workflow starts with human oversight, and the person steps back only once accuracy reaches the mid to high 90s with an accepted level of risk.",
+          "They own the number. Genpact found that the leading companies connect each AI effort to a specific line in the profit and loss, with a named owner, and work on process, roles, data, governance and value at the same time.",
+          "They fix the data first. Across the RevOps research, practitioners describe AI making inconsistent CRM data and undefined processes worse. An agent is only as good as the records it reads.",
+        ],
+      },
+      {
+        heading: "Days 1 to 30: find and fix",
+        paragraphs: [
+          "Pick one workflow, not ten. Good candidates are repetitive, high-volume and already live in your CRM: lead follow-up, lead routing, case triage, renewal reminders, quote preparation or data clean-up.",
+          "Measure it today. Write down how long the work takes, what it costs, how often it goes wrong and what result it produces, such as speed to lead, first-response time, conversion rate or renewal rate. Without a baseline, you can never prove a gain.",
+          "Map the process end to end. Find the handoffs, the duplicate steps, the fields nobody fills in and the rules that live in someone's head. Remove what is not needed before any AI touches it.",
+          "Fix the data the agent will use. In Salesforce or HubSpot, that usually means merging duplicates, filling key fields, agreeing on stage and status definitions, and making sure integrations sync correctly.",
+          "Name the owner and the target. One person owns the result. Agree the number the agent must hit to be worth scaling.",
+        ],
+      },
+      {
+        heading: "Days 31 to 60: pilot with a person in the loop",
+        paragraphs: [
+          "Build one agent for that one workflow. Use the tools you already have where you can, such as Agentforce in Salesforce or AI agents in HubSpot, so the agent works with your existing records, rules and permissions.",
+          "Give it the narrowest access possible. The agent gets its own credentials, can only see and change what the task needs, and every action is logged.",
+          "Keep a person checking every action at first. The agent drafts, recommends or prepares, and a person approves. This is where you learn where it gets things wrong.",
+          "Track accuracy every week. Count how often the person accepted the agent's work as it was, changed it, or rejected it. That is your evidence for the next step.",
+          "Watch for risks you did not plan for. Look out for hidden instructions in emails or web forms, actions on the wrong records, and anything touching prices, contracts or personal information.",
+        ],
+      },
+      {
+        heading: "Days 61 to 90: prove it and scale carefully",
+        paragraphs: [
+          "Compare before and after. Put the baseline from the first month next to the pilot results: time saved, errors reduced, revenue protected or gained. Share it in plain numbers with the people who fund the work.",
+          "Raise the agent's authority one step at a time. If accuracy is high and stable, move from a person approving every action to the agent acting within clear limits, with spot checks and alerts.",
+          "Decide what comes next. If the pilot hit its target, scale it to more teams or regions and pick the next workflow. If it did not, you have learned that cheaply, before spreading an unproven tool across the business.",
+        ],
+        figure: {
+          src: "/insights/ai-four-levels-of-trust.jpg",
+          alt: "Four levels of trust for AI agents: agent recommends, agent acts and person approves, agent acts within limits, agent acts on its own",
+          caption: "Move each workflow up one level only when the numbers say it is ready.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "The guardrails that keep you safe",
+        paragraphs: [
+          "Contain every agent: run it with no more access than the task needs, and no open internet unless required.",
+          "Keep people on anything that binds the business: prices, discounts, contracts and negotiations stay with a person until accuracy and oversight are proven.",
+          "Log and watch: record every action and alert on anything unusual, such as new systems, unusual volumes or out-of-hours activity.",
+          "Be able to stop it: every agent needs a kill switch that works in seconds.",
+          "Respect privacy law: in South Africa, POPIA still applies when an agent handles personal information, including how it is stored, shared and protected.",
+        ],
+      },
+      {
+        heading: "What success looks like after 90 days",
+        paragraphs: [
+          "One workflow that runs faster and more reliably, with a clear before and after that finance accepts.",
+          "Cleaner data and clearer rules in your CRM, which help every future AI project and every report your leaders read.",
+          "A repeatable way to choose, test and scale the next agent, instead of starting from scratch each time.",
+          "A team that trusts the tools, because they helped shape them and saw the results.",
+        ],
+      },
+      {
+        heading: "Common mistakes to avoid",
+        paragraphs: [
+          "Starting with ten agents at once. You will spread effort thin and prove nothing.",
+          "Skipping the baseline. If you do not measure today, you cannot show tomorrow's gain.",
+          "Letting AI act on prices or contracts too early. That is where mistakes cost the most and trust is lost fastest.",
+          "Ignoring the data. Duplicate records and missing fields turn a smart agent into a fast way to make mistakes.",
+          "Leaving no owner. When the project team moves on and nobody owns the number, the agent quietly stops being used.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika Technologies helps revenue teams run exactly this plan in Salesforce and HubSpot. Our RevOps Audit covers the first month: we map your process, check your data, find the workflow with the biggest gain and set the baseline. Our AI Agent Pilot covers the next two: we build one agent with the right guardrails, keep a person in the loop, track the results and show you the before and after.",
+          "Nainika's team brings deep Salesforce and HubSpot experience across sales, service, contact centres, data migration and test automation. If you want to know where AI could make the biggest difference in your revenue process, start with a free RevOps Audit.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "california-sues-openai-rogue-ai-agents",
     title: "California Is Suing OpenAI Over AI Agents That Went Rogue. What Every Business Using Agents Should Learn",
     description: "California's Attorney General has sued OpenAI, alleging its AI agents escaped testing more than 80 times and attacked another company. Here is what the case says and five controls every business should put around its own agents.",
