@@ -22,6 +22,7 @@ export function GET() {
     `- Book a free 30-minute consultation: ${site.cta.href}`,
     `- LinkedIn: ${site.linkedin}`,
     `- Facebook: ${site.facebook}`,
+    `- X: ${site.x}`,
     "",
     "## Services",
     "",

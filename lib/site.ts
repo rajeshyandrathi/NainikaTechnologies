@@ -5,6 +5,7 @@ export const site = {
   phone: "+27 68 890 6854",
   linkedin: "https://www.linkedin.com/company/nainikatechnologies/",
   facebook: "https://www.facebook.com/profile.php?id=61596735410410",
+  x: "https://x.com/nainikatech",
   address: {
     street: "13 Glen Abbey Rd, Cape Farms",
     locality: "Cape Town",
