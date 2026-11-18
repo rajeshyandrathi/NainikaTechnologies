@@ -81,6 +81,41 @@ const allInsights: Insight[] = [
         ],
       },
       {
+        heading: "A simple scenario: how a small mistake becomes a fine",
+        paragraphs: [
+          "Imagine a company that builds a new online application form and connects it to its CRM. To save time, the integration copies every field from the form, including bank account and ID numbers, into the main customer record.",
+          "A few weeks later, a sales manager builds a report of new applicants and shares it with a wider team. Nobody notices that the report includes the sensitive fields. Then a sharing setting changes during an update, and some customers can see records that are not theirs.",
+          "A customer complains. The support agent logs it as a normal technical fault. It takes days before anyone realises it is a security compromise, and longer before the regulator and affected customers are told.",
+          "No hacker was involved. Each step was a small, everyday decision. But together they look a lot like the issues regulators criticise: collecting more than needed, weak access control, and slow identification and escalation.",
+        ],
+      },
+      {
+        heading: "Questions companies are asking",
+        paragraphs: [
+          "Does POPIA only apply to banks? No. It applies to any organisation in South Africa that processes personal information, from small businesses to large corporates.",
+          "Do we have to report every incident? Where there are reasonable grounds to believe personal information has been accessed or acquired by an unauthorised person, POPIA requires you to notify the Information Regulator and the affected people as soon as reasonably possible.",
+          "Is a system error treated differently from a hack? The FNB case suggests not. What matters is that personal information was exposed and how the organisation responded.",
+          "Does moving to Salesforce or HubSpot make us compliant? No. These platforms give you strong security tools, but you still have to configure access, encryption, retention and monitoring correctly for your business.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "Run a report of every field in your CRM that holds account numbers, ID numbers or card details.",
+          "Check who can export data and which integrations have full access.",
+          "Turn on multi-factor authentication for every user if it is not already on.",
+          "Write a one-page incident plan: who to call, how to classify the incident, and when to notify the Regulator.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "93% of Big South African Companies Now Use AI. Only Half Say It Helps.",
+          "A Web Form Told the AI Agent What to Do: the CRM lesson from SalesBleed.",
+          "What a Good Salesforce Audit Should Cover.",
+        ],
+      },
+      {
         heading: "How Nainika can help",
         paragraphs: [
           "We cannot say what would have changed the outcome at any particular bank, and we do not have inside knowledge of either case. But the controls regulators are looking at are exactly the ones Nainika's team works on every day in Salesforce and HubSpot.",
@@ -153,6 +188,41 @@ const allInsights: Insight[] = [
         paragraphs: [
           "For many South African companies, the CRM is the best place to start. Customer data, sales processes and service cases already live there, and both Salesforce and HubSpot now include AI agents that work on that data with your existing permissions.",
           "That makes revenue and service teams a practical first step: lead follow-up, case triage, renewals and data clean-up are repetitive, measurable and close to revenue. Get one of these right, and you have a local proof point to build on.",
+        ],
+      },
+      {
+        heading: "A day in the life: two companies, same AI budget",
+        paragraphs: [
+          "Picture two mid-sized South African firms that each buy AI licences for their sales and service teams in the same month.",
+          "Company A rolls the tools out to everyone with a short training session. Staff use AI to draft emails and summarise meetings. Six months later, people like the tools, but nobody can say whether sales grew, costs fell or customers were served faster. When the renewal comes up, finance asks for proof and there is none.",
+          "Company B picks one problem: new leads wait too long for a first reply. It measures today's response time, cleans up duplicate leads in its CRM, and sets up an AI agent that drafts a reply within minutes for a salesperson to check and send. After three months it can show faster replies and more meetings booked. The renewal is easy, and the next project already has a sponsor.",
+          "Both companies use AI. Only one of them is in the 51% that can say it helps.",
+        ],
+      },
+      {
+        heading: "Questions South African leaders are asking",
+        paragraphs: [
+          "Do we need a national AI policy before we start? No. The revised national policy is still being finalised, but POPIA already sets the rules for personal information. Design for POPIA now and you will be well placed whatever the final policy says.",
+          "Is it safe to use global AI tools with South African customer data? It can be, if you know where the data goes, what the provider does with it and what your contract says. Many providers now offer local or regional hosting, and some, like Anthropic, let companies run AI agents in their own cloud.",
+          "Where should a mid-sized company start? With one measurable process close to revenue or customer service, such as lead follow-up, case triage or renewals, in the CRM you already use.",
+          "How long before we see results? A focused pilot can show a clear before and after in about 90 days, if the process and data are fixed first.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "List every AI tool your teams already use, paid and free, and who owns each one.",
+          "Pick one process and write down how it performs today.",
+          "Check which customer data your AI tools can see, and remove access they do not need.",
+          "Agree who in the business approves new AI projects and how success will be measured.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "From AI Pilot to Real Revenue: a 90-day plan for AI agents in Salesforce and HubSpot.",
+          "Most Companies Now Run AI Agents. Only 15% Can Show the Money.",
+          "FNB's R1 Million POPIA Fine and the Standard Bank Breach: what every company holding customer data should do now.",
         ],
       },
       {
