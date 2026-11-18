@@ -15,6 +15,83 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "fnb-fine-standard-bank-breach-popia-lessons",
+    title: "FNB's R1 Million POPIA Fine and the Standard Bank Breach: What Every Company Holding Customer Data Should Do Now",
+    description: "The Information Regulator has fined FNB R1 million under POPIA, and Standard Bank's breached client data appears to have been published online. Here is what happened, what regulators are looking at, and six checks for the customer data in your CRM.",
+    date: "2026-11-18",
+    image: "/insights/fnb-standard-bank-popia-lessons.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Two of South Africa's biggest banks are in the news for data protection. The Information Regulator has fined FNB R1 million under the Protection of Personal Information Act (POPIA). Standard Bank is still under investigation after a breach in which client data appears to have been published online.",
+          "Neither story is only about banks. Any company that holds customer names, ID numbers, account numbers or contact details in a CRM, a spreadsheet or a connected app faces the same questions. And the FNB case shows that regulators care as much about how you handle an incident as about the incident itself.",
+        ],
+      },
+      {
+        heading: "What happened at FNB",
+        paragraphs: [
+          "The Information Regulator issued an enforcement notice and an infringement notice against FNB, with a R1 million administrative fine. It found shortcomings in how the bank handled repeated security incidents and in its safeguards against unauthorised access to personal information on its digital home loan application platform. Customer account numbers were among the information exposed.",
+          "One of the incidents was not an outside attack but a system error, in which the information of 88 customers was exposed to 696 unauthorised people through the banking app.",
+          "Reports on the decision stress that what happened after the incidents was the main reason for the fine. The Regulator criticised how incidents were identified, classified and escalated, not only the exposure itself. It also found that some personal information was collected inappropriately and kept for longer than necessary.",
+          "Under POPIA, mishandling a person's account number in this way is a criminal offence, which is why the fine could be issued directly. Legal commentators have described it as the first such fine against a bank on the public record.",
+        ],
+      },
+      {
+        heading: "What happened at Standard Bank",
+        paragraphs: [
+          "Standard Bank reported unauthorised access to select client data, including names, ID and company registration numbers, contact details and account numbers. Its subsidiary Liberty disclosed a related breach. The bank later said the stolen data now appears to have been published online, and it warned affected clients about the risk of impersonation and phishing.",
+          "The Information Regulator is investigating. A Regulator executive said it would look at Standard Bank's access controls, whether it uses strong user authentication and how it uses encryption. No POPIA fine has been reported, and the full extent of the breach has not been made public.",
+          "Separately, the Prudential Authority fined Standard Bank R17 million, with R5 million suspended, for failures in customer due diligence, record-keeping and anti-money laundering training. That penalty relates to financial crime controls, not to the data breach.",
+        ],
+      },
+      {
+        heading: "The lessons for every company",
+        paragraphs: [
+          "Mistakes are as dangerous as hackers. FNB's exposure came from a system error. A wrong sharing setting, a badly built report or an integration that syncs too much data can expose customers just as surely as an attack.",
+          "How you respond is judged. Spotting an incident, deciding how serious it is, escalating it and reporting it on time all matter. A slow or unclear response can turn a problem into a fine.",
+          "Account numbers and ID numbers need special care. These are the fields that criminals use for impersonation and fraud, and that regulators look at first.",
+          "Old data is still breach data. Keeping personal information longer than you need it adds risk and can itself break POPIA.",
+          "Access control, strong sign-in and encryption are the basics regulators check. If you cannot show who can see what, and how it is protected, you are exposed.",
+        ],
+      },
+      {
+        heading: "Six POPIA checks for the customer data in your CRM",
+        paragraphs: [
+          "Know your sensitive fields: list every place account numbers, ID numbers and card details live in Salesforce, HubSpot and the systems connected to them, including old fields, attachments and notes.",
+          "Lock down access: give each user, integration and AI agent only the fields and records it needs. Use strong sign-in, such as multi-factor authentication, for everyone.",
+          "Protect data at rest: encrypt sensitive fields and mask them on screens, in list views and in reports so people only see what their job requires.",
+          "Keep less, for less time: set retention rules, archive or delete data you no longer need, and stop collecting fields you do not use.",
+          "Monitor and log: watch for unusual exports, logins and API activity, and keep an audit trail of who changed or viewed sensitive records.",
+          "Practise incident response: agree who classifies, escalates and reports a security compromise, how fast, and how customers will be told. Test it before you need it.",
+        ],
+        figure: {
+          src: "/insights/popia-crm-data-checks.jpg",
+          alt: "Six POPIA checks for customer data in your CRM: know your sensitive fields, lock down access, protect data at rest, keep less for less time, monitor and log, practise incident response",
+          caption: "Regulators look at what you protect and at how you respond when something goes wrong.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Where AI fits in",
+        paragraphs: [
+          "Many companies are now connecting AI agents to their CRM. An agent that can read every record can also expose every record. Give agents their own credentials, the narrowest access possible and full logging, and keep them away from account numbers and ID numbers unless the task truly needs them.",
+          "AI can also help: it can spot unusual access patterns, flag sensitive data stored in the wrong places and speed up incident triage, as long as a person makes the final call.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "We cannot say what would have changed the outcome at any particular bank, and we do not have inside knowledge of either case. But the controls regulators are looking at are exactly the ones Nainika's team works on every day in Salesforce and HubSpot.",
+          "Our Salesforce and RevOps audits map where sensitive data lives, who and what can reach it, and how long it is kept. We tighten sharing rules, field-level security and permission sets, set up encryption and masking, and remove data you no longer need.",
+          "We build monitoring and audit trails for exports, logins and integrations, and design incident processes so security events are spotted, classified and escalated quickly. When you add AI agents, we set them up with their own narrow access, approval steps and logging, with POPIA in mind from the start.",
+          "Nainika's team has worked on large financial services data migrations and on service and case management for banking teams, where protecting customer information is part of every design decision. If you want to know how exposed your customer data is today, start with our free RevOps Audit.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "south-africa-ai-93-percent-use-half-see-value",
     title: "93% of Big South African Companies Now Use AI. Only Half Say It Helps. Here Is How to Be in the Half That Wins",
     description: "New South African research shows AI use among large organisations has doubled in two years, but only 51% see a positive effect on productivity. As President Ramaphosa pushes South Africa to build AI, not just buy it, here is how local businesses can turn AI into real results.",
