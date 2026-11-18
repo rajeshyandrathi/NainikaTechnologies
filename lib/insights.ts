@@ -15,6 +15,79 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "south-africa-ai-93-percent-use-half-see-value",
+    title: "93% of Big South African Companies Now Use AI. Only Half Say It Helps. Here Is How to Be in the Half That Wins",
+    description: "New South African research shows AI use among large organisations has doubled in two years, but only 51% see a positive effect on productivity. As President Ramaphosa pushes South Africa to build AI, not just buy it, here is how local businesses can turn AI into real results.",
+    date: "2026-11-18",
+    image: "/insights/south-africa-ai-use-vs-value.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "South Africa has embraced AI faster than almost anyone expected. The new SA AI Index from World Wide Worx, run with Altron Digital Business, found that 93% of large South African organisations now use AI in some form, up from 45% two years earlier.",
+          "But use is not the same as value. Only 51% of those organisations say AI has a positive effect on productivity, and more than half are still at the experimental stage.",
+          "At the same time, President Cyril Ramaphosa has led a delegation to Silicon Valley with a clear message: South Africa must become a producer of AI, not just a consumer of tools built elsewhere. For local businesses, the question is simple. How do you move from using AI to getting results from it?",
+        ],
+      },
+      {
+        heading: "What the new research shows",
+        paragraphs: [
+          "Adoption has doubled in two years. The SA AI Index shows the share of large organisations using AI rose from 45% to 67% and then to 93% across its three editions.",
+          "Belief has not kept up. Only 51% of organisations report a positive impact on productivity, and 52% remain at the experimental stage. As TechCentral reported, 73% have no tools to measure the value of their AI at all.",
+          "Readiness is the dividing line. Cisco's AI Readiness Index for South Africa found that only 18% of local organisations are fully prepared for AI. Those leaders are four times more likely to move pilots into production and 50% more likely to see measurable value. Almost all of them have a defined AI roadmap, compared with 59% of South African organisations overall.",
+          "And AI agents are next. The same Cisco research found that 93% of South African organisations plan to deploy AI agents, with many expecting them to work alongside employees within a year, even though few have the secure infrastructure to support them.",
+        ],
+        figure: {
+          src: "/insights/south-africa-ai-proof-gap.jpg",
+          alt: "Four statistics on South African business and AI: 93% use AI, 52% are still experimenting, 73% have no tools to measure AI value, 18% are fully ready for AI",
+          caption: "South African companies are using AI widely, but few can prove what it delivers.",
+          width: 1400,
+          height: 700,
+        },
+      },
+      {
+        heading: "Build AI, not just buy it",
+        paragraphs: [
+          "Speaking to the South African delegation in Silicon Valley, President Ramaphosa said the country must move beyond being a consumer of AI built elsewhere and develop its own technology, companies and intellectual property. He pointed to South Africa's universities, financial sector, growing tech industry and the data centres already built by Microsoft, Amazon Web Services and Google.",
+          "He also asked for practical AI initiatives to be ready within three months, covering investment, research and training partnerships, and AI in public services and the economy.",
+          "Policy is still catching up. The draft national AI policy was withdrawn earlier this year after fictitious references were found in the document, and a revised policy is expected to go out for public consultation. Until then, POPIA remains the main law that governs how AI systems may use personal information in South Africa.",
+        ],
+      },
+      {
+        heading: "What this means for South African businesses",
+        paragraphs: [
+          "Building AI does not only mean training new models. For most businesses it means building AI into the way you work: your own processes, your own data and your own customer relationships. That is where lasting advantage comes from, because a competitor can buy the same tool but cannot copy how you use it.",
+          "The research also shows where the risk lies. Many companies have bought AI licences and run pilots, but have not changed the process around them, cleaned their data or decided how to measure success. That is why so many report using AI without seeing better productivity.",
+          "There is a real opportunity here. If only a minority of local companies are truly ready, the ones that get it right in the next year will pull ahead of competitors who are still experimenting.",
+        ],
+      },
+      {
+        heading: "Five steps to be in the half that wins",
+        paragraphs: [
+          "Measure before you start: pick one process and record how long it takes, what it costs and what it produces today. You cannot prove value without a baseline.",
+          "Fix the process and the data first: remove steps that only exist because of old systems, merge duplicate records and agree on what each field and stage means in your CRM.",
+          "Start with one workflow and keep a person in the loop: a single, well-chosen AI agent with human checks will teach you more than ten tools that nobody owns.",
+          "Write down your AI rules: decide which tools staff may use, what data they may share and who approves new AI projects. Make POPIA part of the design, not an afterthought.",
+          "Build your own capability: train your people, keep your business rules and prompts in your own systems, and own the results. That is what building AI, not just buying it, looks like inside a company.",
+        ],
+      },
+      {
+        heading: "Where Salesforce and HubSpot fit",
+        paragraphs: [
+          "For many South African companies, the CRM is the best place to start. Customer data, sales processes and service cases already live there, and both Salesforce and HubSpot now include AI agents that work on that data with your existing permissions.",
+          "That makes revenue and service teams a practical first step: lead follow-up, case triage, renewals and data clean-up are repetitive, measurable and close to revenue. Get one of these right, and you have a local proof point to build on.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika Technologies is based in Cape Town and helps South African businesses turn AI from an experiment into results in Salesforce and HubSpot. Our RevOps Audit finds the workflow with the biggest gain and sets the baseline. Our AI Agent Pilot builds one agent with the right guardrails and POPIA in mind, keeps a person in the loop and shows you the before and after.",
+          "For a step-by-step plan, read our guide: From AI Pilot to Real Revenue, a 90-day plan for AI agents in Salesforce and HubSpot.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "ai-pilot-to-revenue-90-day-plan",
     title: "From AI Pilot to Real Revenue: A 90-Day Plan for AI Agents in Salesforce and HubSpot",
     description: "Most companies now run AI agents, but few can show the money. This practical 90-day plan shows revenue teams how to pick the right workflow, fix the data, run a safe pilot and prove the result in Salesforce or HubSpot.",
