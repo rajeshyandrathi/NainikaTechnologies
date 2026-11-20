@@ -86,6 +86,30 @@ export const roles: Role[] = [
       "Interest in preparing data for agentic AI experiences and solutions",
     ],
   },
+  {
+    slug: "revops-engineer",
+    title: "RevOps Engineer",
+    type: "Full-time, Hybrid",
+    location: "Cape Town or Johannesburg",
+    summary:
+      "Build and run the systems that connect marketing, sales, customer success and finance, on Salesforce, HubSpot and Marketo, with AI agents and automation built in.",
+    responsibilities: [
+      "Design and build lead, opportunity, renewal and quote-to-cash processes in Salesforce and HubSpot",
+      "Build automation with Flows, HubSpot workflows and integrations between CRM, marketing and finance systems",
+      "Set up CPQ, pricing and approval rules, and clean handoffs to billing",
+      "Build pipeline, forecast and revenue dashboards that leaders trust",
+      "Add AI agents and assistants to revenue processes using Agentforce, HubSpot Breeze, Claude, Copilot, Gemini or ChatGPT",
+      "Keep CRM data clean, deduplicated and POPIA compliant",
+    ],
+    requirements: [
+      "3+ years in RevOps, Sales Ops, Marketing Ops or CRM administration and development",
+      "Hands-on Salesforce or HubSpot experience; Marketo is a plus",
+      "Strong understanding of the full revenue funnel from lead to cash",
+      "Experience with Flows, workflows, reporting and integrations",
+      "Hands-on use of AI tools such as Claude, Copilot, Gemini or ChatGPT",
+      "Salesforce or HubSpot certifications are a plus",
+    ],
+  },
 ];
 
 export const talentAreas = [
