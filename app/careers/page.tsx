@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/page-hero";
+import RolesTable from "@/components/roles-table";
 import CareersApplicationForm from "@/components/careers-application-form";
 import { roles, talentAreas } from "@/lib/careers";
 import { site } from "@/lib/site";
@@ -81,59 +82,7 @@ export default async function CareersPage({
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-10 text-center">Open Roles</h2>
 
-            <div className="overflow-x-auto bg-white rounded-xl shadow-lg">
-              <table className="w-full text-left">
-                <thead className="bg-slate-800 text-white text-sm uppercase tracking-wide">
-                  <tr>
-                    <th className="py-3 px-4">Role</th>
-                    <th className="py-3 px-4">Type</th>
-                    <th className="py-3 px-4">Location</th>
-                    <th className="py-3 px-4"><span className="sr-only">Apply</span></th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200">
-                  {roles.map((role) => (
-                    <tr key={role.slug} id={role.slug} className="align-top">
-                      <td className="py-4 px-4 min-w-[280px]">
-                        <h3 className="font-bold text-cyan-600 text-lg">{role.title}</h3>
-                        <p className="text-slate-600 text-sm mt-1">{role.summary}</p>
-                        <details className="mt-2 text-sm">
-                          <summary className="cursor-pointer text-cyan-600 hover:text-cyan-700 font-medium">View details</summary>
-                          <div className="grid md:grid-cols-2 gap-4 mt-3">
-                            <div>
-                              <h4 className="font-semibold text-slate-800 mb-1">What you will do</h4>
-                              <ul className="list-disc pl-5 space-y-1 text-slate-600">
-                                {role.responsibilities.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div>
-                              <h4 className="font-semibold text-slate-800 mb-1">What we are looking for</h4>
-                              <ul className="list-disc pl-5 space-y-1 text-slate-600">
-                                {role.requirements.map((item) => (
-                                  <li key={item}>{item}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </details>
-                      </td>
-                      <td className="py-4 px-4 text-slate-600 text-sm whitespace-nowrap">{role.type}</td>
-                      <td className="py-4 px-4 text-slate-600 text-sm">{role.location}</td>
-                      <td className="py-4 px-4">
-                        <Link
-                          href={`/careers?role=${role.slug}#apply`}
-                          className="bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-all inline-flex items-center text-sm"
-                        >
-                          Apply
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <RolesTable roles={roles} />
             <p className="text-center text-slate-600 mt-6">
               Do not see the right role?{" "}
               <Link href="/careers?role=general#apply" className="text-cyan-600 hover:text-cyan-700 underline">
