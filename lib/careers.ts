@@ -14,7 +14,7 @@ export const roles: Role[] = [
   {
     slug: "agentic-ai-associate",
     title: "Agentic AI - Associate",
-    type: "Full-time, Hybrid",
+    type: "Full-time",
     location: "Cape Town or Johannesburg (Hybrid)",
     summary:
       "Help build, test and run AI agents for clients on Salesforce Agentforce, HubSpot Breeze and custom platforms. A strong start for an early-career engineer who wants to work hands-on with agentic AI.",
@@ -37,7 +37,7 @@ export const roles: Role[] = [
   {
     slug: "agentic-ai-architect",
     title: "Agentic AI - Architect",
-    type: "Full-time, Hybrid",
+    type: "Full-time",
     location: "Cape Town or Johannesburg (Hybrid)",
     summary:
       "Lead the design and delivery of agentic AI solutions for clients, from use case and architecture to governance and AI Operations once agents are live.",
@@ -64,7 +64,7 @@ export const roles: Role[] = [
   {
     slug: "data-engineer-scientist",
     title: "Data Engineer / Data Scientist",
-    type: "Full-time, Hybrid",
+    type: "Full-time",
     location: "Cape Town or Johannesburg (Hybrid)",
     summary:
       "Build the data foundations AI agents and revenue teams depend on, and turn CRM, marketing and finance data into models and insights that drive decisions.",
