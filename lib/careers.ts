@@ -31,6 +31,7 @@ export const roles: Role[] = [
       "Hands-on interest in large language models and AI agents",
       "Exposure to Salesforce or HubSpot is a plus",
       "Clear written communication and a careful, test-first mindset",
+      "Hands-on use of Claude, Microsoft Copilot, Gemini and ChatGPT, with curiosity about new AI innovations",
     ],
   },
   {
@@ -41,6 +42,7 @@ export const roles: Role[] = [
     summary:
       "Lead the design and delivery of agentic AI solutions for clients, from use case and architecture to governance and AI Operations once agents are live.",
     responsibilities: [
+      "Design agentic AI solutions and experiences using Claude, Copilot, Gemini, ChatGPT, Salesforce Agentforce, HubSpot, Data Cloud and custom platforms",
       "Design agent architectures across Salesforce Agentforce, HubSpot, Data Cloud and custom platforms",
       "Run discovery with clients and turn business processes into safe, measurable agent use cases",
       "Set guardrails, access rules, testing, logging and POPIA controls for every agent",
@@ -54,6 +56,9 @@ export const roles: Role[] = [
       "Understanding of AI governance, security and POPIA",
       "Salesforce Agentforce or Architect certifications are a plus",
       "Confident presenting to client leadership",
+      "Deep hands-on experience with Claude, Microsoft Copilot, Gemini and ChatGPT, and knowing when to use each",
+      "A track record of designing agentic AI solutions and experiences, from concept and user journey to production",
+      "Keeps up with AI innovations and turns them into practical client designs",
     ],
   },
   {
@@ -77,6 +82,8 @@ export const roles: Role[] = [
       "Practical machine learning and statistics skills",
       "Experience with CRM or revenue data is a plus",
       "Understanding of POPIA and data privacy",
+      "Experience using Claude, Microsoft Copilot, Gemini or ChatGPT in data and analytics work",
+      "Interest in preparing data for agentic AI experiences and solutions",
     ],
   },
 ];
