@@ -46,7 +46,13 @@ const applyOptions = [
   ...talentAreas.map((a) => ({ value: a, label: a })),
 ];
 
-export default function CareersPage() {
+export default async function CareersPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ role?: string }>;
+}) {
+  const { role } = await searchParams;
+  const showApply = Boolean(role);
   return (
     <div className="overflow-hidden">
       <PageHero
@@ -128,10 +134,17 @@ export default function CareersPage() {
                 </tbody>
               </table>
             </div>
+            <p className="text-center text-slate-600 mt-6">
+              Do not see the right role?{" "}
+              <Link href="/careers?role=general#apply" className="text-cyan-600 hover:text-cyan-700 underline">
+                Send a general application
+              </Link>
+            </p>
         </div>
       </section>
       )}
 
+      {showApply && (
       <section className="py-16 px-4 bg-slate-50" id="apply">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-4 text-center">Apply Now</h2>
@@ -149,6 +162,7 @@ export default function CareersPage() {
           </p>
         </div>
       </section>
+      )}
     </div>
   );
 }
