@@ -15,6 +15,170 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "south-africa-ai-hub-pitch-what-it-means-for-business",
+    title: "South Africa Is Pitching Itself as Africa's AI Hub. What It Means for Your Business",
+    description: "President Ramaphosa took South Africa's AI case to Silicon Valley, offering partnership rather than asking for aid. Here is what was said, where local companies really stand, and six practical moves for South African businesses.",
+    date: "2026-11-20",
+    image: "/insights/south-africa-ai-hub-pitch.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "President Cyril Ramaphosa led a large South African delegation to Silicon Valley and used a keynote at the South Africa and the AI Opportunity Conference to pitch the country as a base for the AI boom. His message was that South Africa is offering an investment and partnership opportunity, not asking for charity.",
+          "At home, the picture is mixed. Almost all large companies now use AI in some form, but far fewer run it in live business processes, and fewer still can measure what it delivers. The national push creates real opportunity, but only for companies that turn AI into everyday work.",
+        ],
+      },
+      {
+        heading: "What was on the table",
+        paragraphs: [
+          "The President asked US technology companies to set up research and development in South Africa, partner with universities, train young people and build local supplier networks. He also asked them to help local entrepreneurs get access to computing power, funding, expertise and markets.",
+          "He pointed to old power station sites that could become data centre hubs, since some already have grid connections and transport links, and to solar and wind resources and reduced load shedding. Investors were promised a more coordinated process for approvals, grid connections and land.",
+          "He stressed that AI must understand languages such as isiZulu, isiXhosa, Sesotho, Sepedi, Setswana, Tshivenda and Xitsonga, that Africa needs its own datasets, and that AI governance should protect privacy, dignity and equality. He also reminded the audience that foundational engineering work for Amazon Web Services was done in Cape Town.",
+          "Business leaders in the delegation proposed a R100 million fund to help local AI start-ups pay for computing power, one of the most expensive parts of building AI.",
+        ],
+      },
+      {
+        heading: "Where South African companies really stand",
+        paragraphs: [
+          "The SA AI Index 2026, from World Wide Worx and Altron Digital Business, found that 93% of organisations with more than 200 employees now use generative AI in some form, up from 45% two years earlier.",
+          "But only 30% have AI running in a live business process, and more than half are still experimenting. Only 27% can measure AI's value, and most cannot put a number on the cost savings.",
+          "The good news is in the 30%. Among companies with AI running in live processes, about 80% report a positive effect on productivity. The gap is not belief in AI. It is the step from trying it to running it.",
+        ],
+      },
+      {
+        heading: "A scenario: two Cape Town distributors",
+        paragraphs: [
+          "Imagine two similar distributors. Both have staff using AI chat tools to write emails and summarise documents. Both say they use AI.",
+          "The first stops there. A year later, it still cannot say what AI has changed. The second picks one process, answering stock and delivery questions from trade customers, and builds an AI agent connected to its CRM and stock system. It measures response times and call volumes before and after, keeps a person in the loop for exceptions, and builds POPIA rules in from the start.",
+          "Six months later, the second company can show its board faster answers, fewer calls and a clear case for the next use case. That is the kind of company that benefits when investment, skills and data centres arrive.",
+        ],
+      },
+      {
+        heading: "Six moves for South African businesses",
+        paragraphs: [
+          "The national push will bring more cloud capacity, more skilled people and more partners. These steps put your business in a position to use them.",
+        ],
+        figure: { src: "/insights/sa-business-ai-moves.jpg", alt: "Six moves for South African businesses", caption: "Six practical moves to turn the national AI push into business results.", width: 1400, height: 700 },
+      },
+      {
+        heading: "Questions South African leaders are asking",
+        paragraphs: [
+          "Will new data centres change anything for us? More local capacity can mean faster services and easier compliance with data rules, but it does not fix weak processes or messy data. Those are in your hands now.",
+          "Should we wait for local AI models? No. Today's platforms already support many languages. Start with your own process, test it with your customers' languages, and switch models later if better ones appear.",
+          "What about jobs? The President himself called for retraining and upskilling. In practice, the companies that do well with AI train their own staff to work alongside agents rather than simply cutting roles.",
+          "Where do Salesforce and HubSpot fit? Your CRM holds the customer data and business rules AI agents need. Agentforce and HubSpot Breeze agents are often the fastest way to move from experiment to a live process.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "Write down every place AI is used in your company today, including personal chat tools.",
+          "Choose one process with clear volume and a clear owner to move into live use.",
+          "Record today's baseline: time, cost, volume or error rate.",
+          "Check whether the customer data that process needs is clean and connected.",
+          "Agree the POPIA rules for that use case before any agent is built.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "93% of Big South African Companies Now Use AI. Only Half Say It Helps.",
+          "From AI Pilot to Real Revenue: a 90-day plan for AI agents in Salesforce and HubSpot.",
+          "FNB's R1 Million POPIA Fine and the Standard Bank Breach.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika's Team is based in Cape Town and helps South African companies move AI from experiment to live work. We cover AI strategy and readiness, Agentforce and HubSpot AI agents, custom AI agents, and AI Operations once agents are live, along with the Salesforce, HubSpot and RevOps foundations they depend on.",
+          "If you want to be in the 30% that runs AI in live processes, we can help you pick the right first use case and measure it properly. Get in touch through nainikatechnologies.co.za.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "crowdstrike-fiddler-flight-recorder-ai-agents",
+    title: "CrowdStrike Is Buying a Flight Recorder for AI Agents. Who Runs Yours?",
+    description: "CrowdStrike has agreed to buy Fiddler AI to record what AI agents do and why. Here is what agent observability means, why AI Operations is becoming its own job, and eight things to put in place before your agents go further.",
+    date: "2026-11-20",
+    image: "/insights/agent-flight-recorder.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "CrowdStrike, one of the world's biggest security companies, has signed an agreement to buy Fiddler AI, a company that watches what AI agents do and explains why they did it. Fiddler will become part of CrowdStrike's Falcon platform under the name Falcon Observe.",
+          "CrowdStrike's chief executive, George Kurtz, called Fiddler a flight recorder for every agent. His point was simple: when a regulator or a board asks what an agent did, saying the model did it is not an acceptable answer.",
+          "For any company running AI agents in Salesforce, HubSpot or its own systems, the message is clear. Building an agent is only the start. Running it, watching it and being able to explain it is now a job in its own right.",
+        ],
+      },
+      {
+        heading: "What CrowdStrike is buying",
+        paragraphs: [
+          "Fiddler gives teams a view of agent behaviour before and after launch. Before launch, it helps test whether an agent completes its task correctly and stays within company policy, and compares how different prompts, models and settings change the result.",
+          "After launch, it traces each agent's reasoning steps and tool calls, spots when behaviour drifts from what was intended, and tracks token use, which is a direct driver of cost.",
+          "Reports put the price at about US$400 million. CrowdStrike also agreed to buy Dreadnode, which tests AI systems for security flaws, for about US$95 million. Both deals are expected to close, and Falcon Observe to become generally available, in CrowdStrike's fourth fiscal quarter.",
+        ],
+      },
+      {
+        heading: "Why this matters beyond security",
+        paragraphs: [
+          "Agents are not like normal software. The same request can produce different answers on different days. An agent can reason its way to an action nobody planned for, without being hacked and without breaking a single rule.",
+          "That is why traditional monitoring is not enough. A server dashboard can show that an integration ran. It cannot show why an agent decided to discount a quote, close a case or email the wrong contact.",
+          "Large vendors are moving fast on this. Sysdig has added runtime checks for AI agents, CrowdStrike has added detection for agents behaving unusually, and Salesforce has added tools for testing and supervising Agentforce. When the biggest security and CRM companies all invest in the same gap, it is a sign the gap is real.",
+        ],
+      },
+      {
+        heading: "A scenario: the quote agent that was too helpful",
+        paragraphs: [
+          "Picture a mid-sized company that launches an AI agent in Salesforce to draft quotes for repeat customers. In testing it works well. Three weeks after launch, finance notices margins slipping on small deals.",
+          "With no record of the agent's reasoning, the team spends days guessing. Was it a prompt change, a new price book, or a customer email the agent read too literally? Nobody can say, so the agent is switched off and the project loses trust.",
+          "With proper agent operations in place, the same team opens the trace, sees that the agent has been applying a loyalty discount meant only for strategic accounts, fixes the rule, adds a test for it and turns the agent back on the same day. The difference is not the AI model. It is how the agent is run.",
+        ],
+      },
+      {
+        heading: "Eight parts of running AI agents in production",
+        paragraphs: [
+          "This is what we mean by AI Operations: the day-to-day work of keeping agents useful, safe and affordable once they are live.",
+        ],
+        figure: { src: "/insights/agent-operations-checklist.jpg", alt: "Eight parts of running AI agents in production", caption: "Eight parts of AI Operations, from ownership and logging to value reviews.", width: 1400, height: 700 },
+      },
+      {
+        heading: "Questions companies are asking",
+        paragraphs: [
+          "Do we need a tool like Falcon Observe? Not always on day one. Salesforce, HubSpot and the main AI platforms already offer logs, testing and audit features. The first step is using what you have properly, with an owner who reviews it.",
+          "Who should own an agent? The business owner of the process, such as the head of sales operations or service, supported by a technical owner. If nobody can be named, the agent is not ready to go live.",
+          "Is this only for big companies? No. A small company with one customer service agent still needs to know what it said to customers and be able to switch it off quickly.",
+          "How does this relate to POPIA? If an agent reads or changes personal information, you need to show who had access, what was done and why. Agent logs are part of that record.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "List every AI agent and automation that acts on customer data, including trial and pilot agents.",
+          "Name one owner for each and write down what it is allowed to do and what it must never do.",
+          "Check that each agent's actions are logged and that someone can read the log.",
+          "Agree how to pause each agent and who is allowed to do it.",
+          "Pick one agent and review a week of its decisions with the business owner.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "Most Companies Now Run AI Agents. Only 15% Can Show the Money.",
+          "AT&T Runs Nearly 500 AI Agent Workflows. Here Is the Rulebook Behind Them.",
+          "California Is Suing OpenAI Over AI Agents That Went Rogue.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika's Team designs, builds and runs AI agents on Salesforce Agentforce, HubSpot Breeze and custom platforms. Our AI Operations service covers the work after launch: ownership models, logging and audit trails, testing, drift and cost monitoring, access reviews and monthly value reports.",
+          "If you already have agents live, we can start with a short review of how they are run today and give you a clear list of gaps to close. Get in touch through nainikatechnologies.co.za.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "fnb-fine-standard-bank-breach-popia-lessons",
     title: "FNB's R1 Million POPIA Fine and the Standard Bank Breach: What Every Company Holding Customer Data Should Do Now",
     description: "The Information Regulator has fined FNB R1 million under POPIA, and Standard Bank's breached client data appears to have been published online. Here is what happened, what regulators are looking at, and six checks for the customer data in your CRM.",
