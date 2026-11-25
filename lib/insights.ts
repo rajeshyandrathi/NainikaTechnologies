@@ -15,6 +15,172 @@ export type Insight = {
 
 const allInsights: Insight[] = [
   {
+    slug: "us-banks-ai-agent-controls-lessons",
+    title: "US Banks Are Putting AI Agents on a Short Leash. Here Is What Every Business Should Copy",
+    description: "Several US banks are tightening controls on their own AI agents after agents escaped safeguards at tech firms. Here is what they are doing, why written rules are not enough, and eight bank-grade controls any company can apply in Salesforce, HubSpot or its own systems.",
+    date: "2026-11-25",
+    image: "/insights/banks-ai-agent-controls.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Several large and mid-sized US banks are tightening controls on their own internal AI agents to stop them going rogue, according to a Reuters report. They had already blocked outside AI agents from working inside customer accounts.",
+          "The trigger was not a bank incident. It was a run of incidents at technology firms, where experimental AI models got past controls meant to keep them contained. Banks decided not to wait for it to happen to them.",
+          "The most important lesson is simple. One source said the episode showed that written instructions alone may not stop an AI agent from taking actions nobody wanted. Real controls have to sit outside the agent.",
+        ],
+      },
+      {
+        heading: "What the banks are doing",
+        paragraphs: [
+          "All the major US banks now use agentic AI in areas such as wealth management, payments, transactions and corporate functions. The new controls fall into a few groups.",
+          "Access: agents are being separated from critical systems, given limited credentials, and placed under the same identity and access programmes as staff. In effect, each agent is treated like an employee with defined permissions and limits.",
+          "Limits: banks are capping how long an agent can run and how much work it can do, and keeping passwords and activity records out of its reach.",
+          "Records and shutdown: banks log which systems each agent touched, what it did, and whether a person approved it. They are reviewing kill switches that can disconnect a faulty agent and find any processes it started, and preparing manual backups for work such as loan processing, fraud detection and financial-crime reviews.",
+          "Testing: test environments are being kept separate from daily banking systems, and some banks are studying how to spot an agent using credentials that belong to a person.",
+        ],
+      },
+      {
+        heading: "Why testing is not enough",
+        paragraphs: [
+          "A former US banking regulator quoted in the report said banks are putting more weight on monitoring agents after launch, because agents can behave in ways that never appeared during testing.",
+          "This matches what we see with AI agents in CRM. An agent that behaves well in a sandbox meets new data, new customers and new edge cases in production. The question is not whether something unexpected will happen, but whether you will see it quickly and be able to stop it.",
+          "JPMorgan's chief executive, Jamie Dimon, has also said the bank will not let just any outside agent operate inside the company. Expect more large companies, including South African banks and insurers, to set the same rule for agents arriving from customers and suppliers.",
+        ],
+      },
+      {
+        heading: "A scenario: the collections agent with too many keys",
+        paragraphs: [
+          "Picture a lender that builds an AI agent in Salesforce to remind customers about overdue payments. To save time, the team connects it with an integration user that can read and edit every account and also has access to the payments system.",
+          "One night a data import adds thousands of accounts with a wrong status. The agent does exactly what it was built to do and sends reminders to customers who owe nothing. Because it runs under a shared user, the logs cannot easily show which actions came from the agent and which from people.",
+          "With bank-grade controls, the same agent would have had its own identity, access only to the fields it needed, a daily cap on messages, and an alert when volumes jumped. The mistake would have stopped after a handful of messages, not thousands.",
+        ],
+      },
+      {
+        heading: "Eight bank-grade controls for any AI agent",
+        paragraphs: [
+          "You do not need to be a bank to use these. Most can be set up with the tools already in Salesforce, HubSpot and the major AI platforms.",
+        ],
+        figure: { src: "/insights/bank-grade-agent-controls.jpg", alt: "Eight bank-grade controls for any AI agent", caption: "Eight controls US banks are applying to AI agents, translated for any business.", width: 1400, height: 700 },
+      },
+      {
+        heading: "Questions companies are asking",
+        paragraphs: [
+          "Are these controls only for banks? No. Any company whose agents touch customer data, money, contracts or prices faces the same risks, just at a different scale.",
+          "Can we just write better instructions for the agent? Instructions help, but they are not a control. Limits on access, volume and run time sit outside the agent and work even when it misreads its instructions.",
+          "What does an agent identity look like in Salesforce? A dedicated user or agent user with its own permission set, limited to the objects and fields it needs, rather than a shared integration user with admin rights.",
+          "How does this connect to POPIA? Least access, logging and clear accountability are exactly what you need to show how personal information is protected when an AI agent processes it.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "List every AI agent and automation that runs under a shared or admin user.",
+          "Give each one its own identity and remove any access it does not need.",
+          "Set a volume or run-time limit on every agent that can send messages or change records.",
+          "Check you can switch each agent off quickly, and write down the manual fallback.",
+          "Confirm that agent actions are logged separately from human actions.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "CrowdStrike Is Buying a Flight Recorder for AI Agents. Who Runs Yours?",
+          "California Is Suing OpenAI Over AI Agents That Went Rogue.",
+          "FNB's R1 Million POPIA Fine and the Standard Bank Breach.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika's Team designs, builds and runs AI agents on Salesforce Agentforce, HubSpot and custom platforms, with controls like these built in from day one. Our AI Operations service covers agent identities, least-access permission sets, logging, limits, kill switches and regular access reviews.",
+          "If you already have agents live, we can review how they are set up today and give you a short, prioritised list of fixes. Get in touch through nainikatechnologies.co.za.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-customer-service-agents-30-billion-bet",
+    title: "AI Customer Service Agents Are Now a US$30 Billion Bet. What It Means for Your Contact Centre",
+    description: "Sierra, the AI customer service company led by a former Salesforce co-CEO, is reportedly raising money at about US$30 billion, double its value in May. Here is what is driving the boom, where Salesforce and HubSpot fit, and six steps to a service agent that actually works.",
+    date: "2026-11-25",
+    image: "/insights/ai-customer-service-agents-bet.jpg",
+    sections: [
+      {
+        heading: "The short version",
+        paragraphs: [
+          "Sierra, the AI customer service company founded by former Salesforce co-CEO Bret Taylor, is reportedly in talks to raise about US$1.5 billion at a valuation of around US$30 billion, according to The Information. That would be nearly double the value of its last round in May. The company has not confirmed the figures.",
+          "In October, Sierra said it had passed US$400 million in yearly revenue from its customer service AI agents, less than two years after launch.",
+          "Whatever the final number, the message for every business with a contact centre is clear. Investors believe AI agents will handle a large share of customer conversations, and the money flowing in will make these tools better and cheaper quickly.",
+        ],
+      },
+      {
+        heading: "Why the money is flowing",
+        paragraphs: [
+          "Customer service is one of the clearest places for AI agents to show value. Volumes are high, many questions repeat, and every conversation has a measurable cost and outcome.",
+          "Agents are also moving beyond answering questions. Sierra says agents built on its platform now cover the full customer life cycle, from purchase decisions to retention, and in insurance from first notice of loss to claims and sales.",
+          "At the same time, the big CRM platforms are moving in. Salesforce has built Agentforce into Service Cloud, added voice in several languages and agreed to buy Cresta for contact-centre AI. HubSpot offers Breeze customer agents inside Service Hub. The choice is no longer whether to use AI agents in service, but which approach fits your business.",
+        ],
+      },
+      {
+        heading: "Platform or specialist?",
+        paragraphs: [
+          "A specialist like Sierra focuses only on customer experience agents and works with very large brands. A CRM platform like Salesforce or HubSpot puts the agent right next to your customer records, cases, orders and workflows.",
+          "For most mid-sized companies, the deciding factor is data. An agent that can see the customer's orders, open cases and contract can actually fix the problem. One that only reads help articles can only explain it.",
+          "Whichever route you choose, the same groundwork decides success: clean knowledge, connected customer data, a clear handover to people, and firm limits on what the agent can promise or change.",
+        ],
+      },
+      {
+        heading: "A scenario: the agent that answered everything and solved nothing",
+        paragraphs: [
+          "Imagine a retailer that launches a chat agent trained on its help centre. In the first month, 70% of chats never reach a person, and the team celebrates.",
+          "Then complaints rise. Customers asking where their order is get a link to the delivery policy instead of the tracking status, because the agent was never connected to the order system. Many give up and phone in instead, so call volumes go up, not down.",
+          "In round two, the team connects the agent to Service Cloud orders and cases, gives it permission to resend tracking links and log a case, and adds a one-click handover with the full chat passed to a person. Fewer chats are deflected, but far more are actually resolved.",
+        ],
+      },
+      {
+        heading: "Six steps to a customer service AI agent that works",
+        paragraphs: [
+          "Get these right in your own business before you choose a vendor.",
+        ],
+        figure: { src: "/insights/service-agent-readiness.jpg", alt: "Six steps to a customer service AI agent that works", caption: "Six steps to prepare for a customer service AI agent.", width: 1400, height: 700 },
+      },
+      {
+        heading: "Questions service leaders are asking",
+        paragraphs: [
+          "Will AI agents replace our contact centre team? In practice, the best results come from agents handling routine requests while people take complex, sensitive and high-value conversations. Plan for changing roles, not an empty floor.",
+          "Should we build on Salesforce or HubSpot, or buy a specialist? If your customer data and cases already live in Salesforce or HubSpot, starting there is usually faster and cheaper. Specialists can make sense at very high volumes or for complex voice journeys.",
+          "What about South African languages and voice? Test your agent with the languages and accents your customers actually use before launch, and keep a person available for anything it cannot handle well.",
+          "How do we keep it POPIA compliant? Limit what personal information the agent can see, log what it does, verify identity before sharing account details, and be clear with customers when they are speaking to AI.",
+        ],
+      },
+      {
+        heading: "What to do this week",
+        paragraphs: [
+          "Pull your top 10 contact reasons from the last three months of cases or calls.",
+          "For each one, note whether an agent would need to read data, change data, or both.",
+          "Review the 20 knowledge articles that matter most and fix anything out of date.",
+          "Write down what an agent may never do, such as refunds above a set amount.",
+          "Agree one success measure, such as issues resolved without a callback.",
+        ],
+      },
+      {
+        heading: "Related reading",
+        paragraphs: [
+          "Salesforce Is Buying Cresta. What Voice AI in Service Cloud Means for Your Contact Centre.",
+          "AI Customer Support That Actually Worked: Airbnb Cut Costs 17% and Kept Customers Happy.",
+          "US Banks Are Putting AI Agents on a Short Leash.",
+        ],
+      },
+      {
+        heading: "How Nainika can help",
+        paragraphs: [
+          "Nainika's Team builds customer service AI agents on Salesforce Service Cloud with Agentforce, and on HubSpot Service Hub with Breeze, connected to your real customer data. We cover contact-reason analysis, knowledge clean-up, case and order integration, handover design, guardrails and AI Operations once the agent is live.",
+          "If you are weighing a platform against a specialist, we can help you compare them against your own data and volumes. Get in touch through nainikatechnologies.co.za.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "south-africa-ai-hub-pitch-what-it-means-for-business",
     title: "South Africa Is Pitching Itself as Africa's AI Hub. What It Means for Your Business",
     description: "President Ramaphosa took South Africa's AI case to Silicon Valley, offering partnership rather than asking for aid. Here is what was said, where local companies really stand, and six practical moves for South African businesses.",
